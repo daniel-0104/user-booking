@@ -1,15 +1,14 @@
 body{
-    background-color: #2C3E50;
     color: white;
 }
 :root{
-    --pumpkin : #FEBD69;
-    --nav-bg : #34495E;
+    --pumpkin : #4adec1;
+    --nav-bg : #3e5a7a;
     --gold: #FFD700;
     --grey: rgb(63, 63, 63);
     --dark-gray : #1e252b;
-    --navy : #001F3F;
-    --gray-blue : #314860;
+    --navy : #19344f;
+    --gray-blue : #416285;
     --teal : #39CCCC;
 }
 
@@ -17,12 +16,19 @@ body{
 #nav{
     background-color: var(--nav-bg);
 }
+#logo-img{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
 #cinema-label{
-    color: var(--pumpkin);
+    color: var(--gold);
     font-family: fantasy;
 }
 .nav-link.active{
-    color: var(--pumpkin) !important;
+    color: var(--gold) !important;
 }
 #nav-order > li > a{
     color: white;
@@ -32,7 +38,7 @@ body{
 }
 #nav-order > li > a:hover,
 .nav-item a i:hover{
-    color: var(--pumpkin);
+    color: var(--gold);
 }
 @media screen and (max-width: 768px){
     #nav-icon{
@@ -132,10 +138,10 @@ body{
 #search-ticket p{
     background-color: var(--navy);
     color: white;
-    padding: 15px 30px;
+    padding: 15px 28px;
     font-size: 13pt;
     border-radius: 50px;
-    box-shadow: rgb(40, 62, 86) 0px 10px 10px -3px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .group{
@@ -143,8 +149,8 @@ body{
     line-height: 28px;
     align-items: center;
     position: relative;
-    width: 40%;
-    margin-top: 10px;
+    width: 80%;
+    margin-top: 14px;
 }
 .input{
     font-family: "Montserrat", sans-serif;
@@ -162,7 +168,7 @@ body{
     border: 1px solid white;
 }
 .input::placeholder{
-    color: #bdbecb;
+    color: #d4d5e4;
 }
 .search-icon{
     position: absolute;
