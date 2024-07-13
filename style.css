@@ -1,19 +1,18 @@
 body{
-    background-color:#ECF0F1;
+    background-color: var(--body);
     color: white;
 }
 :root{
+    --body : #436587;
+    --nav-bar: #344d69;
+    --secondary: #2980B9;
     --gold: #FFD700;
-    --grey: rgb(63, 63, 63);
-    --dark-gray : #1e252b;
-    --navy : #19344f;
-    --gray-blue : #50769e;
     --teal: #5febcf ;
 }
 
 /*.......................................... nav bar start ................................... */
 #nav{
-    background-color: #1E212B;
+    background-color: var(--nav-bar);
 
 }
 #logo-img{
@@ -50,14 +49,9 @@ body{
     .b-nav{
         display: block !important;
     }
-    /* #home-content > div > p{
-        display: none;
-        background-color: red;
-        width: 100% !important;
-    } */
 }
 .b-nav{
-    background-color: var(--nav-bg);
+    background-color: var(--nav-bar);
     bottom: 0;
     width: 100%;
     display: none;
@@ -127,7 +121,7 @@ body{
     margin-top: -70px;
 }
 #search-ticket > div{
-    background-color: rgb(175, 175, 175);
+    background-color:  var(--nav-bar);
     padding: 30px 30px 35px;
     border-radius: 10px;
     box-shadow:rgba(255, 255, 255, 0.747) 1px 3px 2px;
@@ -136,7 +130,7 @@ body{
     color: var(--teal);
 }
 #search-ticket p{
-    background-color: #FF6F61;
+    background-color: var(--secondary);
     color: white;
     padding: 15px 28px;
     font-size: 13pt;
@@ -195,7 +189,7 @@ body{
 
 /*.......................................... popular movie start ................................... */
 #popular-movie{
-    margin: 80px auto;
+    margin: 100px auto;
 }
 #view-more > button{
     color: var(--teal);
@@ -204,384 +198,51 @@ body{
     color: white;
 }
 #pop-movie-list > .col-lg-4 > div{
-    background-color: #20639b;
-    padding: 20px;
+    background-color: var(--nav-bar) ;
+    padding: 20px 20px 12px;
     border-radius: 10px;
+    /* box-shadow: 0 3px 8px rgba(255, 252, 252, 0.2); */
     border: 1px solid white;
 }
 #pop-movie-list a{
     color: white;
     text-decoration: none;
 }
+.zoom-img{
+    width: 100%;
+    height:auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.zoom-img img{
+    width: 100%;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+}
+.zoom-img img:hover{
+    transform: scale(1.1);
+}
 #pop-movie-list a h4{
-    margin: 10px;
+    margin-top: 10px;
     text-align: center;
 }
 #pop-movie-list a:hover{
     color: var(--teal);
 }
+#ticket-btn{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: white;
+}
+#ticket-btn:hover{
+    box-shadow: 1px 1px 2px white;
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #pop-movie-list a h4{
+        font-size: 12pt;
+    }
+}
 /*.......................................... popular movie end ................................... */
-
-
-/*.......................................... now showing movie start ................................... */
-/* #now-showing{
-    margin: 80px auto;
-}
-#now-showing h3{
-    color: var(--teal);
-} */
-/*.......................................... now showing movie end ................................... */
-
-/*.......................................... coming soon section start ................................... */
-/* #movies{
-    margin: 50px auto 0;
-    padding: 30px;
-}
-#movies h3{
-    color: var(--teal);
-}
-.categories-content a{
-    width: 100%;
-    padding: 5px 20px;
-    cursor: pointer;
-}
-.categories-content a:hover{
-    background-color: var(--gray-blue);
-    border-radius: 5px;
-}
-
-#coming-soon-category{
-    background-color: var(--navy);
-}
-#coming-soon-category h5,
-#coming-soon-category h5 ~ label{
-    color: var(--gold);
-} */
-
-/* .slider-btns{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    text-align: center;
-    width: 100%;
-    justify-content: space-between;
-}
-.slider-btns button{
-    position: static;
-    background-color: var(--gold);
-    color: white;
-    width: 43px;
-    height: 43px;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 12pt;
-}
-.slider-btns button:hover{
-    background-color: var(--grey);
-    color: white;
-} */
-/*.......................................... coming soon section end ................................... */
-
-/*.......................................... movies categories section start ................................... */
-/* #films{
-    margin: auto;
-    padding: 30px;
-}
-#top-movie,
-#adventure,
-#action{
-    margin-bottom: 60px;
-} */
-/*.......................................... movies categories section end ................................... */
-
-/*.......................................... detail section start ................................... */
-/* .movie-detail .poster{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
-    border-radius:10px;
-}
-.movie-detail .movie-detail-content{
-    padding-left: 30px;
-}
-.movie-detail .movie-detail-content .movie-name{
-    font-size:1.8em;
-    margin-top: -10px;
-}
-.movie-detail .movie-detail-content .category{
-    display:flex;
-    gap:40px;
-    text-transform:capitalize;
-    margin:10px 0;
-}
-.movie-detail .movie-detail-content .movie-info{
-    display:flex;
-    gap:30px;
-    margin:25px 0;
-}
-.movie-detail .movie-detail-content .movie-info .fa-circle,
-.movie-detail .movie-detail-content .movie-info .fa-stopwatch{
-    color: var(--gold); 
-    font-size:.85em;
-}
-.category li::marker{
-    color: var(--gold);
-}
-#watch-trailer,
-#booking{
-    margin-top: -10px;
-    background-color: var(--gold);
-    padding: 6px 20px;
-}
-#watch-trailer a,
-#booking a{
-    text-decoration: none;
-    color: #000000;
-}
-
-#details-text{
-    list-style: none;
-    width: 100%;
-    padding-left: 0;
-    margin-top: -8px;
-}
-#details-text li{
-    position: relative;
-    padding: 15px 100px 15px 0;
-    display: table-cell;
-}
-#details-text li a{
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 15pt;
-    display: inline-block;
-    position: relative;
-    padding: 0 10px;
-}
-#details-text li a:hover::after,
-#details-text li a.text-active::after {
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: var(--gold);
-    height: 2px;
-    margin-top: 2px;
-    width: 100%;
-    left: 0;
-}
-#details-text li a::after{
-    position: absolute;
-    content: "";
-    display: block;
-    background-color: var(--gold);
-    height: 2px;
-    width: 0;
-    left: 50%;
-    margin-top: 3px;
-    transition: 0.25s ease-out;
-}
-#detail-about{
-    margin-top: -10px;
-    line-height: 25px;
-}
-#cast{
-    width: 100%;
-    display: none;
-}
-#cast-content{
-    text-align: center;
-}
-#cast-content img{
-    display: block;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: auto;
-}
-#cast-swiper .swiper-pagination .swiper-pagination-bullet {
-    opacity: 1;
-    border: white solid 1px;
-    background-color: transparent;
-}
-#cast-swiper .swiper-pagination .swiper-pagination-bullet:hover{
-    background-color: var(--gold);
-}
-#cast-swiper .swiper-pagination .swiper-pagination-bullet-active {
-    background-color: var(--gold);
-} */
-/*.......................................... detail section end ................................... */
-
-/*.......................................... booking section start ................................... */
-/* #buy-tickets > div > h3{
-    color: var(--gold);
-}
-#select-date > ul > li,
-#ticket-price > ul > li{
-    margin-left: -10px;
-    list-style-type: none;
-    height: auto;
-}
-#select-time > ul > li{
-    list-style-type: none;
-    height: auto;
-}
-#select-date button,
-#select-time button{
-    width: 100%;
-    height: 50px;
-    border: 0;
-    background-color: var(--dark-gray);
-    color: white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-#select-date button:hover,
-#select-time button:hover{
-    background-color: var(--gold);
-    color: white;
-    border-color: white;
-}
-.js-select-active{
-    background-color: var(--gold) !important;
-    color: white !important;
-    border-color: white !important;
-}
-#ticket-price button{
-    width: 100%;
-    height: 50px;
-    background-color: transparent;
-    color: white;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-.f-price{
-    border: 1px solid #17a2b8;
-}
-.s-price{
-    border: 1px solid #FF7F3E;
-}
-.t-price{
-    border: 1px solid red;
-}
-
-.movie-container{
-    margin: 20px 0;
-}
-.movie-container select{
-    background-color: #fff;
-    border: 0;
-    border-radius: 5px;
-    font-size: 16px;
-    margin-left: 10px;
-    padding: 5px 15px 5px 15px;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-}
-.container{
-    perspective: 1000px;
-    margin-bottom: 30px;
-}
-.seat{
-    background-color: #383840;
-    height: 30px;
-    width: 38px;
-    margin: 8px;
-    font-size: 50px;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-.f1 .seat,
-.f2 .seat{
-    border: 1px solid #17a2b8;
-}
-
-.s1 .seat,
-.s2 .seat{
-    border: 1px solid #FF7F3E;
-}
-
-.t1 .seat,
-.t2 .seat{
-    border: 1px solid red;
-}
-
-.seat.selected,
-#selected{
-    background-color: var(--gold);
-}
-.seat.sold{
-    background-color: #ddd8d8;
-}
-.seat:nth-of-type(2){
-    margin-right: 30px;
-}
-.seat:nth-last-of-type(2){
-    margin-left: 30px;
-}
-.seat:not(.sold):hover{
-    cursor: pointer;
-    transform: scale(1.2);
-}
-.showcase .seat:not(.sold):hover{
-    cursor: default;
-    transform: scale(1);
-}
-.showcase{
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: #9e9e9e;
-    list-style-type: none;
-    display: flex;
-}
-.showcase li{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 10px;
-}
-.showcase li small{
-    margin-left: 2px;
-}
-.row{
-    display: flex;
-}
-.screen{
-    background-color: #f0eded;
-    height: 15px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 100px 100px 0 0;
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.7);
-}
-#confirm-booking #count,
-#confirm-booking #price,
-#confirm-booking #final-price{
-    color: var(--gold);
-} */
-/*.......................................... booking section end ................................... */
-
-/*.......................................... other movies section start ................................... */
-/* .swiper{
-    width: 100%;
-    height: 100%;
-}
-#now-showing-swiper .swiper-slide{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#now-showing-swiper .swiper-slide img{
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
-/*.......................................... other movies section end ................................... */
 
 
 
