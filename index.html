@@ -30,13 +30,16 @@
             <div class="d-flex align-items-center">
                 <img src="image/depositphotos_73179751-stock-illustration-vector-logo-slate-board-for.jpg" alt="" id="logo-img">
                 <a class="navbar-brand" href="#" id="cinema-label">
-                    <h4 class="ps-2">M-THEATER</h4>
+                    <h5 class="ps-2">M-THEATER</h5>
                 </a>
             </div>
             <div class="d-flex align-items-center justify-content-center">
                 <ul class="navbar-nav m-auto" id="nav-order">
                     <li class="nav-item">
                         <a class="nav-link" id="hide-nav" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="hide-nav" aria-current="page" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" id="hide-nav" href="booking.html">Book Now</a>
@@ -71,7 +74,8 @@
     <!-- nav bar bottom start  -->
     <nav class="position-fixed b-nav">
         <div class="d-flex b-navbar-brand">
-            <a href="" class="me-3">Home</a>
+            <a href="">Home</a>
+            <a href="">About Us</a>
             <a href="">Book Now</a>
             <a href="">Contact</a>
         </div>
@@ -115,52 +119,69 @@
     </section>
     <!-- home section end  -->
 
-    <!-- now showing movie start  -->
-    <!-- <section class="px-5 mb-3" id="now-showing">
-        <h3>Now Showing</h3>
+    <!-- popular movie start  -->
+    <section class="px-5 mb-3" id="popular-movie">
+        <div class="d-flex align-content-center justify-content-between">
+            <h3 class="fw-bold">Popular Movies</h3>
+            <a href="" class="text-decoration-none" id="view-more">
+                <button class="btn border-0 shadow-none fw-medium">View More <i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+            </a>
+        </div>
         <hr>
-        <div class="swiper mySwiper" id="now-showing-swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00000019-ldtjfqegkr-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00370924-bkbcsecatb-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00374393-lctwnbpxtx-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00379741-zgtxqvvxpq-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00391374-nztxbrutgt-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00396593-ymgmgqcxlu-portrait.avif" class="rounded"></a>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="p-2">
-                        <a href=""><img src="image/et00401043-vuulvkfzyj-portrait.avif" class="rounded"></a>
-                    </div>
+        <div class="row" id="pop-movie-list">
+            <div class="col-lg-4 col-sm-6">
+                <div>
+                    <a href="">
+                        <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
+                        <h4>Raya And The Last Dragon</h4>
+                    </a>
+                    <hr>
                 </div>
             </div>
-            <div id="swiper-pagination" class="d-block mx-auto text-center mt-2"></div>
         </div>
-    </section> -->
-    <!-- now showing movie end  -->
+    </section>
+    <!-- popular movie end  -->
+
+    <!-- <div class="swiper mySwiper" id="now-showing-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00000019-ldtjfqegkr-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00370924-bkbcsecatb-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00374393-lctwnbpxtx-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00379741-zgtxqvvxpq-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00391374-nztxbrutgt-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00396593-ymgmgqcxlu-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="p-2">
+                    <a href=""><img src="image/et00401043-vuulvkfzyj-portrait.avif" class="rounded"></a>
+                </div>
+            </div>
+        </div>
+        <div id="swiper-pagination" class="d-block mx-auto text-center mt-2"></div>
+    </div> -->
     
     <!-- coming soon section start  -->
     <!-- <section id="movies">

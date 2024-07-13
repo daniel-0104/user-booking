@@ -1,20 +1,20 @@
 body{
+    background-color:#ECF0F1;
     color: white;
 }
 :root{
-    --pumpkin : #4adec1;
-    --nav-bg : #3e5a7a;
     --gold: #FFD700;
     --grey: rgb(63, 63, 63);
     --dark-gray : #1e252b;
     --navy : #19344f;
-    --gray-blue : #416285;
-    --teal : #39CCCC;
+    --gray-blue : #50769e;
+    --teal: #5febcf ;
 }
 
 /*.......................................... nav bar start ................................... */
 #nav{
-    background-color: var(--nav-bg);
+    background-color: #1E212B;
+
 }
 #logo-img{
     display: block;
@@ -50,11 +50,11 @@ body{
     .b-nav{
         display: block !important;
     }
-    #home-content > div > p{
+    /* #home-content > div > p{
         display: none;
         background-color: red;
         width: 100% !important;
-    }
+    } */
 }
 .b-nav{
     background-color: var(--nav-bg);
@@ -80,7 +80,7 @@ body{
     text-decoration: none;
 }
 .b-navbar-brand > a:hover{
-    color: var(--pumpkin);
+    color: var(--gold);
 }
 /*.......................................... nav bar end ................................... */
 
@@ -127,21 +127,20 @@ body{
     margin-top: -70px;
 }
 #search-ticket > div{
-    background-color: var(--gray-blue);
+    background-color: rgb(175, 175, 175);
     padding: 30px 30px 35px;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    box-shadow:rgba(255, 255, 255, 0.747) 1px 3px 2px;
 }
 #search-ticket label{
     color: var(--teal);
 }
 #search-ticket p{
-    background-color: var(--navy);
+    background-color: #FF6F61;
     color: white;
     padding: 15px 28px;
     font-size: 13pt;
     border-radius: 50px;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .group{
@@ -179,19 +178,62 @@ body{
     pointer-events: none;
     z-index: 1;
 }
+
+@media screen and (max-width: 576px){
+    #home-poster-content > div > h1{
+        width: 100%;
+        font-size: 30pt;
+    }
+    #search-ticket{
+        margin-top: -20px;
+    }
+    #search-ticket p{
+        display: none !important;
+    }
+}
 /*.......................................... home section end ................................... */
 
+/*.......................................... popular movie start ................................... */
+#popular-movie{
+    margin: 80px auto;
+}
+#view-more > button{
+    color: var(--teal);
+}
+#view-more > button:hover{
+    color: white;
+}
+#pop-movie-list > .col-lg-4 > div{
+    background-color: #20639b;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#pop-movie-list a{
+    color: white;
+    text-decoration: none;
+}
+#pop-movie-list a h4{
+    margin: 10px;
+    text-align: center;
+}
+#pop-movie-list a:hover{
+    color: var(--teal);
+}
+/*.......................................... popular movie end ................................... */
+
+
 /*.......................................... now showing movie start ................................... */
-#now-showing{
+/* #now-showing{
     margin: 80px auto;
 }
 #now-showing h3{
     color: var(--teal);
-}
+} */
 /*.......................................... now showing movie end ................................... */
 
 /*.......................................... coming soon section start ................................... */
-#movies{
+/* #movies{
     margin: 50px auto 0;
     padding: 30px;
 }
@@ -214,7 +256,7 @@ body{
 #coming-soon-category h5,
 #coming-soon-category h5 ~ label{
     color: var(--gold);
-}
+} */
 
 /* .slider-btns{
     position: absolute;
@@ -242,7 +284,7 @@ body{
 /*.......................................... coming soon section end ................................... */
 
 /*.......................................... movies categories section start ................................... */
-#films{
+/* #films{
     margin: auto;
     padding: 30px;
 }
@@ -250,11 +292,11 @@ body{
 #adventure,
 #action{
     margin-bottom: 60px;
-}
+} */
 /*.......................................... movies categories section end ................................... */
 
 /*.......................................... detail section start ................................... */
-.movie-detail .poster{
+/* .movie-detail .poster{
     display: block;
     width: 100%;
     height: 100%;
@@ -366,15 +408,15 @@ body{
     background-color: transparent;
 }
 #cast-swiper .swiper-pagination .swiper-pagination-bullet:hover{
-    background-color: var(--pumpkin);
+    background-color: var(--gold);
 }
 #cast-swiper .swiper-pagination .swiper-pagination-bullet-active {
     background-color: var(--gold);
-}
+} */
 /*.......................................... detail section end ................................... */
 
 /*.......................................... booking section start ................................... */
-#buy-tickets > div > h3{
+/* #buy-tickets > div > h3{
     color: var(--gold);
 }
 #select-date > ul > li,
@@ -520,11 +562,11 @@ body{
 #confirm-booking #price,
 #confirm-booking #final-price{
     color: var(--gold);
-}
+} */
 /*.......................................... booking section end ................................... */
 
 /*.......................................... other movies section start ................................... */
-.swiper{
+/* .swiper{
     width: 100%;
     height: 100%;
 }
@@ -538,7 +580,7 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 /*.......................................... other movies section end ................................... */
 
 
