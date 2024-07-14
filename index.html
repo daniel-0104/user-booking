@@ -68,9 +68,9 @@
     <!-- nav bar bottom start  -->
     <nav class="position-fixed b-nav">
         <div class="d-flex b-navbar-brand">
-            <a href="">Home</a>
-            <a href="">Book Now</a>
-            <a href="">Contact</a>
+            <a  class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="booking.html">Book Now</a>
+            <a class="nav-link" href="contact.html">Contact</a>
         </div>
     </nav>
     <!-- nav bar bottom end  -->
@@ -92,12 +92,6 @@
                 <div class="col-lg-7 col-sm-7">
                     <label for="">SEARCH TICKET</label>
                     <h2>FIND YOUR TICKET NOW</h2>
-                    <form action="">
-                        <div class="group">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                            <input class="input" type="search" placeholder="Search for movie" name="searchbar"/>
-                        </div>
-                    </form>
                 </div>
                 <div class="col-lg-5 col-sm-5">
                     <p class="d-flex align-content-center justify-content-center">
@@ -105,9 +99,87 @@
                         <span class="ms-3">MOVIE</span>
                     </p>
                 </div>
-                
             </div>
 
+            <div class="custom-select">
+                <button
+                  class="select-button"
+                  role="combobox"
+                  aria-label="select button"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                  aria-controls="select-dropdown"
+                >
+                  <span class="selected-value">Open this select menu</span>
+                  <span class="arrow"></span>
+                </button>
+                <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                  <li role="option">
+                    <input type="radio" id="github" name="social-account" />
+                    <label for="github"><i class="bx bxl-github"></i>GitHub</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="instagram" name="social-account" />
+                    <label for="instagram"
+                      ><i class="bx bxl-instagram"></i>Instagram</label
+                    >
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="facebook" name="social-account" />
+                    <label for="facebook"
+                      ><i class="bx bxl-facebook-circle"></i>Facebook</label
+                    >
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="linkedIn" name="social-account" />
+                    <label for="linkedIn"
+                      ><i class="bx bxl-linkedin-square"></i>LinkedIn</label
+                    >
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="twitter" name="social-account" />
+                    <label for="twitter"><i class="bx bxl-twitter"></i>Twitter</label>
+                  </li>
+                  <li role="option">
+                    <input type="radio" id="reddit" name="social-account" />
+                    <label for="reddit"><i class="bx bxl-reddit"></i>Reddit</label>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- <link  href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"
+              /> -->
+            
+            <!-- <form action="" class="d-flex align-content-center">
+                <div class="form-group mb-3">
+                    <label class="mb-1">Cinema Name</label>
+                    <select name="" id="" class="form-control">
+                        <option value="" disabled selected>Choose cinema...</option>
+                        <option value="">Dagon Cinema</option>
+                        <option value="">Minglar Cinema</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="mb-1">Location</label>
+                    <select name="" id="" class="form-control">
+                        <option value="" disabled selected>Choose cinema...</option>
+                        <option value="">Dagon Cinema</option>
+                        <option value="">Minglar Cinema</option>
+                    </select>
+                </div>
+
+                <div class="form-group mb-3">
+                    <label class="mb-1">Contact</label>
+                    <select name="" id="" class="form-control">
+                        <option value="" disabled selected>Choose cinema...</option>
+                        <option value="">Dagon Cinema</option>
+                        <option value="">Minglar Cinema</option>
+                    </select>
+                </div>
+                
+                <button type="button" class="btn btn-primary">Create</button>
+            </form> -->
         </div>
     </section>
     <!-- home section end  -->
@@ -272,7 +344,7 @@
         <div class="d-flex align-content-center justify-content-between">
             <div id="span-block">
                 <span></span>
-                <h4 class="fw-bold">Feature Trailer</h4>
+                <h4 class="fw-bold">Featured Trailers</h4>
             </div>
             <a href="" class="text-decoration-none" id="view-more">
                 <button class="btn border-0 shadow-none fw-medium">View More <i class="fa-solid fa-arrow-right-long ms-1"></i></button>
@@ -283,26 +355,50 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?modestbranding=1&controls=1&showinfo=0&fs=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="autoplay; encrypted-media"></iframe>
+                    <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div id="trailer-content">
                         <span>News</span>
                         <label for="" class="fw-medium">March 5, 2021</label>
                     </div>
                     <hr>
-                    <p>Raya, a warrior, sets out to track down Sisu, a dragon, who transferred all her powers into a magical gem which is now scattered all over the kingdom of Kumandra, dividing its people.</p>
+                    <p class="pb-3">Raya, a warrior, sets out to track down Sisu, a dragon, who transferred all her powers into a magical gem which is now scattered all over the kingdom of Kumandra, dividing its people.</p>
                 </div>
                 <div class="swiper-slide">
-                    <iframe src="https://www.youtube.com/embed/uWIRyU5fuzU?si=GIyD6AedpOqzUKeI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allow="autoplay; encrypted-media"></iframe>
+                    <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=u9bMXm6yvgAhED-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="trailer-content">
+                        <span>News</span>
+                        <label for="" class="fw-medium">April 27, 2018</label>
+                    </div>
+                    <hr>
+                    <p class="pb-3">The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.</p>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://www.youtube.com/embed/uWIRyU5fuzU?si=OhGi-N6NmjELZV_T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div id="trailer-content">
                         <span>News</span>
                         <label for="" class="fw-medium">January 15, 2021</label>
                     </div>
                     <hr>
-                    <p>Determined teen Din is longing to reconnect with his childhood best friend when he meets a wish-granting dragon that shows him the magic of possibilities.</p>
+                    <p class="pb-3">Determined teen Din is longing to reconnect with his childhood best friend when he meets a wish-granting dragon that shows him the magic of possibilities.</p>
+                </div>
+                <div class="swiper-slide">
+                    <iframe src="https://www.youtube.com/embed/IeFWNtMo1Fs?si=9H0VwKVqG7d01UYb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <div id="trailer-content">
+                        <span>News</span>
+                        <label for="" class="fw-medium">May 24, 2024</label>
+                    </div>
+                    <hr>
+                    <p class="pb-3">After an unexpected reunion with his long-lost father, the street cat Vic, Garfield is forced to leave his very comfortable life with Harald behind. Together with Vic and Odie, he plans a crazy robbery.</p>
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-btns">
+                <button class="button-prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="button-next">
+                    <i class="fa-solid fa-chevron-right"></i> 
+                </button>
+            </div>
         </div>
 
     </section>
