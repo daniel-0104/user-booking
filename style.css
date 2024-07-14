@@ -187,9 +187,25 @@ body{
 }
 /*.......................................... home section end ................................... */
 
-/*.......................................... popular movie start ................................... */
-#popular-movie{
+/*.......................................... now showing movie start ................................... */
+#now-showing-movie,
+#feature-trailer{
     margin: 100px auto;
+}
+#span-block{
+    display: flex; 
+    align-items: center;
+}
+#span-block > span{
+    display: inline-block;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    width: 20px;
+    height: 3px;
+    border-radius: 20px;
+    margin-right: 10px;
 }
 #view-more > button{
     color: var(--teal);
@@ -197,14 +213,14 @@ body{
 #view-more > button:hover{
     color: white;
 }
-#pop-movie-list > .col-lg-4 > div{
+#now-movie-list > .col-lg-4 > div{
     background-color: var(--nav-bar) ;
     padding: 20px 20px 12px;
     border-radius: 10px;
     /* box-shadow: 0 3px 8px rgba(255, 252, 252, 0.2); */
     border: 1px solid white;
 }
-#pop-movie-list a{
+#now-movie-list a{
     color: white;
     text-decoration: none;
 }
@@ -222,11 +238,11 @@ body{
 .zoom-img img:hover{
     transform: scale(1.1);
 }
-#pop-movie-list a h4{
+#now-movie-list a h4{
     margin-top: 10px;
     text-align: center;
 }
-#pop-movie-list a:hover{
+#now-movie-list a:hover{
     color: var(--teal);
 }
 #ticket-btn{
@@ -238,12 +254,54 @@ body{
     box-shadow: 1px 1px 2px white;
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
-    #pop-movie-list a h4{
+    #now-movie-list a h4{
         font-size: 12pt;
     }
 }
-/*.......................................... popular movie end ................................... */
+/*.......................................... now showing movie end ................................... */
 
 
+/*.......................................... feature trailer start ................................... */
+.swiper{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide{
+    background-color: var(--nav-bar);
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.swiper-slide img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper{
+    margin-left: auto;
+    margin-right: auto;
+}
+iframe{
+    width: 100%;
+    height: 300px;
+}
+#trailer-content{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+#trailer-content span{
+    display: block;
+    width: fit-content;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: white;
+    margin-right: 10px;
+    padding: 4px 12px;
+    text-transform: uppercase;
+}
 
+/*.......................................... feature trailer end ................................... */
 
