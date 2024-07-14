@@ -120,9 +120,8 @@ body{
 #search-ticket{
     margin-top: -70px;
     background-color:  var(--nav-bar);
-    padding: 30px 30px 35px;
+    padding: 30px 30px;
     border-radius: 10px;
-    box-shadow:rgba(255, 255, 255, 0.747) 1px 3px 2px;
 }
 #search-ticket .col-lg-7 > label{
     color: var(--teal);
@@ -135,137 +134,18 @@ body{
     border-radius: 50px;
 }
 
-.custom-select {
-    position: relative;
-    width: 400px;
-    max-width: 100%;
-    font-size: 1.15rem;
-    color: #000;
-    margin-top: 3rem;
-  }
-  
-  .select-button {
-    width: 100%;
-    font-size: 1.15rem;
-    background-color: #fff;
-    padding: 0.675em 1em;
-    border: 1px solid #caced1;
-    border-radius: 0.25rem;
-    cursor: pointer;
-  
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .selected-value {
-    text-align: left;
-  }
-  
-  .arrow {
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid #000;
-    transition: transform ease-in-out 0.3s;
-  }
-  
-  .select-dropdown {
-    position: absolute;
-    list-style: none;
-    width: 100%;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
-    border: 1px solid #caced1;
-    border-radius: 4px;
-    padding: 10px;
-    margin-top: 10px;
-    max-height: 200px;
-    overflow-y: auto;
-    transition: 0.5s ease;
-  
-    transform: scaleY(0);
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .select-dropdown:focus-within {
-    box-shadow: 0 10px 25px rgba(94, 108, 233, 0.6);
-  }
-  
-  .select-dropdown li {
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .select-dropdown li label {
-    width: 100%;
-    padding: 8px 10px;
-    cursor: pointer;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .select-dropdown::-webkit-scrollbar {
-    width: 7px;
-  }
-  .select-dropdown::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 25px;
-  }
-  
-  .select-dropdown::-webkit-scrollbar-thumb {
-    background: #ccc;
-    border-radius: 25px;
-  }
-  
-  .select-dropdown li:hover,
-  .select-dropdown input:checked ~ label {
-    background-color: #f2f2f2;
-  }
-  
-  .select-dropdown input:focus ~ label {
-    background-color: #dfdfdf;
-  }
-  
-  .select-dropdown input[type="radio"] {
-    position: absolute;
-    left: 0;
-    opacity: 0;
-  }
-  
-  /* interactivity */
-  
-  .custom-select.active .arrow {
-    transform: rotate(180deg);
-  }
-  
-  .custom-select.active .select-dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: scaleY(1);
-  }
-  
-  /*=============
-  Aesthetics 
-  =========================*/
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-
-
-/* .group{
+#home-search{
+    background-color: var(--body);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.group{
     display: flex;
     line-height: 28px;
     align-items: center;
     position: relative;
     width: 80%;
-    margin-top: 14px;
 }
 .input{
     font-family: "Montserrat", sans-serif;
@@ -273,7 +153,7 @@ body{
     height: 45px;
     padding-left: 2.5rem;
     border: 0;
-    border-radius: 12px;
+    border-radius: 5px;
     background-color: transparent;
     outline: none;
     color: white;
@@ -283,18 +163,17 @@ body{
     border: 1px solid white;
 }
 .input::placeholder{
-    color: #d4d5e4;
+    color: #ececec;
 }
 .search-icon{
     position: absolute;
     left: 1rem;
-    fill: #bdbecb;
+    fill: #ececec;
     width: 1rem;
     height: 1rem;
     pointer-events: none;
     z-index: 1;
-} */
-
+}
 @media screen and (max-width: 576px){
     #home-poster-content > div > h1{
         width: 100%;
@@ -307,12 +186,109 @@ body{
         display: none !important;
     }
 }
+
+.custom-select{
+    position: relative;
+    width: 180px;
+    max-width: 100%;
+    font-size: 1.14rem;
+    color: white;
+}
+.select-button{
+    width: 100%;
+    font-size: 1.14rem;
+    background-color: var(--body);
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.selected-value{
+    text-align: left;
+}
+.selected-value > i{
+    color: var(--teal);
+    margin-right: 10px;
+}
+.arrow{
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid white;
+    transition: transform ease-in-out 0.3s;
+}
+.select-dropdown{
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    background-color: var(--body);
+    border: 1px solid #dadde0;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    transition: 0.5s ease;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+}
+.select-dropdown li{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.select-dropdown li label{
+    width: 100%;
+    padding: 8px 10px;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.select-dropdown::-webkit-scrollbar{
+    width: 5px;
+}
+.select-dropdown::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+.select-dropdown::-webkit-scrollbar-thumb{
+    background: var(--nav-bar);
+    border-radius: 25px;
+}
+.select-dropdown li:hover{
+    color: var(--teal);
+}
+.select-dropdown input:checked ~ label,
+.select-dropdown input:focus ~ label{
+    background-color: #ffffff30;
+    color: white;
+}
+.select-dropdown input[type="radio"]{
+    position: absolute;
+    left: 0;
+    opacity: 0;
+}
+.custom-select.active .arrow{
+    transform: rotate(180deg);
+}
+.custom-select.active .select-dropdown{
+    opacity: 1;
+    visibility: visible;
+    transform: scaleY(1);
+}
 /*.......................................... home section end ................................... */
 
 /*.......................................... now showing movie start ................................... */
 #now-showing-movie,
 #feature-trailer{
-    margin: 100px auto;
+    margin: 110px auto;
 }
 #span-block{
     display: flex; 
@@ -339,7 +315,6 @@ body{
     background-color: var(--nav-bar) ;
     padding: 20px 20px 12px;
     border-radius: 10px;
-    /* box-shadow: 0 3px 8px rgba(255, 252, 252, 0.2); */
     border: 1px solid white;
 }
 #now-movie-list a{
@@ -372,8 +347,11 @@ body{
     border: 1px solid var(--secondary);
     color: white;
 }
+#ticket-btn label{
+    cursor: pointer;
+}
 #ticket-btn:hover{
-    box-shadow: 1px 1px 2px white;
+    box-shadow: 1px 2px 2px white;
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
     #now-movie-list a h4{

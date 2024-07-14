@@ -10,61 +10,73 @@ navLinks.forEach(link => {
 // href clicked active link end
 
 // ......................................................feature trailer swiper start ............................
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  loop: true,
-  grabCursor: true,
-  navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-    },
-    770: {
-        slidesPerView: 2,
-    },
-    1400: {
-        slidesPerView: 3,
-    }
-  }
-});
+// var swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 2,
+//   spaceBetween: 30,
+//   loop: true,
+//   grabCursor: true,
+//   navigation: {
+//     nextEl: ".button-next",
+//     prevEl: ".button-prev",
+//   },
+//   breakpoints: {
+//     0: {
+//         slidesPerView: 1,
+//     },
+//     770: {
+//         slidesPerView: 2,
+//     },
+//     1400: {
+//         slidesPerView: 3,
+//     }
+//   }
+// });
 // ......................................................feature trailer swiper end ............................
 
 
-const customSelect = document.querySelector(".custom-select");
-const selectBtn = document.querySelector(".select-button");
+const customSelects = document.querySelectorAll(".custom-select");
+const selectBtns = document.querySelectorAll(".select-button");
+const selectedValues = document.querySelectorAll(".selected-value");
+const optionsLists = document.querySelectorAll(".select-dropdown li");
 
-const selectedValue = document.querySelector(".selected-value");
-const optionsList = document.querySelectorAll(".select-dropdown li");
-
-// add click event to select button
-selectBtn.addEventListener("click", () => {
-  // add/remove active class on the container element
-  customSelect.classList.toggle("active");
-  // update the aria-expanded attribute based on the current state
-  selectBtn.setAttribute(
-    "aria-expanded",
-    selectBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-  );
+selectBtns.forEach((btn, btnIndex) => {
+  btn.addEventListener('click', () => {
+    // Toggle the active class on the specific custom select element
+    customSelects[btnIndex].classList.toggle("active");
+    // Update the aria-expanded attribute based on the current state
+    btn.setAttribute(
+      "aria-expanded",
+      btn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
+  });
 });
 
-optionsList.forEach((option) => {
-  function handler(e) {
-    // Click Events
-    if (e.type === "click" && e.clientX !== 0 && e.clientY !== 0) {
-      selectedValue.textContent = this.children[1].textContent;
-      customSelect.classList.remove("active");
-    }
-    // Key Events
-    if (e.key === "Enter") {
-      selectedValue.textContent = this.textContent;
-      customSelect.classList.remove("active");
-    }
-  }
+optionsLists.forEach((option) => {
+  option.addEventListener("click", function (e) {
+    const customSelect = this.closest('.custom-select');
+    const selectedValue = customSelect.querySelector('.selected-value');
+    const btn = customSelect.querySelector('.select-button');
 
-  option.addEventListener("keyup", handler);
-  option.addEventListener("click", handler);
+    // Update the selected value text
+    selectedValue.innerHTML = this.querySelector('label').textContent;
+    // Remove the active class
+    customSelect.classList.remove("active");
+    // Update the aria-expanded attribute
+    btn.setAttribute("aria-expanded", "false");
+  });
+
+  option.addEventListener("keyup", function (e) {
+    if (e.key === "Enter") {
+      const customSelect = this.closest('.custom-select');
+      const selectedValue = customSelect.querySelector('.selected-value');
+      const btn = customSelect.querySelector('.select-button');
+
+      // Update the selected value text
+      selectedValue.innerHTML = this.querySelector('label').textContent;
+      // Remove the active class
+      customSelect.classList.remove("active");
+      // Update the aria-expanded attribute
+      btn.setAttribute("aria-expanded", "false");
+    }
+  });
 });
