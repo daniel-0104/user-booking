@@ -103,7 +103,7 @@
             </div>
 
             <div class="row mt-3" id="home-search">
-                <div class="col-lg-4">
+                <div class="col-lg-3 col-md-12 ps-0">
                     <form action="">
                         <div class="group">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
@@ -111,61 +111,92 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-lg-8">
-                    <div class="row">
-                        <div class="col-lg-3">
-                            <div class="custom-select">
-                                <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
-                                    <span class="selected-value"><i class="fa-solid fa-map-location-dot"></i>Location</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <ul class="select-dropdown" role="listbox" id="select-dropdown">
-                                    <li role="option">
-                                        <input type="radio" id="c-location1" name="cinemaLocation"/>
-                                        <label for="c-location1">South Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location2" name="cinemaLocation"/>
-                                        <label for="c-location2">North Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location3" name="cinemaLocation"/>
-                                        <label for="c-location3">East Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location4" name="cinemaLocation"/>
-                                        <label for="c-location4">West Dagon</label>
-                                    </li>
-                                </ul>
+                <div class="col-lg-9 col-md-12">
+                    <form action="" id="cinema-form">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="custom-select">
+                                    <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                        <span class="selected-value"><i class="fa-solid fa-map-location-dot"></i>Location</span>
+                                        <span class="arrow"></span>
+                                    </button>
+                                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                                        <li role="option">
+                                            <input type="radio" id="c-location1" name="cinemaLocation"/>
+                                            <label for="c-location1">South Dagon</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-location2" name="cinemaLocation"/>
+                                            <label for="c-location2">North Dagon</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-location3" name="cinemaLocation"/>
+                                            <label for="c-location3">East Dagon</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-location4" name="cinemaLocation"/>
+                                            <label for="c-location4">West Dagon</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-6">
+                                <div class="custom-select">
+                                    <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                        <span class="selected-value"><i class="fa-regular fa-calendar-check"></i>Date</span>
+                                        <span class="arrow"></span>
+                                    </button>
+                                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                                        <li role="option">
+                                            <input type="radio" id="c-date1" name="cinemaDate"/>
+                                            <label for="c-date1">4/02/2023</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-date2" name="cinemaDate"/>
+                                            <label for="c-date2">10/03/2021</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-date3" name="cinemaDate"/>
+                                            <label for="c-date3">11/08/2021</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-date4" name="cinemaDate"/>
+                                            <label for="c-date4">20/12/2024</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 col-sm-11">
+                                <div class="custom-select">
+                                    <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                        <span class="selected-value"><i class="fa-solid fa-film"></i>Movie</span>
+                                        <span class="arrow"></span>
+                                    </button>
+                                    <ul class="select-dropdown" role="listbox" id="select-dropdown">
+                                        <li role="option">
+                                            <input type="radio" id="c-movie1" name="cinemaMovie"/>
+                                            <label for="c-movie1">Raya And The Last Dragon</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-movie2" name="cinemaMovie"/>
+                                            <label for="c-movie2">Avengers Infinity War</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-movie3" name="cinemaMovie"/>
+                                            <label for="c-movie3">OutLaw</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="c-movie4" name="cinemaMovie"/>
+                                            <label for="c-movie4">Wish Dragon</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-sm-1 mt-1 d-flex justify-content-end">
+                                <button type="submit" class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </div>
-                        <!-- <div class="col-lg-3">
-                            <div class="custom-select">
-                                <button class="select-button" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
-                                    <span class="selected-value"><i class="fa-solid fa-map-location-dot"></i>Location</span>
-                                    <span class="arrow"></span>
-                                </button>
-                                <ul class="select-dropdown" role="listbox" id="select-dropdown">
-                                    <li role="option">
-                                        <input type="radio" id="c-location1" name="cinemaLocation"/>
-                                        <label for="c-location1">South Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location2" name="cinemaLocation"/>
-                                        <label for="c-location2">North Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location3" name="cinemaLocation"/>
-                                        <label for="c-location3">East Dagon</label>
-                                    </li>
-                                    <li role="option">
-                                        <input type="radio" id="c-location4" name="cinemaLocation"/>
-                                        <label for="c-location4">West Dagon</label>
-                                    </li>
-                                </ul>
-                            </div> -->
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>  
 
@@ -344,16 +375,7 @@
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                    <iframe
-    src="https://www.youtube-nocookie.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp"
-    title="YouTube video player"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen>
-</iframe>
-
-                    <!-- <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+                    <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div id="trailer-content">
                         <span>News</span>
                         <label class="fw-medium">March 5, 2021</label>
@@ -361,7 +383,7 @@
                     <hr>
                     <p class="pb-3">Raya, a warrior, sets out to track down Sisu, a dragon, who transferred all her powers into a magical gem which is now scattered all over the kingdom of Kumandra, dividing its people.</p>
                 </div>
-                <!-- <div class="swiper-slide">
+                <div class="swiper-slide">
                     <iframe src="https://www.youtube.com/embed/6ZfuNTqbHE8?si=u9bMXm6yvgAhED-9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     <div id="trailer-content">
                         <span>News</span>
@@ -387,7 +409,7 @@
                     </div>
                     <hr>
                     <p class="pb-3">After an unexpected reunion with his long-lost father, the street cat Vic, Garfield is forced to leave his very comfortable life with Harald behind. Together with Vic and Odie, he plans a crazy robbery.</p>
-                </div> -->
+                </div>
             </div>
             <div class="swiper-btns">
                 <button class="button-prev">

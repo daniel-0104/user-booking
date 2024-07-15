@@ -10,28 +10,40 @@ navLinks.forEach(link => {
 // href clicked active link end
 
 // ......................................................feature trailer swiper start ............................
-// var swiper = new Swiper(".mySwiper", {
-//   slidesPerView: 2,
-//   spaceBetween: 30,
-//   loop: true,
-//   grabCursor: true,
-//   navigation: {
-//     nextEl: ".button-next",
-//     prevEl: ".button-prev",
-//   },
-//   breakpoints: {
-//     0: {
-//         slidesPerView: 1,
-//     },
-//     770: {
-//         slidesPerView: 2,
-//     },
-//     1400: {
-//         slidesPerView: 3,
-//     }
-//   }
-// });
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    770: {
+        slidesPerView: 2,
+    },
+    1400: {
+        slidesPerView: 3,
+    }
+  }
+});
 // ......................................................feature trailer swiper end ............................
+
+
+document.getElementById('cinema-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Additional logic before submitting the form
+  console.log('Form submitted without reloading the page');
+    
+  // Optionally, you can submit the form programmatically if needed
+  this.submit();
+
+});
 
 
 const customSelects = document.querySelectorAll(".custom-select");
@@ -40,10 +52,9 @@ const selectedValues = document.querySelectorAll(".selected-value");
 const optionsLists = document.querySelectorAll(".select-dropdown li");
 
 selectBtns.forEach((btn, btnIndex) => {
-  btn.addEventListener('click', () => {
-    // Toggle the active class on the specific custom select element
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
     customSelects[btnIndex].classList.toggle("active");
-    // Update the aria-expanded attribute based on the current state
     btn.setAttribute(
       "aria-expanded",
       btn.getAttribute("aria-expanded") === "true" ? "false" : "true"
@@ -57,11 +68,8 @@ optionsLists.forEach((option) => {
     const selectedValue = customSelect.querySelector('.selected-value');
     const btn = customSelect.querySelector('.select-button');
 
-    // Update the selected value text
     selectedValue.innerHTML = this.querySelector('label').textContent;
-    // Remove the active class
     customSelect.classList.remove("active");
-    // Update the aria-expanded attribute
     btn.setAttribute("aria-expanded", "false");
   });
 
@@ -71,11 +79,8 @@ optionsLists.forEach((option) => {
       const selectedValue = customSelect.querySelector('.selected-value');
       const btn = customSelect.querySelector('.select-button');
 
-      // Update the selected value text
       selectedValue.innerHTML = this.querySelector('label').textContent;
-      // Remove the active class
       customSelect.classList.remove("active");
-      // Update the aria-expanded attribute
       btn.setAttribute("aria-expanded", "false");
     }
   });
