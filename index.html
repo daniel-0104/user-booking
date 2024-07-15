@@ -31,16 +31,25 @@
                     <h5 class="ps-2">M-THEATER</h5>
                 </a>
             </div>
-            <div class="d-flex align-items-center justify-content-center">
+            <div class="d-flex align-content-center justify-content-center">
                 <ul class="navbar-nav m-auto" id="nav-order">
                     <li class="nav-item">
                         <a class="nav-link" id="hide-nav" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="hide-nav" href="booking.html">Book Now</a>
+                        <a class="nav-link" id="hide-nav" href="movies.html">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="hide-nav" href="contact.html">Contact Us</a>
+                        <a class="nav-link" id="hide-nav" href="promotions.html">Promotions</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="hide-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-dropdown="1">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
@@ -69,9 +78,16 @@
     <!-- nav bar bottom start  -->
     <nav class="position-fixed b-nav">
         <div class="d-flex b-navbar-brand">
-            <a  class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="booking.html">Book Now</a>
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="movies.html">Movies</a>
+            <a class="nav-link" href="promotions.html">Promotions</a>
+            <a class="nav-link dropup" href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-dropdown="2">
+                Pages<i class="fa-solid fa-sort-up ms-2 pt-2"></i>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
+                    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
+                </ul>
+            </a>
         </div>
     </nav>
     <!-- nav bar bottom end  -->
@@ -192,7 +208,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="col-lg-1 col-md-1 col-sm-1 mt-1 d-flex justify-content-end">
+                            <div class="col-lg-1 col-md-1 col-sm-1 mt-1">
                                 <button type="submit" class="btn search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                             </div>
                         </div>
@@ -223,7 +239,7 @@
                         <div class="zoom-img">
                             <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
                         </div>
-                        <h4>Raya And The Last Dragon</h4>
+                        <h5>Raya And The Last Dragon</h4>
                     </a>
                     <hr>
                     <div class="d-flex align-content-center justify-content-between">
@@ -233,53 +249,7 @@
                                 <label>Book Ticket</label>
                             </button>
                         </a>
-                        <p>
-                            <span><i class="fa-regular fa-star"></i></span>
-                            <label>5.0</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div>
-                    <a href="">
-                        <div class="zoom-img">
-                            <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
-                        </div>
-                        <h4>Raya And The Last Dragon</h4>
-                    </a>
-                    <hr>
-                    <div class="d-flex align-content-center justify-content-between">
-                        <a href="">
-                            <button class="btn" id="ticket-btn">
-                                <span><i class="fa-solid fa-ticket"></i></span>
-                                <label>Book Ticket</label>
-                            </button>
-                        </a>
-                        <p>
-                            <span><i class="fa-regular fa-star"></i></span>
-                            <label>5.0</label>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-sm-6 mb-4">
-                <div>
-                    <a href="">
-                        <div class="zoom-img">
-                            <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
-                        </div>
-                        <h4>Raya And The Last Dragon</h4>
-                    </a>
-                    <hr>
-                    <div class="d-flex align-content-center justify-content-between">
-                        <a href="">
-                            <button class="btn" id="ticket-btn">
-                                <span><i class="fa-solid fa-ticket"></i></span>
-                                <label>Book Ticket</label>
-                            </button>
-                        </a>
-                        <p>
+                        <p class="mt-1">
                             <span><i class="fa-regular fa-star"></i></span>
                             <label>5.0</label>
                         </p>
@@ -292,7 +262,7 @@
                         <div class="zoom-img">
                             <img src="image/Wish-Dragon.webp"  alt="">
                         </div>
-                        <h4>Wish Dragon</h4>
+                        <h5>Wish Dragon</h4>
                     </a>
                     <hr>
                     <div class="d-flex align-content-center justify-content-between">
@@ -302,7 +272,30 @@
                                 <label>Book Ticket</label>
                             </button>
                         </a>
-                        <p>
+                        <p class="mt-1">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/small-spos8674-poster-movie-the-lion-king-mufasa-wall-poster-sl-original-imaghzwansyt5m4b.webp"  alt="">
+                        </div>
+                        <h5>The Lion King</h4>
+                    </a>
+                    <hr>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1">
                             <span><i class="fa-regular fa-star"></i></span>
                             <label>5.0</label>
                         </p>
@@ -315,7 +308,7 @@
                         <div class="zoom-img">
                             <img src="image/Wish-Dragon.webp"  alt="">
                         </div>
-                        <h4>Wish Dragon</h4>
+                        <h5>Wish Dragon</h4>
                     </a>
                     <hr>
                     <div class="d-flex align-content-center justify-content-between">
@@ -325,7 +318,7 @@
                                 <label>Book Ticket</label>
                             </button>
                         </a>
-                        <p>
+                        <p class="mt-1">
                             <span><i class="fa-regular fa-star"></i></span>
                             <label>5.0</label>
                         </p>
@@ -336,9 +329,9 @@
                 <div>
                     <a href="">
                         <div class="zoom-img">
-                            <img src="image//Wish-Dragon.webp"  alt="">
+                            <img src="image/small-spos8674-poster-movie-the-lion-king-mufasa-wall-poster-sl-original-imaghzwansyt5m4b.webp"  alt="">
                         </div>
-                        <h4>Wish Dragon</h4>
+                        <h5>The Lion King</h4>
                     </a>
                     <hr>
                     <div class="d-flex align-content-center justify-content-between">
@@ -348,7 +341,30 @@
                                 <label>Book Ticket</label>
                             </button>
                         </a>
-                        <p>
+                        <p class="mt-1">
+                            <span><i class="fa-regular fa-star"></i></span>
+                            <label>5.0</label>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-sm-6 mb-4">
+                <div>
+                    <a href="">
+                        <div class="zoom-img">
+                            <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
+                        </div>
+                        <h5>Raya And The Last Dragon</h4>
+                    </a>
+                    <hr>
+                    <div class="d-flex align-content-center justify-content-between">
+                        <a href="">
+                            <button class="btn" id="ticket-btn">
+                                <span><i class="fa-solid fa-ticket"></i></span>
+                                <label>Book Ticket</label>
+                            </button>
+                        </a>
+                        <p class="mt-1">
                             <span><i class="fa-regular fa-star"></i></span>
                             <label>5.0</label>
                         </p>
@@ -424,7 +440,43 @@
     </section>
     <!-- feature trailer start  -->
 
-
+    <!-- promotion start  -->
+    <section class="container-lg" id="promotion">
+        <div class="d-flex align-content-center justify-content-between">
+            <div id="span-block">
+                <span></span>
+                <h4 class="fw-bold">Exciting Promotions</h4>
+            </div>
+            <a href="" class="text-decoration-none" id="view-more">
+                <button class="btn border-0 shadow-none fw-medium">View More <i class="fa-solid fa-arrow-right-long ms-1"></i></button>
+            </a>
+        </div>
+        <hr>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href=""><img src="image/GSC-Minions-Promo-at-Subang-Parade.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/pngtree-free-movie-poster-flyer-cinema-png-image_4301443.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/movie-promo-poster_1284-8010.avif" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/GSC-Minions-Promo-at-Subang-Parade.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/pngtree-free-movie-poster-flyer-cinema-png-image_4301443.jpg" class="w-100 d-block rounded" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href=""><img src="image/movie-promo-poster_1284-8010.avif" class="w-100 d-block rounded" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!-- promotion end -->
 </body>
 
     <!-- js bootstrap  -->

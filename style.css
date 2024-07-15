@@ -39,6 +39,29 @@ body{
 .nav-item a i:hover{
     color: var(--gold);
 }
+.dropdown-menu{
+    background-color: var(--nav-bar);
+    overflow: hidden;
+    overflow-y: auto;
+    max-height: 200px;
+    border: 1px solid white;
+}
+.dropdown-item{
+    color: white;
+    padding: 8px 0 8px 14px;
+}
+.dropdown-item:hover{
+    color: var(--gold);
+    background-color: transparent;
+}
+.nav-item .dropdown-item.active{
+    background-color: #fefefe29 !important;
+    color: white !important;
+}
+/* .dropup .dropdown-item.active {
+    background-color: #ffffff30 !important;
+    color: white !important;
+} */
 @media screen and (max-width: 768px){
     #nav-icon{
         display: flex;
@@ -179,11 +202,6 @@ body{
         width: 90%;
     }
 }
-/* @media screen and (min-width: 576px) and (max-width: 708px){
-    #cinema-form .d-flex{
-        margin-left: 2px;
-    }
-} */
 @media screen and (max-width: 992px){
     #home-search > .col-lg-3{
         margin-bottom: 20px;
@@ -204,6 +222,9 @@ body{
     }
     #search-ticket p{
         display: none !important;
+    }
+    #cinema-form .col-sm-1{
+        text-align: right;
     }
 }
 
@@ -272,14 +293,17 @@ body{
     gap: 1rem;
     align-items: center;
 }
-.select-dropdown::-webkit-scrollbar{
+.select-dropdown::-webkit-scrollbar,
+.dropdown-menu::-webkit-scrollbar{
     width: 5px;
 }
-.select-dropdown::-webkit-scrollbar-track{
+.select-dropdown::-webkit-scrollbar-track,
+.dropdown-menu::-webkit-scrollbar-track{
     background: #f1f1f1;
     border-radius: 25px;
 }
-.select-dropdown::-webkit-scrollbar-thumb{
+.select-dropdown::-webkit-scrollbar-thumb,
+.dropdown-menu::-webkit-scrollbar-thumb{
     background: var(--nav-bar);
     border-radius: 25px;
 }
@@ -315,10 +339,12 @@ body{
 }
 /*.......................................... home section end ................................... */
 
+
 /*.......................................... now showing movie start ................................... */
 #now-showing-movie,
-#feature-trailer{
-    margin: 110px auto;
+#feature-trailer,
+#promotion{
+    margin: 80px auto;
 }
 #span-block{
     display: flex; 
@@ -359,13 +385,15 @@ body{
 }
 .zoom-img img{
     width: 100%;
+    height: 190px; 
+    object-fit: cover;
     border-radius: 10px;
     transition: all .3s ease-in-out;
 }
 .zoom-img img:hover{
     transform: scale(1.1);
 }
-#now-movie-list a h4{
+#now-movie-list a h5{
     margin-top: 10px;
     text-align: center;
 }
@@ -384,7 +412,7 @@ body{
     box-shadow: 1px 2px 2px white;
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
-    #now-movie-list a h4{
+    #now-movie-list a h5{
         font-size: 12pt;
     }
 }
@@ -428,7 +456,7 @@ body{
     background-color: var(--secondary);
     color: white;
 }
-.swiper-slide{
+#feature-trailer .swiper-slide{
     background-color: var(--nav-bar);
     padding: 20px 20px 0;
     border: 1px solid white;
@@ -457,3 +485,31 @@ iframe{
 }
 /*.......................................... feature trailer end ................................... */
 
+
+/*.......................................... promotion start ................................... */
+#promotion-content{
+    background-color: var(--nav-bar);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+#promotion-content > h4{
+    margin-top: 15px;
+    margin-left: 20px;
+}
+#promotion-btn{
+    background-color: var(--secondary);
+    color: white;
+    width: 100%;
+}
+#promotion-btn:hover{
+    box-shadow: 1px 2px 2px white;
+}
+
+.mySwiper2 .swiper-slide img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 1px solid white;
+}
+/*.......................................... promotion end ................................... */

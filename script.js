@@ -9,42 +9,31 @@ navLinks.forEach(link => {
 });
 // href clicked active link end
 
-// ......................................................feature trailer swiper start ............................
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  loop: true,
-  grabCursor: true,
-  navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-    },
-    770: {
-        slidesPerView: 2,
-    },
-    1400: {
-        slidesPerView: 3,
-    }
-  }
-});
-// ......................................................feature trailer swiper end ............................
+// document.addEventListener('DOMContentLoaded', () => {
+//   const dropdownItems = document.querySelectorAll('.dropdown-item');
+//   const activePage = localStorage.getItem('activePage');
+//   if (activePage) {
+//       const activeItem = document.querySelector(`.dropdown-item[href="${activePage}"]`);
+//       if (activeItem) {
+//           activeItem.classList.add('active');
+//       }
+//   }
+
+//   dropdownItems.forEach(item => {
+//       item.addEventListener('click', (event) => {
+//           localStorage.setItem('activePage', item.getAttribute('href'));
+//           dropdownItems.forEach(i => i.classList.remove('active'));
+//           item.classList.add('active');
+//       });
+//   });
+// });
 
 
+// .................................................... search movie selected btn start .................................
 document.getElementById('cinema-form').addEventListener('submit', function(event) {
   event.preventDefault();
-
-  // Additional logic before submitting the form
-  console.log('Form submitted without reloading the page');
-    
-  // Optionally, you can submit the form programmatically if needed
   this.submit();
-
 });
-
 
 const customSelects = document.querySelectorAll(".custom-select");
 const selectBtns = document.querySelectorAll(".select-button");
@@ -84,4 +73,45 @@ optionsLists.forEach((option) => {
       btn.setAttribute("aria-expanded", "false");
     }
   });
+});
+// .................................................... search movie selected btn end .................................
+
+
+// ......................................................feature trailer swiper start... ............................
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".button-next",
+    prevEl: ".button-prev",
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    770: {
+        slidesPerView: 2,
+    },
+    1400: {
+        slidesPerView: 3,
+    }
+  }
+});
+// ......................................................feature trailer swiper end .................................
+
+
+
+var swiper = new Swiper(".mySwiper2", {
+  spaceBetween: 30,
+  slidesPerView: 4,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  }
 });
