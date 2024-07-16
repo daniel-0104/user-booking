@@ -102,7 +102,7 @@ var swiper = new Swiper(".mySwiper", {
 // ......................................................feature trailer swiper end .................................
 
 
-
+// ...................................................... promotion swiper start .................................
 var swiper = new Swiper(".mySwiper2", {
   spaceBetween: 30,
   slidesPerView: 4,
@@ -113,5 +113,33 @@ var swiper = new Swiper(".mySwiper2", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    562: {
+      slidesPerView: 2,
+    },
+    720: {
+        slidesPerView: 3,
+    },
+    980: {
+      slidesPerView: 4,
+    },
+    1300: {
+        slidesPerView: 5,
+    }
   }
 });
+// ..................................................... promotion swiper end .................................
+
+
+// var swiper = new Swiper(".mySwiper3", {
+//   direction: "vertical",
+//   spaceBetween: 30,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+// });

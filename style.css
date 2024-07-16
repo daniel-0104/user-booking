@@ -1,6 +1,8 @@
-body{
+html,body{
     background-color: var(--body);
     color: white;
+    /* position: relative;
+    height: 100%; */
 }
 :root{
     --body : #4b7198;
@@ -343,7 +345,8 @@ body{
 /*.......................................... now showing movie start ................................... */
 #now-showing-movie,
 #feature-trailer,
-#promotion{
+#promotion,
+#cinema-details{
     margin: 80px auto;
 }
 #span-block{
@@ -416,11 +419,21 @@ body{
         font-size: 12pt;
     }
 }
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .zoom-img img{
+        height: 220px !important; 
+    }
+}
+@media screen and (max-width: 576px){
+    .zoom-img img{
+        height: fit-content; 
+    }
+}
 /*.......................................... now showing movie end ................................... */
 
 
 /*.......................................... feature trailer start ................................... */
-.swiper{
+#feature-trailer .swiper{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -508,8 +521,69 @@ iframe{
 
 .mySwiper2 .swiper-slide img{
     width: 100%;
-    height: 250px;
+    height: 260px;
     object-fit: cover;
     border: 1px solid white;
 }
+.mySwiper2 .swiper-pagination-bullet-active{
+    background-color: var(--teal);
+    opacity: 1;
+}
+@media screen and (min-width: 562px) and (max-width: 720px){
+    .mySwiper2 .swiper-slide img{
+        height: 350px;
+    }
+}
+@media screen and (max-width: 562px){
+    .mySwiper2 .swiper-slide img{
+        display: block;
+        margin: auto;
+        width: 90% !important;
+        height: 420px;
+    }
+}
 /*.......................................... promotion end ................................... */
+
+
+/*.......................................... cinema details start ................................... */
+/* .swiper {
+    width: 100%;
+    height: 100%;
+  } */
+
+  /* .swiper-pagination {
+          position: absolute !important;
+          left: 3% !important;
+          top: 50%;
+          transform: translateY(-50%);
+          width: auto !important;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+  .swiper-pagination .swiper-pagination-bullet {
+      margin: 5px 0;
+  } */
+
+
+/* .mySwiper3{
+    background-color: var(--nav-bar);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px;
+    height: 320px;
+}
+.mySwiper3 img{
+    max-height: 280px;
+    object-fit: cover;
+}
+.mySwiper3 .col-lg-7{
+    padding-left: 20px;
+}
+.mySwiper3 h4{
+    color: var(--teal);
+    font-weight: bold;
+    margin: 10px 0;
+} */
+/*.......................................... cinema details end ................................... */
