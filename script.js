@@ -132,14 +132,19 @@ var swiper = new Swiper(".mySwiper2", {
     }
   }
 });
-// ..................................................... promotion swiper end .................................
+// ..................................................... promotion swiper end ....................................
 
 
-// var swiper = new Swiper(".mySwiper3", {
-//   direction: "vertical",
-//   spaceBetween: 30,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+// ..................................................... cinema details start ....................................
+var swiper = new Swiper(".mySwiper3", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  hashNavigation: {
+    watchState: true,
+  },
+  navigation: {
+    nextEl: ".button-next2",
+    prevEl: ".button-prev2",
+  },
+});
+// ..................................................... cinema details end ....................................

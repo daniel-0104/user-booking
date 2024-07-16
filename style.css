@@ -1,8 +1,8 @@
 html,body{
     background-color: var(--body);
     color: white;
-    /* position: relative;
-    height: 100%; */
+    position: relative;
+    height: 100%;
 }
 :root{
     --body : #4b7198;
@@ -347,7 +347,7 @@ html,body{
 #feature-trailer,
 #promotion,
 #cinema-details{
-    margin: 80px auto;
+    margin: 90px auto;
 }
 #span-block{
     display: flex; 
@@ -433,7 +433,7 @@ html,body{
 
 
 /*.......................................... feature trailer start ................................... */
-#feature-trailer .swiper{
+.swiper{
     position: relative;
     display: flex;
     flex-direction: column;
@@ -546,33 +546,71 @@ iframe{
 
 
 /*.......................................... cinema details start ................................... */
-/* .swiper {
-    width: 100%;
-    height: 100%;
-  } */
+.swiper-btn2s{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    z-index: 1;
+    text-align: right;
+    justify-content: space-between;
+}
+.swiper-btn2s button{
+    position: static;
+    background-color: var(--nav-bar);
+    color: var(--teal);
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.swiper-btn2s button:hover{
+    background-color: var(--nav-bar);
+    color: var(--teal);
+    border: 1px solid white;
+}
 
-  /* .swiper-pagination {
-          position: absolute !important;
-          left: 3% !important;
-          top: 50%;
-          transform: translateY(-50%);
-          width: auto !important;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-      }
-  .swiper-pagination .swiper-pagination-bullet {
-      margin: 5px 0;
-  } */
-
-
-/* .mySwiper3{
+#cinema-detail-content{
     background-color: var(--nav-bar);
     border: 1px solid white;
     border-radius: 10px;
     padding: 20px;
-    height: 320px;
+}
+#cinema-detail-content h5{
+    color: var(--teal);
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* .swiper{
+    width: 100%;
+    height: 100%;
+}
+.mySwiper3 .swiper-pagination{
+    position: absolute !important;
+    left: 1% !important;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mySwiper3 .swiper-pagination .swiper-pagination-bullet{
+    margin: 5px 0;
+}
+.mySwiper3 .swiper-pagination-bullet-active{
+    background-color: var(--teal);
+    opacity: 1;
+}
+
+.mySwiper3{
+    display: block;
+    height: 330px;
+
 }
 .mySwiper3 img{
     max-height: 280px;
@@ -581,9 +619,9 @@ iframe{
 .mySwiper3 .col-lg-7{
     padding-left: 20px;
 }
-.mySwiper3 h4{
-    color: var(--teal);
-    font-weight: bold;
-    margin: 10px 0;
+
+#cinema-details-bottom{
+    background-color: red;
+    margin: 80px 0 !important;
 } */
 /*.......................................... cinema details end ................................... */
