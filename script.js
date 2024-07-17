@@ -146,5 +146,18 @@ var swiper = new Swiper(".mySwiper3", {
     nextEl: ".button-next2",
     prevEl: ".button-prev2",
   },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    770: {
+        slidesPerView: 2,
+    },
+    1200: {
+        slidesPerView: 3,
+    }
+  },
+  simulateTouch: false,
+  allowTouchMove: false,
 });
 // ..................................................... cinema details end ....................................

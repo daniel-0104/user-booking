@@ -1,8 +1,6 @@
-html,body{
+body{
     background-color: var(--body);
     color: white;
-    position: relative;
-    height: 100%;
 }
 :root{
     --body : #4b7198;
@@ -546,6 +544,10 @@ iframe{
 
 
 /*.......................................... cinema details start ................................... */
+.swiper-slide {
+    user-select: auto;
+}
+
 .swiper-btn2s{
     position: relative;
     display: flex;
@@ -576,13 +578,28 @@ iframe{
     border: 1px solid white;
     border-radius: 10px;
     padding: 20px;
+    height: 430px;
+}
+#cinema-detail-content img{
+    height: 220px;
+    object-fit: cover;
 }
 #cinema-detail-content h5{
     color: var(--teal);
     font-weight: bold;
-    margin: 10px 0;
-    text-align: center;
+    margin: 10px 0 20px;
 }
+
+@media screen and (max-width: 770px){
+    #cinema-detail-content img{
+        height: 260px;
+        object-fit: cover;
+    }
+}
+/* #cinema-detail-content i,
+#cinema-detail-content strong{
+    color: var(--teal);
+} */
 
 /* .swiper{
     width: 100%;
