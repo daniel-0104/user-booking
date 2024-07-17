@@ -544,10 +544,9 @@ iframe{
 
 
 /*.......................................... cinema details start ................................... */
-.swiper-slide {
+.swiper-slide{
     user-select: auto;
 }
-
 .swiper-btn2s{
     position: relative;
     display: flex;
@@ -589,56 +588,68 @@ iframe{
     font-weight: bold;
     margin: 10px 0 20px;
 }
-
 @media screen and (max-width: 770px){
     #cinema-detail-content img{
         height: 260px;
         object-fit: cover;
     }
 }
-/* #cinema-detail-content i,
-#cinema-detail-content strong{
-    color: var(--teal);
-} */
-
-/* .swiper{
-    width: 100%;
-    height: 100%;
-}
-.mySwiper3 .swiper-pagination{
-    position: absolute !important;
-    left: 1% !important;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto !important;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.mySwiper3 .swiper-pagination .swiper-pagination-bullet{
-    margin: 5px 0;
-}
-.mySwiper3 .swiper-pagination-bullet-active{
-    background-color: var(--teal);
-    opacity: 1;
-}
-
-.mySwiper3{
-    display: block;
-    height: 330px;
-
-}
-.mySwiper3 img{
-    max-height: 280px;
-    object-fit: cover;
-}
-.mySwiper3 .col-lg-7{
-    padding-left: 20px;
-}
-
-#cinema-details-bottom{
-    background-color: red;
-    margin: 80px 0 !important;
-} */
 /*.......................................... cinema details end ................................... */
+
+
+/*.......................................... footer section start ................................... */
+#footer{
+    background-color: #242f3b;
+}
+#footer h5{
+    text-transform: uppercase;
+    font-size: 15pt;
+}
+#footer h6{
+    text-transform: uppercase;
+    font-size: 10pt;
+}
+#footer p{
+    color: rgb(230, 227, 227);
+    line-height: 25px;
+}
+#footer-icon a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    font-size: 12pt;
+    border: 1px solid var(--gold);
+    margin-right: 12px;
+}
+#footer-icon a:hover{
+    color: var(--gold);
+}
+#footer-simple ul{
+    list-style: none;
+    text-align: left;
+    padding-left: 0;
+}
+#footer-simple ul li{
+    padding: 5px 0;
+}
+#footer-simple ul li a{
+    text-decoration: none;
+    color: rgb(230, 227, 227);
+    font-size: 12pt;
+}
+#footer-simple ul li a i{
+    color: var(--gold);
+}
+#footer-simple ul li a:hover{
+    color: var(--gold);
+}
+#footer-bottom a{
+    text-decoration: none;
+    color: white;
+}
+/*.......................................... footer section end ................................... */
