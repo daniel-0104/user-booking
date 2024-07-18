@@ -13,7 +13,6 @@ body{
 /*.......................................... nav bar start ................................... */
 #nav{
     background-color: var(--nav-bar);
-
 }
 #logo-img{
     display: block;
@@ -31,73 +30,37 @@ body{
 }
 #nav-order > li > a{
     color: white;
-    padding: 8px 25px;
+    padding: 8px 35px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
 }
 #nav-order > li > a:hover,
-.nav-item a i:hover{
-    color: var(--gold);
+.nav-item a i:hover,
+#login-btn:hover{
+    color: var(--gold) !important;
 }
-.dropdown-menu{
-    background-color: var(--nav-bar);
-    overflow: hidden;
-    overflow-y: auto;
-    max-height: 200px;
-    border: 1px solid white;
-}
-.dropdown-item{
+.navbar-toggler{
+    border: none;
     color: white;
-    padding: 8px 0 8px 14px;
+    box-shadow: none;
+    outline: 0;
 }
-.dropdown-item:hover{
-    color: var(--gold);
-    background-color: transparent;
+.navbar-toggler:focus{
+    box-shadow: none;
 }
-.nav-item .dropdown-item.active{
-    background-color: #fefefe29 !important;
-    color: white !important;
-}
-/* .dropup .dropdown-item.active {
-    background-color: #ffffff30 !important;
-    color: white !important;
-} */
 @media screen and (max-width: 768px){
     #nav-icon{
         display: flex;
     }
-    #hide-nav{
-        display: none;
+    .navbar-nav li{
+        padding: 8px 0;
     }
-    .b-nav{
-        display: block !important;
+    #nav-icon{
+        border-top: 1px solid rgb(242, 240, 240);
+        padding-left: 20px;
+        padding-top: 18px;
+        margin-top: 10px;
     }
-}
-.b-nav{
-    background-color: var(--nav-bar);
-    bottom: 0;
-    width: 100%;
-    display: none;
-    z-index: 9999;
-    padding: 12px 0;
-}
-.b-navbar-brand{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.b-navbar-brand > a{
-    display: flex;
-    margin: auto;
-    padding: 0 20px;
-    align-items: center;
-    justify-content: center;
-    font-size: 10pt;
-    color: white;
-    text-decoration: none;
-}
-.b-navbar-brand > a:hover{
-    color: var(--gold);
 }
 /*.......................................... nav bar end ................................... */
 
@@ -601,9 +564,11 @@ iframe{
 #footer{
     background-color: #242f3b;
 }
-#footer h5{
+#footer h5,
+#toggle-btn button{
     text-transform: uppercase;
     font-size: 15pt;
+    color: white;
 }
 #footer h6{
     text-transform: uppercase;
@@ -629,27 +594,74 @@ iframe{
 #footer-icon a:hover{
     color: var(--gold);
 }
-#footer-simple ul{
+#footer-simple ul,
+#footer-dropdown ul{
     list-style: none;
     text-align: left;
     padding-left: 0;
 }
-#footer-simple ul li{
+#footer-simple ul li,
+#footer-dropdown ul li{
     padding: 5px 0;
 }
-#footer-simple ul li a{
+#footer-simple ul li a,
+#footer-dropdown ul li a{
     text-decoration: none;
     color: rgb(230, 227, 227);
     font-size: 12pt;
 }
-#footer-simple ul li a i{
+#footer-simple ul li a i,
+#footer-dropdown ul li a i{
     color: var(--gold);
 }
-#footer-simple ul li a:hover{
+#footer-simple ul li a:hover,
+#footer-dropdown ul li a:hover{
     color: var(--gold);
+}
+#footer-dropdown{
+    display: none;
+}
+#toggle-btn button{
+    width: fit-content;
+    text-align: left;
+    margin-left: -14px;
+    border: none;
+}
+#footer-dropdown div{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    border-radius: 4px;
+}
+#down{
+    display: block;
+    font-size: 10pt;
+}
+#up{
+    display: none;
+    font-size: 10pt;
 }
 #footer-bottom a{
     text-decoration: none;
     color: white;
+}
+@media screen and (max-width: 768px){
+    /* #footer{
+        margin-bottom: 40px;
+    } */
+    #footer-dropdown{
+        display: block;
+        margin-bottom: 25px;
+    }
+    #footer-simple{
+        display: none;
+    }
+    #footer h5,
+    #toggle-btn button{
+        font-size: 13pt;
+    }
+    #developer{
+        display: none;
+    }
 }
 /*.......................................... footer section end ................................... */

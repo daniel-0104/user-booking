@@ -161,3 +161,15 @@ var swiper = new Swiper(".mySwiper3", {
   allowTouchMove: false,
 });
 // ..................................................... cinema details end ....................................
+
+
+//................................................. footer dropdown start ...........................................
+$(document).ready(function(){
+  $('#toggle-btn').click(function(){
+    $('#drop-items').toggle(500);
+    $('#down').toggle();
+    $('#up').toggle();
+  });
+  $('#drop-items').hide();
+});
+// ................................................... footer dropdown end ........................................
