@@ -48,6 +48,9 @@ body{
 .navbar-toggler:focus{
     box-shadow: none;
 }
+#login-btn{
+    border: 1px solid white;
+}
 @media screen and (max-width: 768px){
     #nav-icon{
         display: flex;
@@ -58,8 +61,8 @@ body{
     #nav-icon{
         border-top: 1px solid rgb(242, 240, 240);
         padding-left: 20px;
-        padding-top: 18px;
-        margin-top: 10px;
+        padding-top: 15px;
+        margin: 10px 0;
     }
 }
 /*.......................................... nav bar end ................................... */
@@ -75,7 +78,8 @@ body{
     align-items: center;
     color: var(--white);
 }
-#home-poster-content{
+#home-poster-content,
+#home-poster-content2{
     text-align: center;
     width: 100%;
     height: 100vh;
@@ -89,18 +93,29 @@ body{
     text-align: center;
     font-size: 50pt;
     word-spacing: 2pt;
-    width: 70%;
+    width: 70% !important;
     font-weight: bold;
 }
-#home-poster-content > div > h1 > span{
+#home-poster-content2 > div > h1{
+    display: block;
+    margin: auto;
+    text-align: center;
+    font-size: 50pt;
+    word-spacing: 2pt;
+    width: 100%;
+    font-weight: bold;
+}
+#home-poster-content > div > h1 > span,
+#home-poster-content2 > div > h1 > span{
     color: var(--gold);
 }
-#home-poster-content > div > p{
-    width: 80%;
+#home-poster-content > div > p,
+#home-poster-content2 > div > p{
+    width: 80% !important;
     display: block;
     margin: auto;
     margin-top: 20px;
-    font-size: 15pt;
+    font-size: 16pt;
 }
 
 #search-ticket{
@@ -176,7 +191,8 @@ body{
     }
 }
 @media screen and (max-width: 576px){
-    #home-poster-content > div > h1{
+    #home-poster-content > div > h1,
+    #home-poster-content2 > div > h1{
         width: 100%;
         font-size: 30pt;
     }
@@ -256,17 +272,14 @@ body{
     gap: 1rem;
     align-items: center;
 }
-.select-dropdown::-webkit-scrollbar,
-.dropdown-menu::-webkit-scrollbar{
+.select-dropdown::-webkit-scrollbar{
     width: 5px;
 }
-.select-dropdown::-webkit-scrollbar-track,
-.dropdown-menu::-webkit-scrollbar-track{
+.select-dropdown::-webkit-scrollbar-track{
     background: #f1f1f1;
     border-radius: 25px;
 }
-.select-dropdown::-webkit-scrollbar-thumb,
-.dropdown-menu::-webkit-scrollbar-thumb{
+.select-dropdown::-webkit-scrollbar-thumb{
     background: var(--nav-bar);
     border-radius: 25px;
 }
@@ -665,3 +678,52 @@ iframe{
     }
 }
 /*.......................................... footer section end ................................... */
+
+
+/*.......................................... movie category start ................................... */
+#movies-category{
+    margin: 40px auto;
+}
+#category-form,
+#movie-list{
+    background-color: var(--nav-bar);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 23px;
+}
+#category-form h5{
+    text-transform: uppercase;
+}
+#category-content{
+    height: 340px;
+    overflow-y: auto !important;
+}
+#category-content::-webkit-scrollbar{
+    width: 3px;
+}
+#category-content::-webkit-scrollbar-track{
+    background: #f1f1f1;
+    border-radius: 25px;
+}
+#category-content::-webkit-scrollbar-thumb{
+    background: var(--gold);
+    border-radius: 25px;
+}
+#category-content a{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    /* background-color: #c4bfbf48;
+    color: white; */
+}
+#category-content a:hover{
+    color: var(--gold);
+}
+#category-content label{
+    margin-top: -10px;
+}
+/*.......................................... movie category end ................................... */
