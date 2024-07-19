@@ -9,30 +9,16 @@ navLinks.forEach(link => {
 });
 // href clicked active link end
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const dropdownItems = document.querySelectorAll('.dropdown-item');
-//   const activePage = localStorage.getItem('activePage');
-//   if (activePage) {
-//       const activeItem = document.querySelector(`.dropdown-item[href="${activePage}"]`);
-//       if (activeItem) {
-//           activeItem.classList.add('active');
-//       }
-//   }
-
-//   dropdownItems.forEach(item => {
-//       item.addEventListener('click', (event) => {
-//           localStorage.setItem('activePage', item.getAttribute('href'));
-//           dropdownItems.forEach(i => i.classList.remove('active'));
-//           item.classList.add('active');
-//       });
-//   });
-// });
-
 
 // .................................................... search movie selected btn start .................................
-document.getElementById('cinema-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  this.submit();
+document.addEventListener('DOMContentLoaded', () => {
+  const cinemaForm = document.getElementById('cinema-form');
+  if (cinemaForm) {
+    cinemaForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      this.submit();
+    });
+  }
 });
 
 const customSelects = document.querySelectorAll(".custom-select");
@@ -173,3 +159,63 @@ $(document).ready(function(){
   $('#drop-items').hide();
 });
 // ................................................... footer dropdown end ........................................
+
+
+
+//....................................... ......category active link start .........................................
+const categoryLinks = document.querySelectorAll('.category-link');
+categoryLinks.forEach(link => link.classList.remove('active'));
+categoryLinks.forEach(link => {
+  if (currentHTMLPage.includes(link.getAttribute('href'))) {
+    link.classList.add('active');
+  }
+});
+//................................................category active link end..... .........................................
+
+//................................................ movie sorting start ..... .........................................
+const sortingSelect = document.querySelector(".sorting-content");
+const sortingBtn = document.querySelector(".sorting-select-btn");
+const sortingValue = document.querySelector(".sorting-selected-value");
+const sortingOptions = document.querySelectorAll(".sorting-dropdown li");
+
+document.addEventListener('DOMContentLoaded', () => {
+  sortingOptions.forEach((option) => {
+    const label = option.querySelector('label');
+    if (label.textContent === sortingValue.textContent) {
+      option.querySelector('input').checked = true;
+    }
+  });
+});
+
+sortingBtn.addEventListener('click', (event) => {
+  event.preventDefault();
+  sortingSelect.classList.toggle("active");
+  sortingBtn.setAttribute(
+    "aria-expanded",
+    sortingBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+  );
+});
+
+sortingOptions.forEach((option) => {
+  option.addEventListener("click", function () {
+    sortingValue.innerHTML = this.querySelector('label').textContent;
+    sortingSelect.classList.remove("active");
+    sortingBtn.setAttribute("aria-expanded", "false");
+
+    sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
+    this.querySelector('input').checked = true;
+  });
+
+  option.addEventListener("keyup", function (e) {
+    if (e.key === "Enter") {
+      sortingValue.innerHTML = this.querySelector('label').textContent;
+      sortingSelect.classList.remove("active");
+      sortingBtn.setAttribute("aria-expanded", "false");
+
+      sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
+      this.querySelector('input').checked = true;
+    }
+  });
+});
+
+//................................................ movie sorting end..... .........................................

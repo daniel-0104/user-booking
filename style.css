@@ -48,9 +48,6 @@ body{
 .navbar-toggler:focus{
     box-shadow: none;
 }
-#login-btn{
-    border: 1px solid white;
-}
 @media screen and (max-width: 768px){
     #nav-icon{
         display: flex;
@@ -226,7 +223,8 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.selected-value{
+.selected-value,
+.sorting-selected-value{
     text-align: left;
 }
 .selected-value > i{
@@ -256,7 +254,8 @@ body{
     visibility: hidden;
     z-index: 1;
 }
-.select-dropdown li{
+.select-dropdown li,
+.sorting-dropdown li{
     position: relative;
     cursor: pointer;
     display: flex;
@@ -264,7 +263,8 @@ body{
     align-items: center;
     font-size: 12pt;
 }
-.select-dropdown li label{
+.select-dropdown li label,
+.sorting-dropdown li label{
     width: 100%;
     padding: 8px 10px;
     cursor: pointer;
@@ -291,15 +291,18 @@ body{
     background-color: #ffffff30;
     color: white;
 }
-.select-dropdown input[type="radio"]{
+.select-dropdown input[type="radio"],
+.sorting-dropdown input[type="radio"]{
     position: absolute;
     left: 0;
     opacity: 0;
 }
-.custom-select.active .arrow{
+.custom-select.active .arrow,
+.sorting-content.active .arrow{
     transform: rotate(180deg);
 }
-.custom-select.active .select-dropdown{
+.custom-select.active .select-dropdown,
+.sorting-content.active .sorting-dropdown{
     opacity: 1;
     visibility: visible;
     transform: scaleY(1);
@@ -659,9 +662,6 @@ iframe{
     color: white;
 }
 @media screen and (max-width: 768px){
-    /* #footer{
-        margin-bottom: 40px;
-    } */
     #footer-dropdown{
         display: block;
         margin-bottom: 25px;
@@ -682,12 +682,10 @@ iframe{
 
 /*.......................................... movie category start ................................... */
 #movies-category{
-    margin: 40px auto;
+    margin: 30px auto 70px;
 }
-#category-form,
-#movie-list{
+#category-form{
     background-color: var(--nav-bar);
-    border: 1px solid white;
     border-radius: 10px;
     padding: 20px 23px;
 }
@@ -695,17 +693,20 @@ iframe{
     text-transform: uppercase;
 }
 #category-content{
-    height: 340px;
+    height: 350px;
     overflow-y: auto !important;
 }
-#category-content::-webkit-scrollbar{
+#category-content::-webkit-scrollbar,
+.sorting-dropdown::-webkit-scrollbar{
     width: 3px;
 }
-#category-content::-webkit-scrollbar-track{
-    background: #f1f1f1;
+#category-content::-webkit-scrollbar-track,
+.sorting-dropdown::-webkit-scrollbar-track{
+    background: #ffffff;
     border-radius: 25px;
 }
-#category-content::-webkit-scrollbar-thumb{
+#category-content::-webkit-scrollbar-thumb,
+.sorting-dropdown::-webkit-scrollbar-thumb{
     background: var(--gold);
     border-radius: 25px;
 }
@@ -717,13 +718,85 @@ iframe{
     color: white;
     padding: 8px;
     text-decoration: none;
-    /* background-color: #c4bfbf48;
-    color: white; */
+}
+.category-link.active,
+.sorting-dropdown input:checked ~ label,
+.sorting-dropdown input:focus ~ label{
+    background-color: #e8e4e416 !important;
+    color: white !important;
 }
 #category-content a:hover{
     color: var(--gold);
 }
 #category-content label{
     margin-top: -10px;
+}
+
+#movie-label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#movie-label p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 35px;
+    font-size: 13pt;
+    border-radius: 5px;
+    width: fit-content;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+#movie-list{
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+#movie-sorting label{
+    margin-right: 20px;
+}
+
+.sorting-content{
+    position: relative;
+    width: 60%;
+    font-size: 1.14rem;
+    color: white;
+}
+.sorting-select-btn{
+    width: 100%;
+    font-size: 1.13rem;
+    background-color: transparent;
+    padding: 8px 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sorting-dropdown{
+    position: absolute;
+    list-style: none;
+    width: 100%;
+    background-color: var(--nav-bar);
+    box-shadow: rgba(0, 0, 0, 0.199) 0px -4px 10px;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 5px;
+    max-height: 140px;
+    overflow-y: auto;
+    transition: 0.5s ease;
+    transform: scaleY(0);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+.sorting-dropdown li:hover{
+    color: var(--gold);
 }
 /*.......................................... movie category end ................................... */
