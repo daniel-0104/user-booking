@@ -91,7 +91,7 @@
                 </div>
                 <div id="movie-list">  
                     <div class="row" id="movie-sorting">
-                        <div class="col-lg-8 col-sm-8">
+                        <div class="col-lg-8 col-sm-8 bg-danger">
                             <div class="d-flex align-items-center">
                                 <label>Sort By : </label>
                                 <div class="sorting-content">
@@ -112,30 +112,93 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-sm-4">
+                        <div class="col-lg-4 col-sm-4 bg-warning">
                             <ul id="movie-cell-category">
-                                <li><a href="javascript:void(0)"><i class="fa-solid fa-list"></i></a></li>
-                                <li><a href="javascript:void(0)"><i class="fa-solid fa-table-cells-large"></i></a></li>
+                                <li><a href="javascript:void(0)" class="cell-content cell-active" data-element-class="movieList"><i class="fa-solid fa-list"></i></a></li>
+                                <li><a href="javascript:void(0)" class="cell-content" data-element-class="movieCell"><i class="fa-solid fa-table-cells-large"></i></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div id="movie-list-content">
-                    <div id="movie-list-show">
-                        <div class="row">
-                            <div class="col-lg-5">
+                    <div class="container-lg" id="movie-list-show">
+                        <div class="row mb-4">
+                            <div class="col-lg-6 col-md-6">
                                 <a href="">
                                     <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
                                 </a>
                             </div>
-                            <div class="col-lg-7">
+                            <div class="col-lg-6 col-md-6">
                                 <a href="">
                                     <h4>Raya And The Last Dragon</h4>
                                 </a>
+                                <span>2h 30min</span>
+                                <p class="mt-3">Animation | Adventure | Action</p>
+                                <strong>Release Date :</strong><label class="ms-2">March 5, 2021</label>
+                                <hr>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="">
+                                        <button class="btn" id="ticket-btn">
+                                            <span><i class="fa-solid fa-ticket"></i></span>
+                                            <label>Book Ticket</label>
+                                        </button>
+                                    </a>
+                                    <a href="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                </div>
                             </div>
                         </div>
+                        <!-- <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <a href="">
+                                    <img src="image/Wish-Dragon.webp" class="w-100 d-block rounded" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="">
+                                    <h4>Wish Dragon</h4>
+                                </a>
+                                <span>1h 50min</span>
+                                <p class="mt-3">Animation | Adventure | Action</p>
+                                <strong>Release Date :</strong><label class="ms-2">March 5, 2022</label>
+                                <hr>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="">
+                                        <button class="btn" id="ticket-btn">
+                                            <span><i class="fa-solid fa-ticket"></i></span>
+                                            <label>Book Ticket</label>
+                                        </button>
+                                    </a>
+                                    <a href="https://www.youtube.com/embed/uWIRyU5fuzU?si=OhGi-N6NmjELZV_T" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mb-4">
+                            <div class="col-lg-6">
+                                <a href="">
+                                    <img src="image/small-spos8674-poster-movie-the-lion-king-mufasa-wall-poster-sl-original-imaghzwansyt5m4b.webp" class="w-100 d-block rounded" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg-6">
+                                <a href="">
+                                    <h4>The Lion King</h4>
+                                </a>
+                                <span>2h 10min</span>
+                                <p class="mt-3">Animation | Adventure | Family</p>
+                                <strong>Release Date :</strong><label class="ms-2">Feb 10, 1998</label>
+                                <hr>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <a href="">
+                                        <button class="btn" id="ticket-btn">
+                                            <span><i class="fa-solid fa-ticket"></i></span>
+                                            <label>Book Ticket</label>
+                                        </button>
+                                    </a>
+                                    <a href="https://www.youtube.com/embed/IeFWNtMo1Fs?si=9H0VwKVqG7d01UYb" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
-                    <!-- <div class="row" id="movie-cell-show">
+                    <div class="row" id="movie-cell-show">
                         <div class="col-lg-6 mb-4">
                             <div>
                                 <a href="">
@@ -182,7 +245,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="col-lg-3 order-lg-first">

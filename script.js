@@ -9,6 +9,7 @@ navLinks.forEach(link => {
 });
 // href clicked active link end
 
+
 // .................................................... search movie selected btn start .................................
 document.addEventListener('DOMContentLoaded', () => {
   const cinemaForm = document.getElementById('cinema-form');
@@ -160,7 +161,6 @@ $(document).ready(function(){
 // ................................................... footer dropdown end ........................................
 
 
-
 //....................................... ......category active link start .........................................
 const categoryLinks = document.querySelectorAll('.category-link');
 categoryLinks.forEach(link => link.classList.remove('active'));
@@ -170,6 +170,7 @@ categoryLinks.forEach(link => {
   }
 });
 //................................................category active link end..... .........................................
+
 
 //................................................ movie sorting start ..... .........................................
 const sortingSelect = document.querySelector(".sorting-content");
@@ -218,5 +219,32 @@ sortingOptions.forEach((option) => {
     }
   });
 });
-
 //................................................ movie sorting end..... .........................................
+
+
+//................................................ movie cell category start .......................................
+let cellContent = document.querySelectorAll('#movie-cell-category li a');
+const movieList = document.getElementById('movie-list-show');
+const movieCell = document.getElementById('movie-cell-show');
+
+function detailsClick(event){
+  event.preventDefault(); 
+  const clickedElement = event.target.tagName === 'I' ? event.target.parentElement : event.target;
+  const elementClass = clickedElement.dataset.elementClass;
+
+  if(clickedElement.classList.contains('cell-active')){
+    return;
+  }
+  for(let d of cellContent){
+    d.classList.remove('cell-active');
+  }
+  clickedElement.classList.add('cell-active');
+
+  movieList.style.display = elementClass === 'movieList' ? 'block' : 'none';
+  movieCell.style.display = elementClass === 'movieCell' ? 'flex' : 'none';
+}
+
+cellContent.forEach(item => {
+  item.addEventListener('click',detailsClick);
+});
+//................................................ movie cell category end .......................................

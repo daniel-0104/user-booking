@@ -25,6 +25,9 @@ body{
     color: var(--gold);
     font-family: fantasy;
 }
+#login-btn{
+    border: 1px solid var(--secondary);
+}
 .nav-link.active{
     color: var(--gold) !important;
 }
@@ -381,7 +384,8 @@ body{
     text-align: center;
 }
 #now-movie-list a:hover,
-#movie-cell-show a:hover{
+#movie-cell-show a:hover,
+#ticket-btn span i{
     color: var(--teal);
 }
 #ticket-btn{
@@ -393,7 +397,7 @@ body{
     cursor: pointer;
 }
 #ticket-btn:hover{
-    box-shadow: 1px 2px 2px white;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
     #now-movie-list a h5{
@@ -697,7 +701,7 @@ iframe{
     text-transform: uppercase;
 }
 #category-content{
-    height: 350px;
+    height: 380px;
     overflow-y: auto !important;
 }
 #category-content::-webkit-scrollbar,
@@ -775,7 +779,6 @@ iframe{
     font-size: 1.12rem;
     background-color: transparent;
     padding: 8px 10px;
-    /* border: 1px solid white; */
     border: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
     border-radius: 5px;
@@ -819,18 +822,73 @@ iframe{
     font-size: 15pt;
     padding: 0 15px ;
 }
+#movie-cell-category li a:hover,
+#movie-cell-category li a::after,
+#movie-cell-category li a.cell-active,
+#movie-cell-category li a i:hover,
+#movie-cell-category li a i::after{
+    color: var(--teal);
+}
 
 #movie-list-content{
    margin: 20px auto;
 }
-#movie-list-show{
+#movie-list-show > div{
     background-color: var(--nav-bar);
     border-radius: 10px;
-    padding: 20px;
-    border: 1px solid white;
+    padding: 30px 20px 30px 4px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+#movie-cell-show{
+    display: none;
+}
+#movie-list-show a{
+    text-decoration: none;
+}
+#movie-list-show a h4{
+    color: white;
+    margin-bottom: 10px;
+}
+#movie-list-show a h4:hover,
+#movie-list-show span,
+#circle-play i,
+#circle-play:hover{
+    color: var(--teal);
+}
+#circle-play{
+    color: white
 }
 
-
+@media screen and (max-width: 576px){
+    #movie-sorting{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    #movie-sorting .col-lg-8,
+    #movie-sorting .col-lg-4{
+        width: fit-content;
+    }
+    .sorting-content{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+    #movie-list-show img{
+        display: block;
+        width: 80% !important;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 767px){
+    #movie-list-show a h4{
+        margin-top: 20px;
+    }
+    #movie-list-show > div{
+        padding: 20px 10px;
+    }
+}
 @media screen and (max-width: 992px){
     #category-form{
         margin-top: 30px;
