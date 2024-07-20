@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #4b7198;
+    --body : #4d759c;
     --nav-bar: #344d69;
     --secondary: #2980B9;
     --gold: #FFD700;
@@ -30,7 +30,7 @@ body{
 }
 #nav-order > li > a{
     color: white;
-    padding: 8px 35px;
+    padding: 8px 30px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -347,13 +347,15 @@ body{
 #view-more > button:hover{
     color: white;
 }
-#now-movie-list > .col-lg-4 > div{
+#now-movie-list > .col-lg-4 > div,
+#movie-cell-show > .col-lg-6 > div{
     background-color: var(--nav-bar) ;
     padding: 20px 20px 12px;
     border-radius: 10px;
     border: 1px solid white;
 }
-#now-movie-list a{
+#now-movie-list a,
+#movie-cell-show a{
     color: white;
     text-decoration: none;
 }
@@ -373,11 +375,13 @@ body{
 .zoom-img img:hover{
     transform: scale(1.1);
 }
-#now-movie-list a h5{
+#now-movie-list a h5,
+#movie-cell-show a h5{
     margin-top: 10px;
     text-align: center;
 }
-#now-movie-list a:hover{
+#now-movie-list a:hover,
+#movie-cell-show a:hover{
     color: var(--teal);
 }
 #ticket-btn{
@@ -722,7 +726,7 @@ iframe{
 .category-link.active,
 .sorting-dropdown input:checked ~ label,
 .sorting-dropdown input:focus ~ label{
-    background-color: #e8e4e416 !important;
+    background-color: #e8e4e41b !important;
     color: white !important;
 }
 #category-content a:hover{
@@ -749,6 +753,7 @@ iframe{
     width: fit-content;
     font-weight: bold;
     margin-bottom: 0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
 }
 #movie-list{
     background-color: var(--nav-bar);
@@ -763,15 +768,16 @@ iframe{
 .sorting-content{
     position: relative;
     width: 60%;
-    font-size: 1.14rem;
     color: white;
 }
 .sorting-select-btn{
     width: 100%;
-    font-size: 1.13rem;
+    font-size: 1.12rem;
     background-color: transparent;
     padding: 8px 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    border: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
     border-radius: 5px;
     cursor: pointer;
     color: white;
@@ -798,5 +804,36 @@ iframe{
 }
 .sorting-dropdown li:hover{
     color: var(--gold);
+}
+#movie-cell-category{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 6px;
+}
+#movie-cell-category li a{
+    text-decoration: none;
+    color: white;
+    font-size: 15pt;
+    padding: 0 15px ;
+}
+
+#movie-list-content{
+   margin: 20px auto;
+}
+#movie-list-show{
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid white;
+}
+
+
+@media screen and (max-width: 992px){
+    #category-form{
+        margin-top: 30px;
+    }
 }
 /*.......................................... movie category end ................................... */

@@ -9,7 +9,6 @@ navLinks.forEach(link => {
 });
 // href clicked active link end
 
-
 // .................................................... search movie selected btn start .................................
 document.addEventListener('DOMContentLoaded', () => {
   const cinemaForm = document.getElementById('cinema-form');
@@ -187,14 +186,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-sortingBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  sortingSelect.classList.toggle("active");
-  sortingBtn.setAttribute(
-    "aria-expanded",
-    sortingBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-  );
-});
+if(sortingBtn){
+  sortingBtn.addEventListener('click', (event) => {
+    event.preventDefault();
+    sortingSelect.classList.toggle("active");
+    sortingBtn.setAttribute(
+      "aria-expanded",
+      sortingBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+    );
+  });
+};
 
 sortingOptions.forEach((option) => {
   option.addEventListener("click", function () {

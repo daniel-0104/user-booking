@@ -21,7 +21,7 @@
     <!-- css -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-page="index-page">
+<body>
     <!-- nav bar start-->
     <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="nav">
         <div class="container-fluid">
@@ -46,7 +46,7 @@
                         <a class="nav-link" href="promotions.html">Promotions</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact Us</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
                 <div class="nav-item d-flex" id="nav-icon">
@@ -76,7 +76,116 @@
     <!-- movie category start  -->
     <section class="mx-4">
         <div class="row" id="movies-category">
-            <div class="col-lg-3">
+            <div class="col-lg-9">
+                <div id="movie-label">
+                    <p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv-minimal"><path d="M7 21h10"/><rect width="20" height="14" x="2" y="3" rx="2"/></svg>
+                        <span class="ms-3">MOVIES</span>
+                    </p>
+                    <form action="">
+                        <div class="group">
+                            <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
+                            <input class="input" type="search" placeholder="Search for movie" name="searchbar"/>
+                        </div>
+                    </form>
+                </div>
+                <div id="movie-list">  
+                    <div class="row" id="movie-sorting">
+                        <div class="col-lg-8 col-sm-8">
+                            <div class="d-flex align-items-center">
+                                <label>Sort By : </label>
+                                <div class="sorting-content">
+                                    <button class="sorting-select-btn" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
+                                        <span class="sorting-selected-value">Now Showing</span>
+                                        <span class="arrow"></span>
+                                    </button>
+                                    <ul class="sorting-dropdown" role="listbox">
+                                        <li role="option">
+                                            <input type="radio" id="sorting1" name="sortingCategory"/>
+                                            <label for="sorting1">Now Showing</label>
+                                        </li>
+                                        <li role="option">
+                                            <input type="radio" id="sorting2" name="sortingCategory"/>
+                                            <label for="sorting2">Coming Soon</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-4">
+                            <ul id="movie-cell-category">
+                                <li><a href="javascript:void(0)"><i class="fa-solid fa-list"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="fa-solid fa-table-cells-large"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="movie-list-content">
+                    <div id="movie-list-show">
+                        <div class="row">
+                            <div class="col-lg-5">
+                                <a href="">
+                                    <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
+                                </a>
+                            </div>
+                            <div class="col-lg-7">
+                                <a href="">
+                                    <h4>Raya And The Last Dragon</h4>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row" id="movie-cell-show">
+                        <div class="col-lg-6 mb-4">
+                            <div>
+                                <a href="">
+                                    <div class="zoom-img">
+                                        <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg"  alt="">
+                                    </div>
+                                    <h5>Raya And The Last Dragon</h4>
+                                </a>
+                                <hr>
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <a href="">
+                                        <button class="btn" id="ticket-btn">
+                                            <span><i class="fa-solid fa-ticket"></i></span>
+                                            <label>Book Ticket</label>
+                                        </button>
+                                    </a>
+                                    <p class="mt-1">
+                                        <span><i class="fa-regular fa-star"></i></span>
+                                        <label>5.0</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div>
+                                <a href="">
+                                    <div class="zoom-img">
+                                        <img src="image/Wish-Dragon.webp"  alt="">
+                                    </div>
+                                    <h5>Wish Dragon</h4>
+                                </a>
+                                <hr>
+                                <div class="d-flex align-content-center justify-content-between">
+                                    <a href="">
+                                        <button class="btn" id="ticket-btn">
+                                            <span><i class="fa-solid fa-ticket"></i></span>
+                                            <label>Book Ticket</label>
+                                        </button>
+                                    </a>
+                                    <p class="mt-1">
+                                        <span><i class="fa-regular fa-star"></i></span>
+                                        <label>5.0</label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col-lg-3 order-lg-first">
                 <div id="category-form">
                     <form>
                         <div class="d-flex align-items-center justify-content-between mb-3">
@@ -110,45 +219,6 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
-            <div class="col-lg-9">
-                <div id="movie-label">
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-tv-minimal"><path d="M7 21h10"/><rect width="20" height="14" x="2" y="3" rx="2"/></svg>
-                        <span class="ms-3">MOVIES</span>
-                    </p>
-                    <form action="">
-                        <div class="group">
-                            <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                            <input class="input" type="search" placeholder="Search for movie" name="searchbar"/>
-                        </div>
-                    </form>
-                </div>
-                <div id="movie-list">  
-                    <div class="row" id="movie-sorting">
-                        <div class="col-lg-6">
-                            <div class="d-flex align-items-center">
-                                <label>Sort By : </label>
-                                <div class="sorting-content">
-                                    <button class="sorting-select-btn" role="combobox" aria-label="select button" aria-haspopup="listbox" aria-expanded="false" aria-controls="select-dropdown">
-                                        <span class="sorting-selected-value">Now Showing</span>
-                                        <span class="arrow"></span>
-                                    </button>
-                                    <ul class="sorting-dropdown" role="listbox">
-                                        <li role="option">
-                                            <input type="radio" id="sorting1" name="sortingCategory"/>
-                                            <label for="sorting1">Now Showing</label>
-                                        </li>
-                                        <li role="option">
-                                            <input type="radio" id="sorting2" name="sortingCategory"/>
-                                            <label for="sorting2">Coming Soon</label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
