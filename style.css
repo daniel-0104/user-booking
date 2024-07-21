@@ -4,7 +4,7 @@ body{
 }
 :root{
     --body : #4d759c;
-    --nav-bar: #344d69;
+    --nav-bar: #344e6a;
     --secondary: #2980B9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -25,9 +25,9 @@ body{
     color: var(--gold);
     font-family: fantasy;
 }
-#login-btn{
+/* #login-btn{
     border: 1px solid var(--secondary);
-}
+} */
 .nav-link.active{
     color: var(--gold) !important;
 }
@@ -392,12 +392,13 @@ body{
     background-color: transparent;
     border: 1px solid var(--secondary);
     color: white;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
 }
 #ticket-btn label{
     cursor: pointer;
 }
 #ticket-btn:hover{
-    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
+    color: var(--teal);
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
     #now-movie-list a h5{
@@ -485,25 +486,6 @@ iframe{
 
 
 /*.......................................... promotion start ................................... */
-#promotion-content{
-    background-color: var(--nav-bar);
-    border: 1px solid white;
-    border-radius: 10px;
-    padding: 10px;
-}
-#promotion-content > h4{
-    margin-top: 15px;
-    margin-left: 20px;
-}
-#promotion-btn{
-    background-color: var(--secondary);
-    color: white;
-    width: 100%;
-}
-#promotion-btn:hover{
-    box-shadow: 1px 2px 2px white;
-}
-
 .mySwiper2 .swiper-slide img{
     width: 100%;
     height: 260px;
@@ -771,14 +753,17 @@ iframe{
 
 .sorting-content{
     position: relative;
-    width: 60%;
+    width: fit-content;
     color: white;
+}
+.sorting-select-btn .arrow{
+    margin-left: 15px;
 }
 .sorting-select-btn{
     width: 100%;
     font-size: 1.12rem;
     background-color: transparent;
-    padding: 8px 10px;
+    padding: 8px 20px;
     border: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
     border-radius: 5px;
@@ -860,6 +845,14 @@ iframe{
     color: white
 }
 
+@media screen and (max-width: 460px){
+    #movie-label{
+        display: block;
+    }
+    #movie-label form{
+        margin-top: 20px;
+    }
+}
 @media screen and (max-width: 576px){
     #movie-sorting{
         display: flex;
@@ -870,8 +863,17 @@ iframe{
     #movie-sorting .col-lg-4{
         width: fit-content;
     }
-    .sorting-content{
-        width: 100%;
+    #movie-sorting .col-lg-8 .d-flex > label{
+        display: none;
+    }
+    .sorting-select-btn{
+        padding-left: 10px;
+    }
+    .sorting-select-btn .arrow{
+        margin-left: 8px;
+    }
+    #movie-cell-category{
+        padding: 0;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -895,3 +897,107 @@ iframe{
     }
 }
 /*.......................................... movie category end ................................... */
+
+
+/*.......................................... promotion list start ................................... */
+#promotion-page{
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 0 40px;
+}
+#promotion-list > label{
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 35px;
+    font-size: 13pt;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+}
+#promotion-list a{
+    color: white;
+    text-decoration: none;
+}
+#promotion-list a > img{
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+}
+#promotion-list a > h5{
+    background-color: var(--nav-bar);
+    border: 1px solid white;
+    padding: 10px 15px;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+#promotion-list a:hover{
+    color: var(--teal);
+}
+@media screen and (max-width: 576px){
+    #promotion-list a > img{
+        display: block;
+        margin: auto;
+        width: 360px !important;
+        height: 400px;
+        object-fit: cover;
+    }
+    #promotion-page{
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 410px){
+    #promotion-list a > img{
+        width: 330px !important;
+    }
+}
+/*.......................................... promotion list end ................................... */
+
+
+/*.......................................... promotion details start ................................... */
+#promotion-details{
+    margin: 30px auto 90px;
+}
+#promotion-content{
+    background-color: var(--nav-bar);
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+#promotion-content > h4{
+    margin-left: 20px;
+}
+#promotion-btn{
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    font-size: 13pt;
+    color: white;
+}
+#promotion-btn:hover{
+    color: var(--teal);
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
+}
+@media screen and (max-width: 768px){
+    #promotion-content img{
+        display: block;
+        width: 60% !important;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 440px){
+    #promotion-content .col-lg-8{
+        padding: 0 20px !important;
+    }
+}
+/*.......................................... promotion details end ................................... */
+
+
+/*.......................................... movie details start ................................... */
+/* #movie-details{
+    margin: 20px auto 90px;
+} */
+/*.......................................... movie details end ................................... */
