@@ -3,9 +3,9 @@ body{
     color: white;
 }
 :root{
-    --body : #4d759c;
-    --nav-bar: #344e6a;
-    --secondary: #2980B9;
+    --body : #4e7aa6;
+    --nav-bar: #385577;
+    --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
 }
@@ -350,15 +350,13 @@ body{
 #view-more > button:hover{
     color: white;
 }
-#now-movie-list > .col-lg-4 > div,
-#movie-cell-show > .col-lg-6 > div{
+#now-movie-list > .col-lg-4 > div{
     background-color: var(--nav-bar) ;
     padding: 20px 20px 12px;
     border-radius: 10px;
     border: 1px solid white;
 }
-#now-movie-list a,
-#movie-cell-show a{
+#now-movie-list a{
     color: white;
     text-decoration: none;
 }
@@ -378,13 +376,11 @@ body{
 .zoom-img img:hover{
     transform: scale(1.1);
 }
-#now-movie-list a h5,
-#movie-cell-show a h5{
+#now-movie-list a h5{
     margin-top: 10px;
     text-align: center;
 }
 #now-movie-list a:hover,
-#movie-cell-show a:hover,
 #ticket-btn span i{
     color: var(--teal);
 }
@@ -712,7 +708,7 @@ iframe{
 .category-link.active,
 .sorting-dropdown input:checked ~ label,
 .sorting-dropdown input:focus ~ label{
-    background-color: #e8e4e41b !important;
+    background-color: #e8e4e41a !important;
     color: white !important;
 }
 #category-content a:hover{
@@ -827,6 +823,12 @@ iframe{
 }
 #movie-cell-show{
     display: none;
+    background-color: var(--nav-bar);
+    padding: 30px 20px 10px;
+    border-radius: 10px;
+}
+#movie-cell-show a img:hover{
+    border: 1px solid var(--teal);
 }
 #movie-list-show a{
     text-decoration: none;
@@ -927,7 +929,6 @@ iframe{
 }
 #promotion-list a > h5{
     background-color: var(--nav-bar);
-    border: 1px solid white;
     padding: 10px 15px;
     font-size: 14pt;
     border-radius: 5px;
@@ -957,11 +958,10 @@ iframe{
 
 /*.......................................... promotion details start ................................... */
 #promotion-details{
-    margin: 30px auto 90px;
+    margin: 30px auto 100px;
 }
 #promotion-content{
     background-color: var(--nav-bar);
-    border: 1px solid white;
     border-radius: 10px;
     padding: 20px 10px;
 }
@@ -993,11 +993,43 @@ iframe{
         padding: 0 20px !important;
     }
 }
+
+/* related promotion  */
+#other-promotion{
+    background-color: var(--nav-bar);
+    padding: 35px 0 10px 0;
+}
+#other-promo-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#other-promo-label > span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--teal);
+    margin-right: 20px;
+}
 /*.......................................... promotion details end ................................... */
 
 
 /*.......................................... movie details start ................................... */
-/* #movie-details{
-    margin: 20px auto 90px;
-} */
+#movie-details > div{
+    position: relative;
+}
+#movie-details img{
+    display: block;
+    width: 100%;
+    /* height: 500px; */
+    object-fit: cover;
+}
+#movie-details span{
+    position: absolute;
+    width: 100%;
+    background-color: #202f3de5;
+    height: 100%;
+    top: 0;
+}
 /*.......................................... movie details end ................................... */

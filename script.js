@@ -93,7 +93,7 @@ var swiper = new Swiper(".mySwiper2", {
   spaceBetween: 30,
   slidesPerView: 4,
   autoplay: {
-    delay: 4000,
+    delay: 3000,
     disableOnInteraction: false,
   },
   pagination: {
