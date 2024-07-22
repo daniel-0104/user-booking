@@ -248,3 +248,36 @@ cellContent.forEach(item => {
   item.addEventListener('click',detailsClick);
 });
 //................................................ movie cell category end .......................................
+
+
+// ...................................................... other movies swiper start .................................
+var swiper = new Swiper(".mySwiper4", {
+  spaceBetween: 30,
+  slidesPerView: 4,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    562: {
+      slidesPerView: 2,
+    },
+    720: {
+        slidesPerView: 3,
+    },
+    980: {
+      slidesPerView: 4,
+    },
+    1300: {
+        slidesPerView: 5,
+    }
+  }
+});
+// ..................................................... other movies swiper end ....................................

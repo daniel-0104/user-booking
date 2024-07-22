@@ -4,7 +4,7 @@ body{
 }
 :root{
     --body : #4e7aa6;
-    --nav-bar: #385577;
+    --nav-bar: #345173;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -69,7 +69,6 @@ body{
 
 /*.......................................... home section start ................................... */
 #home-poster{
-    background-image: url(image/pexels-photo-7991486.jpg);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -78,14 +77,21 @@ body{
     align-items: center;
     color: var(--white);
 }
-#home-poster-content,
-#home-poster-content2{
+/* #home-poster ~ span{
+    position: absolute;
+    background-color: #1b25306b;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+} */
+#home-poster-content{
     text-align: center;
     width: 100%;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 #home-poster-content > div > h1{
     display: block;
@@ -96,21 +102,10 @@ body{
     width: 70% !important;
     font-weight: bold;
 }
-#home-poster-content2 > div > h1{
-    display: block;
-    margin: auto;
-    text-align: center;
-    font-size: 50pt;
-    word-spacing: 2pt;
-    width: 100%;
-    font-weight: bold;
-}
-#home-poster-content > div > h1 > span,
-#home-poster-content2 > div > h1 > span{
+#home-poster-content > div > h1 > span{
     color: var(--gold);
 }
-#home-poster-content > div > p,
-#home-poster-content2 > div > p{
+#home-poster-content > div > p{
     width: 80% !important;
     display: block;
     margin: auto;
@@ -123,6 +118,7 @@ body{
     background-color:  var(--nav-bar);
     padding: 30px 30px;
     border-radius: 10px;
+    z-index: 9999 !important;
 }
 #search-ticket .col-lg-7 > label{
     color: var(--teal);
@@ -191,8 +187,7 @@ body{
     }
 }
 @media screen and (max-width: 576px){
-    #home-poster-content > div > h1,
-    #home-poster-content2 > div > h1{
+    #home-poster-content > div > h1{
         width: 100%;
         font-size: 30pt;
     }
@@ -484,9 +479,8 @@ iframe{
 /*.......................................... promotion start ................................... */
 .mySwiper2 .swiper-slide img{
     width: 100%;
-    height: 260px;
+    height: 270px;
     object-fit: cover;
-    border: 1px solid white;
 }
 .mySwiper2 .swiper-pagination-bullet-active{
     background-color: var(--teal);
@@ -844,6 +838,7 @@ iframe{
     color: var(--teal);
 }
 #circle-play{
+    text-decoration: none;
     color: white
 }
 
@@ -958,12 +953,14 @@ iframe{
 
 /*.......................................... promotion details start ................................... */
 #promotion-details{
-    margin: 30px auto 100px;
+    margin: 30px auto 70px;
 }
 #promotion-content{
     background-color: var(--nav-bar);
     border-radius: 10px;
     padding: 20px 10px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
 }
 #promotion-content > h4{
     margin-left: 20px;
@@ -997,7 +994,7 @@ iframe{
 /* related promotion  */
 #other-promotion{
     background-color: var(--nav-bar);
-    padding: 35px 0 10px 0;
+    padding: 50px 0 10px 0;
 }
 #other-promo-label{
     display: flex;
@@ -1018,31 +1015,93 @@ iframe{
 /*.......................................... movie details start ................................... */
 #movie-details > div,
 #movie-cover-poster{
-    position: relative;
+    position: relative !important;
+    width: 100%;
 }
 #movie-cover-poster > img{
     display: block;
     width: 100%;
-    height: 600px;
+    height: 100vh;
     object-fit: cover;
 }
 #movie-cover-poster > span{
     position: absolute;
     width: 100%;
-    background-color: #1b2530f2;
-    height: 600px;
+    background-color: #1b2530ee;
+    height: 100%;
     top: 0;
 }
 #movie-detail-content{
     position: absolute;
     top: 30px;
+    width: 100%;
 }
-#movie-detail-content .col-lg-8 > h1{
+#movie-detail-content > .col-lg-8 > h1{
     color: var(--teal);
     font-weight: bold;
 }
-#movie-detail-content .col-lg-8 p,
-#movie-detail-content .col-lg-8 span{
+#movie-detail-content > .col-lg-8 p,
+#movie-detail-content > .col-lg-8 span{
     font-size: 13pt;
+}
+@media screen and (max-width: 992px){
+    #movie-cover-poster{
+        display: none;
+    }
+    #movie-detail-content{
+        position: relative;
+        background-color: #1b2530f2;
+        width: 100%;
+        margin-right: 0 !important;
+        top: 0;
+        padding-top: 20px;
+    }
+    #movie-detail-content .col-lg-4 > img{
+        width: 40% !important;
+    }
+    #movie-detail-content .col-lg-8{
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 508px){
+    #movie-detail-content > .col-lg-8 > h1{
+        font-size: 18pt;
+    }
+    #movie-detail-content > .col-lg-8 div:nth-child(2){
+        display: block !important;
+        width: 100%;
+        padding: 10px 0;
+    }
+}
+
+/* related movies  */
+.mySwiper4 .swiper-slide img{
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+}
+.mySwiper4 .swiper-slide img:hover{
+    border: 1px solid var(--teal);
+}
+.mySwiper4 .swiper-pagination-bullet-active{
+    background-color: var(--teal);
+    opacity: 1;
+}
+#other-movies{
+    background-color: var(--nav-bar);
+    padding: 50px 0 10px 0;
+}
+#other-movies-label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#other-movies-label > span{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 20px;
+    background-color: var(--teal);
+    margin-right: 20px;
 }
 /*.......................................... movie details end ................................... */

@@ -31,33 +31,31 @@
                     <h5 class="ps-2">M-THEATER</h5>
                 </a>
             </div>
-            <div class="d-flex align-content-center justify-content-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav m-auto" id="nav-order">
                     <li class="nav-item">
-                        <a class="nav-link" id="hide-nav" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="hide-nav" href="movies.html">Movies</a>
+                        <a class="nav-link" href="movies.html">Movies</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="hide-nav" href="promotions.html">Promotions</a>
+                        <a class="nav-link" href="promotions.html">Promotions</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="hide-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-dropdown="1">
-                            Pages
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                            <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
-            </div>
-            <div class="me-md-4">
                 <div class="nav-item d-flex" id="nav-icon">
                     <div class="d-inline me-2">
-                        <a href="" class="btn text-white border-0" role="button">
+                        <!-- <a href="" class="btn text-white border-0" role="button">
                             <i class="fa-solid fa-circle-user fs-4"></i>
+                        </a> -->
+                        <a href="" class="btn text-white" role="button" id="login-btn">
+                            Login
                         </a>
                     </div>
                     <div class="nav-item me-2">
@@ -75,22 +73,76 @@
     </nav>
     <!-- nav bar end  -->
 
-    <!-- nav bar bottom start  -->
-    <nav class="position-fixed b-nav">
-        <div class="d-flex b-navbar-brand">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="movies.html">Movies</a>
-            <a class="nav-link" href="promotions.html">Promotions</a>
-            <a class="nav-link dropup" href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-dropdown="2">
-                Pages<i class="fa-solid fa-sort-up ms-2 pt-2"></i>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="about.html">About Us</a></li>
-                    <li><a class="dropdown-item" href="contact.html">Contact Us</a></li>
-                </ul>
-            </a>
+
+    <!-- footer section start  -->
+    <section id="footer">
+        <div class="px-4 pt-5">
+            <div class="row mb-4">
+                <div class="col-lg-4 mb-5">
+                    <h5>Subscribe Newsletter</h5>
+                    <p class="mt-3">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <form action="" class="mt-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Email Address" aria-describedby="button-addon2">
+                            <button class="btn btn-dark" type="submit" id="button-addon2">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            <div id="footer-simple" class="ps-5">
+                                <h5>My Account</h5>
+                                <ul class="mt-3">
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>My Account</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Contact Us</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Login</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Order History</a></li>
+                                </ul>
+                            </div>
+                            <div id="footer-dropdown">
+                                <div id="toggle-btn">
+                                    <button class="btn fw-medium">My Account</button>
+                                    <span>
+                                        <i class="fa-solid fa-chevron-down" id="down"></i>
+                                        <i class="fa-solid fa-angle-up up" id="up"></i>
+                                    </span>
+                                </div> 
+                                <ul id="drop-items">
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>My Account</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Contact Us</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Login</a></li>
+                                    <li><a href="javascript:void(0)"><i class="fa-solid fa-caret-right me-2"></i>Order History</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <div>
+                                <h5>About Us</h5>
+                                <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia doloremque facere distinctio placeat possimus harum temporibus officia hic totam perspiciatis eaque molestiae incidunt quibusdam, perferendis, itaque praesentium laboriosam! Reiciendis, corporis.</p>
+                            </div>
+                            <div class="d-flex align-items-center mt-4">
+                                <h6>connect with us : </h6>
+                                <div class="d-flex ms-4 mb-1" id="footer-icon">
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-youtube"></i></a>
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="javascript:void(0)"><i class="fa-brands fa-facebook"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex align-items-center justify-content-between" id="footer-bottom">
+                <p>© 2024 Your Company Name. All rights reserved.</p>
+                <p id="developer">Developed By : <a href="">Alex</a> & <a href="">HP</a></p>
+            </div>
         </div>
-    </nav>
-    <!-- nav bar bottom end  -->
+    </section>
+    <!-- footer section end -->
 </body>
 
     <!-- js bootstrap  -->
@@ -99,9 +151,10 @@
     <!-- swiper js  -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- js  -->
     <script src="script.js"></script>
 
-
-    
 </html>
