@@ -50,15 +50,15 @@
                     </li>
                 </ul>
                 <div class="nav-item d-flex" id="nav-icon">
-                    <div class="d-inline me-2">
+                    <div class="d-inline me-5">
                         <!-- <a href="" class="btn text-white border-0" role="button">
                             <i class="fa-solid fa-circle-user fs-4"></i>
                         </a> -->
-                        <a href="" class="btn text-white" role="button" id="login-btn">
+                        <!-- <a href="auth.html" class="btn text-white" role="button" id="login-btn">
                             Login
-                        </a>
+                        </a> -->
                     </div>
-                    <div class="nav-item me-2">
+                    <!-- <div class="nav-item me-2">
                         <a href="" type="button" class="btn position-relative text-white border-0" id="dropdown">
                             <i class="fa-solid fa-cart-shopping fs-6"></i>
                             <span class="position-absolute top-0 start-100 translate-middle badge rounded bg-info-subtle text-dark">
@@ -66,13 +66,29 @@
                                 <span class="visually-hidden">unread messages</span>
                             </span>
                         </a>
-                    </div> 
+                    </div>  -->
+                </div>
+                <div class="nav-item" id="nav-icon">
+                    <button class="btn text-white border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                        <i class="fa-solid fa-circle-user fs-4"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
-    <!-- nav bar end  -->
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header justify-content-between">
+          <h5 class="offcanvas-title" id="offcanvasRightLabel">Welcome, <span class="user-name">Daniel</span></h5>
+          <button type="button" class="btn text-white fs-5 border-0" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <hr>
+        <div class="offcanvas-body">
+            <h6>testing hello world</h6>
+        </div>
+    </div>
+    <!-- nav bar end  -->
+     
     <!-- home section start  -->
     <section id="home" class="position-relative">
         <div>
@@ -84,7 +100,7 @@
                     </div>
                 </div>
             </div>
-            <span></span>
+            <!-- <span></span> -->
         </div>
         <div class="container-lg" id="search-ticket">
             <div class="row mx-auto align-items-center">

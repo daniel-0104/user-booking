@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #4e7aa6;
+    --body : #46709b;
     --nav-bar: #345173;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -39,7 +39,8 @@ body{
 }
 #nav-order > li > a:hover,
 .nav-item a i:hover,
-#login-btn:hover{
+.nav-item button i:hover,
+.offcanvas button i:hover{
     color: var(--gold) !important;
 }
 .navbar-toggler{
@@ -65,6 +66,18 @@ body{
         margin: 10px 0;
     }
 }
+
+.offcanvas{
+    background-color: var(--nav-bar);
+    color: white;
+}
+.offcanvas hr{
+    margin-top: -5px;
+}
+.user-name{
+    color: var(--gold);
+    font-size: 18pt !important;
+}
 /*.......................................... nav bar end ................................... */
 
 /*.......................................... home section start ................................... */
@@ -79,7 +92,7 @@ body{
 }
 /* #home-poster ~ span{
     position: absolute;
-    background-color: #1b25306b;
+    background-color: #403d3066;
     width: 100%;
     height: 100vh;
     top: 0;
@@ -821,6 +834,10 @@ iframe{
     padding: 30px 20px 10px;
     border-radius: 10px;
 }
+#movie-cell-show a img{
+    height: 400px;
+    object-fit: cover;
+}
 #movie-cell-show a img:hover{
     border: 1px solid var(--teal);
 }
@@ -871,6 +888,13 @@ iframe{
     }
     #movie-cell-category{
         padding: 0;
+    }
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 80% !important;
+        height: 400px;
+        object-fit: cover;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -1050,7 +1074,7 @@ iframe{
     }
     #movie-detail-content{
         position: relative;
-        background-color: #1b2530f2;
+        background-color: #1b2530ec;
         width: 100%;
         margin-right: 0 !important;
         top: 0;
@@ -1076,20 +1100,49 @@ iframe{
 
 /* related movies  */
 .mySwiper4 .swiper-slide img{
-    width: 100%;
-    height: 410px;
+    /* width: 90%; */
+    height: 400px;
     object-fit: cover;
 }
 .mySwiper4 .swiper-slide img:hover{
     border: 1px solid var(--teal);
 }
+.mySwiper4 .swiper-pagination-bullet{
+    padding: 0 8px;
+    height: 5px;
+    border-radius: 20px;
+}
 .mySwiper4 .swiper-pagination-bullet-active{
     background-color: var(--teal);
     opacity: 1;
 }
+.swiper-btn4s{
+    position: relative;
+    display: flex;
+    width: fit-content;
+    z-index: 1;
+    text-align: right;
+    justify-content: space-between;
+}
+.swiper-btn4s button{
+    position: static;
+    background-color: var(--secondary);
+    color: white;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.swiper-btn4s button:hover{
+    background-color: var(--secondary);
+    color: white;
+    border: 1px solid white;
+}
 #other-movies{
     background-color: var(--nav-bar);
-    padding: 50px 0 10px 0;
+    padding: 50px 20px 10px;
 }
 #other-movies-label{
     display: flex;
@@ -1098,10 +1151,185 @@ iframe{
 }
 #other-movies-label > span{
     display: block;
-    width: 30px;
+    width: 25px;
     height: 3px;
     border-radius: 20px;
     background-color: var(--teal);
     margin-right: 20px;
 }
 /*.......................................... movie details end ................................... */
+
+
+/*.......................................... contact us start ................................... */
+#contact-us{
+    margin: 30px auto 80px;
+}
+#contact-us > label{
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 35px;
+    font-size: 13pt;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+}
+#contact-us-info > h6{
+    text-transform: uppercase;
+    color: var(--teal);
+    font-size: 15pt;
+    font-weight: bold;
+    margin: 30px 0 20px;
+}
+#contact-us-info > p,
+#contact-us-info > div{
+    font-size: 13pt;
+    margin-bottom: 20px;
+}
+#contact-block{
+    display: flex; 
+    align-items: center;
+    margin-top: 6px;
+}
+#contact-block > span:nth-child(1){
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--teal);
+    width: 13px;
+    height: 3px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+#contact-us-form > div{
+    background-color: var(--nav-bar);
+    padding: 28px 30px 20px;
+    border-radius: 10px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+    margin-top: 25px;
+}
+#contact-us-form label{
+    font-size: 13pt;
+}
+#contact-us-form input,
+#contact-us-form textarea{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    padding: 12px 14px;
+    margin-top: 7px;
+    color: white;
+}
+#contact-us-form textarea{
+    resize: none;
+}
+#contact-us-form input::placeholder,
+#contact-us-form textarea::placeholder{
+    color: rgba(255, 255, 255, 0.606);
+}
+#contact-us-form input:focus,
+#contact-us-form textarea:focus{
+    border: 1px solid var(--teal);
+    box-shadow: none;
+}
+#contact-us-form button{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+}
+#contact-us-form button:hover{
+    border: 1px solid var(--teal);
+}
+@media screen and (max-width: 992px){
+    #contact-us{
+        padding: 0 20px !important;
+    }
+}
+/*.......................................... contact us end ................................... */
+
+
+/*................................... ..........auth section start .................................. */
+#auth-bg{
+    background-image: linear-gradient(to right top, #4d6a8a, #5c86b3, #466a91, #285785, #3e6e9e);
+    color: white;
+}
+.login-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login-form{
+    background-color: #385370;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 4px 3px rgb(187, 187, 187);
+    max-width: 450px;
+    width: 100%; 
+    color: white;
+    border: 1px solid rgb(233, 230, 230);
+}
+.login-content h2{
+	margin: 15px 0;
+	color: white;
+	text-transform: uppercase;
+	font-size: 2.9rem;
+}
+.login-content .input-div{
+	position: relative;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d1d1d1;
+}
+.input-i{
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.input-div > div{
+    position: relative;
+	height: 45px;
+}
+.input-div > div > input{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
+	background: none;
+	padding: 0.5rem 0.7rem;
+	font-size: 1.2rem;
+	color: white;
+	font-family: 'poppins', sans-serif;
+}
+.input-div > div > input::placeholder{
+    color: rgb(231, 231, 231);
+}
+.login-content .btn{
+	display: block;
+	width: 100%;
+	height: 45px;
+	border-radius: 25px;
+	outline: none;
+	border: none;
+    background-color:  #2fbd6f;
+	font-size: 1.1rem;
+	color: #fff;
+	font-family: 'Poppins', sans-serif;
+	text-transform: uppercase;
+	margin-top: 30px;
+	cursor: pointer;
+	transition: .5s;
+}
+.login-content .btn:hover{
+    background-color: #2fdb7d;
+}
+/*................................... ..........auth section end .................................. */

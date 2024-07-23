@@ -254,8 +254,16 @@ cellContent.forEach(item => {
 var swiper = new Swiper(".mySwiper4", {
   spaceBetween: 30,
   slidesPerView: 4,
+  freeMode: true,
+  hashNavigation: {
+    watchState: true,
+  },
+  navigation: {
+    nextEl: ".button-next4",
+    prevEl: ".button-prev4",
+  },
   autoplay: {
-    delay: 4000,
+    delay: 6000,
     disableOnInteraction: false,
   },
   pagination: {
