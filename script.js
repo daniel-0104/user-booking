@@ -262,10 +262,10 @@ var swiper = new Swiper(".mySwiper4", {
     nextEl: ".button-next4",
     prevEl: ".button-prev4",
   },
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 6000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,

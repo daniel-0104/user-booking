@@ -4,7 +4,7 @@ body{
 }
 :root{
     --body : #46709b;
-    --nav-bar: #345173;
+    --nav-bar: #324d6d;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -26,7 +26,7 @@ body{
     font-family: fantasy;
 }
 #login-btn{
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.644);
 }
 .my-account{
     display: none;
@@ -36,14 +36,13 @@ body{
 }
 #nav-order > li > a{
     color: white;
-    padding: 8px 30px;
+    padding: 8px 35px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
 }
 #nav-order > li > a:hover,
 .nav-item a i:hover,
 .nav-item button:hover,
-.offcanvas button i:hover,
 #login-btn:hover{
     color: var(--gold) !important;
 }
@@ -83,12 +82,19 @@ body{
     margin-top: -5px;
 }
 .user-name{
-    color: var(--gold);
+    color: var(--teal);
     font-size: 18pt !important;
 }
 #profile-info{
     margin-top: -12px;
 }
+#profile-info form{
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+    padding: 10px 0;
+    border-radius: 10px;
+}
+.offcanvas button i:hover,
 #profile-info > div > i,
 #info-link > div > i,
 #info-link > a:hover{
@@ -110,13 +116,6 @@ body{
     align-items: center;
     color: var(--white);
 }
-/* #home-poster ~ span{
-    position: absolute;
-    background-color: #403d3066;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-} */
 #home-poster-content{
     text-align: center;
     width: 100%;
@@ -1120,7 +1119,6 @@ iframe{
 
 /* related movies  */
 .mySwiper4 .swiper-slide img{
-    /* width: 90%; */
     height: 400px;
     object-fit: cover;
 }
@@ -1235,11 +1233,17 @@ iframe{
     font-size: 13pt;
 }
 #contact-us-form input,
-#contact-us-form textarea,
-#profile-info input{
+#contact-us-form textarea{
     background-color: transparent;
     border: 1px solid var(--secondary);
     padding: 12px 14px;
+    margin-top: 7px;
+    color: white;
+}
+#profile-info input{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    padding: 10px 14px;
     margin-top: 7px;
     color: white;
 }
@@ -1257,15 +1261,20 @@ iframe{
     border: 1px solid var(--teal);
     box-shadow: none;
 }
-#contact-us-form button,
-#profile-info button{
-    background-color: transparent;
+#contact-us-form button{
     border: 1px solid var(--secondary);
-    color: white;
+    color: var(--teal);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
 }
-#contact-us-form button:hover,
+#profile-info button{
+    border: 1px solid var(--secondary);
+    color: var(--teal);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+}
 #profile-info button:hover{
+    border: 1px solid var(--teal);
+}
+#contact-us-form button:hover{
     border: 1px solid var(--teal);
 }
 @media screen and (max-width: 992px){
@@ -1278,8 +1287,33 @@ iframe{
 
 /*.......................................... change password start ................................... */
 #change-pass > div:nth-child(1){
-    margin-top: 30px;
+    margin-top: 20px;
     padding-left: 50px;
+}
+#change-pass > div:nth-child(1) > a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: bold;
+}
+#change-pass > div:nth-child(1) > a:hover{
+    color: var(--teal);
+}
+#change-pass > div:nth-child(1) > span{
+    font-size: 13pt;
+    font-weight: bold;
+}
+#change-pass > div:nth-child(1) > label{
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+    margin-left: 25px;
 }
 #change-pass-content{
     display: block;
@@ -1302,7 +1336,7 @@ iframe{
 #change-pass-content input{
     background-color: transparent;
     border: 1px solid var(--secondary);
-    padding: 12px 14px;
+    padding: 10px 14px;
     margin-top: 7px;
     color: white;
 }
@@ -1314,9 +1348,8 @@ iframe{
     box-shadow: none;
 }
 #change-pass-content button{
-    background-color: transparent;
     border: 1px solid var(--secondary);
-    color: white;
+    color: var(--teal);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
 }
 #change-pass-content button:hover{
