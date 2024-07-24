@@ -25,9 +25,12 @@ body{
     color: var(--gold);
     font-family: fantasy;
 }
-/* #login-btn{
-    border: 1px solid var(--secondary);
-} */
+#login-btn{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+}
+.my-account{
+    display: none;
+}
 .nav-link.active{
     color: var(--gold) !important;
 }
@@ -39,8 +42,9 @@ body{
 }
 #nav-order > li > a:hover,
 .nav-item a i:hover,
-.nav-item button i:hover,
-.offcanvas button i:hover{
+.nav-item button:hover,
+.offcanvas button i:hover,
+#login-btn:hover{
     color: var(--gold) !important;
 }
 .navbar-toggler{
@@ -52,7 +56,7 @@ body{
 .navbar-toggler:focus{
     box-shadow: none;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 767px){
     #nav-icon{
         display: flex;
     }
@@ -65,18 +69,34 @@ body{
         padding-top: 15px;
         margin: 10px 0;
     }
+    .my-account{
+        display: block;
+        margin-left: 12px;
+    }
 }
 
 .offcanvas{
     background-color: var(--nav-bar);
     color: white;
 }
-.offcanvas hr{
+.offcanvas > hr{
     margin-top: -5px;
 }
 .user-name{
     color: var(--gold);
     font-size: 18pt !important;
+}
+#profile-info{
+    margin-top: -12px;
+}
+#profile-info > div > i,
+#info-link > div > i,
+#info-link > a:hover{
+    color: var(--teal) !important;
+}
+#profile-info > div > h5,
+#info-link > div > h5{
+    font-weight: bold;
 }
 /*.......................................... nav bar end ................................... */
 
@@ -1215,7 +1235,8 @@ iframe{
     font-size: 13pt;
 }
 #contact-us-form input,
-#contact-us-form textarea{
+#contact-us-form textarea,
+#profile-info input{
     background-color: transparent;
     border: 1px solid var(--secondary);
     padding: 12px 14px;
@@ -1226,21 +1247,25 @@ iframe{
     resize: none;
 }
 #contact-us-form input::placeholder,
-#contact-us-form textarea::placeholder{
+#contact-us-form textarea::placeholder,
+#profile-info input::placeholder{
     color: rgba(255, 255, 255, 0.606);
 }
 #contact-us-form input:focus,
-#contact-us-form textarea:focus{
+#contact-us-form textarea:focus,
+#profile-info input:focus{
     border: 1px solid var(--teal);
     box-shadow: none;
 }
-#contact-us-form button{
+#contact-us-form button,
+#profile-info button{
     background-color: transparent;
     border: 1px solid var(--secondary);
     color: white;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
 }
-#contact-us-form button:hover{
+#contact-us-form button:hover,
+#profile-info button:hover{
     border: 1px solid var(--teal);
 }
 @media screen and (max-width: 992px){
@@ -1249,6 +1274,65 @@ iframe{
     }
 }
 /*.......................................... contact us end ................................... */
+
+
+/*.......................................... change password start ................................... */
+#change-pass > div:nth-child(1){
+    margin-top: 30px;
+    padding-left: 50px;
+}
+#change-pass-content{
+    display: block;
+    margin: 20px auto;
+    width: 600px;
+    background-color: var(--nav-bar);
+    padding: 28px 30px;
+    border-radius: 10px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+#change-pass-content > h4{
+    color: var(--teal);
+    font-weight: bold;
+    text-align: center;
+}
+#change-pass-content label{
+    font-size: 13pt;
+}
+#change-pass-content input{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    padding: 12px 14px;
+    margin-top: 7px;
+    color: white;
+}
+#change-pass-content input::placeholder{
+    color: rgba(255, 255, 255, 0.606);
+}
+#change-pass-content input:focus{
+    border: 1px solid var(--teal);
+    box-shadow: none;
+}
+#change-pass-content button{
+    background-color: transparent;
+    border: 1px solid var(--secondary);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+}
+#change-pass-content button:hover{
+    border: 1px solid var(--teal);
+}
+@media screen and (max-width: 640px){
+    #change-pass-content{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 430px){
+    #change-pass-content{
+        width: 350px;
+    }
+}
+/*.......................................... change password end ................................... */
 
 
 /*................................... ..........auth section start .................................. */
