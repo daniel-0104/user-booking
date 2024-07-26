@@ -25,12 +25,12 @@
     <!-- nav bar start-->
     <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="nav">
         <div class="container-fluid">
-            <div class="d-flex align-items-center">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
                 <img src="image/depositphotos_73179751-stock-illustration-vector-logo-slate-board-for.jpg" alt="" id="logo-img">
-                <a class="navbar-brand" href="#" id="cinema-label">
+                <span class="navbar-brand" id="cinema-label">
                     <h5 class="ps-2">M-THEATER</h5>
-                </a>
-            </div>
+                </span>
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fa-solid fa-bars"></i>
             </button>
@@ -131,7 +131,18 @@
                                             <label>Book Ticket</label>
                                         </button>
                                     </a>
-                                    <a href="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" target="_blank" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#trailer" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                </div>
+                                <!-- youtube modal  -->
+                                <div class="modal fade" id="trailer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="trailerLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content border-0 bg-transparent">
+                                            <div class="d-flex justify-content-end mb-2">
+                                                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                                            </div>
+                                            <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -156,7 +167,7 @@
                                             <label>Book Ticket</label>
                                         </button>
                                     </a>
-                                    <a href="https://www.youtube.com/embed/uWIRyU5fuzU?si=OhGi-N6NmjELZV_T" target="_blank" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#trailer" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
                                 </div>
                             </div>
                         </div>
@@ -181,47 +192,68 @@
                                             <label>Book Ticket</label>
                                         </button>
                                     </a>
-                                    <a href="https://www.youtube.com/embed/IeFWNtMo1Fs?si=9H0VwKVqG7d01UYb" target="_blank" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#trailer" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="container-lg" id="movie-cell-show">
                         <div class="row">
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/Screen+Shot+2019-07-17+at+7.57.17+PM.png" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/Screen+Shot+2019-07-17+at+7.57.17+PM.png" class="w-100 d-block rounded" alt="">
+                                        <h5>Avengers Endgame</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/The_Garfield_Movie_2024_poster.jpg" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/The_Garfield_Movie_2024_poster.jpg" class="w-100 d-block rounded" alt="">
+                                        <h5>The Garfield</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-100 d-block rounded" alt="">
+                                        <h5>Raya And The Last Dragon</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/s-l1600.webp" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/s-l1600.webp" class="w-100 d-block rounded" alt="">
+                                        <h5>Avengers Age Of Ultron</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/Screen+Shot+2019-07-17+at+7.57.17+PM.png" class="w-100 d-block rounded" alt="">
+                                        <h5>Avengers Endgame</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/s-l1600.webp" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/The_Garfield_Movie_2024_poster.jpg" class="w-100 d-block rounded" alt="">
+                                        <h5>The Garfield</h5>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 mb-4">
-                                <a href="">
-                                    <img src="image/Screen+Shot+2019-07-17+at+7.57.17+PM.png" class="w-100 d-block rounded" alt="">
-                                </a>
+                            <div class="col-lg-4 col-md-4 col-sm-6">
+                                <div>
+                                    <a href="">
+                                        <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-100 d-block rounded" alt="">
+                                        <h5>Raya And The Last Dragon</h5>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

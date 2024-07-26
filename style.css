@@ -850,17 +850,25 @@ iframe{
 #movie-cell-show{
     display: none;
     background-color: var(--nav-bar);
-    padding: 30px 20px 10px;
+    padding: 30px 20px 0;
     border-radius: 10px;
 }
+#movie-cell-show .col-lg-4{
+    margin-bottom: 60px;
+}
 #movie-cell-show a img{
-    height: 400px;
     object-fit: cover;
 }
 #movie-cell-show a img:hover{
     border: 1px solid var(--teal);
 }
-#movie-list-show a{
+#movie-cell-show a h5{
+    margin-top: 5px;
+    color: white;
+    padding-left: 10px;
+}
+#movie-list-show a,
+#movie-cell-show a{
     text-decoration: none;
 }
 #movie-list-show a h4{
@@ -870,7 +878,8 @@ iframe{
 #movie-list-show a h4:hover,
 #movie-list-show span,
 #circle-play i,
-#circle-play:hover{
+#circle-play:hover,
+#movie-cell-show .col-lg-4:hover h5{
     color: var(--teal);
 }
 #circle-play{
@@ -912,8 +921,11 @@ iframe{
         display: block;
         margin: auto;
         width: 80% !important;
-        height: 400px;
         object-fit: cover;
+    }
+    #movie-cell-show a h5{
+        display: block;
+        text-align: center;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -1057,7 +1069,9 @@ iframe{
 
 /*.......................................... movie details start ................................... */
 #movie-details > div,
-#movie-cover-poster{
+#movie-cover-poster,
+#book-ticket > div,
+#ticket-mc-poster{
     position: relative !important;
     width: 100%;
 }
@@ -1067,7 +1081,8 @@ iframe{
     height: 100vh;
     object-fit: cover;
 }
-#movie-cover-poster > span{
+#movie-cover-poster > span,
+#ticket-mc-poster > span{
     position: absolute;
     width: 100%;
     background-color: #1b2530ee;
@@ -1086,6 +1101,27 @@ iframe{
 #movie-detail-content > .col-lg-8 p,
 #movie-detail-content > .col-lg-8 span{
     font-size: 13pt;
+}
+
+.modal-content{
+    text-align: end;
+    justify-content: end;
+}
+.modal-content button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 14pt;
+    border: none;
+    color: white;
+    background-color: var(--nav-bar);
+}
+.modal-content button:hover{
+    color: var(--teal);
+    background-color: var(--nav-bar);
 }
 @media screen and (max-width: 992px){
     #movie-cover-poster{
@@ -1106,21 +1142,37 @@ iframe{
         padding: 30px;
     }
 }
-@media screen and (max-width: 508px){
+@media screen and (max-width: 618px){
+    #icon-span{
+        display: block !important;
+        width: 100% !important;
+    }
+    #icon-span > div{
+        padding: 5px 0;
+    }
+}
+@media screen and (max-width: 510px){
     #movie-detail-content > .col-lg-8 > h1{
         font-size: 18pt;
-    }
-    #movie-detail-content > .col-lg-8 div:nth-child(2){
-        display: block !important;
-        width: 100%;
-        padding: 10px 0;
     }
 }
 
 /* related movies  */
+.mySwiper4{
+    margin-top: -5px;
+}
+.mySwiper4 .swiper-slide a{
+    text-decoration: none;
+}
+.mySwiper4 .swiper-slide:hover h6{
+    color: var(--teal) !important;
+}
 .mySwiper4 .swiper-slide img{
-    height: 400px;
     object-fit: cover;
+}
+.mySwiper4 .swiper-slide h6{
+    margin-top: 5px;
+    color: white;
 }
 .mySwiper4 .swiper-slide img:hover{
     border: 1px solid var(--teal);
@@ -1129,6 +1181,7 @@ iframe{
     padding: 0 8px;
     height: 5px;
     border-radius: 20px;
+    margin-bottom: 10px !important;
 }
 .mySwiper4 .swiper-pagination-bullet-active{
     background-color: var(--teal);
@@ -1160,7 +1213,7 @@ iframe{
 }
 #other-movies{
     background-color: var(--nav-bar);
-    padding: 50px 20px 10px;
+    padding: 120px 20px 10px;
 }
 #other-movies-label{
     display: flex;
@@ -1366,6 +1419,70 @@ iframe{
     }
 }
 /*.......................................... change password end ................................... */
+
+
+/*.......................................... book ticket start ................................... */
+#ticket-mc-poster > img{
+    display: block;
+    width: 100%;
+    margin: auto;
+    height: 500px;
+    object-fit: cover;
+}
+#ticket-m-poster{
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    justify-content: center;
+}
+#ticket-m-poster > img{
+    width: 260px;
+    height: 390px;
+    object-fit: cover;
+}
+#ticket-m-poster > h4{
+    color: var(--teal);
+    margin-top: 15px;
+}
+
+#select-date > ul > li{
+    list-style-type: none;
+    height: auto;
+}
+#select-date button{
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--secondary);
+    background-color: var(--nav-bar);
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+}
+#caret-right{
+    color: var(--teal);
+}
+#select-date button:hover,
+.js-select-active{
+    background-color: #0000007a !important;
+    color: var(--teal) !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+#select-cinema-time{
+    margin: 70px auto;
+}
+#cinema-time-content{
+    background-color: var(--nav-bar);
+    padding: 20px 30px;
+    border-radius: 10px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+/*.......................................... book ticket end ................................... */
 
 
 /*................................... ..........auth section start .................................. */

@@ -207,17 +207,6 @@ sortingOptions.forEach((option) => {
     sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
     this.querySelector('input').checked = true;
   });
-
-  option.addEventListener("keyup", function (e) {
-    if (e.key === "Enter") {
-      sortingValue.innerHTML = this.querySelector('label').textContent;
-      sortingSelect.classList.remove("active");
-      sortingBtn.setAttribute("aria-expanded", "false");
-
-      sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
-      this.querySelector('input').checked = true;
-    }
-  });
 });
 //................................................ movie sorting end..... .........................................
 
@@ -259,13 +248,17 @@ var swiper = new Swiper(".mySwiper4", {
     watchState: true,
   },
   navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  navigation: {
     nextEl: ".button-next4",
     prevEl: ".button-prev4",
   },
-  // autoplay: {
-  //   delay: 6000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -289,3 +282,28 @@ var swiper = new Swiper(".mySwiper4", {
   }
 });
 // ..................................................... other movies swiper end ....................................
+
+
+// ..................................................... showtime select date start ....................................
+document.addEventListener('DOMContentLoaded',function(){
+  const selectDates = document.querySelectorAll('.js-select-date');
+
+  selectDates.forEach(function(selectDate){
+    selectDate.addEventListener('click',function(){
+      if(selectDate.classList.contains('js-select-active')){
+        selectDate.classList.remove('js-select-active');
+      }
+      else{
+        selectDates.forEach(function(date){
+          date.classList.remove('js-select-active');
+        });
+      }
+      selectDate.classList.add('js-select-active');
+    });
+  });
+});
+// ..................................................... showtime select date end .................................... 
+
+
+// ..................................................... showtime select  end .................................... 
+// ..................................................... showtime select date end .................................... 
