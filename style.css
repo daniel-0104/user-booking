@@ -664,10 +664,12 @@ iframe{
 #down{
     display: block;
     font-size: 10pt;
+    margin-left: 9px;
 }
 #up{
     display: none;
     font-size: 10pt;
+    margin-left: 9px;
 }
 #footer-bottom a{
     text-decoration: none;
@@ -1448,11 +1450,20 @@ iframe{
     margin-top: 15px;
 }
 
-#select-date > ul > li{
+#select-date > ul{
+    background-color: var(--nav-bar);
+    padding: 22px 20px 18px;
+    border-radius: 10px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+#select-date > ul > li,
+.select-time > ul > li{
     list-style-type: none;
     height: auto;
 }
-#select-date button{
+#select-date button,
+.select-time button{
     width: 100%;
     height: 50px;
     border: 1px solid var(--secondary);
@@ -1460,14 +1471,15 @@ iframe{
     color: white;
     border-radius: 10px;
     margin-bottom: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
 }
 #caret-right{
     color: var(--teal);
 }
 #select-date button:hover,
-.js-select-active{
-    background-color: #0000007a !important;
+.js-select-active,
+.select-time button:hover{
+    background-color: #08080863 !important;
     color: var(--teal) !important;
     border: none !important;
     box-shadow: none !important;
@@ -1477,12 +1489,73 @@ iframe{
 }
 #cinema-time-content{
     background-color: var(--nav-bar);
-    padding: 20px 30px;
+    padding: 10px 30px;
     border-radius: 10px;
     border-left: 2px solid var(--teal);
     border-right: 2px solid var(--teal);
 }
+#cinema-time-content > div{
+    margin: 30px 0;
+}
+#cinema-time-content h6{
+    font-size: 13pt;
+}
+.cinema-down{
+    display: none;
+}
+.cinema-down:hover,
+.cinema-up:hover{
+    color: var(--teal);
+    cursor: pointer;
+}
+
+#select-seat-modal .modal-content .row{
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+    padding-top: 15px;
+}
+#select-seat-modal h5{
+    color: var(--teal);
+    margin-top: 10px;
+}
+#select-seat-modal .modal-content .row .col-lg-7 label{
+    color: rgb(206, 205, 205);
+}
+#select-seat-modal .modal-content .row .col-lg-7 button{
+    border: 1px solid var(--secondary);
+    color: var(--teal);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    padding: 20px 0 !important;
+    font-size: 13pt !important;
+    margin-top: 30px !important;
+}
+#select-seat-modal .modal-content .row .col-lg-7 button:hover{
+    border: 1px solid var(--teal);
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #select-seat-modal .modal-lg{
+        max-width: 700px;
+    }
+}
+@media screen and (max-width: 768px){
+    #select-seat-modal img{
+        display: block;
+        width: 50% !important;
+        margin: auto;
+    }
+    #select-seat-modal .modal-content .row .col-lg-7 button{
+        margin-bottom: 20px;
+    }
+}
 /*.......................................... book ticket end ................................... */
+
+
+/*.......................................... select seat start ................................... */
+#select-movie-label{
+    background-color: var(--nav-bar);
+    padding: 20px 15px;
+}
+/*.......................................... select seat end ................................... */
 
 
 /*................................... ..........auth section start .................................. */

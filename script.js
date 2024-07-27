@@ -287,6 +287,11 @@ var swiper = new Swiper(".mySwiper4", {
 // ..................................................... showtime select date start ....................................
 document.addEventListener('DOMContentLoaded',function(){
   const selectDates = document.querySelectorAll('.js-select-date');
+  const firstDateButton = document.getElementById('first-date-button');
+
+  if (firstDateButton) {
+    firstDateButton.classList.add('js-select-active');
+  }
 
   selectDates.forEach(function(selectDate){
     selectDate.addEventListener('click',function(){
@@ -305,5 +310,13 @@ document.addEventListener('DOMContentLoaded',function(){
 // ..................................................... showtime select date end .................................... 
 
 
-// ..................................................... showtime select  end .................................... 
-// ..................................................... showtime select date end .................................... 
+// ....................................... showtime select cinema and time dropdown start ................................ 
+$(document).ready(function(){
+  $('.ct-toggle-btn').click(function(){
+    console.log('click')
+    $(this).closest('.cinema-section').find('.select-time').slideToggle(500);
+    $(this).find('.cinema-down').toggle();
+    $(this).find('.cinema-up').toggle();
+  });
+});
+// ....................................... showtime select cinema and time dropdown end .................................... 

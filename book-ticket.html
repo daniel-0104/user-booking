@@ -55,7 +55,6 @@
     </nav>
     <!-- nav bar end  -->
 
-
     <!-- book ticket start  -->
     <section id="book-ticket">
         <div>
@@ -72,15 +71,15 @@
                 </ul>
             </div>
         </div>
-        <div id="show-time">
+        <div id="show-time" class="mt-5">
             <div class="container-lg mt-4" id="select-date">
                 <div class="d-flex align-items-center">
                     <i class="fa-solid fa-caret-right me-3 mb-1" id="caret-right"></i>
                     <h5 class="fw-medium">Select Date</h5>
                 </div>
-                <ul class="row mt-2 mx-auto ps-0 ">
+                <ul class="row mt-2 mx-auto">
                     <li class="col-lg-3 col-md-4 col-sm-6">
-                        <button class="js-select-date">
+                        <button id="first-date-button" class="js-select-date js-select-active">
                             <span>Wed</span>
                             <span>12</span>
                             <span>June</span>
@@ -132,20 +131,171 @@
                     <form action="">
                         <div class="group">
                             <svg viewBox="0 0 24 24" aria-hidden="true" class="search-icon"><g><path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path></g></svg>
-                            <input class="input" type="search" placeholder="Search cinema name" name="searchbar"/>
+                            <input class="input" type="search" placeholder="Search location" name="searchbar"/>
                         </div>
                     </form>
                 </div>
                 <div id="cinema-time-content" class="mt-2">
-                    <div class="row">
-                        <div class="col-lg-4"></div>
+                    <div class="cinema-section">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6>Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
+                            <span class="ct-toggle-btn">
+                                <i class="fa-solid fa-chevron-down cinema-down"></i>
+                                <i class="fa-solid fa-chevron-up cinema-up"></i>
+                            </span>
+                        </div>
+                        <div class="select-time">
+                            <ul class="row mt-3 mx-auto ps-0 ">
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button data-bs-toggle="modal" data-bs-target="#select-seat-modal">
+                                        <span>11:30 AM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>8:00 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                        <!-- select seat modal  -->
+                        <div class="modal fade" id="select-seat-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="select-seat-modalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg modal-dialog-centered">
+                                <div class="modal-content border-0 position-relative bg-transparent">
+                                    <div class="d-flex justify-content-end mb-2">
+                                        <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                                    </div>
+                                    <div class="row mx-auto">
+                                        <div class="col-lg-5 col-md-5 text-center">
+                                            <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="mx-auto rounded border d-block w-75"  alt="">
+                                            <h5>Raya And The Last Dragon</h5>
+                                            <ul class="d-flex align-items-center justify-content-center">
+                                                <li class="me-5">1h 47m</li>
+                                                <li>ENG</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-lg-7 col-md-7 text-start pt-4">
+                                            <div class="mb-4">
+                                                <label>Cinema</label>
+                                                <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label>Hall</label>
+                                                <h6 class="mt-1">Hall 1</h6>
+                                            </div>
+                                            <div class="mb-4">
+                                                <label>Date & Time</label>
+                                                <h6 class="mt-1">Wed 12 June , 11:30 AM</h6>
+                                            </div>
+                                            <a href="select-seat.html" class="text-decoration-none text-white">
+                                                <button type="button" class="btn w-100">Select Seats</button>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cinema-section">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6>Mega Ace Cineplex (Myayadanar) - Thaketa (Yangon)</h6>
+                            <span class="ct-toggle-btn">
+                                <i class="fa-solid fa-chevron-down cinema-down"></i>
+                                <i class="fa-solid fa-chevron-up cinema-up"></i>
+                            </span>
+                        </div>
+                        <div class="select-time">
+                            <ul class="row mt-3 mx-auto ps-0">
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>10:05 AM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>1:30 PM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>9:00 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="cinema-section">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6>Mega Ace Cineplex (Kan Thar Yar) - NorthOkkalapa</h6>
+                            <span class="ct-toggle-btn">
+                                <i class="fa-solid fa-chevron-down cinema-down"></i>
+                                <i class="fa-solid fa-chevron-up cinema-up"></i>
+                            </span>
+                        </div>
+                        <div class="select-time">
+                            <ul class="row mt-3 mx-auto ps-0">
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>9:30 AM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>3:20 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="cinema-section">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <h6>Mega Ace Cineplex (Shwe Baho) - Tamwe (Yangon)</h6>
+                            <span class="ct-toggle-btn">
+                                <i class="fa-solid fa-chevron-down cinema-down"></i>
+                                <i class="fa-solid fa-chevron-up cinema-up"></i>
+                            </span>
+                        </div>
+                        <div class="select-time">
+                            <ul class="row mt-3 mx-auto ps-0">
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>10:50 AM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>1:50 PM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>3:55 PM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>6:30 PM</span>
+                                    </button>
+                                </li>
+                                <li class="col-lg-2 col-md-3 col-sm-4">
+                                    <button>
+                                        <span>8:40 PM</span>
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </section>
     <!-- book ticket end  -->
-
 
     <!-- footer section start  -->
     <section id="footer">
@@ -180,7 +330,7 @@
                                     <button class="btn fw-medium">Pages</button>
                                     <span>
                                         <i class="fa-solid fa-chevron-down" id="down"></i>
-                                        <i class="fa-solid fa-angle-up up" id="up"></i>
+                                        <i class="fa-solid fa-chevron-up" id="up"></i>
                                     </span>
                                 </div> 
                                 <ul id="drop-items">
