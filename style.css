@@ -1449,6 +1449,12 @@ iframe{
     color: var(--teal);
     margin-top: 15px;
 }
+#ticket-m-poster > ul,
+#select-seat-modal .modal-content .row .col-lg-5 > ul{
+    width: fit-content;
+    padding-left: 0 !important;
+    margin: auto;
+}
 
 #select-date > ul{
     background-color: var(--nav-bar);
@@ -1512,7 +1518,7 @@ iframe{
 #select-seat-modal .modal-content .row{
     background-color: var(--nav-bar);
     border-radius: 10px;
-    padding-top: 15px;
+    padding: 20px 0 20px;
 }
 #select-seat-modal h5{
     color: var(--teal);
@@ -1543,9 +1549,6 @@ iframe{
         width: 50% !important;
         margin: auto;
     }
-    #select-seat-modal .modal-content .row .col-lg-7 button{
-        margin-bottom: 20px;
-    }
 }
 /*.......................................... book ticket end ................................... */
 
@@ -1554,6 +1557,11 @@ iframe{
 #select-movie-label{
     background-color: var(--nav-bar);
     padding: 20px 15px;
+}
+#select-movie-label li{
+    list-style: none;
+    margin-left: 0;
+    background-color: red;
 }
 /*.......................................... select seat end ................................... */
 
