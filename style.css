@@ -1450,7 +1450,8 @@ iframe{
     margin-top: 15px;
 }
 #ticket-m-poster > ul,
-#select-seat-modal .modal-content .row .col-lg-5 > ul{
+#select-seat-modal .modal-content .row .col-lg-5 > ul,
+#selected-movie-label > div > ul{
     width: fit-content;
     padding-left: 0 !important;
     margin: auto;
@@ -1554,15 +1555,37 @@ iframe{
 
 
 /*.......................................... select seat start ................................... */
-#select-movie-label{
+#selected-movie-label{
     background-color: var(--nav-bar);
-    padding: 20px 15px;
+    padding: 20px 25px;
 }
-#select-movie-label li{
+#selected-movie-label button{
+    border: 1px solid var(--secondary);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    padding: 5px 20px;
+}
+#selected-movie-label button:hover{
+    border: 1px solid var(--teal);
+    color: var(--teal);
+}
+#selected-movie-label > div > h5{
+    color: var(--teal);
+}
+#selected-movie-label li{
     list-style: none;
     margin-left: 0;
-    background-color: red;
 }
+
+.screen{
+    background-color: var(--nav-bar);
+    height: 4px;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 100px 100px 0 0;
+    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.767);
+}
+
 /*.......................................... select seat end ................................... */
 
 

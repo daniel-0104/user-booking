@@ -166,12 +166,16 @@ $(document).ready(function(){
 
 
 //....................................... ......category active link start .........................................
-const categoryLinks = document.querySelectorAll('.category-link');
-categoryLinks.forEach(link => link.classList.remove('active'));
-categoryLinks.forEach(link => {
-  if (currentHTMLPage.includes(link.getAttribute('href'))) {
-    link.classList.add('active');
-  }
+document.addEventListener('DOMContentLoaded',function(){
+  const categoryLinks = document.querySelectorAll('.category-link');
+  const currentHTMLPage = window.location.pathname;
+  categoryLinks.forEach(link => link.classList.remove('active'));
+  
+  categoryLinks.forEach(link => {
+    if (currentHTMLPage.includes(link.getAttribute('href'))) {
+      link.classList.add('active');
+    }
+  });
 });
 //................................................category active link end..... .........................................
 
