@@ -328,3 +328,35 @@ $(document).ready(function(){
   });
 });
 // ....................................... showtime select cinema and time dropdown end .................................... 
+
+//.......................................  seat in theater start..................................
+// const rows = 40;
+// const cols = 50;
+// const container = document.getElementById('container');
+
+// for (let row = 0; row < rows; row++) {
+//     const rowName = String.fromCharCode(65 + row); // Convert row number to letter
+//     const rowDiv = document.createElement('div');
+//     rowDiv.className = 'row';
+
+//     const rowLabel = document.createElement('div');
+//     rowLabel.className = 'row-label';
+//     rowLabel.textContent = rowName;
+
+//     const theaterDiv = document.createElement('div');
+//     theaterDiv.className = 'theater';
+
+//     for (let col = 1; col <= cols; col++) {
+//         const seat = document.createElement('div');
+//         seat.className = 'seat';
+//         seat.dataset.row = rowName;
+//         seat.dataset.col = col;
+//         seat.textContent = col;
+//         theaterDiv.appendChild(seat);
+//     }
+
+//     rowDiv.appendChild(rowLabel);
+//     rowDiv.appendChild(theaterDiv);
+//     container.appendChild(rowDiv);
+// }
+//.......................................  seat in theater end ..................................

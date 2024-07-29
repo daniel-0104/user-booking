@@ -4,7 +4,7 @@ body{
 }
 :root{
     --body : #46709b;
-    --nav-bar: #324d6d;
+    --nav-bar: #345072;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -1557,7 +1557,7 @@ iframe{
 /*.......................................... select seat start ................................... */
 #selected-movie-label{
     background-color: var(--nav-bar);
-    padding: 20px 25px;
+    padding: 16px 25px;
 }
 #selected-movie-label button{
     border: 1px solid var(--secondary);
@@ -1569,7 +1569,7 @@ iframe{
     border: 1px solid var(--teal);
     color: var(--teal);
 }
-#selected-movie-label > div > h5{
+#selected-movie-label h5{
     color: var(--teal);
 }
 #selected-movie-label li{
@@ -1577,15 +1577,39 @@ iframe{
     margin-left: 0;
 }
 
-.screen{
-    background-color: var(--nav-bar);
-    height: 4px;
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 100px 100px 0 0;
-    box-shadow: 0 3px 6px rgba(255, 255, 255, 0.767);
-}
 
+
+.screen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.projecter{
+    position: relative;
+    width: 400px;
+    height: 190px;
+    background-color: #ecececee;
+    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.664);
+}
+#quarters{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 420px;
+}
+.quarter-ellipse1 {
+    background: var(--nav-bar);
+    width: 100px;
+    height: 220px;
+    border-radius: 20px 0 90% 0;
+}
+.quarter-ellipse2 {
+    background: var(--nav-bar);
+    width: 100px;
+    height: 220px;
+    border-radius: 0 20px 0 90%;
+}
 /*.......................................... select seat end ................................... */
 
 

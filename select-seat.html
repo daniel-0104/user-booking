@@ -24,22 +24,36 @@
 <body>
 
     <!-- select seat start  -->
-    <section>
-        <div id="selected-movie-label" class="d-flex align-items-center justify-content-between">
-            <a href="book-ticket.html">
-                <button class="btn">Back</button>
-            </a>
-            <div class="">
-                <h5>Raya And The Last Dragon</h5>
-                <ul class="d-flex align-items-center justify-content-center">
-                    <li>Wed 12 June , 11:30 AM</li>
-                </ul>
+    <section class="position-relative">
+        <div id="selected-movie-label" class="row mx-auto align-items-center">
+            <div class="col-lg-4 col-sm-2">
+                <a href="book-ticket.html">
+                    <button class="btn">Back</button>
+                </a>
             </div>
-            <h6>Time Left : <span></span> 5:00 </h6>
+            <div class="col-lg-4 col-sm-8 text-center">
+                <h5>Raya And The Last Dragon</h5>
+                    <ul class="d-flex align-items-center justify-content-center">
+                        <li>Wed 12 June , 11:30 AM</li>
+                    </ul>
+            </div>
+            <div class="col-lg-4 col-sm-2 text-end">
+                <h6>Time Left : <span></span> 5:00 </h6>
+            </div>
+
+
         </div>
         <div id="theater-seat-content" class="mt-5">
             <p class="text-center">Mega Ace Cineplex (Capital)</p>
-            <div class="screen"></div>
+            <div class="screen">
+                <div class="projecter"></div>
+                <div id="quarters">
+                    <div class="quarter-ellipse1"></div>
+                    <div class="quarter-ellipse2"></div>
+                </div>
+                
+            </div>
+
         </div>
     </section>
     <!-- select seat end  -->
