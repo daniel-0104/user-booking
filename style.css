@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #46709b;
+    --body : #47739e;
     --nav-bar: #345072;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -1126,7 +1126,24 @@ iframe{
     background-color: var(--nav-bar);
 }
 #more-cover-poster{
-    background-color: #1b2530ec;
+    padding: 20px 30px;
+}
+#more-cover-poster h4{
+    display: block;
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 8px;
+    font-weight: bold;
+}
+#more-cover-poster img{
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border: 3px solid white;
+    border-radius: 10px;
 }
 @media screen and (max-width: 992px){
     #movie-cover-poster{
@@ -1218,7 +1235,8 @@ iframe{
 }
 #other-movies{
     background-color: var(--nav-bar);
-    padding: 120px 20px 10px;
+    padding: 60px 20px 10px;
+    margin-top: 50px;
 }
 #other-movies-label{
     display: flex;
@@ -1579,12 +1597,14 @@ iframe{
     list-style: none;
     margin-left: 0;
 }
+#seat-plan{
+    margin: 100px 0;
+}
 @media screen and (max-width: 768px){
     #selected-movie-label .col-md-6{
         margin: 20px auto;
     }
 }
-
 
 .screen{
     display: flex;
@@ -1631,6 +1651,74 @@ iframe{
     .quarter-ellipse2{
         width: 80px;
         height: 200px;
+    }
+}
+
+#check-out{
+    background-color: var(--nav-bar);
+    margin-bottom: 50px;
+    padding: 30px 25px;
+    border-radius: 10px;
+    border-left: 3px solid var(--teal);
+    border-right: 3px solid var(--teal);
+}
+#seat-number h6{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    width: 60px;
+    height: 40px;
+    border-radius: 10px;
+    color: var(--teal);
+    font-size: 14pt;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    border: 1px solid var(--teal);
+}
+#check-out p{
+    color: var(--teal);
+    font-size: 15pt;
+    font-weight: bold;
+}
+#check-out button{
+    width: 100%;
+    border: 1px solid var(--secondary);
+    color: var(--teal);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.524);
+    font-size: 13pt;
+    margin-top: 20px;
+}
+#check-out button:hover{
+    border: 1px solid var(--teal);
+}
+@media screen and (max-width: 992px){
+    #check-out{
+        display: block;
+        width: 95%;
+    }
+}
+@media screen and (max-width: 576px){
+    #seat-number{
+        display: flex !important;
+        width: 100%;
+        align-items: center;
+    }
+    #seat-number > div{
+        display: block;
+        width: fit-content;
+    }
+    #check-out .col-lg-6{
+        margin-bottom: 30px;
+    }
+    #check-out .col-lg-4{
+        display: flex;
+        align-items: center;
+    }
+    #check-out .col-lg-4 > h5{
+        margin-bottom: 0;
+        margin-right: 20px;
     }
 }
 /*.......................................... select seat end ................................... */

@@ -251,21 +251,9 @@ cellContent.forEach(item => {
 var swiper = new Swiper(".mySwiper4", {
   spaceBetween: 30,
   slidesPerView: 4,
-  freeMode: true,
-  hashNavigation: {
-    watchState: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
   navigation: {
     nextEl: ".button-next4",
     prevEl: ".button-prev4",
-  },
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
   },
   pagination: {
     el: ".swiper-pagination",
@@ -290,6 +278,33 @@ var swiper = new Swiper(".mySwiper4", {
   }
 });
 // ..................................................... other movies swiper end ....................................
+
+
+// ..................................................... other photo swiper start ....................................
+var swiper = new Swiper(".mySwiper5", {
+  spaceBetween: 30,
+  slidesPerView: 3,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    500: {
+        slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1300: {
+        slidesPerView: 4,
+    }
+  }
+});
+// ..................................................... other photo swiper end ....................................
 
 
 // ..................................................... showtime select date start ....................................
@@ -328,35 +343,3 @@ $(document).ready(function(){
   });
 });
 // ....................................... showtime select cinema and time dropdown end .................................... 
-
-//.......................................  seat in theater start..................................
-// const rows = 40;
-// const cols = 50;
-// const container = document.getElementById('container');
-
-// for (let row = 0; row < rows; row++) {
-//     const rowName = String.fromCharCode(65 + row); // Convert row number to letter
-//     const rowDiv = document.createElement('div');
-//     rowDiv.className = 'row';
-
-//     const rowLabel = document.createElement('div');
-//     rowLabel.className = 'row-label';
-//     rowLabel.textContent = rowName;
-
-//     const theaterDiv = document.createElement('div');
-//     theaterDiv.className = 'theater';
-
-//     for (let col = 1; col <= cols; col++) {
-//         const seat = document.createElement('div');
-//         seat.className = 'seat';
-//         seat.dataset.row = rowName;
-//         seat.dataset.col = col;
-//         seat.textContent = col;
-//         theaterDiv.appendChild(seat);
-//     }
-
-//     rowDiv.appendChild(rowLabel);
-//     rowDiv.appendChild(theaterDiv);
-//     container.appendChild(rowDiv);
-// }
-//.......................................  seat in theater end ..................................
