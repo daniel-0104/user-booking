@@ -1125,6 +1125,9 @@ iframe{
     color: var(--teal);
     background-color: var(--nav-bar);
 }
+#more-cover-poster{
+    background-color: #1b2530ec;
+}
 @media screen and (max-width: 992px){
     #movie-cover-poster{
         display: none;
@@ -1145,12 +1148,12 @@ iframe{
     }
 }
 @media screen and (max-width: 618px){
-    #icon-span{
+    #detail-flex{
         display: block !important;
         width: 100% !important;
     }
-    #icon-span > div{
-        padding: 5px 0;
+    #detail-flex > div:nth-child(2){
+        margin-left: 0 !important;
     }
 }
 @media screen and (max-width: 510px){
@@ -1576,13 +1579,18 @@ iframe{
     list-style: none;
     margin-left: 0;
 }
-
+@media screen and (max-width: 768px){
+    #selected-movie-label .col-md-6{
+        margin: 20px auto;
+    }
+}
 
 
 .screen{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
 }
 .projecter{
     position: relative;
@@ -1609,6 +1617,21 @@ iframe{
     width: 100px;
     height: 220px;
     border-radius: 0 20px 0 90%;
+    color: red;
+}
+@media screen and (max-width: 470px){
+    .projecter{
+        width: 300px;
+        height: 180px;
+    }
+    #quarters{
+        width: 320px;
+    }
+    .quarter-ellipse1,
+    .quarter-ellipse2{
+        width: 80px;
+        height: 200px;
+    }
 }
 /*.......................................... select seat end ................................... */
 
