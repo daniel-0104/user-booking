@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body : #47739e;
-    --nav-bar: #345072;
+    --body : #3e6995;
+    --nav-bar: #2a4160;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -1536,6 +1536,14 @@ iframe{
     color: var(--teal);
     cursor: pointer;
 }
+#cinema-name label{
+    background-color: var(--secondary) !important;
+    margin-bottom: 10px;
+    padding: 0 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 11pt;
+}
 
 #select-seat-modal .modal-content .row{
     background-color: var(--nav-bar);
@@ -1570,6 +1578,14 @@ iframe{
         display: block;
         width: 50% !important;
         margin: auto;
+    }
+    #cinema-name > h6{
+        margin-right: 5px !important;
+    }
+}
+@media screen and (max-width: 576px){
+    #cinema-name{
+        display: block !important;
     }
 }
 /*.......................................... book ticket end ................................... */
