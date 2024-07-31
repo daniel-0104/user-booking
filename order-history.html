@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order History</title>
+
+    <!-- css bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- animate  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="order-history">
+        <div class="d-flex align-items-center">
+            <a href="index.html" class="me-4">Home</a> <span> > </span>
+            <label for="">Order History</label>
+        </div>
+        <div class="container-lg my-5" id="ticket-table">
+            <div class="table-responsive">
+                <table>
+                    <thead class="border-bottom">
+                        <tr>
+                            <th class="w-25">Order Date</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>31.07.2024</td>
+                            <td>
+                                <div class="row" id="detail-content">
+                                    <div class="col-lg-4">
+                                        <div class="item-right">
+                                            <span class="up-border"></span>
+                                            <span class="down-border"></span>
+                                        </div>
+                                        <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-75 d-block m-auto mt-4 rounded" alt="">
+                                    </div>
+                                    <div class="col-lg-8 ps-5 py-3">
+                                        <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                                        <div class="mt-4">
+                                            <label>Cinema</label>
+                                            <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-3">
+                                            <div class="me-5">
+                                                <label>Date</label>
+                                                <h6 class="mt-1">Wed, 12 June 2021</h6>
+                                            </div>
+                                            <div class="me-5">
+                                                <label>Time</label>
+                                                <h6 class="mt-1">11:30 AM</h6>
+                                            </div>
+                                            <div class="me-5">
+                                                <label>Hall</label>
+                                                <h6 class="mt-1">Hall 1</h6>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <label>Selected Seats</label>
+                                            <h6 class="mt-1">A1, A2, A3</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-3">
+                                            <div class="me-5">
+                                                <label>Cost</label>
+                                                <h6 class="mt-1">30000 Kyats</h6>
+                                            </div>
+                                            <div>
+                                                <label>Booking Code</label>
+                                                <h6 class="mt-1">MOV12345</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+            <!-- <div class="d-flex align-items-center">
+                <strong class="me-3">Order Date : </strong>
+                <h6 class="mb-0">31.07.2024</h6>
+            </div>
+            <div class="row" id="order-details">
+                <div class="col-lg-5 bg-warning text-center">
+                    <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" alt="">
+                </div>
+                <div class="col-lg-7">
+                    <h5>Raya And The Last Dragon</h5>
+                </div>
+            </div> -->
+            <!-- <div class="container">
+                <div class="item">
+                    <div class="item-right">
+                        <span class="up-border"></span>
+                        <span class="down-border"></span>
+                    </div>
+                    
+                    <div class="item-left">
+                        <p class="event">Music Event</p>
+                        <h2 class="title">Live In Sydney</h2>
+                        
+                        <div class="sce">
+                        <div class="icon">
+                            <i class="fa fa-table"></i>
+                        </div>
+                        <p>Monday 15th 2016 <br/> 15:20Pm & 11:00Am</p>
+                        </div>
+                        <div class="fix"></div>
+                        <div class="loc">
+                        <div class="icon">
+                            <i class="fa fa-map-marker"></i>
+                        </div>
+                        <p>North,Soth, United State , Amre <br/> Party Number 16,20</p>
+                        </div>
+                        <div class="fix"></div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </section>
+
+
+
+
+</body>
+
+    <!-- js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- js  -->
+    <script src="script.js"></script>
+
+</html>

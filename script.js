@@ -343,3 +343,30 @@ $(document).ready(function(){
   });
 });
 // ....................................... showtime select cinema and time dropdown end .................................... 
+
+
+//............................................... time duration start ...............................................
+// function startTimer(duration, display) {
+//   let timer = duration, minutes, seconds;
+//   const interval = setInterval(function(){
+//       minutes = parseInt(timer / 60, 10);
+//       seconds = parseInt(timer % 60, 10);
+
+//       minutes = minutes < 10 ? "0" + minutes : minutes;
+//       seconds = seconds < 10 ? "0" + seconds : seconds;
+//       display.textContent = minutes + ":" + seconds;
+
+//       if (--timer < 0) {
+//           clearInterval(interval);
+//           alert('You have reached the time limit.');
+//           window.location.href = 'book-ticket.html';
+//       }
+//   }, 1000);
+// }
+
+// window.onload = function () {
+//   const fiveMinutes = 60 * 5;
+//   const display = document.querySelector('#timer');
+//   startTimer(fiveMinutes, display);
+// };
+//............................................... time duration end ...............................................

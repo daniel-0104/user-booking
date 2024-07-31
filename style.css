@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body : #3e6995;
-    --nav-bar: #2a4160;
+    --body : #4c76a0;
+    --nav-bar: #2f4765;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -25,7 +25,8 @@ body{
     color: var(--gold);
     font-family: fantasy;
 }
-#login-btn{
+#login-btn,
+#logout-btn{
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.644);
 }
 .my-account{
@@ -43,7 +44,8 @@ body{
 #nav-order > li > a:hover,
 .nav-item a i:hover,
 .nav-item button:hover,
-#login-btn:hover{
+#login-btn:hover,
+#logout-btn:hover{
     color: var(--gold) !important;
 }
 .navbar-toggler{
@@ -91,7 +93,7 @@ body{
 #profile-info form{
     border-left: 2px solid var(--teal);
     border-right: 2px solid var(--teal);
-    padding: 10px 0;
+    padding: 10px 0 15px;
     border-radius: 10px;
 }
 .offcanvas button i:hover,
@@ -1738,6 +1740,200 @@ iframe{
     }
 }
 /*.......................................... select seat end ................................... */
+
+
+/*.......................................... order history start ................................... */
+#order-history > div:nth-child(1){
+    margin-top: 20px;
+    padding-left: 50px;
+}
+#order-history > div:nth-child(1) > a{
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-size: 12pt;
+    font-weight: bold;
+}
+#order-history > div:nth-child(1) > a:hover{
+    color: var(--teal);
+}
+#order-history > div:nth-child(1) > span{
+    font-size: 13pt;
+    font-weight: bold;
+}
+#order-history > div:nth-child(1) > label{
+    text-transform: uppercase;
+    background-color: var(--secondary);
+    color: white;
+    padding: 10px 20px;
+    font-size: 12pt;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+    margin-left: 25px;
+}
+
+#ticket-table table{
+    width: 100%;
+    /* background-color: var(--nav-bar) !important; */
+    border-radius: 10px;
+}
+#ticket-table table td,
+#ticket-table table th{
+    padding: 20px;
+}
+#detail-content{
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+}
+#detail-content label{
+    color: rgb(206, 205, 205);
+}
+#detail-content .col-lg-4{
+    position: relative;
+    border-right: 1px dotted white;
+}
+#detail-content .item-right .up-border{
+    width: 30px;
+    height: 30px;
+    background-color: var(--body);
+    border-radius: 50%;
+    position: absolute;
+    border-bottom: 2px solid var(--nav-bar);
+}
+#detail-content .item-right .down-border {
+    width: 30px;
+    height: 30px;
+    background-color: var(--body);
+    border-radius: 50%;
+    position: absolute;
+    border-top: 2px solid var(--nav-bar);
+}
+#detail-content .item-right .up-border {
+    top: -16px;
+    right: -16px;
+  }
+
+#detail-content .item-right .down-border {
+    bottom: -16px;
+    right: -16px;
+}
+
+
+
+/* div.container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 300px;
+  }
+  .upcomming {
+    font-size: 45px;
+    text-transform: uppercase;
+    border-left: 14px solid rgba(255, 235, 59, 0.78);
+    padding-left: 12px;
+    margin: 18px 8px;
+  }
+  .container .item {
+    width: 100%;
+    float: left;
+    padding: 0 20px;
+    background: #fff;
+    overflow: hidden;
+    margin: 10px
+  }
+  .container .item-right, .container .item-left {
+    float: left;
+    padding: 20px 
+  }
+  .container .item-right {
+    padding: 79px 50px;
+    margin-right: 20px;
+    width: 30%;
+    position: relative;
+    height: 286px
+  }
+  .container .item-right .up-border, .container .item-right .down-border {
+      padding: 14px 15px;
+      background-color: #ddd;
+      border-radius: 50%;
+      position: absolute
+  }
+  .container .item-right .up-border {
+    top: -8px;
+    right: -35px;
+  }
+  .container .item-right .down-border {
+    bottom: -13px;
+    right: -35px;
+  }
+  .container .item-right .num {
+    font-size: 60px;
+    text-align: center;
+    color: #111
+  }
+  .container .item-right .day, .container .item-left .event {
+    color: #555;
+    font-size: 20px;
+    margin-bottom: 9px;
+  }
+  .container .item-right .day {
+    text-align: center;
+    font-size: 25px;
+  }
+  .container .item-left {
+    width: 70%;
+    padding: 34px 0px 19px 46px;
+    border-left: 3px dotted #999;
+  } 
+  .container .item-left .title {
+    color: #111;
+    font-size: 34px;
+    margin-bottom: 12px
+  }
+  .container .item-left .sce {
+    margin-top: 5px;
+    display: block
+  }
+  .container .item-left .sce .icon, .container .item-left .sce p,
+  .container .item-left .loc .icon, .container .item-left .loc p{
+      float: left;
+      word-spacing: 5px;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 10px;
+  }
+  .container .item-left .sce .icon, .container .item-left .loc .icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #666
+  }
+  .container .item-left .loc {display: block}
+  .fix {clear: both}
+  .container .item .tickets, .booked, .cancel{
+      color: #fff;
+      padding: 6px 14px;
+      float: right;
+      margin-top: 10px;
+      font-size: 18px;
+      border: none;
+      cursor: pointer
+  }
+  .container .item .tickets {background: #777}
+  .container .item .booked {background: #3D71E9}
+  .container .item .cancel {background: #DF5454}
+  .linethrough {text-decoration: line-through}
+  @media only screen and (max-width: 1150px) {
+    .container .item {
+      width: 100%;
+      margin-right: 20px
+    }
+    div.container {
+      margin: 0 20px auto
+    }
+  } */
+/*.......................................... order history end ................................... */
 
 
 /*................................... ..........auth section start .................................. */
