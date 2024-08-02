@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #4c76a0;
+    --body : #416991;
     --nav-bar: #2f4765;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -482,7 +482,7 @@ body{
 }
 #feature-trailer .swiper-slide{
     background-color: var(--nav-bar);
-    padding: 20px 20px 0;
+    padding: 25px 20px 0;
     border: 1px solid white;
     border-radius: 10px;
     position: relative;
@@ -1655,7 +1655,6 @@ iframe{
     width: 100px;
     height: 220px;
     border-radius: 0 20px 0 90%;
-    color: red;
 }
 @media screen and (max-width: 470px){
     .projecter{
@@ -1773,12 +1772,21 @@ iframe{
     margin-left: 25px;
 }
 
+
 #ticket-table table{
     width: 100%;
 }
-#ticket-table table td,
+#ticket-table tr th:nth-child(1){
+    width: 15%;
+}
 #ticket-table table th{
     padding: 20px;
+}
+#ticket-table table td{
+    padding: 35px 20px;
+}
+#ticket-table table td{
+    border-bottom: 1px solid white;
 }
 #detail-content{
     background-color: var(--nav-bar);
@@ -1788,8 +1796,18 @@ iframe{
 }
 #detail-content img{
     margin: auto;
-    /* height: 300px; */
+    padding: 10px;
     object-fit: cover;
+}
+#cinema-name2 label{
+    background-color: var(--secondary) !important;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 11pt;
+    color: white !important;
 }
 #detail-content label,
 #ph-detail-content label{
@@ -1826,13 +1844,21 @@ iframe{
 
 #ticket-ph{
     display: none;
+    margin-bottom: 30px;
+}
+#order-date{
+    width: fit-content;
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+    padding: 10px 15px;
+    text-align: center;
+    margin-bottom: 15px;
 }
 #ph-detail-content{
     background-color: var(--nav-bar);
     padding: 20px;
     border-radius: 10px;
-    border-top: 3px solid var(--teal);
-    border-bottom: 3px solid var(--teal);
+    border: 1px solid white;
 }
 #ph-detail-content > div:nth-child(1){
     border-bottom: 1px dotted white;
@@ -1844,18 +1870,18 @@ iframe{
 }
 #ticket-ph .item-right .up-border,
 #ticket-ph .item-right .down-border{
-    width: 30px;
+    width: 25px;
     height: 30px;
     background-color: var(--body);
     border-radius: 50%;
     position: absolute;
 }
 #ticket-ph .item-right .up-border{
-    top: 310px;
+    top: 372px;
     left: 1px;
 }
 #ticket-ph .item-right .down-border{
-    top: 310px;
+    top: 372px;
     right: 1px;
 }
 @media screen and (max-width: 992px){
@@ -1866,8 +1892,20 @@ iframe{
         display: block;
     }
 }
-
-
+@media screen and (min-width: 560px) and (max-width: 768px){
+    #ticket-ph .col-lg-6{
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+}
+@media screen and (max-width: 560px){
+    #ticket-ph .col-lg-6{
+        display: block;
+        width: 100%;
+        margin: auto;
+    }
+}
 
 /*.......................................... order history end ................................... */
 

@@ -33,16 +33,16 @@
                 <table>
                     <thead class="border-bottom">
                         <tr>
-                            <th class="w-25">Order Date</th>
+                            <th>Order Date</th>
                             <th>Details</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>31.07.2024</td>
+                            <td class="fw-medium">31.07.2024</td>
                             <td>
                                 <div class="row" id="detail-content">
-                                    <div class="col-lg-4 col-md-4">
+                                    <div class="col-lg-4 col-md-4 text-center d-flex justify-content-center">
                                         <div class="item-right">
                                             <span class="up-border"></span>
                                             <span class="down-border"></span>
@@ -50,7 +50,10 @@
                                         <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" class="w-75 d-block rounded" alt="">
                                     </div>
                                     <div class="col-lg-8 col-md-8 ps-5 py-3">
-                                        <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                                        <div class="d-flex align-items-center" id="cinema-name2">
+                                            <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                                            <label for="">2D</label>
+                                        </div>
                                         <div class="mt-4">
                                             <label>Cinema</label>
                                             <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
@@ -86,15 +89,72 @@
                                     </div>
                                 </div>
                             </td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="fw-medium">20.08.2020</td>
+                            <td>
+                                <div class="row" id="detail-content">
+                                    <div class="col-lg-4 col-md-4 text-center d-flex justify-content-center">
+                                        <div class="item-right">
+                                            <span class="up-border"></span>
+                                            <span class="down-border"></span>
+                                        </div>
+                                        <img src="image/The_Garfield_Movie_2024_poster.jpg" class="w-75 d-block rounded" alt="">
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 ps-5 py-3">
+                                        <div class="d-flex align-items-center" id="cinema-name2">
+                                            <h5 class="fw-bold">The Garfield</h5>
+                                            <label for="">2D</label>
+                                        </div>
+                                        <div class="mt-4">
+                                            <label>Cinema</label>
+                                            <h6 class="mt-1">Mega Ace Cineplex (Myayadanar) - Thaketa (Yangon)</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-3">
+                                            <div class="me-5">
+                                                <label>Date</label>
+                                                <h6 class="mt-1">Fri, 19 Jan 2022</h6>
+                                            </div>
+                                            <div class="me-5">
+                                                <label>Time</label>
+                                                <h6 class="mt-1">08:30 PM</h6>
+                                            </div>
+                                            <div class="me-5">
+                                                <label>Hall</label>
+                                                <h6 class="mt-1">Hall 3</h6>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3">
+                                            <label>Selected Seats</label>
+                                            <h6 class="mt-1">G1,G2</h6>
+                                        </div>
+                                        <div class="d-flex align-items-center mt-3">
+                                            <div class="me-5">
+                                                <label>Cost</label>
+                                                <h6 class="mt-1">50000 Kyats</h6>
+                                            </div>
+                                            <div>
+                                                <label>Booking Code</label>
+                                                <h6 class="mt-1">MOV12345</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            
                         </tr>
                     </tbody>
                 </table>
             </div>
-
         </div>
         <div class="container-lg" id="ticket-ph">
             <div class="row">
-                <div class="col-lg-6 col-md-6 position-relative">
+                <div class="col-lg-6 col-md-6 mb-5 position-relative">
+                    <div id="order-date">
+                        <strong class="me-3">Order Date : </strong>
+                        <span>31.07.2024</span>
+                    </div>
                     <div class="item-right">
                         <span class="up-border"></span>
                         <span class="down-border"></span>
@@ -104,7 +164,63 @@
                             <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
                         </div>
                         <div class="mt-4">
-                            <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                            <div class="d-flex align-items-center" id="cinema-name2">
+                                <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                                <label for="">2D</label>
+                            </div>
+                            <div class="mt-4">
+                                <label>Cinema</label>
+                                <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="me-5">
+                                    <label>Date</label>
+                                    <h6 class="mt-1">Wed, 12 June 2021</h6>
+                                </div>
+                                <div class="me-5">
+                                    <label>Time</label>
+                                    <h6 class="mt-1">11:30 AM</h6>
+                                </div>
+                                <div class="me-5">
+                                    <label>Hall</label>
+                                    <h6 class="mt-1">Hall 1</h6>
+                                </div>
+                            </div>
+                            <div class="mt-3">
+                                <label>Selected Seats</label>
+                                <h6 class="mt-1">A1, A2, A3</h6>
+                            </div>
+                            <div class="d-flex align-items-center mt-3">
+                                <div class="me-5">
+                                    <label>Cost</label>
+                                    <h6 class="mt-1">30000 Kyats</h6>
+                                </div>
+                                <div>
+                                    <label>Booking Code</label>
+                                    <h6 class="mt-1">MOV12345</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mb-5 position-relative">
+                    <div id="order-date">
+                        <strong class="me-3">Order Date : </strong>
+                        <span>20.08.2020</span>
+                    </div>
+                    <div class="item-right">
+                        <span class="up-border"></span>
+                        <span class="down-border"></span>
+                    </div>
+                    <div id="ph-detail-content">
+                        <div>
+                            <img src="image/small-spos8674-poster-movie-the-lion-king-mufasa-wall-poster-sl-original-imaghzwansyt5m4b.webp" class="w-100 d-block rounded" alt="">
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex align-items-center" id="cinema-name2">
+                                <h5 class="fw-bold">The Lion King</h5>
+                                <label for="">2D</label>
+                            </div>
                             <div class="mt-4">
                                 <label>Cinema</label>
                                 <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
