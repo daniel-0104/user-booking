@@ -1480,6 +1480,77 @@ iframe{
     margin: auto;
 }
 
+#order-location1,
+#order-location2,
+#order-location3{
+    position: relative;
+    margin: 80px auto;
+}
+#order-location1 #o-location-n,
+#order-location2 #o-location-n,
+#order-location3 #o-location-n{
+    margin-top: -15px;
+}
+#order-location1 > div:nth-child(1),
+#order-location2 > div:nth-child(1),
+#order-location3 > div:nth-child(1){
+    display: block;
+    width: 65%;
+    margin: auto;
+    height: 1px;
+    background-color: white;
+}
+#order-location2 span,
+#order-location3 span{
+    display: block;
+    width: 100%;
+}
+#order-location2 span:nth-child(1),
+#order-location3 span:nth-child(1),
+#order-location3 span:nth-child(2){
+    border: 1px solid var(--teal);
+}
+#order-location1 label,
+#order-location2 label,
+#order-location3 label{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: var(--nav-bar);
+    color: white;
+}
+#order-location1 label:nth-child(1),
+#order-location2 label:nth-child(1),
+#order-location2 label:nth-child(2),
+#order-location3 label:nth-child(1),
+#order-location3 label:nth-child(2){
+    background-color: var(--teal);
+    color: var(--nav-bar);
+}
+#order-location1 h6:nth-child(2),
+#order-location1 h6:nth-child(3),
+#order-location2 h6:nth-child(1),
+#order-location2 h6:nth-child(3),
+#order-location3 h6:nth-child(1),
+#order-location3 h6:nth-child(2){
+    color: #283e57;
+}
+@media screen and (max-width: 480px){
+    #order-location1 #o-location-n > div:nth-child(2) > h6,
+    #order-location2 #o-location-n > div:nth-child(2) > h6,
+    #order-location3 #o-location-n > div:nth-child(2) > h6{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 10%;
+        margin: auto;
+        text-align: center;
+    }
+}
+
 #select-date > ul{
     background-color: var(--nav-bar);
     padding: 22px 20px 18px;
