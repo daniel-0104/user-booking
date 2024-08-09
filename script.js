@@ -399,3 +399,74 @@ document.addEventListener('DOMContentLoaded',function(){
 //   startTimer(fiveMinutes, display);
 // };
 //............................................... time duration end ...............................................
+
+
+
+// Select the seat plan container
+const seatPlan = document.getElementById('seat-plan');
+
+// Set the number of rows and columns
+const rows = 26;
+const cols = 30;
+
+// Create the grid layout using CSS Grid
+seatPlan.style.display = 'grid';
+seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`; // Extra column for row labels
+seatPlan.style.gridGap = '6px';
+
+// Array of row labels (A, B, C, ...)
+const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+// Loop to create the rows and columns
+for (let row = 0; row < rows; row++) {
+    // Create and append the row label
+    const rowLabelDiv = document.createElement('div');
+    rowLabelDiv.className = 'row-label';
+    rowLabelDiv.textContent = rowLabels[row] || ''; // Handle overflow for rows beyond 'Z'
+    seatPlan.appendChild(rowLabelDiv);
+
+    for (let col = 1; col <= cols; col++) {
+        // Create a div for each seat
+        const seatDiv = document.createElement('div');
+        seatDiv.className = 'seat';
+        seatDiv.innerHTML = `
+                <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+        `;
+
+        // Append the seat to the seat plan container
+        seatPlan.appendChild(seatDiv);
+    }
+}
+
+
+// Dragging functionality for horizontal scroll
+let isDown = false;
+let startX;
+let scrollLeft;
+
+seatPlan.addEventListener('mousedown', (e) => {
+    isDown = true;
+    // seatPlan.style.cursor = 'grabbing';
+    startX = e.pageX - seatPlan.offsetLeft;
+    scrollLeft = seatPlan.scrollLeft;
+    e.preventDefault();
+});
+
+seatPlan.addEventListener('mouseleave', () => {
+    isDown = false;
+    // seatPlan.style.cursor = 'grab';
+});
+
+seatPlan.addEventListener('mouseup', () => {
+    isDown = false;
+    // seatPlan.style.cursor = 'grab';
+});
+
+seatPlan.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - seatPlan.offsetLeft;
+    const walk = (x - startX) * 2; // Adjust scrolling speed here
+    seatPlan.scrollLeft = scrollLeft - walk;
+});
