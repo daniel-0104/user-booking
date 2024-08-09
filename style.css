@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body : #416991;
-    --nav-bar: #2f4765;
+    --body : #396ea4;
+    --nav-bar: #2b4c74;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -1082,20 +1082,20 @@ iframe{
 #movie-cover-poster > img{
     display: block;
     width: 100%;
-    height: 100vh;
+    height: 95vh;
     object-fit: cover;
 }
 #movie-cover-poster > span,
 #ticket-mc-poster > span{
     position: absolute;
     width: 100%;
-    background-color: #1b2530ee;
+    background-color: #212d3bee;
     height: 100%;
     top: 0;
 }
 #movie-detail-content{
     position: absolute;
-    top: 30px;
+    top: 40px;
     width: 100%;
 }
 #movie-detail-content > .col-lg-8 > h1{
@@ -1127,25 +1127,49 @@ iframe{
     color: var(--teal);
     background-color: var(--nav-bar);
 }
-#more-cover-poster{
-    padding: 20px 30px;
+#more-cover-poster,
+#movie-cast{
+    padding: 20px 30px 5px;
 }
-#more-cover-poster h4{
+#more-cover-poster > h4,
+#movie-cast > h4{
     display: block;
-    text-align: center;
-    margin: auto;
-    width: fit-content;
-    border-bottom: 2px solid var(--teal);
-    padding-bottom: 8px;
+    text-align: left;
+    margin: 0 10px;
+    border-bottom: 1px solid var(--teal);
+    padding-bottom: 9px;
     font-weight: bold;
+    text-transform: uppercase;
 }
 #more-cover-poster img{
     display: block;
     width: 100%;
     height: 230px;
     object-fit: cover;
-    border: 3px solid white;
-    border-radius: 10px;
+    border: 2px solid var(--teal);
+    border-radius: 8px;
+}
+#movie-cast .mySwiper6 .swiper-slide{
+    background-color: var(--nav-bar);
+    padding: 35px 15px 25px;
+    border-radius: 8px;
+}
+#movie-cast img{
+    display: block;
+    margin: auto;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 20%;
+    border: 2px solid var(--teal);
+    padding: 10px;
+}
+#movie-cast h5{
+    text-align: center;
+    margin: 10px auto 8px;
+}
+#movie-cast span{
+    color: var(--teal);
 }
 @media screen and (max-width: 992px){
     #movie-cover-poster{
@@ -1173,6 +1197,10 @@ iframe{
     }
     #detail-flex > div:nth-child(2){
         margin-left: 0 !important;
+    }
+    #more-cover-poster > h4,
+    #movie-cast > h4{
+        margin: 0;
     }
 }
 @media screen and (max-width: 510px){
@@ -1741,6 +1769,104 @@ iframe{
         height: 200px;
     }
 }
+
+#seat-plan .cinema {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    /* background-color: #f0f0f0; */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+#seat-plan .row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+#seat-plan .seat {
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: rotate(0);
+    transition: transform 0.3s ease;
+}
+/* 
+#seat-plan .seat:hover {
+    transform: scale(1.05);
+} */
+
+.seat-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 70px;
+    height: 100px;
+    background: linear-gradient(135deg, #4a4a4a, #3b3b3b);
+
+    border-radius: 15px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.seat-back {
+    width: 100%;
+    height: 65%;
+    background: linear-gradient(135deg, #3d3d3d, #2b2b2b);
+    border-radius: 15px 15px 0 0;
+    position: relative;
+    z-index: 1;
+}
+
+.seat-cushion {
+    width: 85%;
+    height: 35%;
+    background: linear-gradient(135deg, #4a4a4a, #3b3b3b);
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+    margin-top: -5px;
+    box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.4);
+}
+
+.stitching {
+    position: absolute;
+    width: 90%;
+    height: 5px;
+    background: linear-gradient(135deg, #666, #444);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+}
+
+#seat-plan .handle {
+    width: 8px;
+    height: 50px;
+    background-color: #444;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#seat-plan .handle.left {
+    border-radius: 5px 0 0 5px;
+}
+
+#seat-plan .handle.right {
+    border-radius: 0 5px 5px 0;
+}
+
+/* #seat-plan .seat-body:hover {
+    background-color: #e0e0e0;
+}
+
+#seat-plan .handle:hover {
+    background-color: #555;
+} */
+
 
 #check-out{
     background-color: var(--nav-bar);

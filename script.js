@@ -307,6 +307,35 @@ var swiper = new Swiper(".mySwiper5", {
 // ..................................................... other photo swiper end ....................................
 
 
+// ..................................................... movie cast swiper start ....................................
+var swiper = new Swiper(".mySwiper6", {
+  spaceBetween: 30,
+  slidesPerView: 5,
+  grabCursor: true,
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    500: {
+        slidesPerView: 2,
+    },
+    800: {
+      slidesPerView: 3,
+    },
+    992: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView : 5,
+    },
+    1300: {
+        slidesPerView: 6,
+    }
+  }
+});
+// ..................................................... movie cast swiper end ....................................
+
+
 // ..................................................... showtime select date start ....................................
 document.addEventListener('DOMContentLoaded',function(){
   const selectDates = document.querySelectorAll('.js-select-date');
@@ -334,18 +363,18 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 // ....................................... showtime select cinema and time dropdown start ................................ 
-$(document).ready(function(){
-  $('.ct-toggle-btn').click(function(){
-    console.log('click')
-    $(this).closest('.cinema-section').find('.select-time').slideToggle(500);
-    $(this).find('.cinema-down').toggle();
-    $(this).find('.cinema-up').toggle();
-  });
-});
-// ....................................... showtime select cinema and time dropdown end .................................... 
+// $(document).ready(function(){
+//   $('.ct-toggle-btn').click(function(){
+//     console.log('click')
+//     $(this).closest('.cinema-section').find('.select-time').slideToggle(500);
+//     $(this).find('.cinema-down').toggle();
+//     $(this).find('.cinema-up').toggle();
+//   });
+// });
+// // ....................................... showtime select cinema and time dropdown end .................................... 
 
 
-//............................................... time duration start ...............................................
+// //............................................... time duration start ...............................................
 // function startTimer(duration, display) {
 //   let timer = duration, minutes, seconds;
 //   const interval = setInterval(function(){
