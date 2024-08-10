@@ -1770,7 +1770,7 @@ iframe{
     }
 }
 
-.lucide-armchair{
+#seat-plan-container .lucide-armchair{
     width: 50px;
     height: 50px;
     position: relative;
@@ -1783,18 +1783,99 @@ iframe{
     margin-left: 9px;
     font-size: 10pt !important;
 }
-#seat-plan {
-    width: 100%; /* Adjust as needed */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Disable vertical scrolling */
-    white-space: nowrap; /* Prevent wrapping of content */
+#seat-plan{
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
     display: grid;
-    /* grid-template-columns: repeat(31, auto);  */
     grid-gap: 6px;
-  }
-  #seat-plan  > .seat{
+}
+#seat-plan  > .seat{
     cursor: pointer;
-  }
+}
+#seat-plan  > .seat:hover{
+    color: var(--gold);
+}
+.bar {
+    position: relative;
+    background: #245770cb;
+    border: 1px solid var(--header);
+    width: fit-content;
+    border-radius: 5px;
+    padding: 11px 20px 1px;
+}
+.bar:after, .bar:before {
+    position: absolute;  
+    content: "";
+    width: 0; 
+	height: 0; 
+    top: 50%;
+}
+.bar:before {
+    /* border: 5px solid red; */
+    bottom: 0;
+    /* left: -8px;
+    margin-top: -8px;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent; 
+	border-top: 8px solid var(--header);  */
+}
+.bar:after {
+    border: 5px solid yellow;
+    bottom: 0;
+    left: 50%;
+    /* left: -7px;
+    margin-top: -7px;
+	border-left: 7px solid transparent;
+	border-right: 7px solid transparent; 
+	border-bottom: 7px solid #173a4bcb;  */
+} 
+
+#seat-color{
+    margin-top: 70px;
+    margin-bottom: -50px;
+}
+#seat-color span{
+    font-size: 14pt;
+    font-family: calibri;
+}
+.sold-seat > svg{
+    color: var(--nav-bar);
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
+.available-seat > svg{
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
+.selected-seat > svg{
+    color: var(--teal);
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+}
+#swipe-left{
+    display: none;
+    width: fit-content;
+    font-size: 14px;
+    color: white;
+    border: 1px solid white;
+    padding: 9px 10px 5px;
+    border-radius: 8px;
+}
+@media screen and (max-width: 789px){
+    #seat-color{
+        display: block !important;
+    }
+    #swipe-left{
+        float: right;
+        margin: 30px 0 20px;
+    }
+}
+
 #check-out{
     background-color: var(--nav-bar);
     margin-bottom: 50px;

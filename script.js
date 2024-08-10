@@ -404,10 +404,12 @@ document.addEventListener('DOMContentLoaded',function(){
 
 // Select the seat plan container
 const seatPlan = document.getElementById('seat-plan');
+const swipeLeft = document.getElementById('swipe-left');
+
 
 // Set the number of rows and columns
-const rows = 26;
-const cols = 30;
+const rows = 6;
+const cols = 20;
 
 // Create the grid layout using CSS Grid
 seatPlan.style.display = 'grid';
@@ -439,6 +441,10 @@ for (let row = 0; row < rows; row++) {
     }
 }
 
+if (seatPlan.scrollWidth > seatPlan.clientWidth) {
+  swipeLeft.style.display = 'block';
+}
+
 
 // Dragging functionality for horizontal scroll
 let isDown = false;
@@ -447,7 +453,6 @@ let scrollLeft;
 
 seatPlan.addEventListener('mousedown', (e) => {
     isDown = true;
-    // seatPlan.style.cursor = 'grabbing';
     startX = e.pageX - seatPlan.offsetLeft;
     scrollLeft = seatPlan.scrollLeft;
     e.preventDefault();
@@ -455,12 +460,10 @@ seatPlan.addEventListener('mousedown', (e) => {
 
 seatPlan.addEventListener('mouseleave', () => {
     isDown = false;
-    // seatPlan.style.cursor = 'grab';
 });
 
 seatPlan.addEventListener('mouseup', () => {
     isDown = false;
-    // seatPlan.style.cursor = 'grab';
 });
 
 seatPlan.addEventListener('mousemove', (e) => {
