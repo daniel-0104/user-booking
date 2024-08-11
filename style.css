@@ -1509,10 +1509,13 @@ iframe{
 }
 
 #order-location1,
-#order-location2,
 #order-location3{
     position: relative;
     margin: 80px auto;
+}
+#order-location2{
+    position: relative;
+    margin: 20px auto 30px;
 }
 #order-location1 #o-location-n,
 #order-location2 #o-location-n,
