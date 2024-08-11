@@ -363,14 +363,14 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 // ....................................... showtime select cinema and time dropdown start ................................ 
-// $(document).ready(function(){
-//   $('.ct-toggle-btn').click(function(){
-//     console.log('click')
-//     $(this).closest('.cinema-section').find('.select-time').slideToggle(500);
-//     $(this).find('.cinema-down').toggle();
-//     $(this).find('.cinema-up').toggle();
-//   });
-// });
+$(document).ready(function(){
+  $('.ct-toggle-btn').click(function(){
+    console.log('click')
+    $(this).closest('.cinema-section').find('.select-time').slideToggle(500);
+    $(this).find('.cinema-down').toggle();
+    $(this).find('.cinema-up').toggle();
+  });
+});
 // // ....................................... showtime select cinema and time dropdown end .................................... 
 
 
@@ -402,21 +402,15 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-// Select the seat plan container
+//.............................................. Select the seat plan container start .................................
 const seatPlan = document.getElementById('seat-plan');
 const swipeLeft = document.getElementById('swipe-left');
 
-
-// Set the number of rows and columns
 const rows = 6;
 const cols = 20;
 
-// Create the grid layout using CSS Grid
-seatPlan.style.display = 'grid';
-seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`; // Extra column for row labels
-seatPlan.style.gridGap = '6px';
+seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 
-// Array of row labels (A, B, C, ...)
 const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 // Loop to create the rows and columns
@@ -431,10 +425,30 @@ for (let row = 0; row < rows; row++) {
         // Create a div for each seat
         const seatDiv = document.createElement('div');
         seatDiv.className = 'seat';
-        seatDiv.innerHTML = `
-                <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2"/><path d="M19 18v2"/></svg>
+
+        seatDiv.addEventListener('click',function(){
+          seatDiv.classList.toggle('selected');
+        });
+
+        // Create the price box and add it to the seat
+        const priceBox = document.createElement('div');
+        priceBox.className = 'box arrow-bottom';
+        priceBox.textContent = '10000 Kyats';
+        seatDiv.appendChild(priceBox);
+
+        // Create seat number or icon and add it to the seat
+        const seatContent = document.createElement('div');
+        seatContent.className = 'seat-content';
+        seatContent.innerHTML = `
+            <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+                <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+                <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+                <path d="M5 18v2"/>
+                <path d="M19 18v2"/>
+            </svg>
         `;
+        seatDiv.appendChild(seatContent);
 
         // Append the seat to the seat plan container
         seatPlan.appendChild(seatDiv);
@@ -445,8 +459,6 @@ if (seatPlan.scrollWidth > seatPlan.clientWidth) {
   swipeLeft.style.display = 'block';
 }
 
-
-// Dragging functionality for horizontal scroll
 let isDown = false;
 let startX;
 let scrollLeft;
@@ -470,6 +482,7 @@ seatPlan.addEventListener('mousemove', (e) => {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - seatPlan.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust scrolling speed here
+    const walk = (x - startX) * 2;
     seatPlan.scrollLeft = scrollLeft - walk;
 });
+//.............................................. Select the seat plan container end .................................

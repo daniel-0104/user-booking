@@ -1789,52 +1789,51 @@ iframe{
     overflow-y: hidden;
     white-space: nowrap;
     display: grid;
-    grid-gap: 6px;
+    grid-gap: 7px;
+    padding: 60px 40px 0 15px;
 }
 #seat-plan  > .seat{
+    position: relative;
     cursor: pointer;
 }
-#seat-plan  > .seat:hover{
-    color: var(--gold);
+/* #seat-plan  > .seat:hover{
+    color: var(--teal);
+} */
+#seat-plan  > .seat:hover .box{
+    display: block !important;
 }
-.bar {
-    position: relative;
-    background: #245770cb;
-    border: 1px solid var(--header);
+.box {
+    display: none;
     width: fit-content;
-    border-radius: 5px;
-    padding: 11px 20px 1px;
-}
-.bar:after, .bar:before {
-    position: absolute;  
-    content: "";
-    width: 0; 
-	height: 0; 
-    top: 50%;
-}
-.bar:before {
-    /* border: 5px solid red; */
-    bottom: 0;
-    /* left: -8px;
-    margin-top: -8px;
-	border-left: 8px solid transparent;
-	border-right: 8px solid transparent; 
-	border-top: 8px solid var(--header);  */
-}
-.bar:after {
-    border: 5px solid yellow;
-    bottom: 0;
+    height: auto;
+    background-color: var(--nav-bar);
+    color: var(--teal);
+    padding: 10px 13px;
+    position: absolute;
+    margin-top: -50px;
     left: 50%;
-    /* left: -7px;
-    margin-top: -7px;
-	border-left: 7px solid transparent;
-	border-right: 7px solid transparent; 
-	border-bottom: 7px solid #173a4bcb;  */
-} 
+    transform: translateX(-50%);
+    z-index: 9999;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 6px;
+    top: 0;
+  }
+  .box.arrow-bottom:after {
+    content: " ";
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 13px solid var(--nav-bar);
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    border-bottom: none;
+  }
 
 #seat-color{
     margin-top: 70px;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
 }
 #seat-color span{
     font-size: 14pt;
@@ -1857,6 +1856,14 @@ iframe{
     height: 30px;
     font-weight: bold;
 }
+.sold{
+    color: var(--nav-bar);
+}
+.selected{
+    color: var(--teal);
+}
+
+
 #swipe-left{
     display: none;
     width: fit-content;
