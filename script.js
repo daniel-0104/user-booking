@@ -475,8 +475,6 @@ for (let row = 0; row < rows; row++) {
             </svg>
         `;
         seatDiv.appendChild(seatContent);
-
-        // Append the seat to the seat plan container
         seatPlan.appendChild(seatDiv);
     }
 }
