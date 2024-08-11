@@ -406,6 +406,24 @@ $(document).ready(function(){
 const seatPlan = document.getElementById('seat-plan');
 const swipeLeft = document.getElementById('swipe-left');
 
+const seatStatus = {
+  'A1' : 'sold',
+  'A2' : 'sold',
+  'A13' : 'sold',
+  'A14' : 'sold',
+  'A15' : 'sold',
+  'C7' : 'sold',
+  'C8' : 'sold',
+  'C9' : 'sold',
+  'E1' : 'sold',
+  'E2' : 'sold',
+  'E4' : 'sold',
+  'E5' : 'sold',
+  'E16' : 'sold',
+  'E17' : 'sold',
+  'F12' : 'sold'
+};
+
 const rows = 6;
 const cols = 20;
 
@@ -413,30 +431,37 @@ seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 
 const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-// Loop to create the rows and columns
+if(cols <= 12){
+  document.getElementById('seat-plan-container').style.width = '70%';
+}
+
 for (let row = 0; row < rows; row++) {
-    // Create and append the row label
     const rowLabelDiv = document.createElement('div');
     rowLabelDiv.className = 'row-label';
-    rowLabelDiv.textContent = rowLabels[row] || ''; // Handle overflow for rows beyond 'Z'
+    rowLabelDiv.style.marginRight = '15px';
+    rowLabelDiv.textContent = rowLabels[row] || '';
     seatPlan.appendChild(rowLabelDiv);
 
     for (let col = 1; col <= cols; col++) {
-        // Create a div for each seat
         const seatDiv = document.createElement('div');
         seatDiv.className = 'seat';
 
-        seatDiv.addEventListener('click',function(){
-          seatDiv.classList.toggle('selected');
-        });
+        const seatIdentifier = `${rowLabels[row]}${col}`;
+        const status = seatStatus[seatIdentifier] || 'available'; 
+  
+        seatDiv.classList.add(status);
 
-        // Create the price box and add it to the seat
-        const priceBox = document.createElement('div');
-        priceBox.className = 'box arrow-bottom';
-        priceBox.textContent = '10000 Kyats';
-        seatDiv.appendChild(priceBox);
+        if(status === 'available'){
+            const priceBox = document.createElement('div');
+            priceBox.className = 'box arrow-bottom';
+            priceBox.textContent = '5000 Kyats';
+            seatDiv.appendChild(priceBox);
 
-        // Create seat number or icon and add it to the seat
+            seatDiv.addEventListener('click',function(){
+              seatDiv.classList.toggle('selected');
+            });
+        }
+
         const seatContent = document.createElement('div');
         seatContent.className = 'seat-content';
         seatContent.innerHTML = `

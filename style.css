@@ -1770,6 +1770,11 @@ iframe{
     }
 }
 
+#seat-plan-container{
+    display: block;
+    width: 95%;
+    margin: auto;
+}
 #seat-plan-container .lucide-armchair{
     width: 50px;
     height: 50px;
@@ -1778,9 +1783,8 @@ iframe{
 }
 .svg-number{
     display: block;
-    width: 30px;
+    width: 100%;
     text-align: center;
-    margin-left: 9px;
     font-size: 10pt !important;
 }
 #seat-plan{
@@ -1789,26 +1793,36 @@ iframe{
     overflow-y: hidden;
     white-space: nowrap;
     display: grid;
-    grid-gap: 7px;
-    padding: 60px 40px 0 15px;
+    column-gap: 5px;
+    row-gap: 20px;
+    padding: 60px 35px 30px 0;
+}
+#seat-plan::-webkit-scrollbar{
+    width: 80%;
+    height: 9px;
+}
+#seat-plan::-webkit-scrollbar-track{
+    background: #e3e3e3ba;
+}
+#seat-plan::-webkit-scrollbar-thumb{
+    background: var(--nav-bar);
 }
 #seat-plan  > .seat{
     position: relative;
     cursor: pointer;
+    text-align: center;
+    width: fit-content;
 }
-/* #seat-plan  > .seat:hover{
-    color: var(--teal);
-} */
 #seat-plan  > .seat:hover .box{
     display: block !important;
 }
-.box {
+.box{
     display: none;
     width: fit-content;
     height: auto;
     background-color: var(--nav-bar);
     color: var(--teal);
-    padding: 10px 13px;
+    padding: 10px 14px;
     position: absolute;
     margin-top: -50px;
     left: 50%;
@@ -1817,9 +1831,11 @@ iframe{
     text-align: center;
     font-weight: 600;
     border-radius: 6px;
+    font-size: 12pt;
     top: 0;
-  }
-  .box.arrow-bottom:after {
+    animation: fadeIn 0.3s ease-in-out;
+}
+.box.arrow-bottom:after{
     content: " ";
     position: absolute;
     bottom: -13px;
@@ -1829,11 +1845,19 @@ iframe{
     border-right: 13px solid transparent;
     border-left: 13px solid transparent;
     border-bottom: none;
-  }
+}
 
 #seat-color{
-    margin-top: 70px;
+    margin-top: 80px;
     margin-bottom: -100px;
+    margin-right: 30px;
+}
+#seat-color > div:first-child{
+    display: block;
+    width: fit-content;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.161);
+    padding: 10px 20px 0;
+    border-radius: 8px;
 }
 #seat-color span{
     font-size: 14pt;
@@ -1858,12 +1882,12 @@ iframe{
 }
 .sold{
     color: var(--nav-bar);
+    font-weight: 800;
 }
 .selected{
     color: var(--teal);
+    font-weight: 800;
 }
-
-
 #swipe-left{
     display: none;
     width: fit-content;
@@ -1873,13 +1897,13 @@ iframe{
     padding: 9px 10px 5px;
     border-radius: 8px;
 }
-@media screen and (max-width: 789px){
+@media screen and (max-width: 860px){
     #seat-color{
         display: block !important;
     }
     #swipe-left{
         float: right;
-        margin: 30px 0 20px;
+        margin-top: 30px;
     }
 }
 
