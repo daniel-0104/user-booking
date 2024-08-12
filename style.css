@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #386695;
+    --body : #4379af;
     --nav-bar: #2b4c74;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -1508,12 +1508,12 @@ iframe{
     margin: auto;
 }
 
-#order-location1,
-#order-location3{
+#order-location1{
     position: relative;
     margin: 80px auto;
 }
-#order-location2{
+#order-location2,
+#order-location3{
     position: relative;
     margin: 70px auto;
 }
@@ -1860,14 +1860,17 @@ iframe{
     row-gap: 20px;
     padding: 60px 35px 30px 0;
 }
-#seat-plan::-webkit-scrollbar{
+#seat-plan::-webkit-scrollbar,
+#double-seat-plan::-webkit-scrollbar{
     width: 80%;
     height: 9px;
 }
-#seat-plan::-webkit-scrollbar-track{
+#seat-plan::-webkit-scrollbar-track,
+#double-seat-plan::-webkit-scrollbar-track{
     background: #e3e3e3c1;
 }
-#seat-plan::-webkit-scrollbar-thumb{
+#seat-plan::-webkit-scrollbar-thumb,
+#double-seat-plan::-webkit-scrollbar-thumb{
     background: var(--nav-bar);
 }
 #seat-plan  > .seat{
@@ -2073,6 +2076,56 @@ iframe{
     }
 }
 /*.......................................... select seat end ................................... */
+
+
+/*.......................................... checkout start  ................................... */
+#user-contact-info{
+    background-color: var(--nav-bar);
+    padding: 22px 30px 15px;
+    border-radius: 8px;
+}
+#user-contact-info form input{
+    background-color: transparent;
+    color: var(--teal);
+}
+
+#booking-summary{
+    position: relative;
+    background-color: var(--nav-bar);
+    padding: 30px 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+#booking-summary > h5{
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px dotted white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#payment .item-right .up-border,
+#payment .item-right .down-border{
+    width: 40px;
+    height: 40px;
+    background-color: var(--body);
+    border-radius: 50%;
+    position: absolute;
+}
+#payment .item-right .up-border{
+    top: -22px;
+    left: 230px;
+}
+#payment .item-right .down-border{
+    bottom: -22px;
+    right: 230px;
+}
+
+#booking-total{
+    background-color: var(--nav-bar);
+    padding: 25px 20px;
+    border-radius: 8px;
+}
+/*.......................................... checkout end  ................................... */
 
 
 /*.......................................... order history start ................................... */

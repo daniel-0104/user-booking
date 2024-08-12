@@ -402,7 +402,7 @@ $(document).ready(function(){
 
 
 
-//.............................................. Select the seat plan container start .................................
+//.............................................. Select the single seat plan container start .................................
 const seatPlan = document.getElementById('seat-plan');
 const swipeLeft = document.getElementById('swipe-left');
 
@@ -425,7 +425,7 @@ const seatStatus = {
 };
 
 const rows = 6;
-const cols = 10;
+const cols = 20;
 
 seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 
@@ -510,10 +510,10 @@ seatPlan.addEventListener('mousemove', (e) => {
     const walk = (x - startX) * 2;
     seatPlan.scrollLeft = scrollLeft - walk;
 });
-//.............................................. Select the seat plan container end .................................
+//.............................................. Select the single seat plan container end .................................
 
 
-
+//.............................................. Select the double seat plan container start .................................
 const doubleSeatPlan = document.getElementById('double-seat-plan');
 
 const doubleStatus = {
@@ -558,6 +558,14 @@ for (let row = 0; row < doubleRow; row++) {
 
             doubleSeatDiv.addEventListener('click',function(){
               doubleSeatDiv.classList.toggle('double-seat-selected');
+
+              const seatNumberElement = doubleSeatDiv.querySelector('.seat-number');
+              if (doubleSeatDiv.classList.contains('double-seat-selected')) {
+                  seatNumberElement.style.backgroundColor = '#5febcf';
+              } else {
+                seatNumberElement.style.backgroundColor = 'rgb(225, 225, 225)';
+                seatNumberElement.style.color = '#2b4c74';
+            }
             });
         }
 
@@ -585,11 +593,9 @@ for (let row = 0; row < doubleRow; row++) {
           doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2b4c74';
           doubleSeatContent.querySelector('.seat-number').style.color = 'gray';
         }
-        if (status2 === 'double-seat-selected') {
-          doubleSeatContent.querySelector('.seat-number').style.color = 'red';
-        }
 
         doubleSeatDiv.appendChild(doubleSeatContent);
         doubleSeatPlan.appendChild(doubleSeatDiv);
     }
 }
+//.............................................. Select the double seat plan container end .................................
