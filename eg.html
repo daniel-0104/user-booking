@@ -7,88 +7,124 @@
 </head>
 
 <style>
-    body {
+    body{
+        background-color: black;
+    }
+    .cinema {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 100px;
+}
+
+.row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: black;
+    gap: 20px;
 }
 
 .seat {
-    width: 220px;
-    height: 260px;
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    position: relative;
+}
+
+.seat-body {
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    width: 70px;
+    height: 100px;
+    background-color: #2c2c2c;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .seat-back {
     width: 100%;
-    height: 120px;
+    height: 70%;
+    background: linear-gradient(135deg, #444, #222);
+    border-radius: 12px 12px 0 0;
+    padding: 5px;
+    position: relative;
+}
+
+.seat-cushion {
+    width: 90%;
+    height: 40%;
+    background: linear-gradient(135deg, #555, #333);
+    border-radius: 8px;
+    box-shadow: inset 0 -2px 8px rgba(0, 0, 0, 0.5);
+    margin-top: -8px;
+    position: relative;
+}
+
+.stitching {
+    width: 90%;
+    height: 2px;
+    background-color: #777;
+    border-radius: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.handle {
+    width: 12px;
+    height: 70px;
     background-color: #333;
-    border-radius: 10px 10px 0 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    position: relative;
+    border-radius: 6px;
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
 }
 
-.headrest {
-    width: 100%;
-    height: 20px;
+.handle.left {
+    border-radius: 12px 0 0 12px;
+}
+
+.handle.right {
+    border-radius: 0 12px 12px 0;
+}
+
+.seat-body:hover {
     background-color: #444;
-    border-radius: 0 0 10px 10px;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
-.seat-base {
-    width: 100%;
-    height: 140px;
-    background-color: #222;
-    border-radius: 0 0 10px 10px;
-    position: relative;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+.seat-body:hover .seat-cushion {
+    background-color: #666;
 }
 
-.cushion {
-    width: 100%;
-    height: 100px;
+.handle:hover {
     background-color: #444;
-    border-radius: 10px;
-}
-
-.armrest {
-    width: 20px;
-    height: 100px;
-    background-color: #555;
-    border-radius: 5px;
-    position: absolute;
-    top: 10px;
-}
-
-.armrest-left {
-    left: -10px;
-}
-
-.armrest-right {
-    right: -10px;
 }
 
 </style>
+
 <body>
-    <div class="seat">
-        <div class="seat-back">
-            <div class="headrest"></div>
+    <div class="cinema">
+        <div class="row">
+            <div class="seat">
+                <div class="handle left"></div>
+                <div class="seat-body">
+                    <div class="seat-back">
+                        <div class="stitching"></div>
+                    </div>
+                    <div class="seat-cushion">
+                        <div class="stitching"></div>
+                    </div>
+                </div>
+                <div class="handle right"></div>
+            </div>
+            <!-- Add more seats as needed -->
         </div>
-        <div class="seat-base">
-            <div class="cushion"></div>
-            <div class="armrest armrest-left"></div>
-            <div class="armrest armrest-right"></div>
-        </div>
+        <!-- Add more rows as needed -->
     </div>
+    
+    
+
 </body>
 </html>

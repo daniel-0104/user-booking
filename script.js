@@ -425,7 +425,7 @@ const seatStatus = {
 };
 
 const rows = 6;
-const cols = 20;
+const cols = 10;
 
 seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 
@@ -517,51 +517,49 @@ seatPlan.addEventListener('mousemove', (e) => {
 const doubleSeatPlan = document.getElementById('double-seat-plan');
 
 const doubleStatus = {
-  'A1' : 'sold',
-  'A2' : 'sold',
-  'A13' : 'sold',
-  'A14' : 'sold',
-  'A15' : 'sold',
+  'A1' : 'double-seat-sold',
+  'A2' : 'double-seat-sold',
+  'E6' : 'double-seat-sold'
 };
 
 const doubleRow = 6;
-const doubleCol = 10;
+const doubleCol = 8;
 
 doubleSeatPlan.style.gridTemplateColumns = `auto repeat(${doubleCol}, auto)`;
 
 const doubleRowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-if(doubleCol <= 12){
+if(doubleCol <= 7){
   document.getElementById('double-seat-plan-container').style.width = '70%';
 }
 
 for (let row = 0; row < doubleRow; row++) {
     const doubleRowLabelDiv = document.createElement('div');
     doubleRowLabelDiv.className = 'double-row-label';
-    doubleRowLabelDiv.style.marginRight = '15px';
+    doubleRowLabelDiv.style.marginLeft = '30px';
     doubleRowLabelDiv.style.fontSize = '16pt';
     doubleRowLabelDiv.textContent = doubleRowLabels[row] || '';
     doubleSeatPlan.appendChild(doubleRowLabelDiv);
 
-    for (let col = 1; col <= cols; col++) {
+    for (let col = 1; col <= doubleCol; col++) {
         const doubleSeatDiv = document.createElement('div');
         doubleSeatDiv.className = 'seat';
 
         const doubleSeatIdentifier = `${doubleRowLabels[row]}${col}`;
-        const status2 = doubleStatus[doubleSeatIdentifier] || 'available'; 
+        const status2 = doubleStatus[doubleSeatIdentifier] || 'double-seat-available'; 
   
         doubleSeatDiv.classList.add(status2);
 
-        // if(status2 === 'available'){
-        //     const priceBox = document.createElement('div');
-        //     priceBox.className = 'box arrow-bottom';
-        //     priceBox.textContent = '5000 Kyats';
-        //     doubleSeatDiv.appendChild(priceBox);
+        if(status2 === 'double-seat-available'){
+            const priceBox2 = document.createElement('div');
+            priceBox2.className = 'box2 arrow-bottom';
+            priceBox2.textContent = '10000 Kyats';
+            doubleSeatDiv.appendChild(priceBox2);
 
-        //     doubleSeatDiv.addEventListener('click',function(){
-        //       doubleSeatDiv.classList.toggle('selected');
-        //     });
-        // }
+            doubleSeatDiv.addEventListener('click',function(){
+              doubleSeatDiv.classList.toggle('double-seat-selected');
+            });
+        }
 
         const doubleSeatContent = document.createElement('div');
         doubleSeatContent.className = 'double-seat';
@@ -582,6 +580,14 @@ for (let row = 0; row < doubleRow; row++) {
                 </svg>
             </div>
         `;
+
+        if (status2 === 'double-seat-sold') {
+          doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2b4c74';
+          doubleSeatContent.querySelector('.seat-number').style.color = 'gray';
+        }
+        if (status2 === 'double-seat-selected') {
+          doubleSeatContent.querySelector('.seat-number').style.color = 'red';
+        }
 
         doubleSeatDiv.appendChild(doubleSeatContent);
         doubleSeatPlan.appendChild(doubleSeatDiv);
