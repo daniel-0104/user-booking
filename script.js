@@ -474,6 +474,7 @@ for (let row = 0; row < rows; row++) {
                 <path d="M19 18v2"/>
             </svg>
         `;
+
         seatDiv.appendChild(seatContent);
         seatPlan.appendChild(seatDiv);
     }
@@ -510,3 +511,79 @@ seatPlan.addEventListener('mousemove', (e) => {
     seatPlan.scrollLeft = scrollLeft - walk;
 });
 //.............................................. Select the seat plan container end .................................
+
+
+
+const doubleSeatPlan = document.getElementById('double-seat-plan');
+
+const doubleStatus = {
+  'A1' : 'sold',
+  'A2' : 'sold',
+  'A13' : 'sold',
+  'A14' : 'sold',
+  'A15' : 'sold',
+};
+
+const doubleRow = 6;
+const doubleCol = 10;
+
+doubleSeatPlan.style.gridTemplateColumns = `auto repeat(${doubleCol}, auto)`;
+
+const doubleRowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+
+if(doubleCol <= 12){
+  document.getElementById('double-seat-plan-container').style.width = '70%';
+}
+
+for (let row = 0; row < doubleRow; row++) {
+    const doubleRowLabelDiv = document.createElement('div');
+    doubleRowLabelDiv.className = 'double-row-label';
+    doubleRowLabelDiv.style.marginRight = '15px';
+    doubleRowLabelDiv.style.fontSize = '16pt';
+    doubleRowLabelDiv.textContent = doubleRowLabels[row] || '';
+    doubleSeatPlan.appendChild(doubleRowLabelDiv);
+
+    for (let col = 1; col <= cols; col++) {
+        const doubleSeatDiv = document.createElement('div');
+        doubleSeatDiv.className = 'seat';
+
+        const doubleSeatIdentifier = `${doubleRowLabels[row]}${col}`;
+        const status2 = doubleStatus[doubleSeatIdentifier] || 'available'; 
+  
+        doubleSeatDiv.classList.add(status2);
+
+        // if(status2 === 'available'){
+        //     const priceBox = document.createElement('div');
+        //     priceBox.className = 'box arrow-bottom';
+        //     priceBox.textContent = '5000 Kyats';
+        //     doubleSeatDiv.appendChild(priceBox);
+
+        //     doubleSeatDiv.addEventListener('click',function(){
+        //       doubleSeatDiv.classList.toggle('selected');
+        //     });
+        // }
+
+        const doubleSeatContent = document.createElement('div');
+        doubleSeatContent.className = 'double-seat';
+        doubleSeatContent.innerHTML = `
+            <div class="seat-number">${col}</div>
+            <div class="double-seat-container">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+                    <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+                    <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+                    <path d="M5 18v2"/>
+                    <path d="M19 18v2"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+                    <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+                    <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+                    <path d="M5 18v2"/>
+                    <path d="M19 18v2"/>
+                </svg>
+            </div>
+        `;
+
+        doubleSeatDiv.appendChild(doubleSeatContent);
+        doubleSeatPlan.appendChild(doubleSeatDiv);
+    }
+}

@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #396ea4;
+    --body : #386695;
     --nav-bar: #2b4c74;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -1515,7 +1515,7 @@ iframe{
 }
 #order-location2{
     position: relative;
-    margin: 20px auto 30px;
+    margin: 70px auto;
 }
 #order-location1 #o-location-n,
 #order-location2 #o-location-n,
@@ -1698,7 +1698,7 @@ iframe{
 /*.......................................... select seat start ................................... */
 #selected-movie-label{
     background-color: var(--nav-bar);
-    padding: 16px 25px;
+    padding: 20px 25px;
 }
 #selected-movie-label button{
     border: 1px solid var(--secondary);
@@ -1734,31 +1734,31 @@ iframe{
 }
 .projecter{
     position: relative;
-    width: 400px;
-    height: 190px;
+    width: 500px;
+    height: 210px;
     background-color: #ecececee;
-    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.664);
+    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.705);
 }
 #quarters{
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 420px;
+    width: 520px;
 }
 .quarter-ellipse1 {
     background: var(--nav-bar);
-    width: 100px;
-    height: 220px;
+    width: 120px;
+    height: 240px;
     border-radius: 20px 0 90% 0;
 }
 .quarter-ellipse2 {
     background: var(--nav-bar);
-    width: 100px;
-    height: 220px;
+    width: 120px;
+    height: 240px;
     border-radius: 0 20px 0 90%;
 }
-@media screen and (max-width: 470px){
+@media screen and (max-width: 557px){
     .projecter{
         width: 300px;
         height: 180px;
@@ -1790,7 +1790,8 @@ iframe{
     text-align: center;
     font-size: 10pt !important;
 }
-#seat-plan{
+#seat-plan,
+#double-seat-plan{
     width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
@@ -1805,7 +1806,7 @@ iframe{
     height: 9px;
 }
 #seat-plan::-webkit-scrollbar-track{
-    background: #e3e3e3ba;
+    background: #e3e3e3c1;
 }
 #seat-plan::-webkit-scrollbar-thumb{
     background: var(--nav-bar);
@@ -1815,6 +1816,26 @@ iframe{
     cursor: pointer;
     text-align: center;
     width: fit-content;
+}
+#double-seat-plan > .double-seat {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.double-seat-container {
+    display: flex;
+}
+
+.seat-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff; /* Adjust color to match your design */
 }
 #seat-plan  > .seat:hover .box{
     display: block !important;
