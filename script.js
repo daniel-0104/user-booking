@@ -425,7 +425,7 @@ const seatStatus = {
 };
 
 const rows = 6;
-const cols = 20;
+const cols = 30;
 
 seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 

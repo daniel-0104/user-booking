@@ -1,10 +1,11 @@
 body{
     background-color: var(--body);
+    /* background-image: linear-gradient(to right top, #304a63, #2a4157, #24384b, #1e2f3f, #192734); */
     color: white;
 }
 :root{
-    --body : #4379af;
-    --nav-bar: #2b4c74;
+    --body : #192734;
+    --nav-bar: #203549;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -592,7 +593,7 @@ iframe{
 
 /*.......................................... footer section start ................................... */
 #footer{
-    background-color: #242f3b;
+    background-color: #263341;
 }
 #footer h5,
 #toggle-btn button{
@@ -1015,6 +1016,9 @@ iframe{
     margin: 30px auto 70px;
 }
 #promotion-content{
+    display: block;
+    width: 80%;
+    margin: auto;
     background-color: var(--nav-bar);
     border-radius: 10px;
     padding: 20px 10px;
@@ -1023,6 +1027,10 @@ iframe{
 }
 #promotion-content > h4{
     margin-left: 20px;
+}
+#promotion-content .col-lg-8{
+    display: block;
+    margin: auto;
 }
 #promotion-btn{
     display: block;
@@ -1567,7 +1575,7 @@ iframe{
 #order-location2 h6:nth-child(3),
 #order-location3 h6:nth-child(1),
 #order-location3 h6:nth-child(2){
-    color: #283e57;
+    color: #385578;
 }
 @media screen and (max-width: 480px){
     #order-location1 #o-location-n > div:nth-child(2) > h6,
@@ -1747,13 +1755,13 @@ iframe{
     width: 520px;
 }
 .quarter-ellipse1 {
-    background: var(--nav-bar);
+    background: #385578;
     width: 120px;
     height: 240px;
     border-radius: 20px 0 90% 0;
 }
 .quarter-ellipse2 {
-    background: var(--nav-bar);
+    background: #385578;
     width: 120px;
     height: 240px;
     border-radius: 0 20px 0 90%;
@@ -1781,7 +1789,7 @@ iframe{
 #seat-color > div:first-child{
     display: block;
     width: fit-content;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.161);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.24);
     padding: 10px 20px 0;
     border-radius: 8px;
 }
@@ -2079,14 +2087,23 @@ iframe{
 
 
 /*.......................................... checkout start  ................................... */
-#user-contact-info{
+#user-contact-info,
+#promo-code{
     background-color: var(--nav-bar);
     padding: 22px 30px 15px;
     border-radius: 8px;
 }
-#user-contact-info form input{
+#user-contact-info form input,
+#promo-code form input{
     background-color: transparent;
     color: var(--teal);
+}
+#user-contact-info form input::placeholder{
+    color: white;
+}
+#user-contact-info form input:focus{
+    box-shadow: none;
+    border: 1px solid var(-teal);
 }
 
 #booking-summary{
@@ -2124,6 +2141,13 @@ iframe{
     background-color: var(--nav-bar);
     padding: 25px 20px;
     border-radius: 8px;
+}
+#booking-total-content span{
+    font-size: 14pt;
+    margin-right: 10px;
+}
+#booking-total-content label{
+    font-size: 14pt;
 }
 /*.......................................... checkout end  ................................... */
 
