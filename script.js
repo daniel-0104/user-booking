@@ -590,7 +590,7 @@ for (let row = 0; row < doubleRow; row++) {
         `;
 
         if (status2 === 'double-seat-sold') {
-          doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2b4c74';
+          doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2D3949';
           doubleSeatContent.querySelector('.seat-number').style.color = 'gray';
         }
 

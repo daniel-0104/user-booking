@@ -1,11 +1,10 @@
 body{
-    background-color: var(--body);
-    /* background-image: linear-gradient(to right top, #304a63, #2a4157, #24384b, #1e2f3f, #192734); */
+    background-image: linear-gradient(to bottom, #305578, #2d5174, #2a4e6f, #274a6b, #244767);
     color: white;
 }
 :root{
-    --body : #192734;
-    --nav-bar: #203549;
+    --body : #244767;
+    --nav-bar: #223c55;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -593,7 +592,7 @@ iframe{
 
 /*.......................................... footer section start ................................... */
 #footer{
-    background-color: #263341;
+    background-color: #24303b;
 }
 #footer h5,
 #toggle-btn button{
@@ -1575,7 +1574,7 @@ iframe{
 #order-location2 h6:nth-child(3),
 #order-location3 h6:nth-child(1),
 #order-location3 h6:nth-child(2){
-    color: #385578;
+    color: #242e3b;
 }
 @media screen and (max-width: 480px){
     #order-location1 #o-location-n > div:nth-child(2) > h6,
@@ -1755,13 +1754,13 @@ iframe{
     width: 520px;
 }
 .quarter-ellipse1 {
-    background: #385578;
+    background: var(--nav-bar);
     width: 120px;
     height: 240px;
     border-radius: 20px 0 90% 0;
 }
 .quarter-ellipse2 {
-    background: #385578;
+    background: var(--nav-bar);
     width: 120px;
     height: 240px;
     border-radius: 0 20px 0 90%;
@@ -1879,7 +1878,7 @@ iframe{
 }
 #seat-plan::-webkit-scrollbar-thumb,
 #double-seat-plan::-webkit-scrollbar-thumb{
-    background: var(--nav-bar);
+    background: #1c3e5e;
 }
 #seat-plan  > .seat{
     position: relative;
