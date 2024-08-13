@@ -394,9 +394,9 @@ $(document).ready(function(){
 // }
 
 // window.onload = function () {
-//   const fiveMinutes = 60 * 5;
+//   const twoMinutesThirtySeconds = 2 * 60 + 30;
 //   const display = document.querySelector('#timer');
-//   startTimer(fiveMinutes, display);
+//   startTimer(twoMinutesThirtySeconds, display);
 // };
 //............................................... time duration end ...............................................
 

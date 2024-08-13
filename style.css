@@ -1,10 +1,10 @@
 body{
-    background-image: linear-gradient(to bottom, #305578, #2d5174, #2a4e6f, #274a6b, #244767);
+    background-color: var(--body);
     color: white;
 }
 :root{
-    --body : #244767;
-    --nav-bar: #223c55;
+    --body : #2b4f71;
+    --nav-bar: #193854;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -1564,7 +1564,8 @@ iframe{
 #order-location2 label:nth-child(1),
 #order-location2 label:nth-child(2),
 #order-location3 label:nth-child(1),
-#order-location3 label:nth-child(2){
+#order-location3 label:nth-child(2),
+#order-location3 label:nth-child(3){
     background-color: var(--teal);
     color: var(--nav-bar);
 }
@@ -2089,7 +2090,7 @@ iframe{
 #user-contact-info,
 #promo-code{
     background-color: var(--nav-bar);
-    padding: 22px 30px 15px;
+    padding: 30px;
     border-radius: 8px;
 }
 #user-contact-info form input,
@@ -2102,7 +2103,17 @@ iframe{
 }
 #user-contact-info form input:focus{
     box-shadow: none;
-    border: 1px solid var(-teal);
+    border: 1px solid var(--teal);
+}
+#user-contact-info a button{
+    background-color: var(--body);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    color: white;
+    font-weight: 600;
+    padding: 6px 30px;
+}
+#user-contact-info a button:hover{
+    color: var(--teal);
 }
 
 #booking-summary{
