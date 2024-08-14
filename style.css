@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body : #2b4f71;
-    --nav-bar: #193854;
+    --body : #325b81;
+    --nav-bar: #1d415e;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -381,7 +381,7 @@ body{
 }
 #now-movie-list > .col-lg-4 > div{
     background-color: var(--nav-bar) ;
-    padding: 20px 20px 12px;
+    padding: 25px 20px 20px;
     border-radius: 10px;
     border: 1px solid white;
 }
@@ -2087,33 +2087,98 @@ iframe{
 
 
 /*.......................................... checkout start  ................................... */
-#user-contact-info,
-#promo-code{
+#user-contact-info{
     background-color: var(--nav-bar);
-    padding: 30px;
-    border-radius: 8px;
+    padding: 25px 30px 60px;
+    border-radius: 10px;
 }
 #user-contact-info form input,
 #promo-code form input{
     background-color: transparent;
     color: var(--teal);
 }
-#user-contact-info form input::placeholder{
+#user-contact-info form input::placeholder,
+#promo-code form input::placeholder{
     color: white;
 }
-#user-contact-info form input:focus{
+#user-contact-info form input:focus,
+#promo-code form input:focus{
     box-shadow: none;
     border: 1px solid var(--teal);
 }
-#user-contact-info a button{
+#user-contact-info a{
+    display: block;
+    width: fit-content;
+    float: right;
+    z-index: 1;
+    text-decoration: none;
+}
+#user-contact-info a button,
+#promo-code a button{
     background-color: var(--body);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     color: white;
     font-weight: 600;
     padding: 6px 30px;
 }
-#user-contact-info a button:hover{
+#user-contact-info a button:hover,
+#promo-code a button:hover{
     color: var(--teal);
+}
+
+#promo-code{
+    background-color: var(--nav-bar);
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+#promo-code i{
+    font-size: 13pt;
+    cursor: pointer;
+}
+#promo-code i:hover{
+    color: var(--teal) !important;
+}
+#promo-form{
+    display: none;
+}
+
+#booking-total{
+    background-color: var(--nav-bar);
+    padding-bottom: 25px;
+    border-radius: 10px;
+    margin-top: 35px;
+}
+#booking-total h5{
+    background-color: #16354f;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 20px 0 25px 30px;
+}
+#booking-total-content span{
+    font-size: 14pt;
+    margin-right: 10px;
+}
+#booking-total-content label,
+#taxes label{
+    font-size: 14pt;
+    font-weight: 500;
+}
+#total-price label:first-child{
+    font-size: 16pt;
+    font-weight: 600;
+}
+#total-price label:last-child{
+    font-size: 14pt;
+    font-weight: 700;
+    color: var(--teal);
+}
+
+#payment-option{
+    background-color: var(--nav-bar);
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-top: 35px;
 }
 
 #booking-summary{
@@ -2122,6 +2187,8 @@ iframe{
     padding: 30px 20px;
     border-radius: 8px;
     margin-bottom: 30px;
+    border-left: 3px solid var(--teal);
+    border-right: 3px solid var(--teal);
 }
 #booking-summary > h5{
     text-align: center;
@@ -2140,24 +2207,11 @@ iframe{
 }
 #payment .item-right .up-border{
     top: -22px;
-    left: 230px;
+    left: 220px;
 }
 #payment .item-right .down-border{
     bottom: -22px;
-    right: 230px;
-}
-
-#booking-total{
-    background-color: var(--nav-bar);
-    padding: 25px 20px;
-    border-radius: 8px;
-}
-#booking-total-content span{
-    font-size: 14pt;
-    margin-right: 10px;
-}
-#booking-total-content label{
-    font-size: 14pt;
+    right: 220px;
 }
 /*.......................................... checkout end  ................................... */
 
