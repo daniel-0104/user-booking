@@ -52,16 +52,62 @@
     <section id="payment" class="mb-5">
         <div class="mx-4">
             <div class="row">
-                <div class="col-lg-7">
+                <div class="col-lg-5 order-lg-2">
+                    <div id="booking-summary">
+                        <h5>Booking Summary</h5>
+                        <div class="px-4">
+                            <div class="item-right">
+                                <span class="up-border"></span>
+                                <span class="down-border"></span>
+                            </div>
+                            <div>
+                                <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
+                            </div>
+                            <div class="mt-4">
+                                <div class="d-flex align-items-center" id="cinema-name2">
+                                    <h5 class="fw-bold">Raya And The Last Dragon</h5>
+                                    <label for="">2D</label>
+                                </div>
+                                <div class="mt-4">
+                                    <label>Cinema</label>
+                                    <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
+                                </div>
+                                <div class="d-flex align-items-center mt-3">
+                                    <div class="me-5">
+                                        <label>Date</label>
+                                        <h6 class="mt-1">Wed, 12 June 2021</h6>
+                                    </div>
+                                    <div class="me-5">
+                                        <label>Time</label>
+                                        <h6 class="mt-1">11:30 AM</h6>
+                                    </div>
+                                    <div class="me-5">
+                                        <label>Hall</label>
+                                        <h6 class="mt-1">Hall 1</h6>
+                                    </div>
+                                </div>
+                                <div class="mt-3">
+                                    <label>Selected Seats</label>
+                                    <h6 class="mt-1">A1, A2, A3</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="offer-fy">
+                        <h5>Offer For You</h5>
+                        <hr>
+                    </div>
+                </div>
+                <div class="col-lg-7 order-lg-1">
                     <div id="user-contact-info">
                         <h5>Contact Information</h5>
                         <hr>
                         <form action="" class="mt-3">
                             <div class="row">
-                                <div class="form-group col-lg-6 mb-3">
+                                <div class="form-group col-lg-6 col-sm-6 mb-3">
                                     <input type="text" class="form-control" placeholder="Enter name">
                                 </div>
-                                <div class="form-group col-lg-6 mb-3">
+                                <div class="form-group col-lg-6 col-sm-6 mb-3">
                                     <input type="email" class="form-control" placeholder="Enter email">
                                 </div>
                             </div>
@@ -113,8 +159,8 @@
 
                     <div id="payment-option">
                         <h5>Payment Method</h5>
-                        <div class="px-5">
-                            <div>
+                        <div class="px-4 mt-3">
+                            <div class="">
                                 <div class="custom-radio d-flex align-items-center mb-1">
                                     <input type="radio" name="customRadio" class="payment-radio" data-target=".payment-content-1" checked>
                                     <label class="ms-3" for="radio1">KBZ Pay</label>
@@ -131,7 +177,7 @@
                                 </div>
                             </div>
                             <hr>
-                            <div>
+                            <div class="mb-2">
                                 <div class="custom-radio d-flex align-items-center mb-1">
                                     <input type="radio" name="customRadio" class="payment-radio" data-target=".payment-content-2">
                                     <label class="ms-3" for="radio2">AYA Bank</label>
@@ -147,97 +193,27 @@
                                     </div>
                                 </div>
                             </div>
-                            
-                            
-                            <!-- <div class="mt-5">
-                                <p>Pls send us picture of payment.</p>
-                                <div id="edit-photo">
-                                    <img src="image/photo_2024-08-15_17-04-10.jpg" id="output" alt="">
-                                    <label for="file">
-                                        <span><i class="fa-solid fa-camera me-1"></i></span>
-                                        <span>Change Image</span>
-                                    </label>
-                                    <input type="file" id="file" accept="image/*" capture="environment" onchange="loadFile(event);">
-                                </div>
-                            </div> -->
-                            <!-- <div class="custom-radio d-flex align-items-center">
-                                <input type="radio" name="customRadio" id="radio2">
-                                <label class="ms-3" for="radio2">AYA Bank</label>
-                            </div> -->
-                            
-                        </div>
-                        <!-- <div class="row">
-                            <div class="col-lg-3 col-sm-2 mb-3">
-                                <div id="payment-content">
-                                    <img src="image/kpay.webp" class="rounded" alt="">
-                                    <h6>KBZPay</h6>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-2 mb-3">
-                                <div id="payment-content">
-                                    <img src="image/aya.png" class="rounded" alt="">
-                                    <h6>AYA Bank</h6>
-                                </div>
-                            </div>
-                        </div> -->
-                        <!-- <div class="mt-4">
-                            <div id="transfer-header">
-                                <h6>Trasnsfer</h6>
-                                <i class="fa-solid fa-shuffle ms-2 mb-1"></i>
-                            </div>
-                            <div class="">
-                                <div class="d-flex align-items-center mb-3">
-                                    <strong>KBZ Pay : </strong>
-                                    <label class="ms-3">09972484290</label>
-                                </div>
-                                <div class="d-flex align-items-center">
-                                    <strong>Name : </strong>
-                                    <label class="ms-3">Daniel</label>
-                                </div>
-                            </div>
-                        </div> -->
+                        </div>               
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div id="booking-summary">
-                        <div class="item-right">
-                            <span class="up-border"></span>
-                            <span class="down-border"></span>
+
+                    <div id="payment-picture">
+                        <div class="d-flex align-items-center">
+                            <p>To confirm your payment, please upload a picture of your payment receipt.</p>
+                            <i class="fa-regular fa-hand ms-3 mb-3"></i>
                         </div>
-                        <h5>Booking Summary</h5>
-                        <div class="px-4">
+                        <div id="edit-photo">
                             <div>
-                                <img src="image/disney-raya-and-the-last-dragon-cover-photo-poster.jpg" class="w-100 d-block rounded" alt="">
+                                <img src="image/no-image.jpg" id="output" alt="">
                             </div>
-                            <div class="mt-4">
-                                <div class="d-flex align-items-center" id="cinema-name2">
-                                    <h5 class="fw-bold">Raya And The Last Dragon</h5>
-                                    <label for="">2D</label>
-                                </div>
-                                <div class="mt-4">
-                                    <label>Cinema</label>
-                                    <h6 class="mt-1">Mega Ace Cineplex (Capital) - Dawbon (Yangon)</h6>
-                                </div>
-                                <div class="d-flex align-items-center mt-3">
-                                    <div class="me-5">
-                                        <label>Date</label>
-                                        <h6 class="mt-1">Wed, 12 June 2021</h6>
-                                    </div>
-                                    <div class="me-5">
-                                        <label>Time</label>
-                                        <h6 class="mt-1">11:30 AM</h6>
-                                    </div>
-                                    <div class="me-5">
-                                        <label>Hall</label>
-                                        <h6 class="mt-1">Hall 1</h6>
-                                    </div>
-                                </div>
-                                <div class="mt-3">
-                                    <label>Selected Seats</label>
-                                    <h6 class="mt-1">A1, A2, A3</h6>
-                                </div>
-                            </div>
+                            <label for="file">
+                                <span><i class="fa-solid fa-camera me-1"></i></span>
+                                <span>Upload Image</span>
+                            </label>
+                            <input type="file" id="file" accept="image/*" capture="environment" onchange="loadFile(event);">
                         </div>
+                        <a href="">
+                            <button class="btn">Complete Order</button>
+                        </a>
                     </div>
                 </div>
             </div>

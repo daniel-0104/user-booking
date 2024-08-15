@@ -620,16 +620,35 @@ $(document).ready(function(){
 
 
 //................................................... payment method start ..............................................
-$(document).ready(function() {
-  $('input[name="customRadio"]').on('change', function() {
-      const target = $(this).data('target'); // Get the target class
-      $(target).show(); // Show the target payment content
+$(document).ready(function(){
+  $('.payment-content').not(':first').hide();
+
+  $('.custom-radio').each(function() {
+      if ($(this).find('input').is(':checked')) {
+          $(this).addClass('active').removeClass('inactive');
+      } else {
+          $(this).addClass('inactive').removeClass('active');
+      }
   });
 
-  // Initial display setup based on the default checked radio
-  const defaultChecked = $('input[name="customRadio"]:checked').data('target');
-  $(defaultChecked).show();
+ $('.custom-radio').on('click', function(){
+    $(this).find('input[type="radio"]').prop('checked', true);
+
+    $('.payment-content').hide();
+
+    const target = $(this).find('input[type="radio"]').data('target');
+    $(target).show();
+
+    $('.custom-radio').each(function() {
+        if ($(this).find('input').is(':checked')) {
+            $(this).addClass('active').removeClass('inactive');
+        } else {
+            $(this).addClass('inactive').removeClass('active');
+        }
+    });
+  });
 });
+
 
 
 

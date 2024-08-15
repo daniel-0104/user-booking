@@ -2122,7 +2122,8 @@ iframe{
     padding: 6px 30px;
 }
 #user-contact-info a button:hover,
-#promo-code a button:hover{
+#promo-code a button:hover,
+#payment-picture a button:hover{
     color: var(--teal);
 }
 
@@ -2177,17 +2178,21 @@ iframe{
 
 #payment-option{
     background-color: var(--nav-bar);
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     border-radius: 10px;
     margin-top: 35px;
 }
 .custom-radio{
-    /* border: 1px solid white; */
     cursor: pointer;
     width: 100%;
     padding: 10px 20px;
     border-radius: 10px;
-    /* background-color: #f7ecec14; */
+}
+.custom-radio.active{
+    background-color:  #f7ecec14;
+}
+.custom-radio.inactive{
+    background-color: transparent;
 }
 .custom-radio label{
     cursor: pointer;
@@ -2202,10 +2207,16 @@ iframe{
     accent-color: var(--teal);
 }
 .payment-content{
-    /* background-color: #fff0f041; */
     color: white;
     padding: 10px 30px;
     border-radius: 10px;
+}
+
+#payment-picture{
+    background-color: var(--nav-bar);
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-top: 35px;
 }
 #edit-photo{
     display: block;
@@ -2213,13 +2224,21 @@ iframe{
     text-align: center;
     margin-top: 15px;
 }
-#edit-photo img{
+#edit-photo > div{
+    position: relative;
     display: block;
-    width: 50%;
-    height: 300px;
-    /* border-radius: 50%; */
-    object-fit: cover;
+    width: 180px;
+    height: 180px;
     margin: auto;
+    border: 1px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+#edit-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 #edit-photo label{
     margin-top: 12px;
@@ -2230,10 +2249,21 @@ iframe{
 #edit-photo input{
     display: none;
 }
+#payment-picture a button{
+    background-color: var(--body);
+    width: 100%;
+    margin-top: 30px;
+    font-size: 13pt;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    color: white;
+    font-weight: 600;
+    padding: 10px 0;
+}
 
 #booking-summary{
     position: relative;
     background-color: var(--nav-bar);
+    margin-left: 0;
     padding: 30px 20px;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -2247,6 +2277,9 @@ iframe{
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+#payment .col-lg-5{
+    position: relative;
+}
 #payment .item-right .up-border,
 #payment .item-right .down-border{
     width: 40px;
@@ -2257,11 +2290,30 @@ iframe{
 }
 #payment .item-right .up-border{
     top: -22px;
-    left: 220px;
+    right: 50%;
+    transform: translateX(50%);
 }
 #payment .item-right .down-border{
     bottom: -22px;
-    right: 220px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+#offer-fy{
+    background-color: var(--nav-bar);
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 992px){
+    #booking-summary{
+        display: block;
+        width: 80%;
+        margin: 0 auto 40px;
+    }
+    #payment .col-lg-7{
+        margin-top: 40px;
+    }
 }
 /*.......................................... checkout end  ................................... */
 
