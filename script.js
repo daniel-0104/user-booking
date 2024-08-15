@@ -620,5 +620,26 @@ $(document).ready(function(){
 
 
 //................................................... payment method start ..............................................
+$(document).ready(function() {
+  $('input[name="customRadio"]').on('change', function() {
+      const target = $(this).data('target'); // Get the target class
+      $(target).show(); // Show the target payment content
+  });
+
+  // Initial display setup based on the default checked radio
+  const defaultChecked = $('input[name="customRadio"]:checked').data('target');
+  $(defaultChecked).show();
+});
+
+
+
+
+
+//................................................ edit profile start ..........................
+var loadFile = function (event) {
+  var image = document.getElementById("output");
+  image.src = URL.createObjectURL(event.target.files[0]);
+};
+//........................ ...................edit profile end.................................
 //................................................... payment method end ..............................................
 

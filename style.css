@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body : #325b81;
+    --body : #335b81;
     --nav-bar: #1d415e;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -2093,19 +2093,16 @@ iframe{
     border-radius: 10px;
 }
 #user-contact-info form input,
-#promo-code form input,
-#payment-option form input{
+#promo-code form input{
     background-color: transparent;
     color: var(--teal);
 }
 #user-contact-info form input::placeholder,
-#promo-code form input::placeholder,
-#payment-option form input::placeholder{
+#promo-code form input::placeholder{
     color: white;
 }
 #user-contact-info form input:focus,
-#promo-code form input:focus,
-#payment-option form input:focus{
+#promo-code form input:focus{
     box-shadow: none;
     border: 1px solid var(--teal);
 }
@@ -2152,7 +2149,8 @@ iframe{
     border-radius: 10px;
     margin-top: 35px;
 }
-#booking-total h5{
+#booking-total h5,
+#payment-option h5{
     background-color: #16354f;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -2179,43 +2177,58 @@ iframe{
 
 #payment-option{
     background-color: var(--nav-bar);
-    padding: 25px 30px;
+    padding-bottom: 30px;
     border-radius: 10px;
     margin-top: 35px;
 }
-#payment-content{
-    display: block;
-    width: fit-content;
-    margin: auto;
-    padding: 12px 15px 8px;
-    border: 1px solid white;
-    border-radius: 8px;
+.custom-radio{
+    /* border: 1px solid white; */
     cursor: pointer;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    /* background-color: #f7ecec14; */
 }
-#payment-content:hover,
-#payment-content .active{
-    border: 1px solid var(--teal);
+.custom-radio label{
+    cursor: pointer;
+    width: 100%;
 }
-#payment-content img{
+.custom-radio input[type="radio"]{
+    accent-color: rgb(216, 216, 216);
+    cursor: pointer;
+    transform: scale(1.4);
+}
+.custom-radio input[type="radio"]:checked{
+    accent-color: var(--teal);
+}
+.payment-content{
+    /* background-color: #fff0f041; */
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+#edit-photo{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 15px;
+}
+#edit-photo img{
     display: block;
     width: 50%;
-    margin: auto;
-    height: auto;
+    height: 300px;
+    /* border-radius: 50%; */
     object-fit: cover;
+    margin: auto;
 }
-#payment-content h6{
-    display: block;
-    width: 100%;
-    text-align: center;
+#edit-photo label{
     margin-top: 12px;
+    font-size: 13pt;
+    cursor: pointer;
+    color: var(--blue);
 }
-#transfer-header{
-    display: flex;
-    align-items: center;
-    width: fit-content;
-    background-color: #16354f;
-    padding: 10px 20px 7px;
-    border-radius: 8px;
+#edit-photo input{
+    display: none;
 }
 
 #booking-summary{
