@@ -2093,16 +2093,19 @@ iframe{
     border-radius: 10px;
 }
 #user-contact-info form input,
-#promo-code form input{
+#promo-code form input,
+#payment-option form input{
     background-color: transparent;
     color: var(--teal);
 }
 #user-contact-info form input::placeholder,
-#promo-code form input::placeholder{
+#promo-code form input::placeholder,
+#payment-option form input::placeholder{
     color: white;
 }
 #user-contact-info form input:focus,
-#promo-code form input:focus{
+#promo-code form input:focus,
+#payment-option form input:focus{
     box-shadow: none;
     border: 1px solid var(--teal);
 }
@@ -2179,6 +2182,40 @@ iframe{
     padding: 25px 30px;
     border-radius: 10px;
     margin-top: 35px;
+}
+#payment-content{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 12px 15px 8px;
+    border: 1px solid white;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#payment-content:hover,
+#payment-content .active{
+    border: 1px solid var(--teal);
+}
+#payment-content img{
+    display: block;
+    width: 50%;
+    margin: auto;
+    height: auto;
+    object-fit: cover;
+}
+#payment-content h6{
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+#transfer-header{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    background-color: #16354f;
+    padding: 10px 20px 7px;
+    border-radius: 8px;
 }
 
 #booking-summary{
