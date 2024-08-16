@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 
-<style>
+<!-- <style>
     body{
         background-color: black;
     }
@@ -90,32 +90,76 @@
     border-radius: 0 12px 12px 0;
 }
 
-/* .seat-body:hover {
-    background-color: #444;
+</style> -->
+
+
+<style>
+    .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 40px auto 80px;
 }
 
-.seat-body:hover .seat-cushion {
-    background-color: #666;
-} */
+.header {
+    color: #fff;
+}
 
-/* .handle:hover {
-    background-color: #444;
-} */
+.gallery {
+    display: flex;
+    position: relative;
+    /* width: 1000px; */
+    height: 245px;
+    background: #7e7f9a;
+    border: 3px solid #f9f9f8;
+    border-radius: 5px;
+    overflow: hidden;
+}
 
-#carousel {
-            width: 80%;
-            margin: 0 auto;
-        }
+.main-image-section {
+    width: 80%;
+}
 
-        .carousel img {
-            width: 100%;
-            border-radius: 15px;
-        }
+.main-view {
+    width: 100%;
+    opacity: 0;
+    cursor: pointer;
 
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+
+
+.thumbnails {
+    width: 20%;
+    padding: 5px;
+    overflow-y: auto;
+}
+
+.thumbnails img {
+    width: 100%;
+    opacity: 0.7;
+    cursor: pointer;
+
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+}
+
+.thumbnails img:hover {
+    opacity: 1;
+}
+
+.thumbnails img:focus {
+    opacity: 1
+}
 </style>
-
 <body>
-    <div class="cinema">
+    <!-- <div class="cinema">
         <div class="row">
             <div class="seat">
                 <div class="handle left"></div>
@@ -129,41 +173,136 @@
                 </div>
                 <div class="handle right"></div>
             </div>
-            <!-- Add more seats as needed -->
         </div>
-        <!-- Add more rows as needed -->
-    </div>
+    </div> -->
     
-    
-    <div id="carousel">
-        <div class="carousel">
-            <img src="https://via.placeholder.com/600x400" alt="Image 1">
-            <img src="https://via.placeholder.com/600x400" alt="Image 2">
-            <img src="https://via.placeholder.com/600x400" alt="Image 3">
-            <img src="https://via.placeholder.com/600x400" alt="Image 4">
-            <img src="https://via.placeholder.com/600x400" alt="Image 5">
+    <div class="container">
+        <div class= "header">
+            <h1>404 Page Wallpaper Gallery</h1>
+            <!-- <div class= "options">
+                <ol>
+                    <li>Auto sliding images</li>
+                    <li>Thumbnail Click to main View</li>
+                    <li>Full screen mode sliding</li>
+                </ol>
+            </div> -->
+        </div>
+        <div class="gallery">
+            <div class="main-image-section">
+                <img id="main-view" class="main-view" src= "images/1.jpg" onclick= "fullScreenImage();"/>
+            </div>
+            <div id= "thumbnails" class="thumbnails"></div>
         </div>
     </div>
-
-    
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-waterwheel-carousel/2.3.0/jquery.waterwheelCarousel.min.js"></script>
-
 
     <script>
-        $(document).ready(function() {
-            $(".carousel").waterwheelCarousel({
-                flankingItems: 3,  // Number of items to show on either side of the center item
-                autoPlay: 3000,    // Automatically moves to the next item every 3 seconds
-                separation: 200,   // Space between items
-                opacityMultiplier: 0.8,  // Opacity of side items
-                speed: 500,  // Animation speed in milliseconds
-                clickedCenter: function($clickedItem) {
-                    alert("You clicked on image: " + $clickedItem.attr('alt'));
-                }
-            });
-        });
+        let images = [
+    {
+        url: 'https://www.dropbox.com/s/bhkkcfai7alrfw4/1.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/l6x9llzzqq6z19b/2.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/l6x9llzzqq6z19b/2.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/mg3atxxr2e2wki7/4.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/t7vexrobgpmvizz/5.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/mak24286ksmhhph/6.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/x9kzf8on4t3arv5/7.jpg?raw=1'
+    },
+    {
+        url: 'https://www.dropbox.com/s/vxmuidb45kjcpsc/8.jpg?raw=1'
+    },
+];
+const mainView = document.getElementById('main-view');
+
+const thumbnails = document.getElementById('thumbnails');
+
+for(let i= 0; i< images.length; i++) {
+    let image = images[i];
+    let img = document.createElement('img');
+    img.src = images[i].url;
+    img.setAttribute('width', 170);
+    img.setAttribute('data-index', i);
+    img.addEventListener('click', changeImage);
+    thumbnails.appendChild(img);
+}
+
+function initGallery() {
+    loadImage(0);
+};
+
+// function slideImage() {
+//     let currentIndex = parseInt(mainView.getAttribute('data-index'));
+//     currentIndex = currentIndex + 1 == images.length ? 1 : currentIndex + 1;
+//     loadImage(currentIndex);
+//     setTimeout(slideImage, 3000);
+
+// }
+
+function changeImage(event) {
+    let target = event.currentTarget;
+    let index = target.getAttribute('data-index');
+    loadImage(index);
+}
+
+function loadImage(index) {
+    let image = images[index];
+    mainView.src = image.url;
+    mainView.setAttribute('data-index', index);
+    mainView.setAttribute('id', 'image-' + index);
+    mainView.style.opacity = 1;
+    caption.textContent = image.caption;
+    info.textContent = image.info;
+
+}
+
+function fullScreenImage() {
+    toggleFullscreen(mainView);
+}
+
+function toggleFullscreen(el) {
+    if(document.fullscreenElement || document.mozFullScreenElement 
+        || document.webkitFullscreenElement || document.msFullscreenElement) {
+            if(document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+            else if(document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            }
+            else if(document.webkitExitFullscreen) {
+                document.webkitExitFullscreen();
+            }
+            else if(document.msExitFullscreen) {
+                document.msExitFullscreen();
+            }
+        }
+        else {
+            if(document.documentElement.requestFullscreen) {
+                el.requestFullscreen();
+            }
+            else if(document.documentElement.mozRequestFullScreen) {
+                el.mozRequestFullScreen();
+            }
+            else if(document.documentElement.webkitRequestFullscreen) {
+                el.webkitRequestFullscreen();
+            }
+            else if(document.documentElement.msRequestFullscreen) {
+                el.msRequestFullscreen();
+            }
+        }
+}
+
+initGallery();
+// setTimeout(slideImage, 3000);
     </script>
 </div>
 </body>

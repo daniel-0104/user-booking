@@ -1783,7 +1783,6 @@ iframe{
 
 #seat-color{
     margin-top: 80px;
-    margin-bottom: -100px;
     margin-right: 30px;
 }
 #seat-color > div:first-child{
@@ -1844,7 +1843,7 @@ iframe{
 #seat-plan-container{
     display: block;
     width: 95%;
-    margin: auto;
+    /* margin: -100px auto -70px; */
 }
 #seat-plan-container .lucide-armchair{
     width: 50px;
@@ -2013,12 +2012,78 @@ iframe{
     color: var(--teal);
     font-weight: 800;
 }
+@media screen and (max-width: 695px){
+    #seat-plan-container{
+        background-color: red;
+    }
+    #double-seat-plan-container{
+        width: 100% !important;
+    }
+}
 
+#seat-design{
+    border-top: 1px solid white;
+    margin: 60px auto 50px;
+    padding-top: 50px;
+}
+#seat-design .swiper-slide{
+    background-position: center;
+    background-size: cover;
+    width: 65%;
+}
+#seat-design img{
+    border-radius: 8px;
+    height: 400px;
+    object-fit: cover;
+}
+#seat-design .swiper-btns{
+    position: absolute;
+    display: flex;
+    margin-top: 0;
+    width: 70%;
+    justify-content: space-between;
+    z-index: 1;
+}
+#seat-design .swiper-btns button{
+    position: static;
+    background-color: #15334d;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    margin-top: 40px;
+    border-radius: 50%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14pt;
+}
+#seat-design .swiper-btns button:hover{
+    color: var(--teal);
+}
+#seat-design .swiper-pagination-bullet{
+    padding: 0 8px;
+    height: 6px;
+    border-radius: 20px;
+    margin-top: 10px !important;
+}
+#seat-design .swiper-pagination-bullet-active{
+    background-color: var(--teal);
+    opacity: 1;
+}
+@media screen and (max-width: 767px){
+    #seat-design .swiper-slide{
+        width: 90%;
+    }
+    #seat-design .swiper-btns{
+        width: 95%;
+    }
+}
 
 
 #check-out{
     background-color: var(--nav-bar);
-    margin-bottom: 50px;
+    margin: 50px auto;
     padding: 30px 25px;
     border-radius: 10px;
     border-left: 3px solid var(--teal);
@@ -2083,6 +2148,7 @@ iframe{
         margin-right: 20px;
     }
 }
+
 /*.......................................... select seat end ................................... */
 
 

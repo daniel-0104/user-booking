@@ -370,7 +370,7 @@ $(document).ready(function(){
     $(this).find('.cinema-up').toggle();
   });
 });
-// // ....................................... showtime select cinema and time dropdown end .................................... 
+// ....................................... showtime select cinema and time dropdown end .................................... 
 
 
 // //............................................... time duration start ...............................................
@@ -400,7 +400,6 @@ $(document).ready(function(){
 //............................................... time duration end ...............................................
 
 
-
 //.............................................. Select the single seat plan container start .................................
 document.addEventListener('DOMContentLoaded',function(){
   const seatPlan = document.getElementById('seat-plan');
@@ -425,7 +424,7 @@ document.addEventListener('DOMContentLoaded',function(){
   };
 
   const rows = 6;
-  const cols = 7;
+  const cols = 10;
 
   const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -529,7 +528,7 @@ document.addEventListener('DOMContentLoaded',function(){
   };
 
 const doubleRow = 6;
-const doubleCol = 8;
+const doubleCol = 5;
 
 const doubleRowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
@@ -604,10 +603,38 @@ if(doubleSeatPlan){
 }
 
   if(doubleCol <= 7){
-    document.getElementById('double-seat-plan-container').style.width = '70%';
+    document.getElementById('double-seat-plan-container').style.width = '80%';
   }
 });
 //.............................................. Select the double seat plan container end .................................
+
+
+//...................................................... seat design swiper start ..........................................
+var swiper = new Swiper(".mySwiper7", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: "auto",
+  hashNavigation: {
+    watchState: true,
+  },
+  navigation: {
+    nextEl: ".button-next7",
+    prevEl: ".button-prev7",
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  }
+});
+//....................................................... seat design swiper end ...........................................
 
 
 //.................................................... payment promotion code start .........................................
@@ -649,16 +676,11 @@ $(document).ready(function(){
   });
 });
 
-
-
-
-
-
-//................................................ edit profile start ..........................
+//................ upload screenshot start ..........
 var loadFile = function (event) {
   var image = document.getElementById("output");
   image.src = URL.createObjectURL(event.target.files[0]);
 };
-//........................ ...................edit profile end.................................
+//..................upload screenshot end................
 //................................................... payment method end ..............................................
 
