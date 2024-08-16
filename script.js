@@ -425,7 +425,7 @@ document.addEventListener('DOMContentLoaded',function(){
   };
 
   const rows = 6;
-  const cols = 30;
+  const cols = 7;
 
   const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 

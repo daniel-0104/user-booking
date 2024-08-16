@@ -102,6 +102,16 @@
     background-color: #444;
 } */
 
+#carousel {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .carousel img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
 </style>
 
 <body>
@@ -125,6 +135,36 @@
     </div>
     
     
+    <div id="carousel">
+        <div class="carousel">
+            <img src="https://via.placeholder.com/600x400" alt="Image 1">
+            <img src="https://via.placeholder.com/600x400" alt="Image 2">
+            <img src="https://via.placeholder.com/600x400" alt="Image 3">
+            <img src="https://via.placeholder.com/600x400" alt="Image 4">
+            <img src="https://via.placeholder.com/600x400" alt="Image 5">
+        </div>
+    </div>
 
+    
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-waterwheel-carousel/2.3.0/jquery.waterwheelCarousel.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $(".carousel").waterwheelCarousel({
+                flankingItems: 3,  // Number of items to show on either side of the center item
+                autoPlay: 3000,    // Automatically moves to the next item every 3 seconds
+                separation: 200,   // Space between items
+                opacityMultiplier: 0.8,  // Opacity of side items
+                speed: 500,  // Animation speed in milliseconds
+                clickedCenter: function($clickedItem) {
+                    alert("You clicked on image: " + $clickedItem.attr('alt'));
+                }
+            });
+        });
+    </script>
+</div>
 </body>
 </html>

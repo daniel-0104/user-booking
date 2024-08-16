@@ -2257,7 +2257,7 @@ iframe{
     font-size: 14pt;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     padding: 10px 0;
 }
 
@@ -2347,17 +2347,23 @@ iframe{
     }
     #offer-fy{
         background-color: var(--nav-bar);
-        padding: 20px 30px 55px;
+        padding: 20px 30px;
         border-radius: 10px;
     }
-    #offer-fy > div{
+    #offer-fy > div:last-child > div{
         display: block !important;
         width: 100%;
+        margin-bottom: 50px;
     }
-    #offer-fy a{
+    #offer-content > div:first-child{
+        width: 120px;
+        height: 90px;
+        margin-bottom: 20px;
+    }
+    #offer-content ~ a,
+    #offer-content ~ a > button{
         display: block;
-        width: fit-content;
-        float: right;
+        width: 100%;
     }
 }
 /*.......................................... checkout end  ................................... */
