@@ -2123,7 +2123,8 @@ iframe{
 }
 #user-contact-info a button:hover,
 #promo-code a button:hover,
-#payment-picture a button:hover{
+#payment-picture a button:hover,
+#offer-content ~ a > button:hover{
     color: var(--teal);
 }
 
@@ -2152,7 +2153,7 @@ iframe{
 }
 #booking-total h5,
 #payment-option h5{
-    background-color: #16354f;
+    background-color: #15334d;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 20px 0 25px 30px;
@@ -2214,7 +2215,7 @@ iframe{
 
 #payment-picture{
     background-color: var(--nav-bar);
-    padding: 20px 30px;
+    padding: 20px 30px 25px 30px;
     border-radius: 10px;
     margin-top: 35px;
 }
@@ -2253,10 +2254,10 @@ iframe{
     background-color: var(--body);
     width: 100%;
     margin-top: 30px;
-    font-size: 13pt;
+    font-size: 14pt;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     padding: 10px 0;
 }
 
@@ -2304,8 +2305,27 @@ iframe{
     padding: 20px 30px;
     border-radius: 10px;
 }
+#offer-content > div:first-child{
+    display: block;
+    width: 80px;
+    height: 55px;
+    box-sizing: border-box;
+    margin-right: 12px;
+}
+#offer-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+#offer-content ~ a > button{
+    background-color: var(--body);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    color: white;
+    padding: 5px 15px;
+}
 
-@media screen and (max-width: 992px){
+@media screen and (min-width: 630px) and (max-width: 992px){
     #booking-summary{
         display: block;
         width: 80%;
@@ -2313,6 +2333,31 @@ iframe{
     }
     #payment .col-lg-7{
         margin-top: 40px;
+    }
+    #offer-fy button{
+        margin-left: 50px;
+    }
+}
+@media screen and (max-width: 630px){
+    #payment .col-lg-7{
+        margin-top: 40px;
+    }
+    #booking-summary > div{
+        padding: 0 !important;
+    }
+    #offer-fy{
+        background-color: var(--nav-bar);
+        padding: 20px 30px 55px;
+        border-radius: 10px;
+    }
+    #offer-fy > div{
+        display: block !important;
+        width: 100%;
+    }
+    #offer-fy a{
+        display: block;
+        width: fit-content;
+        float: right;
     }
 }
 /*.......................................... checkout end  ................................... */
