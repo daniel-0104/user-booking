@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body : #335b81;
-    --nav-bar: #1d415e;
+    --body: #2a5178;
+    --nav-bar: #1e3e60;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -599,7 +599,7 @@ iframe{
 
 /*.......................................... footer section start ................................... */
 #footer{
-    background-color: #24303b;
+    background-color: #1d262f;
 }
 #footer h5,
 #toggle-btn button{
@@ -1582,7 +1582,7 @@ iframe{
 #order-location2 h6:nth-child(3),
 #order-location3 h6:nth-child(1),
 #order-location3 h6:nth-child(2){
-    color: #242e3b;
+    color: #1c2f4a;
 }
 @media screen and (max-width: 480px){
     #order-location1 #o-location-n > div:nth-child(2) > h6,
@@ -1599,7 +1599,7 @@ iframe{
 
 #select-date > ul{
     background-color: var(--nav-bar);
-    padding: 22px 20px 18px;
+    padding: 28px 20px 15px;
     border-radius: 10px;
     border-left: 2px solid var(--teal);
     border-right: 2px solid var(--teal);
@@ -1617,16 +1617,17 @@ iframe{
     background-color: var(--nav-bar);
     color: white;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
 }
 #caret-right{
     color: var(--teal);
+    font-size: 15pt;
 }
 #select-date button:hover,
 .js-select-active,
 .select-time button:hover{
-    background-color: #08080863 !important;
+    background-color: #122138d8 !important;
     color: var(--teal) !important;
     border: none !important;
     box-shadow: none !important;
