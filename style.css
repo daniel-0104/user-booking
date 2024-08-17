@@ -37,7 +37,8 @@ body{
 }
 #nav-order > li > a{
     color: white;
-    padding: 8px 35px;
+    padding: 8px 30px;
+    margin: 0 10px;
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -73,6 +74,12 @@ body{
     .my-account{
         display: block;
         margin-left: 12px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #nav-order > li > a{
+        margin: 0;
+        padding:0 20px;
     }
 }
 
@@ -1843,7 +1850,7 @@ iframe{
 #seat-plan-container{
     display: block;
     width: 95%;
-    /* margin: -100px auto -70px; */
+    margin: -100px auto -70px;
 }
 #seat-plan-container .lucide-armchair{
     width: 50px;
@@ -2014,7 +2021,7 @@ iframe{
 }
 @media screen and (max-width: 695px){
     #seat-plan-container{
-        background-color: red;
+        margin: auto;
     }
     #double-seat-plan-container{
         width: 100% !important;

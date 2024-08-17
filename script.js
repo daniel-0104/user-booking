@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 
   if(cols <= 12){
-    document.getElementById('seat-plan-container').style.width = '70%';
+    document.getElementById('seat-plan-container').style.width = '80%';
   }
 
   if(swipeLeft){
