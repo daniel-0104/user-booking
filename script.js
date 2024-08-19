@@ -312,6 +312,10 @@ var swiper = new Swiper(".mySwiper6", {
   spaceBetween: 30,
   slidesPerView: 5,
   grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   breakpoints: {
     0: {
         slidesPerView: 1,
@@ -635,6 +639,41 @@ var swiper = new Swiper(".mySwiper7", {
   }
 });
 //....................................................... seat design swiper end ...........................................
+
+
+//...................................................... team members swiper start ..........................................
+var swiper = new Swiper(".mySwiper8", {
+  spaceBetween: 30,
+  slidesPerView: 4,
+  loop: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".button-next8",
+    prevEl: ".button-prev8",
+  },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    700: {
+        slidesPerView: 2,
+    },
+    980: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+    },
+    1300: {
+        slidesPerView: 4,
+    }
+  }
+});
+//....................................................... team members swiper end ...........................................
 
 
 //.................................................... payment promotion code start .........................................

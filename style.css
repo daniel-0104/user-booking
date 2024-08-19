@@ -4,7 +4,7 @@ body{
 }
 :root{
     --body: #2a5178;
-    --nav-bar: #1e3e60;
+    --nav-bar: #1b3c5e;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -614,6 +614,11 @@ iframe{
 #footer p{
     color: rgb(230, 227, 227);
     line-height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 #footer-icon a{
     display: flex;
@@ -1164,9 +1169,19 @@ iframe{
     border-radius: 8px;
 }
 #movie-cast .mySwiper6 .swiper-slide{
-    background-color: var(--nav-bar);
+    background-color: #16324d;
     padding: 35px 15px 25px;
     border-radius: 8px;
+}
+#movie-cast .mySwiper6 .swiper-pagination-bullet{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-top: 30px !important;
+}
+#movie-cast .mySwiper6 .swiper-pagination-bullet-active{
+    background-color: var(--teal);
+    opacity: 1;
 }
 #movie-cast img{
     display: block;
@@ -1302,18 +1317,107 @@ iframe{
 #about-page{
     display: block;
     width: 100%;
-    margin-top: 30px;
+    margin: 30px auto 80px;
     padding: 0 40px;
 }
-#about-content > label{
+#about-page-text > h5{
     text-transform: uppercase;
-    background-color: var(--secondary);
-    color: white;
-    padding: 10px 35px;
-    font-size: 13pt;
-    border-radius: 5px;
+    color: var(--teal);
+    font-size: 17pt;
     font-weight: bold;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.356);
+    margin: 30px 0 20px;
+}
+#about-page-text > p{
+    font-size: 15pt;
+    margin-bottom: 20px;
+    font-family: calibri;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+#choose-us{
+    margin: 80px auto;
+}
+#choose-us > div > h5{
+    text-transform: uppercase;
+    color: var(--teal);
+    margin: 30px 0 20px;
+    font-size: 23pt;
+}
+#choose-span{
+    background-color: var(--teal);
+    width: 20px;
+    height: 3px;
+    border-radius: 20px;
+    margin-right: 10px;
+    margin-top: 14px;
+}
+.choose-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-bar);
+    border: 1px solid var(--teal);
+    height: 230px;
+    margin: auto;
+    border-radius: 8px;
+    cursor: default;
+}
+.choose-content:hover{
+    box-shadow: 2px 0 13px #5febcf;
+    transition: 0.2s ease-in-out;
+}
+.choose-content svg{
+    font-size: 32pt;
+}
+
+#team{
+    margin-top: 120px;
+}
+#team > div:first-child{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--teal);
+}
+#team > div > label{
+    color: var(--teal);
+    font-size: 14pt;
+    margin-bottom: 8px;
+}
+#team-content .swiper-slide{
+    background-color: #16324d;
+    text-align: center;
+    border-radius: 8px;
+    height: 350px;
+    padding-top: 30px;
+}
+#team-content .swiper-slide img{
+    width: 200px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+#team-content .swiper-slide p{
+    color: var(--teal);
+}
+
+@media screen and (max-width: 772px){
+    #about-page{
+        padding: 0 !important;
+    }
+    #about-page > label{
+        margin-left: 45px;
+    }
+    #about-page-text > p{
+        font-size: 14pt;
+        padding: 0 10px;
+    }
+    #about-page > div:nth-child(3){
+        width: 100% !important;
+        padding: 0 10px;
+    }
 }
 /*.......................................... about us page end ................................... */
 
@@ -1322,7 +1426,8 @@ iframe{
 #contact-us{
     margin: 30px auto 80px;
 }
-#contact-us > label{
+#contact-us > label,
+#about-page > label{
     text-transform: uppercase;
     background-color: var(--secondary);
     color: white;
@@ -2247,7 +2352,7 @@ iframe{
 }
 #booking-total h5,
 #payment-option h5{
-    background-color: #15334d;
+    background-color: #16324d;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 20px 0 25px 30px;
