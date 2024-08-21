@@ -116,42 +116,47 @@ body{
 /*.......................................... nav bar end ................................... */
 
 /*.......................................... home section start ................................... */
-#home-poster{
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    color: var(--white);
-}
-#home-poster-content{
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1;
-}
-#home-poster-content > div > h1{
+#home-poster-content > h1{
     display: block;
     margin: auto;
     text-align: center;
-    font-size: 50pt;
+    font-size: 45pt;
     word-spacing: 2pt;
-    width: 70% !important;
+    width: 50% !important;
     font-weight: bold;
 }
-#home-poster-content > div > h1 > span{
+#home-poster-content > h1 > span{
     color: var(--gold);
 }
-#home-poster-content > div > p{
+#home-poster-content > p{
     width: 80% !important;
     display: block;
     margin: auto;
     margin-top: 20px;
     font-size: 16pt;
+}
+.carousel-item > img{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+.carousel-item > span{
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.384);
+    top: 0;
+}
+.carousel-inner{
+    z-index: -1;
+}
+.carousel-caption{
+    width: 100%;
+    height: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 #search-ticket{
@@ -221,14 +226,24 @@ body{
     #home-search > .col-lg-3{
         margin-bottom: 20px;
     }
+    #home-poster-content > h1{
+        background-color: red;
+        width: 70%;
+        font-size: 32pt;
+    }
 }
 @media screen and (max-width: 768px){
     #cinema-form .col-sm-6{
         margin-bottom: 15px;
     }
+    #home-poster-content > h1{
+        background-color: red;
+        width: 80%;
+        font-size: 32pt;
+    }      
 }
 @media screen and (max-width: 576px){
-    #home-poster-content > div > h1{
+    #home-poster-content > h1{
         width: 100%;
         font-size: 30pt;
     }

@@ -83,15 +83,42 @@
     <!-- home section start  -->
     <section id="home" class="position-relative">
         <div>
-            <div id="home-poster" style="background-image: url(image/pexels-photo-7991486.jpg);">
-                <div id="home-poster-content">
-                    <div class="animate__animated animate__fadeInDown">
-                        <h1>TICKETS BOOKING FOR <span>MOVIE</span></h1>
-                        <p>Buy movie tickets in advance, find movie times watch trailer, read movie reviews and much more </p>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="image/pexels-photo-7991486.jpg" class="d-block w-100" alt="...">
+                        <span></span>
+                        <div class="carousel-caption" id="home-poster-content">
+                            <h1>TICKETS BOOKING FOR <span>MOVIE</span></h1>
+                            <p>Buy movie tickets in advance, find movie times watch trailer, read movie reviews and much more </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000" id="home-poster-content">
+                        <img src="image/b4f00a13-a595-4886-b70a-28c8d89c46a4.02740047f4f8a33e9b1eed4a03f876a8.webp" class="d-block w-100" alt="...">
+                        <span></span>
+                        <div class="carousel-caption" id="home-poster-content">
+                            <h1>TICKETS BOOKING FOR <span>MOVIE</span></h1>
+                            <p>Buy movie tickets in advance, find movie times watch trailer, read movie reviews and much more </p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000" id="home-poster-content">
+                        <img src="image/scale.png" class="d-block w-100" alt="...">
+                        <span></span>
+                        <div class="carousel-caption" id="home-poster-content">
+                            <h1>TICKETS BOOKING FOR <span>MOVIE</span></h1>
+                            <p>Buy movie tickets in advance, find movie times watch trailer, read movie reviews and much more </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- <span></span> -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
         </div>
         <div class="container-lg" id="search-ticket">
             <div class="row mx-auto align-items-center">
