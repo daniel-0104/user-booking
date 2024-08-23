@@ -746,6 +746,14 @@ iframe{
         display: none;
     }
 }
+@media screen and (max-width: 400px){
+    #down,#up{
+        margin-left: 2px;
+    }
+    #footer-dropdown{
+        margin-top: -15px !important;
+    }
+}
 /*.......................................... footer section end ................................... */
 
 
