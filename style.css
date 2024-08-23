@@ -75,6 +75,10 @@ body{
         display: block;
         margin-left: 12px;
     }
+    #cinema-label{
+        color: var(--gold);
+        font-family: fantasy !important;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
     #nav-order > li > a{
@@ -253,6 +257,18 @@ body{
     }
     #cinema-form .col-sm-1{
         text-align: right;
+    }
+}
+@media screen and (max-width: 400px){
+    #home-poster-content > h1{
+        display: block;
+        width: 80% !important;
+        font-size: 20pt;
+    }
+    #home-poster-content > p{
+        width: 80% !important;
+        font-size: 14pt;
+        margin-top: 15px;
     }
 }
 
@@ -553,13 +569,21 @@ iframe{
         height: 420px;
     }
 }
+@media screen and (max-width: 400px){
+    .mySwiper2 .swiper-slide img{
+        display: block;
+        margin: auto;
+        width: 100% !important;
+        height: 300px;
+    }
+}
 /*.......................................... promotion end ................................... */
 
 
 /*.......................................... cinema details start ................................... */
-.swiper-slide{
+/* .swiper-slide{
     user-select: auto;
-}
+} */
 .swiper-btn2s{
     position: relative;
     display: flex;
@@ -581,8 +605,7 @@ iframe{
 }
 .swiper-btn2s button:hover{
     background-color: var(--nav-bar);
-    color: var(--teal);
-    border: 1px solid white;
+    color: white;
 }
 
 #cinema-detail-content{
@@ -605,6 +628,11 @@ iframe{
     #cinema-detail-content img{
         height: 260px;
         object-fit: cover;
+    }
+}
+@media screen and (max-width: 400px){
+    #cinema-detail-content{
+        height: 480px;
     }
 }
 /*.......................................... cinema details end ................................... */

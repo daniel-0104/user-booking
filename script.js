@@ -129,9 +129,7 @@ var swiper = new Swiper(".mySwiper2", {
 var swiper = new Swiper(".mySwiper3", {
   slidesPerView: 3,
   spaceBetween: 30,
-  hashNavigation: {
-    watchState: true,
-  },
+  grabCursor: true,
   navigation: {
     nextEl: ".button-next2",
     prevEl: ".button-prev2",
@@ -146,9 +144,7 @@ var swiper = new Swiper(".mySwiper3", {
     1200: {
         slidesPerView: 3,
     }
-  },
-  simulateTouch: false,
-  allowTouchMove: false,
+  }
 });
 // ..................................................... cinema details end ....................................
 
