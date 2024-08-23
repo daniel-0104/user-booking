@@ -741,7 +741,7 @@ iframe{
     #footer h5,
     #toggle-btn button{
         font-size: 13pt;
-        font-weight: bold;
+        font-weight: bold !important;
     }
     #developer{
         display: none;
