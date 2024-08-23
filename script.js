@@ -13,6 +13,28 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // href clicked active link end
 
+// Show loader before a section loads
+document.addEventListener("DOMContentLoaded", function() {
+  const targetSection = document.querySelector('#my-section');
+  const loader = document.querySelector('#loader');
+
+  // Show loader
+  loader.style.display = "block";
+
+  // Check when the section is fully loaded
+  window.addEventListener('load', function() {
+      loader.style.display = "none";
+  });
+
+  // Optional: Add a timeout if the section might take too long
+  setTimeout(function() {
+      if (targetSection.offsetHeight === 0) {
+          loader.style.display = "none"; // Hide loader if taking too long
+      }
+  }, 5000); // 5 seconds timeout
+});
+
+
 
 // .................................................... search movie selected btn start .................................
 document.addEventListener('DOMContentLoaded', () => {
