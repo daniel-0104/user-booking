@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Show loader before a section loads
 document.addEventListener("DOMContentLoaded", function() {
-  const targetSection = document.querySelector('#my-section');
+  const targetSection = document.querySelectorAll('.load-section');
   const loader = document.querySelector('#loader');
 
   // Show loader
