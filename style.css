@@ -959,6 +959,10 @@ iframe{
     #movie-label form{
         margin-top: 20px;
     }
+    .sorting-dropdown li{
+        display: block;
+        width: 100% !important;
+    }
 }
 @media screen and (max-width: 576px){
     #movie-sorting{
@@ -991,6 +995,10 @@ iframe{
     #movie-cell-show a h5{
         display: block;
         text-align: center;
+    }
+    .sorting-dropdown li{
+        display: block;
+        width: 100% !important;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -1066,6 +1074,17 @@ iframe{
 @media screen and (max-width: 410px){
     #promotion-list a > img{
         width: 330px !important;
+        height: 360px;
+        object-fit: cover;
+    }
+    #promotion-list .col-lg-3{
+        margin: auto;
+        padding: 0;
+    }
+    #promotion-list a > h5{
+        font-size: 13pt;
+        width: 330px;
+        margin: auto;
     }
 }
 /*.......................................... promotion list end ................................... */
