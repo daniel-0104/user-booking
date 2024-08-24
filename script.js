@@ -400,6 +400,67 @@ $(document).ready(function(){
 //............................................... time duration end ...............................................
 
 
+document.addEventListener('DOMContentLoaded',function(){
+  const seatContainer = document.getElementById('eg-test');
+  const seatPlan = document.getElementById('seat-plan');
+  const seatPlanRow = document.querySelectorAll('.seat-plan-row');
+  const seats = document.querySelectorAll('.seat');
+  const swipeLeft = document.getElementById('swipe-left');
+
+  seatPlanRow.forEach(sr => {
+    if(seats.length > 20){
+      // seatContainer.style.backgroundColor = 'red';
+      // seatContainer.style.overflowX = 'auto';
+      sr.style.gridTemplateColumns = `auto repeat(${seats.length}, auto)`;
+    }
+  });
+
+  // function adjustScroll(){
+  //   const seatLength = seats.length;
+  //   if(seatLength > 20){
+  //     seatPlan.style.backgroundColor = 'red';
+  //     seatPlan.style.overflowX = 'auto';
+  //     seatPlanRow.style.gridTemplateColumns = `auto repeat(${seatLength}, auto)`;
+  //   }
+  // }
+
+  // adjustScroll();
+
+  // if(swipeLeft){
+  //     if (seatPlanRow.scrollWidth > seatPlanRow.clientWidth) {
+  //       swipeLeft.style.display = 'block';
+  //     }
+  //   }
+
+  
+  //   let isDown = false;
+  //   let startX;
+  //   let scrollLeft;
+  
+  //   seatPlanRow.addEventListener('mousedown', (e) => {
+  //       isDown = true;
+  //       startX = e.pageX - seatPlanRow.offsetLeft;
+  //       scrollLeft = seatPlanRow.scrollLeft;
+  //       e.preventDefault();
+  //   });
+  
+  //   seatPlanRow.addEventListener('mouseleave', () => {
+  //       isDown = false;
+  //   });
+  
+  //   seatPlanRow.addEventListener('mouseup', () => {
+  //       isDown = false;
+  //   });
+  
+  //   seatPlanRow.addEventListener('mousemove', (e) => {
+  //       if (!isDown) return;
+  //       e.preventDefault();
+  //       const x = e.pageX - seatPlanRow.offsetLeft;
+  //       const walk = (x - startX) * 2;
+  //       seatPlanRow.scrollLeft = scrollLeft - walk;
+  //   });
+});
+
 //.............................................. Select the single seat plan container start .................................
 // document.addEventListener('DOMContentLoaded',function(){
 //   const seatPlan = document.getElementById('seat-plan');
