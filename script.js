@@ -401,119 +401,119 @@ $(document).ready(function(){
 
 
 //.............................................. Select the single seat plan container start .................................
-document.addEventListener('DOMContentLoaded',function(){
-  const seatPlan = document.getElementById('seat-plan');
-  const swipeLeft = document.getElementById('swipe-left');
+// document.addEventListener('DOMContentLoaded',function(){
+//   const seatPlan = document.getElementById('seat-plan');
+//   const swipeLeft = document.getElementById('swipe-left');
 
-  const seatStatus = {
-    'A1' : 'sold',
-    'A2' : 'sold',
-    'A13' : 'sold',
-    'A14' : 'sold',
-    'A15' : 'sold',
-    'C7' : 'sold',
-    'C8' : 'sold',
-    'C9' : 'sold',
-    'E1' : 'sold',
-    'E2' : 'sold',
-    'E4' : 'sold',
-    'E5' : 'sold',
-    'E16' : 'sold',
-    'E17' : 'sold',
-    'F12' : 'sold'
-  };
+//   const seatStatus = {
+//     'A1' : 'sold',
+//     'A2' : 'sold',
+//     'A13' : 'sold',
+//     'A14' : 'sold',
+//     'A15' : 'sold',
+//     'C7' : 'sold',
+//     'C8' : 'sold',
+//     'C9' : 'sold',
+//     'E1' : 'sold',
+//     'E2' : 'sold',
+//     'E4' : 'sold',
+//     'E5' : 'sold',
+//     'E16' : 'sold',
+//     'E17' : 'sold',
+//     'F12' : 'sold'
+//   };
 
-  const rows = 6;
-  const cols = 10;
+//   const rows = 6;
+//   const cols = 10;
 
-  const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+//   const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-  if(seatPlan){
-    seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
+//   if(seatPlan){
+//     seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
 
-    for (let row = 0; row < rows; row++) {
-      const rowLabelDiv = document.createElement('div');
-      rowLabelDiv.className = 'row-label';
-      rowLabelDiv.style.marginRight = '15px';
-      rowLabelDiv.style.fontSize = '16pt';
-      rowLabelDiv.textContent = rowLabels[row] || '';
-      seatPlan.appendChild(rowLabelDiv);
+//     for (let row = 0; row < rows; row++) {
+//       const rowLabelDiv = document.createElement('div');
+//       rowLabelDiv.className = 'row-label';
+//       rowLabelDiv.style.marginRight = '15px';
+//       rowLabelDiv.style.fontSize = '16pt';
+//       rowLabelDiv.textContent = rowLabels[row] || '';
+//       seatPlan.appendChild(rowLabelDiv);
 
-      for (let col = 1; col <= cols; col++) {
-          const seatDiv = document.createElement('div');
-          seatDiv.className = 'seat';
+//       for (let col = 1; col <= cols; col++) {
+//           const seatDiv = document.createElement('div');
+//           seatDiv.className = 'seat';
 
-          const seatIdentifier = `${rowLabels[row]}${col}`;
-          const status = seatStatus[seatIdentifier] || 'available'; 
+//           const seatIdentifier = `${rowLabels[row]}${col}`;
+//           const status = seatStatus[seatIdentifier] || 'available'; 
     
-          seatDiv.classList.add(status);
+//           seatDiv.classList.add(status);
 
-          if(status === 'available'){
-              const priceBox = document.createElement('div');
-              priceBox.className = 'box arrow-bottom';
-              priceBox.textContent = '5000 Kyats';
-              seatDiv.appendChild(priceBox);
+//           if(status === 'available'){
+//               const priceBox = document.createElement('div');
+//               priceBox.className = 'box arrow-bottom';
+//               priceBox.textContent = '5000 Kyats';
+//               seatDiv.appendChild(priceBox);
 
-              seatDiv.addEventListener('click',function(){
-                seatDiv.classList.toggle('selected');
-              });
-          }
+//               seatDiv.addEventListener('click',function(){
+//                 seatDiv.classList.toggle('selected');
+//               });
+//           }
 
-          const seatContent = document.createElement('div');
-          seatContent.className = 'seat-content';
-          seatContent.innerHTML = `
-              <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
-                  <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
-                  <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
-                  <path d="M5 18v2"/>
-                  <path d="M19 18v2"/>
-              </svg>
-          `;
+//           const seatContent = document.createElement('div');
+//           seatContent.className = 'seat-content';
+//           seatContent.innerHTML = `
+//               <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
+//               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+//                   <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+//                   <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+//                   <path d="M5 18v2"/>
+//                   <path d="M19 18v2"/>
+//               </svg>
+//           `;
 
-          seatDiv.appendChild(seatContent);
-          seatPlan.appendChild(seatDiv);
-      }
-    }
+//           seatDiv.appendChild(seatContent);
+//           seatPlan.appendChild(seatDiv);
+//       }
+//     }
 
-    let isDown = false;
-    let startX;
-    let scrollLeft;
+//     let isDown = false;
+//     let startX;
+//     let scrollLeft;
   
-    seatPlan.addEventListener('mousedown', (e) => {
-        isDown = true;
-        startX = e.pageX - seatPlan.offsetLeft;
-        scrollLeft = seatPlan.scrollLeft;
-        e.preventDefault();
-    });
+//     seatPlan.addEventListener('mousedown', (e) => {
+//         isDown = true;
+//         startX = e.pageX - seatPlan.offsetLeft;
+//         scrollLeft = seatPlan.scrollLeft;
+//         e.preventDefault();
+//     });
   
-    seatPlan.addEventListener('mouseleave', () => {
-        isDown = false;
-    });
+//     seatPlan.addEventListener('mouseleave', () => {
+//         isDown = false;
+//     });
   
-    seatPlan.addEventListener('mouseup', () => {
-        isDown = false;
-    });
+//     seatPlan.addEventListener('mouseup', () => {
+//         isDown = false;
+//     });
   
-    seatPlan.addEventListener('mousemove', (e) => {
-        if (!isDown) return;
-        e.preventDefault();
-        const x = e.pageX - seatPlan.offsetLeft;
-        const walk = (x - startX) * 2;
-        seatPlan.scrollLeft = scrollLeft - walk;
-    });
+//     seatPlan.addEventListener('mousemove', (e) => {
+//         if (!isDown) return;
+//         e.preventDefault();
+//         const x = e.pageX - seatPlan.offsetLeft;
+//         const walk = (x - startX) * 2;
+//         seatPlan.scrollLeft = scrollLeft - walk;
+//     });
 
-    if(cols <= 12){
-      document.getElementById('seat-plan-container').style.width = '80%';
-    }
-  }
+//     if(cols <= 12){
+//       document.getElementById('seat-plan-container').style.width = '80%';
+//     }
+//   }
 
-  if(swipeLeft){
-    if (seatPlan.scrollWidth > seatPlan.clientWidth) {
-      swipeLeft.style.display = 'block';
-    }
-  }
-});
+//   if(swipeLeft){
+//     if (seatPlan.scrollWidth > seatPlan.clientWidth) {
+//       swipeLeft.style.display = 'block';
+//     }
+//   }
+// });
 //.............................................. Select the single seat plan container end .................................
 
 

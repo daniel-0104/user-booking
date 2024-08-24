@@ -2064,7 +2064,7 @@ iframe{
     }
 }
 
-#seat-plan-container{
+/* #seat-plan-container{
     display: block;
     width: 95%;
     margin: -100px auto -70px;
@@ -2142,7 +2142,7 @@ iframe{
     border-right: 13px solid transparent;
     border-left: 13px solid transparent;
     border-bottom: none;
-}
+} */
 
 #double-seat-plan-container{
     display: block;
