@@ -400,266 +400,158 @@ $(document).ready(function(){
 //............................................... time duration end ...............................................
 
 
+//.............................................. Select the single seat plan container start .................................
 document.addEventListener('DOMContentLoaded',function(){
-  const seatContainer = document.getElementById('eg-test');
   const seatPlan = document.getElementById('seat-plan');
   const seatPlanRow = document.querySelectorAll('.seat-plan-row');
   const seats = document.querySelectorAll('.seat');
   const swipeLeft = document.getElementById('swipe-left');
 
   seatPlanRow.forEach(sr => {
-    if(seats.length > 20){
+    const totalSeats = sr.querySelectorAll('.seat').length;
+    
+    if (totalSeats > 20) {
       sr.style.display = 'grid';
-      sr.style.gridTemplateColumns = `auto repeat(${seats.length}, auto)`;
+      sr.style.gridTemplateColumns = `auto repeat(${totalSeats}, auto)`;
+    }
+  
+    if (seatPlan.scrollWidth > seatPlan.clientWidth) {
+      swipeLeft.style.display = 'block';
+    } else {
+      swipeLeft.style.display = 'none';
     }
   });
 
   seats.forEach(seatClick => {
     seatClick.addEventListener('click',function(){
-      seatClick.classList.toggle('selected');
+      if(seatClick.classList.contains('available')){
+          seatClick.classList.toggle('selected');
+      }
     });
+
   });
 
-
-  // if (sr.scrollWidth > sr.clientWidth) {
-  //   swipeLeft.style.display = 'block';
-  // }
-
+  if(seatPlan){
+    let isDown = false;
+    let startX;
+    let scrollLeft;
   
-    // let isDown = false;
-    // let startX;
-    // let scrollLeft;
+    seatPlan.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - seatPlan.offsetLeft;
+        scrollLeft = seatPlan.scrollLeft;
+        e.preventDefault();
+    });
   
-    // seatPlanRow.addEventListener('mousedown', (e) => {
-    //     isDown = true;
-    //     startX = e.pageX - seatPlanRow.offsetLeft;
-    //     scrollLeft = seatPlanRow.scrollLeft;
-    //     e.preventDefault();
-    // });
+    seatPlan.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
   
-    // seatPlanRow.addEventListener('mouseleave', () => {
-    //     isDown = false;
-    // });
+    seatPlan.addEventListener('mouseup', () => {
+        isDown = false;
+    });
   
-    // seatPlanRow.addEventListener('mouseup', () => {
-    //     isDown = false;
-    // });
-  
-    // seatPlanRow.addEventListener('mousemove', (e) => {
-    //     if (!isDown) return;
-    //     e.preventDefault();
-    //     const x = e.pageX - seatPlanRow.offsetLeft;
-    //     const walk = (x - startX) * 2;
-    //     seatPlanRow.scrollLeft = scrollLeft - walk;
-    // });
+    seatPlan.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - seatPlan.offsetLeft;
+        const walk = (x - startX) * 2;
+        seatPlan.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
-
-//.............................................. Select the single seat plan container start .................................
-// document.addEventListener('DOMContentLoaded',function(){
-//   const seatPlan = document.getElementById('seat-plan');
-//   const swipeLeft = document.getElementById('swipe-left');
-
-//   const seatStatus = {
-//     'A1' : 'sold',
-//     'A2' : 'sold',
-//     'A13' : 'sold',
-//     'A14' : 'sold',
-//     'A15' : 'sold',
-//     'C7' : 'sold',
-//     'C8' : 'sold',
-//     'C9' : 'sold',
-//     'E1' : 'sold',
-//     'E2' : 'sold',
-//     'E4' : 'sold',
-//     'E5' : 'sold',
-//     'E16' : 'sold',
-//     'E17' : 'sold',
-//     'F12' : 'sold'
-//   };
-
-//   const rows = 6;
-//   const cols = 10;
-
-//   const rowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-
-//   if(seatPlan){
-//     seatPlan.style.gridTemplateColumns = `auto repeat(${cols}, auto)`;
-
-//     for (let row = 0; row < rows; row++) {
-//       const rowLabelDiv = document.createElement('div');
-//       rowLabelDiv.className = 'row-label';
-//       rowLabelDiv.style.marginRight = '15px';
-//       rowLabelDiv.style.fontSize = '16pt';
-//       rowLabelDiv.textContent = rowLabels[row] || '';
-//       seatPlan.appendChild(rowLabelDiv);
-
-//       for (let col = 1; col <= cols; col++) {
-//           const seatDiv = document.createElement('div');
-//           seatDiv.className = 'seat';
-
-//           const seatIdentifier = `${rowLabels[row]}${col}`;
-//           const status = seatStatus[seatIdentifier] || 'available'; 
-    
-//           seatDiv.classList.add(status);
-
-//           if(status === 'available'){
-//               const priceBox = document.createElement('div');
-//               priceBox.className = 'box arrow-bottom';
-//               priceBox.textContent = '5000 Kyats';
-//               seatDiv.appendChild(priceBox);
-
-//               seatDiv.addEventListener('click',function(){
-//                 seatDiv.classList.toggle('selected');
-//               });
-//           }
-
-//           const seatContent = document.createElement('div');
-//           seatContent.className = 'seat-content';
-//           seatContent.innerHTML = `
-//               <text x="12" y="20" text-anchor="middle" class="svg-number">${col}</text>
-//               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
-//                   <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
-//                   <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
-//                   <path d="M5 18v2"/>
-//                   <path d="M19 18v2"/>
-//               </svg>
-//           `;
-
-//           seatDiv.appendChild(seatContent);
-//           seatPlan.appendChild(seatDiv);
-//       }
-//     }
-
-//     let isDown = false;
-//     let startX;
-//     let scrollLeft;
-  
-//     seatPlan.addEventListener('mousedown', (e) => {
-//         isDown = true;
-//         startX = e.pageX - seatPlan.offsetLeft;
-//         scrollLeft = seatPlan.scrollLeft;
-//         e.preventDefault();
-//     });
-  
-//     seatPlan.addEventListener('mouseleave', () => {
-//         isDown = false;
-//     });
-  
-//     seatPlan.addEventListener('mouseup', () => {
-//         isDown = false;
-//     });
-  
-//     seatPlan.addEventListener('mousemove', (e) => {
-//         if (!isDown) return;
-//         e.preventDefault();
-//         const x = e.pageX - seatPlan.offsetLeft;
-//         const walk = (x - startX) * 2;
-//         seatPlan.scrollLeft = scrollLeft - walk;
-//     });
-
-//     if(cols <= 12){
-//       document.getElementById('seat-plan-container').style.width = '80%';
-//     }
-//   }
-
-//   if(swipeLeft){
-//     if (seatPlan.scrollWidth > seatPlan.clientWidth) {
-//       swipeLeft.style.display = 'block';
-//     }
-//   }
-// });
 //.............................................. Select the single seat plan container end .................................
 
 
 //.............................................. Select the double seat plan container start .................................
-document.addEventListener('DOMContentLoaded',function(){
-  const doubleSeatPlan = document.getElementById('double-seat-plan');
+// document.addEventListener('DOMContentLoaded',function(){
+//   const doubleSeatPlan = document.getElementById('double-seat-plan');
 
-  const doubleStatus = {
-    'A1' : 'double-seat-sold',
-    'A2' : 'double-seat-sold',
-    'E6' : 'double-seat-sold'
-  };
+//   const doubleStatus = {
+//     'A1' : 'double-seat-sold',
+//     'A2' : 'double-seat-sold',
+//     'E6' : 'double-seat-sold'
+//   };
 
-const doubleRow = 6;
-const doubleCol = 5;
+// const doubleRow = 6;
+// const doubleCol = 5;
 
-const doubleRowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+// const doubleRowLabels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
-  if(doubleSeatPlan){
-    doubleSeatPlan.style.gridTemplateColumns = `auto repeat(${doubleCol}, auto)`;
+//   if(doubleSeatPlan){
+//     doubleSeatPlan.style.gridTemplateColumns = `auto repeat(${doubleCol}, auto)`;
 
-    for (let row = 0; row < doubleRow; row++) {
-      const doubleRowLabelDiv = document.createElement('div');
-      doubleRowLabelDiv.className = 'double-row-label';
-      doubleRowLabelDiv.style.marginLeft = '30px';
-      doubleRowLabelDiv.style.fontSize = '16pt';
-      doubleRowLabelDiv.textContent = doubleRowLabels[row] || '';
-      doubleSeatPlan.appendChild(doubleRowLabelDiv);
+//     for (let row = 0; row < doubleRow; row++) {
+//       const doubleRowLabelDiv = document.createElement('div');
+//       doubleRowLabelDiv.className = 'double-row-label';
+//       doubleRowLabelDiv.style.marginLeft = '30px';
+//       doubleRowLabelDiv.style.fontSize = '16pt';
+//       doubleRowLabelDiv.textContent = doubleRowLabels[row] || '';
+//       doubleSeatPlan.appendChild(doubleRowLabelDiv);
 
-      for (let col = 1; col <= doubleCol; col++) {
-          const doubleSeatDiv = document.createElement('div');
-          doubleSeatDiv.className = 'seat';
+//       for (let col = 1; col <= doubleCol; col++) {
+//           const doubleSeatDiv = document.createElement('div');
+//           doubleSeatDiv.className = 'seat';
 
-          const doubleSeatIdentifier = `${doubleRowLabels[row]}${col}`;
-          const status2 = doubleStatus[doubleSeatIdentifier] || 'double-seat-available'; 
+//           const doubleSeatIdentifier = `${doubleRowLabels[row]}${col}`;
+//           const status2 = doubleStatus[doubleSeatIdentifier] || 'double-seat-available'; 
     
-          doubleSeatDiv.classList.add(status2);
+//           doubleSeatDiv.classList.add(status2);
 
-          if(status2 === 'double-seat-available'){
-              const priceBox2 = document.createElement('div');
-              priceBox2.className = 'box2 arrow-bottom';
-              priceBox2.textContent = '10000 Kyats';
-              doubleSeatDiv.appendChild(priceBox2);
+//           if(status2 === 'double-seat-available'){
+//               const priceBox2 = document.createElement('div');
+//               priceBox2.className = 'box2 arrow-bottom';
+//               priceBox2.textContent = '10000 Kyats';
+//               doubleSeatDiv.appendChild(priceBox2);
 
-              doubleSeatDiv.addEventListener('click',function(){
-                doubleSeatDiv.classList.toggle('double-seat-selected');
+//               doubleSeatDiv.addEventListener('click',function(){
+//                 doubleSeatDiv.classList.toggle('double-seat-selected');
 
-                const seatNumberElement = doubleSeatDiv.querySelector('.seat-number');
-                if (doubleSeatDiv.classList.contains('double-seat-selected')) {
-                    seatNumberElement.style.backgroundColor = '#5febcf';
-                } else {
-                  seatNumberElement.style.backgroundColor = 'rgb(225, 225, 225)';
-                  seatNumberElement.style.color = '#2b4c74';
-              }
-              });
-          }
+//                 const seatNumberElement = doubleSeatDiv.querySelector('.seat-number');
+//                 if (doubleSeatDiv.classList.contains('double-seat-selected')) {
+//                     seatNumberElement.style.backgroundColor = '#5febcf';
+//                 } else {
+//                   seatNumberElement.style.backgroundColor = 'rgb(225, 225, 225)';
+//                   seatNumberElement.style.color = '#2b4c74';
+//               }
+//               });
+//           }
 
-          const doubleSeatContent = document.createElement('div');
-          doubleSeatContent.className = 'double-seat';
-          doubleSeatContent.innerHTML = `
-              <div class="seat-number">${col}</div>
-              <div class="double-seat-container">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
-                      <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
-                      <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
-                      <path d="M5 18v2"/>
-                      <path d="M19 18v2"/>
-                  </svg>
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
-                      <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
-                      <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
-                      <path d="M5 18v2"/>
-                      <path d="M19 18v2"/>
-                  </svg>
-              </div>
-          `;
+//           const doubleSeatContent = document.createElement('div');
+//           doubleSeatContent.className = 'double-seat';
+//           doubleSeatContent.innerHTML = `
+//               <div class="seat-number">${col}</div>
+//               <div class="double-seat-container">
+//                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+//                       <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+//                       <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+//                       <path d="M5 18v2"/>
+//                       <path d="M19 18v2"/>
+//                   </svg>
+//                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-armchair">
+//                       <path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/>
+//                       <path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/>
+//                       <path d="M5 18v2"/>
+//                       <path d="M19 18v2"/>
+//                   </svg>
+//               </div>
+//           `;
 
-          if (status2 === 'double-seat-sold') {
-            doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2D3949';
-            doubleSeatContent.querySelector('.seat-number').style.color = 'gray';
-          }
+//           if (status2 === 'double-seat-sold') {
+//             doubleSeatContent.querySelector('.seat-number').style.backgroundColor = '#2D3949';
+//             doubleSeatContent.querySelector('.seat-number').style.color = 'gray';
+//           }
 
-          doubleSeatDiv.appendChild(doubleSeatContent);
-          doubleSeatPlan.appendChild(doubleSeatDiv);
-      }
-    }
+//           doubleSeatDiv.appendChild(doubleSeatContent);
+//           doubleSeatPlan.appendChild(doubleSeatDiv);
+//       }
+//     }
 
-    if(doubleCol <= 7){
-      document.getElementById('double-seat-plan-container').style.width = '80%';
-    }
-  }
-});
+//     if(doubleCol <= 7){
+//       document.getElementById('double-seat-plan-container').style.width = '80%';
+//     }
+//   }
+// });
 //.............................................. Select the double seat plan container end .................................
 
 

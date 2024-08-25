@@ -2061,6 +2061,8 @@ iframe{
     #swipe-left{
         float: right;
         margin-top: 30px;
+        margin-right: -10px;
+        margin-bottom: -90px;
     }
 }
 
@@ -2087,6 +2089,7 @@ iframe{
     width: 100%;
     overflow-x: auto;
     padding-top: 60px;
+    padding-right: 40px;
 }
 #seat-plan .seat-plan-row{
     width: fit-content !important;
@@ -2094,25 +2097,21 @@ iframe{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* grid-template-columns: auto repeat(20, auto); */
-    margin-right: 40px !important;
+    margin: auto;
     margin-bottom: 30px;
 }
-
 .row-label{
     margin-right: 24px;
     font-size: 16pt;
 }
-
 #seat-plan .seat{
     position: relative;
     cursor: pointer;
     text-align: center;
     width: fit-content;
-    margin-right: 10px;
+    margin-right: 12px;
 }
-
-#seat-plan .seat:hover .box{
+#seat-plan .seat.available:hover .box{
     display: block !important;
 }
 .box{
@@ -2155,85 +2154,6 @@ iframe{
     background: #183450;
 }
 
-/* #seat-plan-container{
-    display: block;
-    width: 95%;
-    margin: -100px auto -70px;
-}
-#seat-plan-container .lucide-armchair{
-    width: 50px;
-    height: 50px;
-    position: relative;
-    margin-top: -30px !important;
-}
-.svg-number{
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 10pt !important;
-}
-#seat-plan{
-    width: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    display: grid;
-    column-gap: 5px;
-    row-gap: 20px;
-    padding: 60px 35px 30px 0;
-}
-#seat-plan::-webkit-scrollbar,
-#double-seat-plan::-webkit-scrollbar{
-    width: 80%;
-    height: 9px;
-}
-#seat-plan::-webkit-scrollbar-track,
-#double-seat-plan::-webkit-scrollbar-track{
-    background: #e3e3e3c1;
-}
-#seat-plan::-webkit-scrollbar-thumb,
-#double-seat-plan::-webkit-scrollbar-thumb{
-    background: #1c3e5e;
-}
-#seat-plan  > .seat{
-    position: relative;
-    cursor: pointer;
-    text-align: center;
-    width: fit-content;
-}
-#seat-plan  > .seat:hover .box{
-    display: block !important;
-}
-.box{
-    display: none;
-    width: fit-content;
-    height: auto;
-    background-color: var(--nav-bar);
-    color: var(--teal);
-    padding: 10px 14px;
-    position: absolute;
-    margin-top: -50px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 9999;
-    text-align: center;
-    font-weight: 600;
-    border-radius: 6px;
-    font-size: 12pt;
-    top: 0;
-    animation: fadeIn 0.3s ease-in-out;
-}
-.box.arrow-bottom:after{
-    content: " ";
-    position: absolute;
-    bottom: -13px;
-    left: 50%;
-    transform: translateX(-50%);
-    border-top: 13px solid var(--nav-bar);
-    border-right: 13px solid transparent;
-    border-left: 13px solid transparent;
-    border-bottom: none;
-} */
 
 #double-seat-plan-container{
     display: block;
