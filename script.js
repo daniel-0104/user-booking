@@ -409,56 +409,49 @@ document.addEventListener('DOMContentLoaded',function(){
 
   seatPlanRow.forEach(sr => {
     if(seats.length > 20){
-      // seatContainer.style.backgroundColor = 'red';
-      // seatContainer.style.overflowX = 'auto';
+      sr.style.display = 'grid';
       sr.style.gridTemplateColumns = `auto repeat(${seats.length}, auto)`;
     }
   });
 
-  // function adjustScroll(){
-  //   const seatLength = seats.length;
-  //   if(seatLength > 20){
-  //     seatPlan.style.backgroundColor = 'red';
-  //     seatPlan.style.overflowX = 'auto';
-  //     seatPlanRow.style.gridTemplateColumns = `auto repeat(${seatLength}, auto)`;
-  //   }
+  seats.forEach(seatClick => {
+    seatClick.addEventListener('click',function(){
+      seatClick.classList.toggle('selected');
+    });
+  });
+
+
+  // if (sr.scrollWidth > sr.clientWidth) {
+  //   swipeLeft.style.display = 'block';
   // }
 
-  // adjustScroll();
-
-  // if(swipeLeft){
-  //     if (seatPlanRow.scrollWidth > seatPlanRow.clientWidth) {
-  //       swipeLeft.style.display = 'block';
-  //     }
-  //   }
-
   
-  //   let isDown = false;
-  //   let startX;
-  //   let scrollLeft;
+    // let isDown = false;
+    // let startX;
+    // let scrollLeft;
   
-  //   seatPlanRow.addEventListener('mousedown', (e) => {
-  //       isDown = true;
-  //       startX = e.pageX - seatPlanRow.offsetLeft;
-  //       scrollLeft = seatPlanRow.scrollLeft;
-  //       e.preventDefault();
-  //   });
+    // seatPlanRow.addEventListener('mousedown', (e) => {
+    //     isDown = true;
+    //     startX = e.pageX - seatPlanRow.offsetLeft;
+    //     scrollLeft = seatPlanRow.scrollLeft;
+    //     e.preventDefault();
+    // });
   
-  //   seatPlanRow.addEventListener('mouseleave', () => {
-  //       isDown = false;
-  //   });
+    // seatPlanRow.addEventListener('mouseleave', () => {
+    //     isDown = false;
+    // });
   
-  //   seatPlanRow.addEventListener('mouseup', () => {
-  //       isDown = false;
-  //   });
+    // seatPlanRow.addEventListener('mouseup', () => {
+    //     isDown = false;
+    // });
   
-  //   seatPlanRow.addEventListener('mousemove', (e) => {
-  //       if (!isDown) return;
-  //       e.preventDefault();
-  //       const x = e.pageX - seatPlanRow.offsetLeft;
-  //       const walk = (x - startX) * 2;
-  //       seatPlanRow.scrollLeft = scrollLeft - walk;
-  //   });
+    // seatPlanRow.addEventListener('mousemove', (e) => {
+    //     if (!isDown) return;
+    //     e.preventDefault();
+    //     const x = e.pageX - seatPlanRow.offsetLeft;
+    //     const walk = (x - startX) * 2;
+    //     seatPlanRow.scrollLeft = scrollLeft - walk;
+    // });
 });
 
 //.............................................. Select the single seat plan container start .................................
