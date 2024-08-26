@@ -3,7 +3,7 @@ body{
     color: white;
 }
 :root{
-    --body: #2a5178;
+    --body: #2f5e8e;
     --nav-bar: #1b3c5e;
     --secondary: #3c91c9;
     --gold: #FFD700;
@@ -2085,16 +2085,18 @@ iframe{
     text-align: center;
     font-size: 10pt !important;
 }
-#seat-plan{
+#seat-plan,
+#double-seat-paln{
     width: 100%;
     overflow-x: auto;
     padding-top: 60px;
     padding-right: 40px;
 }
-#seat-plan .seat-plan-row{
+#seat-plan .seat-plan-row,
+#double-seat-plan .seat-plan-row{
     width: fit-content !important;
     white-space: nowrap;
-    display: flex;
+    display: flex !important;
     align-items: center;
     justify-content: center;
     margin: auto;
@@ -2104,7 +2106,8 @@ iframe{
     margin-right: 24px;
     font-size: 16pt;
 }
-#seat-plan .seat{
+#seat-plan .seat,
+#double-seat-plan .seat{
     position: relative;
     cursor: pointer;
     text-align: center;
@@ -2159,23 +2162,20 @@ iframe{
     display: block;
     width: 95%;
     margin: auto;
+    overflow-x: auto;
 }
-#double-seat-plan{
+/* #double-seat-plan{
     width: 100%;
     overflow-x: auto;
-    overflow-y: hidden;
-    white-space: nowrap;
-    display: grid;
-    column-gap: 5px;
-    row-gap: 20px;
-    padding: 60px 35px 30px 0;
-}
-#double-seat-plan > .seat{
+    padding-top: 60px;
+    padding-right: 40px;
+} */
+/* #double-seat-plan > .seat{
     position: relative;
     cursor: pointer;
     text-align: center;
     width: fit-content;
-}
+} */
 #double-seat-plan > .seat:hover .box2{
     display: block !important;
 }
