@@ -24,6 +24,7 @@ body{
 #cinema-label{
     color: var(--gold);
     font-family: fantasy;
+    text-transform: uppercase;
 }
 #login-btn,
 #logout-btn{
@@ -75,15 +76,23 @@ body{
         display: block;
         margin-left: 12px;
     }
-    #cinema-label{
-        color: var(--gold);
-        font-family: fantasy !important;
-    }
 }
 @media screen and (min-width: 768px) and (max-width: 992px){
     #nav-order > li > a{
         margin: 0;
         padding:0 20px;
+    }
+}
+@media screen and (max-width: 348px){
+    #logo-img{
+        width: 35px;
+        height: 35px;
+    }
+    #cinema-label > h5{
+        font-size: 12pt !important;
+    }
+    #nav-order > li > a{
+        font-size: 11pt;
     }
 }
 
@@ -245,7 +254,7 @@ body{
         font-size: 32pt;
     }      
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 575px){
     #home-poster-content > h1{
         width: 100%;
         font-size: 30pt;
@@ -259,6 +268,9 @@ body{
     #cinema-form .col-sm-1{
         text-align: right;
     }
+    .search-btn{
+        margin-top: 10px;
+    }
 }
 @media screen and (max-width: 400px){
     #home-poster-content > h1{
@@ -270,6 +282,34 @@ body{
         width: 80% !important;
         font-size: 14pt;
         margin-top: 15px;
+    }
+}
+@media screen and (max-width: 348px){
+    .carousel-item > img{
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+    }
+    #home-poster-content > h1{
+        display: block;
+        width: 80% !important;
+        font-size: 18pt;
+    }
+    #home-poster-content > p{
+        font-size: 12pt;
+    }
+    #search-ticket .col-lg-7 > h2{
+        font-size: 14pt;
+        margin-top: 5px;
+    }
+    .input{
+        height: 40px;
+    }
+    .input::placeholder{
+        font-size: 11pt;
+    }
+    .select-button{
+        font-size: 1rem !important;
     }
 }
 
@@ -477,6 +517,29 @@ body{
         height: fit-content; 
     }
 }
+@media screen and (max-width: 348px){
+    #now-showing-movie > .d-flex{
+        margin-bottom: -15px;
+    }
+    #span-block > span{
+        width: 12px;
+        height: 3px;
+    }
+    #span-block > h4{
+        font-size: 12pt;
+    }
+    #view-more > button{
+        font-size: 9pt;
+        margin-bottom: 10px;
+    }
+    #now-movie-list a h5{
+        font-size: 11pt;
+    }
+    #ticket-btn,
+    #now-movie-list .d-flex p{
+        font-size: 10pt;
+    }
+}
 /*.......................................... now showing movie end ................................... */
 
 
@@ -544,6 +607,21 @@ iframe{
     padding: 4px 12px;
     text-transform: uppercase;
 }
+@media screen and (max-width: 400px){
+    .swiper{
+        margin: 0 !important;
+        padding: 0;
+    }
+    .swiper-btns button{
+        width: 40px;
+        height: 40px;
+    }
+}
+/* @media screen and (max-width: 360px){
+    #feature-trailer{
+        display: none;
+    }
+} */
 /*.......................................... feature trailer end ................................... */
 
 
