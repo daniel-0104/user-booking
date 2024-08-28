@@ -68,26 +68,59 @@ optionsLists.forEach((option) => {
 
 
 // ......................................................feature trailer swiper start... ............................
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 30,
-  loop: true,
-  grabCursor: true,
-  navigation: {
-    nextEl: ".button-next",
-    prevEl: ".button-prev",
-  },
-  breakpoints: {
-    0: {
-        slidesPerView: 1,
-    },
-    770: {
+document.addEventListener('DOMContentLoaded',function(){
+  var swiper;
+
+  function initializeSwiper(){
+    if (window.innerWidth > 360){
+      swiper = new Swiper(".mySwiper", {
         slidesPerView: 2,
-    },
-    1400: {
-        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+          },
+          770: {
+            slidesPerView: 2,
+          },
+          1400: {
+            slidesPerView: 3,
+          }
+        }
+      });
+    }else{
+      swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        grabCursor: true,
+        navigation: {
+          nextEl: ".button-next",
+          prevEl: ".button-prev",
+        }
+      });
     }
   }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    function checkSwiperWidth(){
+      if(window.innerWidth <= 360){
+        document.querySelector('.mySwiper').classList.add('hide-swiper');
+      }else{
+        document.querySelector('.mySwiper').classList.remove('hide-swiper');
+      }
+    }
+    checkSwiperWidth();
+    window.addEventListener('resize',checkSwiperWidth);
+  });
+
+  initializeSwiper();
 });
 // ......................................................feature trailer swiper end .................................
 
@@ -174,6 +207,39 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 //................................................category active link end..... .........................................
+
+
+//............................................... genre mobile scroll start ............................................
+document.addEventListener('DOMContentLoaded',function(){
+  const genreScrollContainer = document.querySelector('.genre-scroll-container');
+
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  genreScrollContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - genreScrollContainer.offsetLeft;
+    scrollLeft = genreScrollContainer.scrollLeft;
+  });
+
+  genreScrollContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+  });
+
+  genreScrollContainer.addEventListener('mouseup', () => {
+    isDown = false;
+  });
+
+  genreScrollContainer.addEventListener('mousemove', (e) => {
+    if(!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - genreScrollContainer.offsetLeft;
+    const walk = (x - startX) * 2;
+    genreScrollContainer.scrollLeft = scrollLeft - walk;
+  });
+});
+//............................................... genre mobile scroll end ............................................
 
 
 //................................................ movie sorting start ..... .........................................

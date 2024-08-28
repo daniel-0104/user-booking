@@ -617,11 +617,14 @@ iframe{
         height: 40px;
     }
 }
-/* @media screen and (max-width: 360px){
+.hide-swiper{
+    display: none;
+}
+@media screen and (max-width: 360px){
     #feature-trailer{
         display: none;
     }
-} */
+}
 /*.......................................... feature trailer end ................................... */
 
 
@@ -654,6 +657,14 @@ iframe{
         margin: auto;
         width: 100% !important;
         height: 300px;
+    }
+}
+@media screen and (max-width: 360px){
+    .mySwiper2 .swiper-slide img{
+        display: block;
+        margin: auto;
+        width: 100% !important;
+        height: 280px;
     }
 }
 /*.......................................... promotion end ................................... */
@@ -712,6 +723,22 @@ iframe{
 @media screen and (max-width: 400px){
     #cinema-detail-content{
         height: 480px;
+    }
+}
+@media screen and (max-width: 360px){
+    .swiper-btn2s button{
+        width: 28px;
+        height: 28px;
+        font-size: 10pt;
+    }
+}
+@media screen and (max-width: 348px){
+    .swiper-btn2s{
+        margin-bottom: 10px;
+    }
+    #cinema-detail-content img{
+        height: 230px;
+        object-fit: cover;
     }
 }
 /*.......................................... cinema details end ................................... */
@@ -1030,6 +1057,24 @@ iframe{
 #circle-play{
     text-decoration: none;
     color: white
+}
+
+#genre-ph{
+    margin-top: 15px;
+}
+#genre-ph a{
+    background-color: var(--nav-bar);
+    border-radius: 8px;
+    margin-right: 10px;
+    color: white !important;
+    text-decoration: none;
+}
+.genre-scroll-container{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.genre-scroll-container::-webkit-scrollbar{
+    display: none;
 }
 
 @media screen and (max-width: 460px){
