@@ -10,6 +10,9 @@ body{
     --teal: #5febcf ;
 }
 
+#return-to-top{
+    display: none;
+}
 #return-to-top > a{
     position: fixed;
     right: 10px;

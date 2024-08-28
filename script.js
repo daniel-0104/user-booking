@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //...................................................... return to top scroll start ........................................
 document.addEventListener('scroll', function() {
   const returnToTopBtn = document.getElementById('return-to-top');
-  const scrollTop =  document.documentElement.scrollTop;
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   
   if (scrollTop > 1000) { 
       returnToTopBtn.style.display = 'block';
