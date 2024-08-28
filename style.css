@@ -10,6 +10,49 @@ body{
     --teal: #5febcf ;
 }
 
+#return-to-top > a{
+    position: fixed;
+    right: 10px;
+    bottom: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--body);
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 15pt;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.363) 0px 5px 30px;
+    transform: translateX(0px);
+    animation: bounce 3s ease-in-out infinite;
+} 
+@keyframes bounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+#return-to-top > a:hover{
+    background-color: var(--body);
+    color: var(--gold);
+}
+@keyframes fadeIn{
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 /*.......................................... nav bar start ................................... */
 #nav{
     background-color: var(--nav-bar);
@@ -959,7 +1002,7 @@ iframe{
     background-color: transparent;
     padding: 8px 20px;
     border: none;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.247);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.414);
     border-radius: 5px;
     cursor: pointer;
     color: white;

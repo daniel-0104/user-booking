@@ -13,6 +13,19 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 // href clicked active link end
 
+//...................................................... return to top scroll start ........................................
+document.addEventListener('scroll', function() {
+  const returnToTopBtn = document.getElementById('return-to-top');
+  const scrollTop =  document.documentElement.scrollTop;
+  
+  if (scrollTop > 1000) { 
+      returnToTopBtn.style.display = 'block';
+  } else {
+      returnToTopBtn.style.display = 'none';
+  }
+});
+//...................................................... return to top scroll end ........................................
+
 
 // .................................................... search movie selected btn start .................................
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,37 +36,25 @@ document.addEventListener('DOMContentLoaded', () => {
       this.submit();
     });
   }
-});
 
-const customSelects = document.querySelectorAll(".custom-select");
-const selectBtns = document.querySelectorAll(".select-button");
-const selectedValues = document.querySelectorAll(".selected-value");
-const optionsLists = document.querySelectorAll(".select-dropdown li");
+  const customSelects = document.querySelectorAll(".custom-select");
+  const selectBtns = document.querySelectorAll(".select-button");
+  const selectedValues = document.querySelectorAll(".selected-value");
+  const optionsLists = document.querySelectorAll(".select-dropdown li");
 
-selectBtns.forEach((btn, btnIndex) => {
-  btn.addEventListener('click', (event) => {
-    event.preventDefault();
-    customSelects[btnIndex].classList.toggle("active");
-    btn.setAttribute(
-      "aria-expanded",
-      btn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-    );
-  });
-});
-
-optionsLists.forEach((option) => {
-  option.addEventListener("click", function (e) {
-    const customSelect = this.closest('.custom-select');
-    const selectedValue = customSelect.querySelector('.selected-value');
-    const btn = customSelect.querySelector('.select-button');
-
-    selectedValue.innerHTML = this.querySelector('label').textContent;
-    customSelect.classList.remove("active");
-    btn.setAttribute("aria-expanded", "false");
+  selectBtns.forEach((btn, btnIndex) => {
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      customSelects[btnIndex].classList.toggle("active");
+      btn.setAttribute(
+        "aria-expanded",
+        btn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+      );
+    });
   });
 
-  option.addEventListener("keyup", function (e) {
-    if (e.key === "Enter") {
+  optionsLists.forEach((option) => {
+    option.addEventListener("click", function (e) {
       const customSelect = this.closest('.custom-select');
       const selectedValue = customSelect.querySelector('.selected-value');
       const btn = customSelect.querySelector('.select-button');
@@ -61,7 +62,19 @@ optionsLists.forEach((option) => {
       selectedValue.innerHTML = this.querySelector('label').textContent;
       customSelect.classList.remove("active");
       btn.setAttribute("aria-expanded", "false");
-    }
+    });
+
+    option.addEventListener("keyup", function (e) {
+      if (e.key === "Enter") {
+        const customSelect = this.closest('.custom-select');
+        const selectedValue = customSelect.querySelector('.selected-value');
+        const btn = customSelect.querySelector('.select-button');
+
+        selectedValue.innerHTML = this.querySelector('label').textContent;
+        customSelect.classList.remove("active");
+        btn.setAttribute("aria-expanded", "false");
+      }
+    });
   });
 });
 // .................................................... search movie selected btn end .................................
@@ -260,39 +273,41 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 //................................................ movie sorting start ..... .........................................
-const sortingSelect = document.querySelector(".sorting-content");
-const sortingBtn = document.querySelector(".sorting-select-btn");
-const sortingValue = document.querySelector(".sorting-selected-value");
-const sortingOptions = document.querySelectorAll(".sorting-dropdown li");
+document.addEventListener('DOMContentLoaded',function(){
+  const sortingSelect = document.querySelector(".sorting-content");
+  const sortingBtn = document.querySelector(".sorting-select-btn");
+  const sortingValue = document.querySelector(".sorting-selected-value");
+  const sortingOptions = document.querySelectorAll(".sorting-dropdown li");
 
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
+    sortingOptions.forEach((option) => {
+      const label = option.querySelector('label');
+      if (label.textContent === sortingValue.textContent) {
+        option.querySelector('input').checked = true;
+      }
+    });
+  });
+
+  if(sortingBtn){
+    sortingBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      sortingSelect.classList.toggle("active");
+      sortingBtn.setAttribute(
+        "aria-expanded",
+        sortingBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
+      );
+    });
+  };
+
   sortingOptions.forEach((option) => {
-    const label = option.querySelector('label');
-    if (label.textContent === sortingValue.textContent) {
-      option.querySelector('input').checked = true;
-    }
-  });
-});
+    option.addEventListener("click", function () {
+      sortingValue.innerHTML = this.querySelector('label').textContent;
+      sortingSelect.classList.remove("active");
+      sortingBtn.setAttribute("aria-expanded", "false");
 
-if(sortingBtn){
-  sortingBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-    sortingSelect.classList.toggle("active");
-    sortingBtn.setAttribute(
-      "aria-expanded",
-      sortingBtn.getAttribute("aria-expanded") === "true" ? "false" : "true"
-    );
-  });
-};
-
-sortingOptions.forEach((option) => {
-  option.addEventListener("click", function () {
-    sortingValue.innerHTML = this.querySelector('label').textContent;
-    sortingSelect.classList.remove("active");
-    sortingBtn.setAttribute("aria-expanded", "false");
-
-    sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
-    this.querySelector('input').checked = true;
+      sortingOptions.forEach(opt => opt.querySelector('input').checked = false);
+      this.querySelector('input').checked = true;
+    });
   });
 });
 //................................................ movie sorting end..... .........................................
