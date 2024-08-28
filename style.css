@@ -906,7 +906,7 @@ iframe{
 .category-link.active,
 .sorting-dropdown input:checked ~ label,
 .sorting-dropdown input:focus ~ label{
-    background-color: #e8e4e41a !important;
+    background-color: #f3eeee21 !important;
     color: white !important;
 }
 #category-content a:hover{
