@@ -196,6 +196,7 @@ $(document).ready(function(){
 
 //....................................... ......category active link start .........................................
 document.addEventListener('DOMContentLoaded',function(){
+  const categoryContent = document.querySelector('#category-content');
   const categoryLinks = document.querySelectorAll('.category-link');
   const currentHTMLPage = window.location.pathname;
   categoryLinks.forEach(link => link.classList.remove('active'));
@@ -205,6 +206,20 @@ document.addEventListener('DOMContentLoaded',function(){
       link.classList.add('active');
     }
   });
+
+  const genreScroll = sessionStorage.getItem('genre-scroll');
+  console.log(genreScroll);
+  if(genreScroll !== null){
+    categoryContent.scrollTop = parseInt(genreScroll,10);
+  }
+
+  document.querySelectorAll('#category-content a').forEach(link => {
+    link.addEventListener('click',function(){
+      sessionStorage.setItem('genre-scroll', categoryContent.scrollTop);
+    });
+  });
+
+
 });
 //................................................category active link end..... .........................................
 
