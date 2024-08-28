@@ -1060,6 +1060,7 @@ iframe{
 }
 
 #genre-ph{
+    display: none;
     margin-top: 15px;
 }
 #genre-ph a{
@@ -1144,6 +1145,12 @@ iframe{
 @media screen and (max-width: 992px){
     #category-form{
         margin-top: 30px;
+    }
+    #movies-category .order-lg-first{
+        display: none;
+    }
+    #genre-ph{
+        display: block;
     }
 }
 /*.......................................... movie category end ................................... */

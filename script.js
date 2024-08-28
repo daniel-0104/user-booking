@@ -197,6 +197,7 @@ $(document).ready(function(){
 //....................................... ......category active link start .........................................
 document.addEventListener('DOMContentLoaded',function(){
   const categoryContent = document.querySelector('#category-content');
+  const genrePh = document.querySelector('.genre-scroll-container');
   const categoryLinks = document.querySelectorAll('.category-link');
   const currentHTMLPage = window.location.pathname;
   categoryLinks.forEach(link => link.classList.remove('active'));
@@ -205,21 +206,22 @@ document.addEventListener('DOMContentLoaded',function(){
     if (currentHTMLPage.includes(link.getAttribute('href'))) {
       link.classList.add('active');
     }
-  });
 
-  const genreScroll = sessionStorage.getItem('genre-scroll');
-  console.log(genreScroll);
-  if(genreScroll !== null){
-    categoryContent.scrollTop = parseInt(genreScroll,10);
-  }
-
-  document.querySelectorAll('#category-content a').forEach(link => {
     link.addEventListener('click',function(){
-      sessionStorage.setItem('genre-scroll', categoryContent.scrollTop);
+      sessionStorage.setItem('genre-scroll-y', categoryContent.scrollTop);
+      sessionStorage.setItem('genre-scroll-x', genrePh.scrollLeft);
     });
   });
 
+  const genreScrollY = sessionStorage.getItem('genre-scroll-y');
+  const genreScrollX = sessionStorage.getItem('genre-scroll-x');
+  if(genreScrollY !== null){
+    categoryContent.scrollTop = parseInt(genreScrollY,10);
+  }
 
+  if(genreScrollX !== null){
+    genrePh.scrollLeft = parseInt(genreScrollX, 10);
+  }
 });
 //................................................category active link end..... .........................................
 
