@@ -26,7 +26,7 @@ body{
     font-size: 15pt;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.363) 0px 5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.329) 0px 5px 30px;
     transform: translateX(0px);
     animation: bounce 3s ease-in-out infinite;
 } 
@@ -952,7 +952,7 @@ iframe{
 .category-link.active,
 .sorting-dropdown input:checked ~ label,
 .sorting-dropdown input:focus ~ label{
-    background-color: #f3eeee21 !important;
+    background-color: #f3eeee2c !important;
     color: white !important;
 }
 #category-content a:hover{
@@ -1186,6 +1186,9 @@ iframe{
     }
     #movie-list-show > div{
         padding: 20px 10px;
+    }
+    #movies-category{
+        margin: 20px auto 70px;
     }
 }
 @media screen and (max-width: 992px){
