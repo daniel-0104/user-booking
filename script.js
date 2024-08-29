@@ -329,13 +329,33 @@ function detailsClick(event){
   }
   clickedElement.classList.add('cell-active');
 
+  localStorage.setItem('selectedElementClass',elementClass);
+  
   movieList.style.display = elementClass === 'movieList' ? 'block' : 'none';
   movieCell.style.display = elementClass === 'movieCell' ? 'flex' : 'none';
+}
+
+function restorState(){
+  const selectedElementClass = localStorage.getItem('selectedElementClass');
+  if(selectedElementClass){
+    cellContent.forEach(item => {
+      if(item.dataset.elementClass === selectedElementClass){
+        item.classList.add('cell-active');
+
+        movieList.style.display = selectedElementClass === 'movieList' ? 'block' : 'none';
+        movieCell.style.display = selectedElementClass === 'movieCell' ? 'flex' : 'none';
+      }else{ 
+        item.classList.remove('cell-active');
+      }
+    });
+  }
 }
 
 cellContent.forEach(item => {
   item.addEventListener('click',detailsClick);
 });
+
+document.addEventListener('DOMContentLoaded',restorState);
 //................................................ movie cell category end .......................................
 
 
