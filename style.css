@@ -1131,7 +1131,7 @@ iframe{
     display: none;
 }
 
-@media screen and (max-width: 360px){
+@media screen and (max-width: 358px){
     .sorting-select-btn{
         font-size: 11pt;
         padding: 8px 15px;
@@ -1150,7 +1150,7 @@ iframe{
         padding: 20px 3px !important;
     }
     #movie-list-show a h4{
-        font-size: 14pt;
+        font-size: 13pt;
     }
     #movie-list-show .col-lg-6 > span,
     #movie-list-show .col-lg-6 > p,
@@ -1158,6 +1158,9 @@ iframe{
     #movie-list-show .col-lg-6 > label,
     #ticket-btn{
         font-size: 10pt;
+    }
+    #movie-list-show .col-lg-6 > strong{
+        font-weight: 600;
     }
     #circle-play{
         font-size: 9pt;
