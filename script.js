@@ -247,27 +247,29 @@ document.addEventListener('DOMContentLoaded',function(){
   let startX;
   let scrollLeft;
 
-  genreScrollContainer.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - genreScrollContainer.offsetLeft;
-    scrollLeft = genreScrollContainer.scrollLeft;
-  });
-
-  genreScrollContainer.addEventListener('mouseleave', () => {
-    isDown = false;
-  });
-
-  genreScrollContainer.addEventListener('mouseup', () => {
-    isDown = false;
-  });
-
-  genreScrollContainer.addEventListener('mousemove', (e) => {
-    if(!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - genreScrollContainer.offsetLeft;
-    const walk = (x - startX) * 2;
-    genreScrollContainer.scrollLeft = scrollLeft - walk;
-  });
+  if(genreScrollContainer){
+    genreScrollContainer.addEventListener('mousedown', (e) => {
+      isDown = true;
+      startX = e.pageX - genreScrollContainer.offsetLeft;
+      scrollLeft = genreScrollContainer.scrollLeft;
+    });
+  
+    genreScrollContainer.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+  
+    genreScrollContainer.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+  
+    genreScrollContainer.addEventListener('mousemove', (e) => {
+      if(!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - genreScrollContainer.offsetLeft;
+      const walk = (x - startX) * 2;
+      genreScrollContainer.scrollLeft = scrollLeft - walk;
+    });
+  }
 });
 //............................................... genre mobile scroll end ............................................
 

@@ -1248,6 +1248,9 @@ iframe{
     #movies-category{
         margin: 20px auto 70px;
     }
+    #promotion-page{
+        margin-top: 20px !important;
+    }
 }
 @media screen and (max-width: 992px){
     #category-form{
@@ -1286,44 +1289,47 @@ iframe{
 }
 #promotion-list a > img{
     width: 100%;
-    height: 290px;
+    height: 70%;
     object-fit: cover;
 }
 #promotion-list a > h5{
     background-color: var(--nav-bar);
     padding: 10px 15px;
-    font-size: 14pt;
+    font-size: 13pt;
     border-radius: 5px;
 }
 #promotion-list a:hover{
     color: var(--teal);
 }
-@media screen and (max-width: 576px){
-    #promotion-list a > img{
-        display: block;
-        margin: auto;
-        width: 360px !important;
-        height: 400px;
-        object-fit: cover;
+@media screen and (max-width: 575px){
+    #promotion-list > div{
+        display: grid;
+        row-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
     }
     #promotion-page{
-        padding: 0 20px;
+        padding: 0 10px;
+    }
+    #promotion-list a > h5{
+        font-size: 11pt;
+    }
+}
+@media screen and (max-width: 460px){
+    #promotion-list > label{
+        padding: 8px 26px;
+        font-size: 11pt;
     }
 }
 @media screen and (max-width: 410px){
-    #promotion-list a > img{
-        width: 330px !important;
-        height: 360px;
-        object-fit: cover;
-    }
-    #promotion-list .col-lg-3{
-        margin: auto;
-        padding: 0;
-    }
     #promotion-list a > h5{
-        font-size: 13pt;
-        width: 330px;
-        margin: auto;
+        padding: 10px;
+        font-size: 9pt;
+    }
+}
+@media screen and (max-width: 348px){
+    #promotion-list a > h5{
+        padding: 5px;
+        font-size: 9pt;
     }
 }
 /*.......................................... promotion list end ................................... */
