@@ -26,16 +26,17 @@ body{
     font-size: 15pt;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.329) 0px 5px 30px;
+    box-shadow: rgba(0, 0, 0, 0.442) 0px 5px 10px;
     transform: translateX(0px);
     animation: bounce 3s ease-in-out infinite;
+    z-index: 9999;
 } 
 @keyframes bounce{
     0%{
         transform: translateY(0px);
     }
     50%{
-        transform: translateY(-15px);
+        transform: translateY(-18px);
     }
     100%{
         transform: translateY(0px);
@@ -69,8 +70,9 @@ body{
 }
 #cinema-label{
     color: var(--gold);
-    font-family: fantasy;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
+    font-weight: bolder;
 }
 #login-btn,
 #logout-btn{
@@ -765,6 +767,9 @@ iframe{
         height: 260px;
         object-fit: cover;
     }
+    #cinema-detail-content{
+        height: 470px;
+    }
 }
 @media screen and (max-width: 400px){
     #cinema-detail-content{
@@ -793,6 +798,10 @@ iframe{
 /*.......................................... footer section start ................................... */
 #footer{
     background-color: #1d262f;
+}
+#footer input:focus{
+    box-shadow: none;
+    border: 1px solid var(--gold);
 }
 #footer h5,
 #toggle-btn button{
