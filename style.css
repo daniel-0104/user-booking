@@ -42,10 +42,6 @@ body{
         transform: translateY(0px);
     }
 }
-#return-to-top > a:hover{
-    background-color: var(--body);
-    color: var(--gold);
-}
 @keyframes fadeIn{
     0% {
         opacity: 0;
@@ -69,6 +65,7 @@ body{
     border: 1px solid white;
 }
 #cinema-label{
+    margin-top: 4px;
     color: var(--gold);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-transform: uppercase;
@@ -1137,6 +1134,14 @@ iframe{
     #movie-label{
         display: block;
     }
+    #movie-label p{
+        padding: 8px 26px;
+        font-size: 12pt;
+    }
+    #movie-label p > svg{
+        width: 20px;
+        height: 20px;
+    }
     #movie-label form{
         margin-top: 20px;
     }
@@ -1165,6 +1170,7 @@ iframe{
         margin-left: 8px;
     }
     #movie-cell-category{
+        margin-bottom: 4px;
         padding: 0;
     }
     #movie-cell-show a img{
