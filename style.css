@@ -17,11 +17,11 @@ body{
     text-decoration: none;
     position: fixed;
     right: 10px;
-    bottom: 50px;
+    bottom: 40px;
     width: 50px;
     height: 50px;
     background-color: var(--body);
-    color: var(--gold);
+    color: white;
     text-align: center;
     line-height: 50px;
     font-size: 15pt;
@@ -570,12 +570,14 @@ body{
     #now-showing-movie > .d-flex{
         margin-bottom: -15px;
     }
-    #span-block > span{
+    #span-block > span,
+    #other-movies-label > span{
         width: 12px;
         height: 3px;
     }
-    #span-block > h4{
-        font-size: 12pt;
+    #span-block > h4,
+    #other-movies-label > h4{
+        font-size: 12pt !important;
     }
     #view-more > button{
         font-size: 9pt;
@@ -785,14 +787,19 @@ iframe{
     }
 }
 @media screen and (max-width: 360px){
-    .swiper-btn2s button{
-        width: 28px;
-        height: 28px;
-        font-size: 10pt;
+    #other-movies-label > h4{
+        margin-left: -10px;
+    }
+    .swiper-btn2s button,
+    .swiper-btn4s button{
+        width: 28px !important;
+        height: 28px !important;
+        font-size: 10pt !important;
     }
 }
 @media screen and (max-width: 348px){
-    .swiper-btn2s{
+    .swiper-btn2s,
+    .swiper-btn4s{
         margin-bottom: 10px;
     }
     #cinema-detail-content img{
@@ -1673,8 +1680,8 @@ iframe{
 }
 .swiper-btn4s button{
     position: static;
-    background-color: var(--secondary);
-    color: white;
+    background-color: var(--teal);
+    color: black;
     width: 35px;
     height: 35px;
     display: flex;
@@ -1683,8 +1690,8 @@ iframe{
     text-align: center;
 }
 .swiper-btn4s button:hover{
-    background-color: var(--secondary);
-    color: white;
+    background-color: var(--teal);
+    color: black;
     border: 1px solid white;
 }
 #other-movies{
