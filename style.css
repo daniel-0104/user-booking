@@ -21,7 +21,7 @@ body{
     width: 50px;
     height: 50px;
     background-color: var(--body);
-    color: white;
+    color: var(--gold);
     text-align: center;
     line-height: 50px;
     font-size: 15pt;
@@ -1517,8 +1517,8 @@ iframe{
 #movie-cast img{
     display: block;
     margin: auto;
-    width: 140px;
-    height: 140px;
+    width: 130px;
+    height: 130px;
     object-fit: cover;
     border-radius: 20%;
     border: 2px solid var(--teal);
@@ -1542,6 +1542,7 @@ iframe{
         margin-right: 0 !important;
         top: 0;
         padding-top: 20px;
+        padding-bottom: 20px;
     }
     #movie-detail-content .col-lg-4 > img{
         width: 300px !important;
