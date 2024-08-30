@@ -379,17 +379,20 @@ var swiper = new Swiper(".mySwiper4", {
     0: {
         slidesPerView: 1,
     },
-    562: {
+    280: {
       slidesPerView: 2,
     },
-    720: {
-        slidesPerView: 3,
+    600: {
+      slidesPerView: 3,
     },
-    980: {
-      slidesPerView: 4,
+    800: {
+        slidesPerView: 4,
+    },
+    1000: {
+      slidesPerView: 5,
     },
     1300: {
-        slidesPerView: 5,
+        slidesPerView: 6,
     }
   }
 });
