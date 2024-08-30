@@ -27,7 +27,7 @@ body{
     font-size: 15pt;
     border-radius: 50px;
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.442) 0px 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.582) 0px 5px 10px;
     transform: translateX(0px);
     animation: bounce 3s ease-in-out infinite;
     z-index: 9999;
@@ -1915,6 +1915,20 @@ iframe{
 @media screen and (max-width: 992px){
     #contact-us{
         padding: 0 20px !important;
+    }
+}
+@media screen and (max-width: 460px){
+    #contact-us > label{
+        margin-top: -12px;
+        padding: 10px 26px 8px !important;
+        font-size: 11pt !important;
+    }
+    #contact-us-info > h6{
+        text-transform: uppercase;
+        color: var(--teal);
+        font-size: 14pt;
+        font-weight: bold;
+        margin: 15px 0 20px;
     }
 }
 @media screen and (max-width: 400px){
