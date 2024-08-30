@@ -1304,13 +1304,17 @@ iframe{
 @media screen and (max-width: 575px){
     #promotion-list > div{
         display: grid;
-        row-gap: 10px;
+        row-gap: 0;
         grid-template-columns: repeat(2, 1fr);
+    }
+    #promotion-list .col-lg-3{
+        margin-bottom: 0 !important;
     }
     #promotion-page{
         padding: 0 10px;
     }
     #promotion-list a > h5{
+        margin-top: 5px !important;
         font-size: 11pt;
     }
 }
@@ -1329,7 +1333,12 @@ iframe{
 @media screen and (max-width: 348px){
     #promotion-list a > h5{
         padding: 5px;
-        font-size: 9pt;
+        font-size: 8pt;
+    }
+    #promotion-list a > img{
+        width: 100%;
+        height: 60%;
+        object-fit: cover;
     }
 }
 /*.......................................... promotion list end ................................... */
