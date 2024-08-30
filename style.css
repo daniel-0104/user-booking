@@ -1578,6 +1578,12 @@ iframe{
     #movie-detail-content > .col-lg-8 > h1{
         font-size: 17pt;
     }
+    #detail-flex{
+        margin-bottom: 25px !important;
+    }
+    #movie-detail-content > .col-lg-8 p{
+        margin-top: 10px !important;
+    }
 }
 @media screen and (max-width: 358px){
     #movie-detail-content .col-lg-4 > img{
