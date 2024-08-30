@@ -17,7 +17,7 @@ body{
     text-decoration: none;
     position: fixed;
     right: 10px;
-    bottom: 30px;
+    bottom: 50px;
     width: 50px;
     height: 50px;
     background-color: var(--body);
@@ -1166,13 +1166,13 @@ iframe{
     #movie-list-show .col-lg-6 > strong,
     #movie-list-show .col-lg-6 > label,
     #ticket-btn{
-        font-size: 10pt;
+        font-size: 10pt !important;
     }
     #movie-list-show .col-lg-6 > strong{
         font-weight: 500 !important;
     }
     #circle-play{
-        font-size: 9pt;
+        font-size: 9pt !important;
     }
     #movie-cell-show a h5{
         font-size: 9pt !important; 
@@ -1571,8 +1571,38 @@ iframe{
         height: 380px;
         object-fit: cover;
     }
+    #movie-detail-content > .col-lg-8{
+        padding-right: 10px !important;
+        padding-left: 13px;
+    }
     #movie-detail-content > .col-lg-8 > h1{
         font-size: 17pt;
+    }
+}
+@media screen and (max-width: 358px){
+    #movie-detail-content .col-lg-4 > img{
+        width: 220px !important;
+        height: 350px;
+        object-fit: cover;
+    }
+    #movie-detail-content > .col-lg-8 > h1{
+        font-size: 16pt;
+    }
+    #detail-flex span{
+        font-size: 11pt !important;
+    }
+    #detail-flex .ms-5 span{
+        margin-left: 8px !important;
+    }
+    #movie-detail-content .col-lg-8 > div:nth-child(3),
+    #movie-detail-content .col-lg-8 > div:nth-child(3) span,
+    #movie-detail-content > .col-lg-8 p,
+    #ticket-btn > span{
+        font-size: 10pt !important;
+    }
+    #movie-detail-content > .col-lg-8 p{
+        line-height: 20px;
+        margin-bottom: -10px;
     }
 }
 
