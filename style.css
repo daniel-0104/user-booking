@@ -496,9 +496,11 @@ body{
     height: 3px;
     border-radius: 20px;
     margin-right: 10px;
+    margin-bottom: 18px;
 }
 #view-more > button{
     color: var(--teal);
+    margin-bottom: 5px;
 }
 #view-more > button:hover{
     color: white;
@@ -577,7 +579,7 @@ body{
     }
     #view-more > button{
         font-size: 9pt;
-        margin-bottom: 10px;
+        margin-bottom: 9px;
     }
     #now-movie-list a h5{
         font-size: 11pt;
@@ -704,6 +706,13 @@ iframe{
         margin: auto;
         width: 100% !important;
         height: 300px;
+    }
+    .mySwiper2{
+        padding-bottom: 40px;
+    }
+    .mySwiper2 .swiper-pagination-bullet{
+        margin-bottom: 0 !important;
+        z-index: 1;
     }
 }
 @media screen and (max-width: 360px){
@@ -1160,7 +1169,7 @@ iframe{
         font-size: 10pt;
     }
     #movie-list-show .col-lg-6 > strong{
-        font-weight: 600;
+        font-weight: 500 !important;
     }
     #circle-play{
         font-size: 9pt;
