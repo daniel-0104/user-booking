@@ -1622,6 +1622,9 @@ iframe{
     #other-movies-label > h4{
         font-size: 14pt !important;
     }
+    #other-movies{
+        padding: 40px 10px 20px !important;
+    }
 }
 @media screen and (max-width: 358px){
     #movie-detail-content .col-lg-4 > img{
@@ -1656,9 +1659,6 @@ iframe{
     }
     #other-movies .mySwiper4 h6{
         font-size: 9pt !important;
-    }
-    #other-movies{
-        padding: 40px 10px 20px !important;
     }
 }
 
