@@ -1620,7 +1620,8 @@ iframe{
         height: 8px;
     }
     #other-movies-label > h4{
-        font-size: 14pt !important;
+        width: 80%;
+        font-size: 13pt !important;
     }
     #other-movies{
         padding: 40px 10px 20px !important;
