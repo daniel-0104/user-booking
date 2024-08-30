@@ -1537,14 +1537,16 @@ iframe{
     }
     #movie-detail-content{
         position: relative;
-        background-color: #1b2530ec;
+        background-color: #16324d;
         width: 100%;
         margin-right: 0 !important;
         top: 0;
         padding-top: 20px;
     }
     #movie-detail-content .col-lg-4 > img{
-        width: 40% !important;
+        width: 300px !important;
+        height: 460px;
+        object-fit: cover;
     }
     #movie-detail-content .col-lg-8{
         padding: 30px;
@@ -1564,8 +1566,13 @@ iframe{
     }
 }
 @media screen and (max-width: 510px){
+    #movie-detail-content .col-lg-4 > img{
+        width: 250px !important;
+        height: 380px;
+        object-fit: cover;
+    }
     #movie-detail-content > .col-lg-8 > h1{
-        font-size: 18pt;
+        font-size: 17pt;
     }
 }
 

@@ -228,13 +228,15 @@ document.addEventListener('DOMContentLoaded',function(){
 
   const genreScrollY = sessionStorage.getItem('genre-scroll-y');
   const genreScrollX = sessionStorage.getItem('genre-scroll-x');
-  if(genreScrollY !== null){
-    categoryContent.scrollTop = parseInt(genreScrollY,10);
-  }
-
-  if(genreScrollX !== null){
-    genrePh.scrollLeft = parseInt(genreScrollX, 10);
-  }
+  document.addEventListener('DOMContentLoaded',function(){
+    if(genreScrollY !== null){
+      categoryContent.scrollTop = parseInt(genreScrollY,10);
+    }
+  
+    if(genreScrollX !== null){
+      genrePh.scrollLeft = parseInt(genreScrollX, 10);
+    }
+  });
 });
 //................................................category active link end..... .........................................
 
