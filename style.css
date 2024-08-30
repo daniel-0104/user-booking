@@ -496,7 +496,7 @@ body{
     height: 3px;
     border-radius: 20px;
     margin-right: 10px;
-    margin-bottom: 18px;
+    margin-bottom: 18px !important;
 }
 #view-more > button{
     color: var(--teal);
