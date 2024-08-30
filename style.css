@@ -1741,7 +1741,45 @@ iframe{
         padding: 0 10px;
     }
 }
+@media screen and (max-width: 460px){
+    #about-page > label{
+        padding: 8px 26px !important;
+        font-size: 11pt !important;
+        margin-left: 10px;
+    }
+    #about-page-text{
+        margin-top: -5px !important;
+    }
+    #about-page-text > h5,
+    .choose-content h5{
+        font-size: 14pt;
+    }
+    #about-page-text > p{
+        font-size: 13pt;
+        line-height: 25px;
+    }
+    #choose-us > div > h5{
+        font-size: 18pt !important;
+    }
+    .choose-content{
+        width: 90%;
+        height: 200px;
+    }
+    .choose-content svg{
+        font-size: 26pt;
+    }
+}
 @media screen and (max-width: 400px){
+    .choose-content{
+        width: 260px;
+        height: 180px;
+    }
+    .choose-content svg{
+        font-size: 25pt;
+    }
+    .choose-content h5{
+        font-size: 13pt;
+    }
     #choose-us{
         margin: 40px auto 10px;
     }
@@ -1755,6 +1793,10 @@ iframe{
     }
     #team{
         margin-top: 80px;
+    }
+    #team-content .mySwiper8{
+        width: 90%;
+        margin: auto !important;
     }
 }
 /*.......................................... about us page end ................................... */
