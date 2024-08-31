@@ -1184,6 +1184,12 @@ iframe{
     #movie-cell-show a h5{
         font-size: 9pt !important; 
     }
+    #movie-cell-show{
+        background-color: transparent;
+        padding: 15px 0 0 !important;
+        border-radius: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.562);
+    }
 }
 @media screen and (max-width: 460px){
     #movie-label{
@@ -1205,10 +1211,7 @@ iframe{
         width: 100% !important;
     }
     #movie-cell-show{
-        background-color: transparent;
-        padding: 15px 0 0;
-        border-radius: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.562);
+        padding: 15px 10px 0;
     }
 }
 @media screen and (max-width: 576px){
