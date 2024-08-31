@@ -1398,17 +1398,53 @@ iframe{
     color: var(--teal);
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
 }
+@media screen and (max-width: 990px){
+    #promotion-content{
+        width: 98%;
+    }
+}
 @media screen and (max-width: 768px){
+    #promotion-details{
+        margin: 25px auto 70px;
+    }
     #promotion-content img{
         display: block;
-        width: 60% !important;
+        width: 250px !important;
+        height: 270px;
+        object-fit: cover;
         margin: auto;
         margin-bottom: 20px;
     }
+    #promotion-content{
+        padding: 20px 15px 0 !important;
+    }
 }
 @media screen and (max-width: 440px){
+    #promotion-content > h4{
+        font-size: 14pt;
+        margin-left: 0;
+    }
+    #promotion-content img{
+        width: 210px !important;
+        height: 220px;
+    }
     #promotion-content .col-lg-8{
         padding: 0 20px !important;
+    }
+}
+@media screen and (max-width: 360px){
+    #promotion-content{
+        width: 100%;
+    }
+    #promotion-content > h4{
+        font-size: 12pt;
+    }
+    #promotion-content img{
+        width: 160px !important;
+        height: 170px;
+    }
+    #promotion-content .order-md-first{
+        font-size: 11pt !important;
     }
 }
 
