@@ -154,17 +154,20 @@ var swiper = new Swiper(".mySwiper2", {
     0: {
         slidesPerView: 1,
     },
-    562: {
+    519: {
       slidesPerView: 2,
     },
-    720: {
+    694: {
         slidesPerView: 3,
     },
-    980: {
+    896: {
       slidesPerView: 4,
     },
-    1300: {
-        slidesPerView: 5,
+    1160: {
+      slidesPerView: 5,
+    },
+    1350: {
+        slidesPerView: 6,
     }
   }
 });
