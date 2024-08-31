@@ -1266,6 +1266,7 @@ iframe{
     }
     #movies-category{
         margin: 20px 10px 70px !important;
+        overflow: hidden;
     }
     #promotion-page{
         margin-top: 20px !important;
@@ -1331,6 +1332,7 @@ iframe{
     }
     #promotion-page{
         padding: 0 10px;
+        overflow: hidden;
     }
     #promotion-list a > h5{
         margin-top: 5px !important;
