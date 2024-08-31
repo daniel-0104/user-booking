@@ -1633,7 +1633,7 @@ iframe{
     }
     #movie-detail-content #ticket-btn,
     #movie-detail-content #circle-play{
-        font-size: 12pt !important;
+        font-size: 13pt !important;
     }
 }
 @media screen and (max-width: 358px){
