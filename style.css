@@ -1482,11 +1482,11 @@ iframe{
     border-radius: 5px;
     font-size: 14pt;
     border: none;
-    color: white;
-    background-color: var(--nav-bar);
+    color: black;
+    background-color: var(--teal);
 }
 .modal-content button:hover{
-    color: var(--teal);
+    color: white;
     background-color: var(--nav-bar);
 }
 #more-cover-poster,
@@ -1630,6 +1630,10 @@ iframe{
     }
     #other-movies{
         padding: 40px 10px 20px !important;
+    }
+    #movie-detail-content #ticket-btn,
+    #movie-detail-content #circle-play{
+        font-size: 12pt !important;
     }
 }
 @media screen and (max-width: 358px){
