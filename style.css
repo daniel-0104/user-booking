@@ -1265,7 +1265,7 @@ iframe{
         padding: 20px 10px;
     }
     #movies-category{
-        margin: 20px auto 70px;
+        margin: 20px 10px 70px !important;
     }
     #promotion-page{
         margin-top: 20px !important;
