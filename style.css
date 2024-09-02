@@ -1199,8 +1199,7 @@ iframe{
     #movie-list-show .col-lg-6 > span,
     #movie-list-show .col-lg-6 > p,
     #movie-list-show .col-lg-6 > strong,
-    #movie-list-show .col-lg-6 > label,
-    #ticket-btn{
+    #movie-list-show .col-lg-6 > label{
         font-size: 10pt !important;
     }
     #movie-list-show .col-lg-6 > strong{
@@ -1700,6 +1699,10 @@ iframe{
     #movie-detail-content #circle-play{
         font-size: 13pt !important;
     }
+    #movie-detail-content > .col-lg-8 p{
+        font-size: 12pt;
+        line-height: 23px;
+    }
 }
 @media screen and (max-width: 358px){
     #movie-detail-content .col-lg-4 > img,
@@ -1719,12 +1722,13 @@ iframe{
     }
     #movie-detail-content .col-lg-8 > div:nth-child(3),
     #movie-detail-content .col-lg-8 > div:nth-child(3) span,
-    #movie-detail-content > .col-lg-8 p,
-    #ticket-btn > span{
+    #movie-detail-content > .col-lg-8 p{
         font-size: 10pt !important;
     }
-    #movie-detail-content > .col-lg-8 p{
-        line-height: 20px;
+    #movie-detail-content #ticket-btn,
+    #movie-detail-content #ticket-btn span,
+    #movie-detail-content #circle-play{
+        font-size: 10pt !important;
     }
     #more-cover-poster > h4,
     #movie-cast > h4{
@@ -2374,7 +2378,7 @@ iframe{
 }
 
 #select-seat-modal .modal-content .row{
-    background-color: var(--body);
+    background-color: var(--nav-bar);
     border-radius: 10px;
     padding: 20px 0 20px;
 }
