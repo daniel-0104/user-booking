@@ -2414,7 +2414,7 @@ iframe{
         display: block !important;
     }
     #select-date{
-        margin: 0 -6px;
+        border-bottom: 1px solid white;
     }
     #caret-right{
         margin-right: 10px !important;
@@ -2429,6 +2429,7 @@ iframe{
         white-space: nowrap;
         padding: 0;
         border-radius: 0;
+        margin: 8px -6px !important;
     }
     #select-date > ul::-webkit-scrollbar{
         display: none;
