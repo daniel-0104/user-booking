@@ -2335,7 +2335,7 @@ iframe{
 .select-time button:hover{
     background-color: #122138d8 !important;
     color: var(--teal) !important;
-    border: none !important;
+    border: 1px solid transparent !important;
     box-shadow: none !important;
 }
 #select-cinema-time{
@@ -2413,13 +2413,24 @@ iframe{
     #cinema-name{
         display: block !important;
     }
+    #select-date{
+        margin: 0 -6px;
+    }
+    #caret-right{
+        margin-right: 10px !important;
+    }
     #select-date > ul{
+        background-color: transparent;
+        border: none;
         display: grid;
         row-gap: 0;
         grid-template-columns: repeat(30, 1fr);
         overflow-x: auto;
         white-space: nowrap;
-        padding: 15px 10px 0 0;
+        padding: 0;
+    }
+    #select-date > ul::-webkit-scrollbar{
+        display: none;
     }
     #select-date > ul button{
         width: fit-content;
