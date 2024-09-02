@@ -1643,9 +1643,10 @@ iframe{
     }
 }
 @media screen and (max-width: 510px){
-    #movie-detail-content .col-lg-4 > img{
+    #movie-detail-content .col-lg-4 > img,
+    #ticket-m-poster > img{
         width: 250px !important;
-        height: 380px;
+        height: 380px !important;
         object-fit: cover;
     }
     #movie-detail-content > .col-lg-8{
@@ -1701,9 +1702,10 @@ iframe{
     }
 }
 @media screen and (max-width: 358px){
-    #movie-detail-content .col-lg-4 > img{
+    #movie-detail-content .col-lg-4 > img,
+    #ticket-m-poster > img{
         width: 220px !important;
-        height: 350px;
+        height: 350px !important;
         object-fit: cover;
     }
     #movie-detail-content > .col-lg-8 > h1{
@@ -2333,7 +2335,7 @@ iframe{
 #select-date button:hover,
 .js-select-active,
 .select-time button:hover{
-    background-color: #122138d8 !important;
+    background-color: #122138e0 !important;
     color: var(--teal) !important;
     border: 1px solid transparent !important;
     box-shadow: none !important;
@@ -2410,6 +2412,9 @@ iframe{
     }
 }
 @media screen and (max-width: 575px){
+    #o-location-n > div:last-child > h6{
+        font-size: 11pt !important;
+    }
     #cinema-name{
         display: block !important;
     }
@@ -2441,8 +2446,10 @@ iframe{
         margin-right: -6px;
     }
     #select-date > ul button:hover{
-        background : unset;
-        color : unset;
+        border: 1px solid var(--secondary);
+        background-color: var(--nav-bar);
+        color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     }
     #select-date > ul button > span{
         display: block;
