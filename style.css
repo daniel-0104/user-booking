@@ -2428,6 +2428,7 @@ iframe{
         overflow-x: auto;
         white-space: nowrap;
         padding: 0;
+        border-radius: 0;
     }
     #select-date > ul::-webkit-scrollbar{
         display: none;
@@ -2437,6 +2438,10 @@ iframe{
         height: auto;
         padding: 10px 20px;
         margin-right: -6px;
+    }
+    #select-date > ul button:hover{
+        background : unset;
+        color : unset;
     }
     #select-date > ul button > span{
         display: block;
