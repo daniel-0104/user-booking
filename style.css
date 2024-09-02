@@ -2411,17 +2411,20 @@ iframe{
         margin-right: 5px !important;
     }
 }
+@media screen and (max-width: 620px){
+    #cinema-name{
+        width: 85%;
+    }
+}
 @media screen and (max-width: 575px){
     #order-location1{
-        margin: 50px auto 60px;
+        margin: 60px auto;
     }
     #o-location-n > div:last-child > h6{
         font-size: 11pt !important;
     }
-    #cinema-name{
-        display: block !important;
-    }
     #select-date{
+        padding-bottom: 15px;
         border-bottom: 1px solid white;
     }
     #caret-right{
@@ -2457,6 +2460,55 @@ iframe{
     #select-date > ul button > span{
         display: block;
         font-size: 11pt;
+    }
+    #select-cinema-time{
+        margin: 40px auto 70px;
+    }
+    #select-cinema-time > div:first-child{
+        display: block !important;
+        width: 100%;
+    }
+    #select-cinema-time > div:first-child form{
+        margin: 10px auto 15px;
+    }
+    #cinema-time-content{
+        padding: 5px 15px 10px;
+    }
+    .select-time > ul{
+        display: grid !important;
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 487px){
+    .select-time > ul{
+        display: grid !important;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 348px){
+    #o-location-n > div:last-child > h6{
+        font-size: 10pt !important;
+    }
+    #order-location1 label,
+    #order-location2 label,
+    #order-location3 label{
+        width: 25px;
+        height: 25px;
+        font-size: 10pt;
+    }
+    #caret-right,
+    #caret-right ~ h5{
+        font-size: 13pt;
+    }
+    .select-time > ul{
+        display: block !important;
+    }
+    #cinema-name > h6{
+        font-size: 12pt;
+    }
+    #cinema-name label{
+        padding: 0 10px;
+        font-size: 10pt;
     }
 }
 /*.......................................... book ticket end ................................... */
