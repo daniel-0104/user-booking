@@ -1166,7 +1166,8 @@ iframe{
     color: white !important;
     text-decoration: none;
 }
-.genre-scroll-container{
+.genre-scroll-container,
+.date-scroll-container{
     overflow-x: auto;
     white-space: nowrap;
 }
@@ -2314,7 +2315,7 @@ iframe{
     list-style-type: none;
     height: auto;
 }
-#select-date button,
+#select-date > ul button,
 .select-time button{
     width: 100%;
     height: 50px;
@@ -2408,9 +2409,27 @@ iframe{
         margin-right: 5px !important;
     }
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 575px){
     #cinema-name{
         display: block !important;
+    }
+    #select-date > ul{
+        display: grid;
+        row-gap: 0;
+        grid-template-columns: repeat(30, 1fr);
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 15px 10px 0 0;
+    }
+    #select-date > ul button{
+        width: fit-content;
+        height: auto;
+        padding: 10px 20px;
+        margin-right: -6px;
+    }
+    #select-date > ul button > span{
+        display: block;
+        font-size: 11pt;
     }
 }
 /*.......................................... book ticket end ................................... */
