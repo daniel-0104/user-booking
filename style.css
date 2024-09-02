@@ -3046,7 +3046,7 @@ iframe{
 }
 #booking-total h5,
 #payment-option h5{
-    background-color: #16324d;
+    background-color: #142f48;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 20px 0 25px 30px;
@@ -3171,6 +3171,10 @@ iframe{
     text-transform: uppercase;
     margin-bottom: 30px;
 }
+#booking-summary img{
+    height: 150px;
+    object-fit: cover;
+}
 #payment .col-lg-5{
     position: relative;
 }
@@ -3221,7 +3225,7 @@ iframe{
 @media screen and (min-width: 630px) and (max-width: 992px){
     #booking-summary{
         display: block;
-        width: 80%;
+        width: 500px;
         margin: 0 auto 40px;
     }
     #payment .col-lg-7{
@@ -3319,6 +3323,9 @@ iframe{
     margin: auto;
     padding: 10px;
     object-fit: cover;
+}
+#cinema-name2 > h5{
+    color: var(--teal);
 }
 #cinema-name2 label{
     background-color: var(--secondary) !important;

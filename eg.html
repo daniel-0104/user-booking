@@ -3,307 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Cinema Screen</title>
+    <style>
+        body {
+            background-color: #111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .screen-container {
+            position: relative;
+            width: 90%;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .screen {
+            position: relative;
+            width: 90%;
+            height: 50%;
+            border-radius: 50%;
+            background-color: transparent;
+            border-top: 5px solid rgba(0, 216, 255, 0.5);
+            /* box-shadow: 0 -2px 15px rgba(0, 216, 255, 0.7);  */
+
+
+            /* height: 10px; */
+            /* padding-bottom: 10px; */
+            /* border-top-left-radius: 100% 100%;
+            border-top-right-radius: 100% 100%;
+            background: transparent;
+            border-top: 5px solid rgba(0, 216, 255, 0.5);
+            box-shadow: 0 -2px 15px rgba(0, 216, 255, 0.7); */
+
+        }
+
+        .screen::before {
+            content: "";
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 90%;
+            border-radius: 50%;
+            background-color: none;
+            /* border-top: 5px solid rgba(0, 217, 255, 0.147); */
+            box-shadow: 0 -10px 15px rgba(0, 216, 255, 0.7);
+        }
+
+        .screen-text {
+            position: absolute;
+            top: 30%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 3px;
+        }
+    </style>
 </head>
-
-<!-- <style>
-    body{
-        background-color: black;
-    }
-    .cinema {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        margin: auto;
-        margin-top: 100px;
-}
-
-.row {
-    display: flex;
-    gap: 20px;
-}
-
-.seat {
-    display: flex;
-    align-items: flex-end;
-    gap: 10px;
-    position: relative;
-}
-
-.seat-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    width: 70px;
-    height: 100px;
-    background-color: #2c2c2c;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-.seat-back {
-    width: 100%;
-    height: 70%;
-    background: linear-gradient(135deg, #444, #222);
-    border-radius: 12px 12px 0 0;
-    padding: 5px;
-    position: relative;
-}
-
-.seat-cushion {
-    width: 90%;
-    height: 40%;
-    background: linear-gradient(135deg, #555, #333);
-    border-radius: 8px;
-    box-shadow: inset 0 -2px 8px rgba(0, 0, 0, 0.5);
-    margin-top: -8px;
-    position: relative;
-}
-
-.stitching {
-    width: 90%;
-    height: 2px;
-    background-color: #777;
-    border-radius: 1px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
-}
-
-.handle {
-    width: 12px;
-    height: 70px;
-    background-color: #333;
-    border-radius: 6px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
-}
-
-.handle.left {
-    border-radius: 12px 0 0 12px;
-}
-
-.handle.right {
-    border-radius: 0 12px 12px 0;
-}
-
-</style> -->
-
-
-<style>
-    .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 80%;
-    margin: 40px auto 80px;
-}
-
-.header {
-    color: #fff;
-}
-
-.gallery {
-    display: flex;
-    position: relative;
-    /* width: 1000px; */
-    height: 245px;
-    background: #7e7f9a;
-    border: 3px solid #f9f9f8;
-    border-radius: 5px;
-    overflow: hidden;
-}
-
-.main-image-section {
-    width: 80%;
-}
-
-.main-view {
-    width: 100%;
-    opacity: 0;
-    cursor: pointer;
-
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-}
-
-
-
-.thumbnails {
-    width: 20%;
-    padding: 5px;
-    overflow-y: auto;
-}
-
-.thumbnails img {
-    width: 100%;
-    opacity: 0.7;
-    cursor: pointer;
-
-    -webkit-transition: opacity 0.3s ease 0s;
-    -moz-transition: opacity 0.3s ease 0s;
-    transition: opacity 0.3s ease 0s;
-}
-
-.thumbnails img:hover {
-    opacity: 1;
-}
-
-.thumbnails img:focus {
-    opacity: 1
-}
-</style>
 <body>
-    <!-- <div class="cinema">
-        <div class="row">
-            <div class="seat">
-                <div class="handle left"></div>
-                <div class="seat-body">
-                    <div class="seat-back">
-                        <div class="stitching"></div>
-                    </div>
-                    <div class="seat-cushion">
-                        <div class="stitching"></div>
-                    </div>
-                </div>
-                <div class="handle right"></div>
-            </div>
-        </div>
-    </div> -->
-    
-    <div class="container">
-        <div class= "header">
-            <h1>404 Page Wallpaper Gallery</h1>
-            <!-- <div class= "options">
-                <ol>
-                    <li>Auto sliding images</li>
-                    <li>Thumbnail Click to main View</li>
-                    <li>Full screen mode sliding</li>
-                </ol>
-            </div> -->
-        </div>
-        <div class="gallery">
-            <div class="main-image-section">
-                <img id="main-view" class="main-view" src= "images/1.jpg" onclick= "fullScreenImage();"/>
-            </div>
-            <div id= "thumbnails" class="thumbnails"></div>
-        </div>
+    <div class="screen-container">
+        <div class="screen"></div>
+        <!-- <div class="screen-text">SCREEN</div> -->
     </div>
-
-    <script>
-        let images = [
-    {
-        url: 'https://www.dropbox.com/s/bhkkcfai7alrfw4/1.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/l6x9llzzqq6z19b/2.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/l6x9llzzqq6z19b/2.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/mg3atxxr2e2wki7/4.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/t7vexrobgpmvizz/5.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/mak24286ksmhhph/6.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/x9kzf8on4t3arv5/7.jpg?raw=1'
-    },
-    {
-        url: 'https://www.dropbox.com/s/vxmuidb45kjcpsc/8.jpg?raw=1'
-    },
-];
-const mainView = document.getElementById('main-view');
-
-const thumbnails = document.getElementById('thumbnails');
-
-for(let i= 0; i< images.length; i++) {
-    let image = images[i];
-    let img = document.createElement('img');
-    img.src = images[i].url;
-    img.setAttribute('width', 170);
-    img.setAttribute('data-index', i);
-    img.addEventListener('click', changeImage);
-    thumbnails.appendChild(img);
-}
-
-function initGallery() {
-    loadImage(0);
-};
-
-// function slideImage() {
-//     let currentIndex = parseInt(mainView.getAttribute('data-index'));
-//     currentIndex = currentIndex + 1 == images.length ? 1 : currentIndex + 1;
-//     loadImage(currentIndex);
-//     setTimeout(slideImage, 3000);
-
-// }
-
-function changeImage(event) {
-    let target = event.currentTarget;
-    let index = target.getAttribute('data-index');
-    loadImage(index);
-}
-
-function loadImage(index) {
-    let image = images[index];
-    mainView.src = image.url;
-    mainView.setAttribute('data-index', index);
-    mainView.setAttribute('id', 'image-' + index);
-    mainView.style.opacity = 1;
-    caption.textContent = image.caption;
-    info.textContent = image.info;
-
-}
-
-function fullScreenImage() {
-    toggleFullscreen(mainView);
-}
-
-function toggleFullscreen(el) {
-    if(document.fullscreenElement || document.mozFullScreenElement 
-        || document.webkitFullscreenElement || document.msFullscreenElement) {
-            if(document.exitFullscreen) {
-                document.exitFullscreen();
-            }
-            else if(document.mozCancelFullScreen) {
-                document.mozCancelFullScreen();
-            }
-            else if(document.webkitExitFullscreen) {
-                document.webkitExitFullscreen();
-            }
-            else if(document.msExitFullscreen) {
-                document.msExitFullscreen();
-            }
-        }
-        else {
-            if(document.documentElement.requestFullscreen) {
-                el.requestFullscreen();
-            }
-            else if(document.documentElement.mozRequestFullScreen) {
-                el.mozRequestFullScreen();
-            }
-            else if(document.documentElement.webkitRequestFullscreen) {
-                el.webkitRequestFullscreen();
-            }
-            else if(document.documentElement.msRequestFullscreen) {
-                el.msRequestFullscreen();
-            }
-        }
-}
-
-initGallery();
-// setTimeout(slideImage, 3000);
-    </script>
-</div>
 </body>
 </html>
