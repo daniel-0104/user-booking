@@ -2374,7 +2374,7 @@ iframe{
 }
 
 #select-seat-modal .modal-content .row{
-    background-color: var(--nav-bar);
+    background-color: var(--body);
     border-radius: 10px;
     padding: 20px 0 20px;
 }
@@ -2386,6 +2386,7 @@ iframe{
     color: rgb(206, 205, 205);
 }
 #select-seat-modal .modal-content .row .col-lg-7 button{
+    background-color: var(--nav-bar);
     border: 1px solid var(--secondary);
     color: var(--teal);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
