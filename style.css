@@ -2484,6 +2484,13 @@ iframe{
         display: grid !important;
         grid-template-columns: repeat(2,1fr);
     }
+    #cinema-name > h6{
+        font-size: 12pt;
+    }
+    #cinema-name label{
+        padding: 0 10px;
+        font-size: 10pt;
+    }
 }
 @media screen and (max-width: 348px){
     #o-location-n > div:last-child > h6{
@@ -2502,13 +2509,6 @@ iframe{
     }
     .select-time > ul{
         display: block !important;
-    }
-    #cinema-name > h6{
-        font-size: 12pt;
-    }
-    #cinema-name label{
-        padding: 0 10px;
-        font-size: 10pt;
     }
 }
 /*.......................................... book ticket end ................................... */
