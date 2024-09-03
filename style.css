@@ -2995,7 +2995,7 @@ iframe{
 }
 #user-contact-info{
     background-color: var(--nav-bar);
-    padding: 25px 30px 60px;
+    padding-bottom: 60px;
     border-radius: 10px;
     margin-top: 30px;
 }
@@ -3036,7 +3036,7 @@ iframe{
 }
 
 #promo-code{
-    background-color: var(--nav-bar);
+    background-color: #142f48;
     padding: 20px 30px;
     border-radius: 10px;
     margin-top: 25px;
@@ -3061,7 +3061,8 @@ iframe{
     margin-top: -30px;
 }
 #booking-total h5,
-#payment-option h5{
+#payment-option h5,
+#user-contact-info h5{
     background-color: #142f48;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -3326,13 +3327,37 @@ iframe{
         width: 400px;
         margin: auto;
     }
-    #booking-summary > div,
     #booking-summary .d-flex:nth-child(4),
     #booking-summary > div > div:last-child{
         padding: 0 !important;
     }
     #payment .col-lg-7{
         padding: 10px;
+    }
+    #booking-total h5,
+    #payment-option h5,
+    #user-contact-info h5{
+        background-color: #142f48;
+        padding: 20px 0 20px 20px;
+        font-size: 14pt;
+    }
+    #booking-total > div{
+        padding: 0 20px !important;
+    }
+    #booking-total-content span,
+    #booking-total-content label,
+    #taxes label,
+    #total-price label{
+        font-size: 13pt !important;
+    }
+    #booking-total{
+        padding-bottom: 20px;
+    }
+    #promo-code{
+        padding: 15px 20px;
+    }
+    #promo-code h5{
+        font-size: 14pt;
     }
 }
 @media screen and (max-width: 448px){
