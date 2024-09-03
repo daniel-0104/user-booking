@@ -2980,10 +2980,24 @@ iframe{
 
 
 /*.......................................... checkout start  ................................... */
+#back-to-seat{
+    width: 100%;
+    background-color: var(--nav-bar);
+    padding: 13px 25px;
+    position: fixed;
+    z-index: 9999;
+}
+#back-to-seat button{
+    border: 1px solid var(--secondary);
+    color: white;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    padding: 5px 20px;
+}
 #user-contact-info{
     background-color: var(--nav-bar);
     padding: 25px 30px 60px;
     border-radius: 10px;
+    margin-top: 30px;
 }
 #user-contact-info form input,
 #promo-code form input{
@@ -3023,10 +3037,11 @@ iframe{
 
 #promo-code{
     background-color: var(--nav-bar);
-    padding: 25px 30px;
+    padding: 20px 30px;
     border-radius: 10px;
-    margin-top: 35px;
+    margin-top: 25px;
 }
+
 #promo-code i{
     font-size: 13pt;
     cursor: pointer;
@@ -3036,13 +3051,14 @@ iframe{
 }
 #promo-form{
     display: none;
+    padding-bottom: 10px;
 }
 
 #booking-total{
     background-color: var(--nav-bar);
     padding-bottom: 25px;
     border-radius: 10px;
-    margin-top: 35px;
+    margin-top: -30px;
 }
 #booking-total h5,
 #payment-option h5{
@@ -3080,10 +3096,10 @@ iframe{
     cursor: pointer;
     width: 100%;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 .custom-radio.active{
-    background-color:  #f7ecec14;
+    background-color: #f3eeee2c
 }
 .custom-radio.inactive{
     background-color: transparent;
@@ -3093,7 +3109,7 @@ iframe{
     width: 100%;
 }
 .custom-radio input[type="radio"]{
-    accent-color: rgb(216, 216, 216);
+    accent-color: rgba(216, 216, 216, 0.726);
     cursor: pointer;
     transform: scale(1.4);
 }
@@ -3108,9 +3124,10 @@ iframe{
 
 #payment-picture{
     background-color: var(--nav-bar);
-    padding: 20px 30px 25px 30px;
+    padding: 20px 30px 30px 30px;
     border-radius: 10px;
     margin-top: 35px;
+    margin-bottom: 35px;
 }
 #edit-photo{
     display: block;
@@ -3160,7 +3177,7 @@ iframe{
     margin-left: 0;
     padding: 30px 20px;
     border-radius: 8px;
-    margin-bottom: 30px;
+    margin-bottom: 0;
     border-left: 3px solid var(--teal);
     border-right: 3px solid var(--teal);
 }
@@ -3171,12 +3188,21 @@ iframe{
     text-transform: uppercase;
     margin-bottom: 30px;
 }
-#booking-summary img{
-    height: 150px;
-    object-fit: cover;
-}
 #payment .col-lg-5{
-    position: relative;
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    bottom: -80px;
+    overflow-y: auto;
+    z-index: 1000; 
+}
+#payment .col-lg-7{
+    margin-top: 40px;
+    background-color: var(--body);
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.592);
+    padding: 0 20px 40px 20px;
+    margin-left: -11px;
+    margin-bottom: -50px;
 }
 #payment .item-right .up-border,
 #payment .item-right .down-border{
@@ -3204,10 +3230,11 @@ iframe{
 }
 #offer-content > div:first-child{
     display: block;
-    width: 80px;
-    height: 55px;
+    width: 60px;
+    height: 60px;
     box-sizing: border-box;
     margin-right: 12px;
+    object-fit: cover;
 }
 #offer-content img{
     width: 100%;
@@ -3222,12 +3249,20 @@ iframe{
     padding: 5px 15px;
 }
 
+#cancel-info{
+    margin-top: 35px;
+}
+
 @media screen and (min-width: 630px) and (max-width: 992px){
-    #booking-summary{
+    #payment .col-lg-5{
+        position: relative;
         display: block;
+    }
+    /* #booking-summary{
+        display: block !important;
         width: 500px;
         margin: 0 auto 40px;
-    }
+    } */
     #payment .col-lg-7{
         margin-top: 40px;
     }
@@ -3326,17 +3361,21 @@ iframe{
 }
 #cinema-name2 > h5{
     color: var(--teal);
+    font-size: 14pt;
 }
 #cinema-name2 label{
     background-color: var(--secondary) !important;
     margin-bottom: 10px;
     margin-left: 20px;
-    padding: 0 10px;
+    padding: 0 8px;
     border-radius: 6px;
     font-weight: 600;
-    font-size: 11pt;
+    font-size: 10pt;
     color: white !important;
 }
+#cinema-name2 ~ div > label,
+#booking-summary .d-flex label,
+#booking-summary .d-flex ~ div > label,
 #detail-content label,
 #ph-detail-content label{
     color: rgb(206, 205, 205);
