@@ -2985,7 +2985,7 @@ iframe{
     background-color: var(--nav-bar);
     padding: 13px 25px;
     position: fixed;
-    z-index: 9999;
+    z-index: 1;
 }
 #back-to-seat button{
     border: 1px solid var(--secondary);
@@ -3171,6 +3171,9 @@ iframe{
     padding: 10px 0;
 }
 
+#location-mb{
+    display: none;
+}
 #booking-summary{
     position: relative;
     background-color: var(--nav-bar);
@@ -3271,7 +3274,9 @@ iframe{
         display: block;
         height: 100%;
         overflow-y: hidden;
-        margin-bottom: 40px;
+        margin-bottom: 110px;
+        z-index: 9999;
+        margin-top: -100px;
     }
     #booking-summary{
         width: 500px;
@@ -3280,6 +3285,18 @@ iframe{
     #payment .col-lg-7{
        box-shadow: none;
        margin-left: 0;
+    }
+    #location-mb{
+        display: block;
+        margin-bottom: -20px;
+    }
+    #location-lap{
+        display: none;
+    }
+    #back-to-seat{
+        display: none;
+        position: relative;
+        z-index: 0;
     }
 }
 @media screen and (max-width: 630px){
@@ -3314,6 +3331,9 @@ iframe{
     #booking-summary > div > div:last-child{
         padding: 0 !important;
     }
+    #payment .col-lg-7{
+        padding: 10px;
+    }
 }
 @media screen and (max-width: 448px){
     #booking-summary{
@@ -3321,6 +3341,9 @@ iframe{
     }
 }
 @media screen and (max-width: 414px){
+    #payment > div{
+        margin: 0 10px !important;
+    }
     #booking-summary .d-flex:nth-child(2){
         display: block !important;
         width: 100%;
@@ -3331,13 +3354,19 @@ iframe{
     #cinema-name2{
         margin-top: 15px;
     }
-    /* #booking-summary .d-flex img{
+    #booking-summary .d-flex img{
         display: block;
         margin: auto;
         width: 180px;
         height: 250px;
         object-fit: cover;
-    } */
+    }
+    #booking-summary > h5{
+        font-size: 12pt
+    }
+    #booking-summary{
+        padding: 30px 10px;
+    }
 }
 /*.......................................... checkout end  ................................... */
 
