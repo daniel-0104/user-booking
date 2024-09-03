@@ -3045,6 +3045,7 @@ iframe{
 #promo-code i{
     font-size: 13pt;
     cursor: pointer;
+    margin-bottom: 5px;
 }
 #promo-code i:hover{
     color: var(--teal) !important;
@@ -3212,7 +3213,7 @@ iframe{
     margin-top: 40px;
     background-color: var(--body);
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.592);
-    padding: 0 20px 60px 20px;
+    padding: 0 20px 40px 20px;
     margin-left: -11px;
     margin-bottom: -50px;
 }
@@ -3283,11 +3284,12 @@ iframe{
     }
     #booking-summary{
         width: 500px;
-        margin: auto;
+        margin: auto !important;
     }
     #payment .col-lg-7{
        box-shadow: none;
        margin-left: 0;
+       margin-bottom: 0;
     }
     #location-mb{
         display: block;
@@ -3316,9 +3318,7 @@ iframe{
 }
 @media screen and (max-width: 630px){
     #offer-fy{
-        background-color: var(--nav-bar);
-        padding: 20px 30px;
-        border-radius: 10px;
+        padding: 20px 30px 2px;
     }
     #offer-fy > div:last-child > div{
         display: block !important;
@@ -3392,6 +3392,9 @@ iframe{
         font-weight: 600;
         padding: 6px 20px;
     }
+    #offer-fy{
+        padding: 20px 30px 1px;
+    }
 }
 @media screen and (max-width: 414px){
     #payment > div{
@@ -3400,6 +3403,9 @@ iframe{
     #booking-summary .d-flex:nth-child(2){
         display: block !important;
         width: 100%;
+    }
+    #booking-summary .d-flex:nth-child(2) > div{
+        margin-right: 0 !important;
     }
     #booking-summary hr{
         display: none;
@@ -3419,6 +3425,63 @@ iframe{
     }
     #booking-summary{
         padding: 30px 10px;
+    }
+}
+@media screen and (max-width: 348px){
+    #booking-summary .d-flex img{
+        display: block;
+        margin: auto;
+        width: 130px;
+        height: 200px;
+        object-fit: cover;
+    }
+    #cinema-name2 > h5{
+        font-size: 13pt !important;
+    }
+    #cinema-name2 label{
+        padding: 0 9px !important;
+        font-size: 9pt !important;
+    }
+    #cinema-name2 ~ div > label,
+    #booking-summary > div .d-flex:nth-child(4) label,
+    #booking-summary > div > div:last-child label{
+        font-size: 10pt;
+    }
+    #cinema-name2 ~ div > h6,
+    #booking-summary > div .d-flex:nth-child(4) h6,
+    #booking-summary > div > div:last-child h6,
+    #payment-picture .d-flex label,
+    #offer-content h6,
+    #offer-content p,
+    #cancel-info label{
+        font-size: 11pt;
+    }
+    #booking-total > h5,
+    #booking-total-content > div span,
+    #promo-code h5,
+    #user-contact-info > h5,
+    #payment-option > h5,
+    #edit-photo ~ a button,
+    #offer-fy h5{
+        font-size: 13pt !important;
+    }
+    #booking-total-content label,
+    #taxes label,
+    .promo-icon{
+        font-size: 12pt !important;
+    }
+    #offer-content{
+        display: block !important;
+        width: 100%;
+    }
+    #offer-content img{
+        display: none !important;
+    }
+    #offer-content > div:last-child{
+        margin-top: -110px;
+    }
+    #offer-fy{
+        padding-bottom: 3px !important;
     }
 }
 /*.......................................... checkout end  ................................... */
