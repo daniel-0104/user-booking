@@ -3036,7 +3036,7 @@ iframe{
 }
 
 #promo-code{
-    background-color: #142f48;
+    background-color: #163451;
     padding: 20px 30px;
     border-radius: 10px;
     margin-top: 25px;
@@ -3100,7 +3100,7 @@ iframe{
     border-radius: 8px;
 }
 .custom-radio.active{
-    background-color: #f3eeee2c
+    background-color: #f3eeee22
 }
 .custom-radio.inactive{
     background-color: transparent;
@@ -3120,7 +3120,6 @@ iframe{
 .payment-content{
     color: white;
     padding: 10px 30px;
-    border-radius: 10px;
 }
 
 #payment-picture{
@@ -3213,7 +3212,7 @@ iframe{
     margin-top: 40px;
     background-color: var(--body);
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.592);
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 60px 20px;
     margin-left: -11px;
     margin-bottom: -50px;
 }
@@ -3270,12 +3269,15 @@ iframe{
 }
 
 @media screen and (max-width: 991px){
+    #payment > div{
+        position: relative;
+    }
     #payment .col-lg-5{
         position: relative;
         display: block;
         height: 100%;
         overflow-y: hidden;
-        margin-bottom: 110px;
+        margin-bottom: 100px;
         z-index: 9999;
         margin-top: -100px;
     }
@@ -3298,6 +3300,18 @@ iframe{
         display: none;
         position: relative;
         z-index: 0;
+    }
+    #payment-option > div{
+        padding: 0 10px !important;
+    }
+    .payment-content{
+        padding: 10px 20px;
+    }
+    .payment-content strong{
+        font-size: 11pt;
+    }
+    #payment-picture{
+        padding: 20px 20px 30px 20px !important;
     }
 }
 @media screen and (max-width: 630px){
@@ -3354,15 +3368,29 @@ iframe{
         padding-bottom: 20px;
     }
     #promo-code{
-        padding: 15px 20px;
+        padding: 20px;
     }
-    #promo-code h5{
+    #offer-fy{
+        padding: 20px;
+    }
+    #promo-code h5,
+    #offer-fy h5{
         font-size: 14pt;
     }
 }
 @media screen and (max-width: 448px){
     #booking-summary{
         width: 100%;
+    }
+    #promo-form form > div{
+        width: 60% !important;
+    }
+    #promo-code a button{
+        background-color: var(--secondary);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+        color: white;
+        font-weight: 600;
+        padding: 6px 20px;
     }
 }
 @media screen and (max-width: 414px){
