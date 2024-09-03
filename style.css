@@ -3022,7 +3022,7 @@ iframe{
 }
 #user-contact-info a button,
 #promo-code a button{
-    background-color: var(--body);
+    background-color: var(--secondary);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     color: white;
     font-weight: 600;
@@ -3161,7 +3161,7 @@ iframe{
     display: none;
 }
 #payment-picture a button{
-    background-color: var(--body);
+    background-color: var(--secondary);
     width: 100%;
     margin-top: 30px;
     font-size: 14pt;
@@ -3177,7 +3177,6 @@ iframe{
     margin-left: 0;
     padding: 30px 20px;
     border-radius: 8px;
-    margin-bottom: 0;
     border-left: 3px solid var(--teal);
     border-right: 3px solid var(--teal);
 }
@@ -3187,6 +3186,16 @@ iframe{
     border-bottom: 1px dotted white;
     text-transform: uppercase;
     margin-bottom: 30px;
+}
+#booking-summary .d-flex:nth-child(2){
+    margin-top: -10px;
+}
+#booking-summary .d-flex img{
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
 }
 #payment .col-lg-5{
     position: fixed;
@@ -3242,41 +3251,38 @@ iframe{
     object-fit: cover;
     border-radius: 5px;
 }
+#offer-content ~ a{
+    text-decoration: none;
+}
 #offer-content ~ a > button{
-    background-color: var(--body);
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    background-color: transparent;
+    border: 1px solid var(--secondary);
     color: white;
-    padding: 5px 15px;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
 }
 
 #cancel-info{
     margin-top: 35px;
 }
 
-@media screen and (min-width: 630px) and (max-width: 992px){
+@media screen and (max-width: 991px){
     #payment .col-lg-5{
         position: relative;
         display: block;
+        height: 100%;
+        overflow-y: hidden;
+        margin-bottom: 40px;
     }
-    /* #booking-summary{
-        display: block !important;
+    #booking-summary{
         width: 500px;
-        margin: 0 auto 40px;
-    } */
-    #payment .col-lg-7{
-        margin-top: 40px;
+        margin: auto;
     }
-    #offer-fy button{
-        margin-left: 50px;
+    #payment .col-lg-7{
+       box-shadow: none;
+       margin-left: 0;
     }
 }
 @media screen and (max-width: 630px){
-    #payment .col-lg-7{
-        margin-top: 40px;
-    }
-    #booking-summary > div{
-        padding: 0 !important;
-    }
     #offer-fy{
         background-color: var(--nav-bar);
         padding: 20px 30px;
@@ -3297,6 +3303,41 @@ iframe{
         display: block;
         width: 100%;
     }
+}
+@media screen and (max-width: 560px){
+    #booking-summary{
+        width: 400px;
+        margin: auto;
+    }
+    #booking-summary > div,
+    #booking-summary .d-flex:nth-child(4),
+    #booking-summary > div > div:last-child{
+        padding: 0 !important;
+    }
+}
+@media screen and (max-width: 448px){
+    #booking-summary{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 414px){
+    #booking-summary .d-flex:nth-child(2){
+        display: block !important;
+        width: 100%;
+    }
+    #booking-summary hr{
+        display: none;
+    }
+    #cinema-name2{
+        margin-top: 15px;
+    }
+    /* #booking-summary .d-flex img{
+        display: block;
+        margin: auto;
+        width: 180px;
+        height: 250px;
+        object-fit: cover;
+    } */
 }
 /*.......................................... checkout end  ................................... */
 
