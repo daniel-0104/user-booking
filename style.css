@@ -2466,7 +2466,6 @@ iframe{
     }
     #select-date{
         padding-bottom: 15px;
-        border-bottom: 1px solid white;
     }
     #caret-right{
         margin-right: 10px !important;
@@ -2503,14 +2502,14 @@ iframe{
         font-size: 11pt;
     }
     #select-cinema-time{
-        margin: 40px auto 70px;
+        margin: 20px auto 70px;
     }
     #select-cinema-time > div:first-child{
         display: block !important;
         width: 100%;
     }
     #select-cinema-time > div:first-child form{
-        margin: 10px auto 15px;
+        margin: 8px auto 20px;
     }
     #cinema-time-content{
         padding: 5px 15px 10px;
@@ -3499,6 +3498,7 @@ iframe{
     #booking-summary > div .d-flex:nth-child(4) label,
     #booking-summary > div > div:last-child label,
     #ticket-ph-content .px-2 > .d-flex:nth-child(3) label,
+    #ticket-ph-content .px-2 > div:nth-child(4) label,
     #ticket-ph-content .px-2 > div:last-child label{
         font-size: 10pt;
     }
@@ -3510,8 +3510,9 @@ iframe{
     #offer-content p,
     #cancel-info label,
     #ticket-ph-content .px-2 > .d-flex:nth-child(3) h6,
+    #ticket-ph-content .px-2 > div:nth-child(4) h6,
     #ticket-ph-content .px-2 > div:last-child h6{
-        font-size: 11pt;
+        font-size: 11pt !important;
     }
     #booking-total > h5,
     #booking-total-content > div span,
@@ -3620,7 +3621,8 @@ iframe{
 #booking-summary .d-flex label,
 #booking-summary .d-flex ~ div > label,
 #detail-content label,
-#ph-detail-content label{
+#ph-detail-content label,
+#ticket-ph-content label{
     color: rgb(206, 205, 205);
 }
 #detail-content .col-lg-4{
@@ -3699,14 +3701,17 @@ iframe{
 }
 #ticket-ph-content .px-2 > .d-flex:first-child{
     padding-top: 15px;
-    height: 140px;
+    height: 150px;
 }
-@media screen and (max-width: 992px){
+@media screen and (max-width: 991px){
     #order-history table{
         display: none;
     }
     #ticket-ph{
         display: block;
+    }
+    #ticket-ph-content{
+        padding: 30px 10px !important;
     }
 }
 @media screen and (max-width: 767px){
@@ -3714,7 +3719,6 @@ iframe{
         display: block;
         margin: auto;
         width: 400px;
-        padding: 30px 12px;
     }
 }
 @media screen and (max-width: 430px){
@@ -3739,6 +3743,7 @@ iframe{
         display: none;
     }
     #ticket-ph-content .px-2 > .d-flex:nth-child(3),
+    #ticket-ph-content .px-2 > div:nth-child(4),
     #ticket-ph-content .px-2 > div:last-child{
         padding-left: 0 !important;
     }
