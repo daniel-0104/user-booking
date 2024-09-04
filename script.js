@@ -18,7 +18,7 @@ document.addEventListener('scroll', function(){
   const returnToTopBtn = document.getElementById('return-to-top');
   const scrollTop = document.documentElement.scrollTop;
   
-  if (scrollTop > 1200){ 
+  if (scrollTop > 1400){ 
     returnToTopBtn.style.display = 'block';
   }else{
     returnToTopBtn.style.display = 'none';
