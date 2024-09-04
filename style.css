@@ -2196,15 +2196,18 @@ iframe{
     #change-pass-content{
         width: 340px;
     }
-    #change-pass > div:nth-child(1){
-        padding-left: 20px;
+    #change-pass > div:nth-child(1),
+    #order-history > div:nth-child(1){
+        padding-left: 20px !important;
     }
-    #change-pass > .d-flex > a{
+    #change-pass > .d-flex > a,
+    #order-history > div:nth-child(1) > a{
         font-size: 11pt !important;
     }
-    #change-pass > div:nth-child(1) > label{
-        padding: 10px 15px;
-        font-size: 11pt;
+    #change-pass > div:nth-child(1) > label,
+    #order-history > div:nth-child(1) > label{
+        padding: 10px 15px !important;
+        font-size: 11pt !important;
     }
 }
 @media screen and (max-width: 358px){
@@ -2220,12 +2223,14 @@ iframe{
     #change-pass-content input{
         padding: 8px 14px;
     }
-    #change-pass > .d-flex > a{
+    #change-pass > .d-flex > a,
+    #order-history > div:nth-child(1) > a{
         margin-right: 10px !important;
     }
-    #change-pass > div:nth-child(1) > label{
-        padding: 10px;
-        margin-left: 10px;
+    #change-pass > div:nth-child(1) > label,
+    #order-history > div:nth-child(1) > label{
+        padding: 10px !important;
+        margin-left: 10px !important; 
     }
 }
 /*.......................................... change password end ................................... */
@@ -3217,8 +3222,7 @@ iframe{
 #location-mb{
     display: none;
 }
-#booking-summary,
-#ticket-ph-content{
+#booking-summary{
     position: relative;
     background-color: var(--nav-bar);
     margin-left: 0;
@@ -3237,8 +3241,7 @@ iframe{
 #booking-summary .d-flex:nth-child(2){
     margin-top: -10px;
 }
-#booking-summary .d-flex img,
-#ticket-ph-content .d-flex img{
+#booking-summary .d-flex img{
     display: block;
     margin: auto;
     width: 80px;
@@ -3494,7 +3497,9 @@ iframe{
     }
     #cinema-name2 ~ div > label,
     #booking-summary > div .d-flex:nth-child(4) label,
-    #booking-summary > div > div:last-child label{
+    #booking-summary > div > div:last-child label,
+    #ticket-ph-content .px-2 > .d-flex:nth-child(3) label,
+    #ticket-ph-content .px-2 > div:last-child label{
         font-size: 10pt;
     }
     #cinema-name2 ~ div > h6,
@@ -3503,7 +3508,9 @@ iframe{
     #payment-picture .d-flex label,
     #offer-content h6,
     #offer-content p,
-    #cancel-info label{
+    #cancel-info label,
+    #ticket-ph-content .px-2 > .d-flex:nth-child(3) h6,
+    #ticket-ph-content .px-2 > div:last-child h6{
         font-size: 11pt;
     }
     #booking-total > h5,
@@ -3645,10 +3652,11 @@ iframe{
     right: -16px;
 }
 
-/* #ticket-ph{
+#ticket-ph{
     display: none;
+    margin-top: -40px;
     margin-bottom: 30px;
-} */
+}
 #order-date{
     width: fit-content;
     background-color: #f3eeee2c !important;
@@ -3673,45 +3681,86 @@ iframe{
     object-fit: cover;
 }
 
-/* #ticket-ph .item-right .up-border,
-#ticket-ph .item-right .down-border{
-    width: 25px;
-    height: 30px;
-    background-color: var(--body);
-    border-radius: 50%;
-    position: absolute;
+#ticket-ph-content{
+    position: relative;
+    background-color: var(--nav-bar);
+    margin-left: 0;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--teal);
+    border-right: 3px solid var(--teal);
 }
-#ticket-ph .item-right .up-border{
-    top: 372px;
-    left: 1px;
+#ticket-ph-content .d-flex img{
+    display: block;
+    margin: auto;
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
 }
-#ticket-ph .item-right .down-border{
-    top: 372px;
-    right: 1px;
-} */
+#ticket-ph-content .px-2 > .d-flex:first-child{
+    padding-top: 15px;
+    height: 140px;
+}
 @media screen and (max-width: 992px){
     #order-history table{
         display: none;
     }
-    /* #ticket-ph{
+    #ticket-ph{
         display: block;
-    } */
-}
-/* @media screen and (min-width: 560px) and (max-width: 768px){
-    #ticket-ph .col-lg-6{
-        display: block;
-        width: 60%;
-        margin: auto;
     }
 }
-@media screen and (max-width: 560px){
-    #ticket-ph .col-lg-6{
+@media screen and (max-width: 767px){
+    #ticket-ph-content{
         display: block;
+        margin: auto;
+        width: 400px;
+        padding: 30px 12px;
+    }
+}
+@media screen and (max-width: 430px){
+    #ticket-ph-content{
+        display: block;
+        margin: auto;
+        width: 380px;
+    }
+    #ticket-ph-content .px-2 > .d-flex:first-child{
+        display: block !important;
+        height: fit-content;
+    }
+    #ticket-ph-content .px-2 > .d-flex img{
+        display: block;
+        margin: auto;
+        width: 180px;
+        height: 250px;
+        object-fit: cover;
+        margin-bottom: 20px;
+    }
+    #ticket-ph-content .px-2 hr{
+        display: none;
+    }
+    #ticket-ph-content .px-2 > .d-flex:nth-child(3),
+    #ticket-ph-content .px-2 > div:last-child{
+        padding-left: 0 !important;
+    }
+    #ticket-ph-content .px-2 > .d-flex:nth-child(1) > div{
+        margin-right: 0 !important;
+    }
+}
+@media screen and (max-width: 407px){
+    #ticket-ph-content{
+        display: block;
+        margin: auto;
         width: 100%;
-        margin: auto;
     }
-} */
-
+}
+@media screen and (max-width: 348px){
+    #order-date{
+        font-size: 11pt;
+    }
+    #ticket-ph-content{
+        padding: 30px 10px 20px !important;
+    }
+}
 /*.......................................... order history end ................................... */
 
 
