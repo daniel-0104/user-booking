@@ -2884,9 +2884,17 @@ iframe{
 }
 
 #seat-design{
-    border-top: 1px solid white;
-    margin: 60px auto 50px;
-    padding-top: 50px;
+    border-bottom: 1px solid white;
+    margin: 60px auto 80px;
+    padding-bottom: 30px;
+}
+#seat-design > div:first-child{
+    display: block;
+    width: fit-content;
+    margin: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.349);
+    padding: 10px 30px;
+    border-radius: 5px;
 }
 #seat-design .swiper-slide{
     background-position: center;
@@ -3312,7 +3320,8 @@ iframe{
 }
 
 #cancel-info{
-    margin-top: 35px;
+    margin-top: -20px;
+    margin-bottom: 60px;
 }
 
 @media screen and (max-width: 991px){

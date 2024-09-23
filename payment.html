@@ -23,11 +23,22 @@
 </head>
 <body>
 
-    <div id="back-to-seat">
+    <div id="back-to-seat" class="row mx-auto align-items-center">
+        <div class="col-lg-4 ps-0">
+            <a href="select-seat.html">
+                <button class="btn"><i class="fa-solid fa-circle-left me-2"></i>Change Seat Plan</button>
+            </a>
+        </div>
+        <div class="offset-lg-4 col-lg-4 col-md-3 text-end">
+            <h6>Time Left : <span id="timer">10:00</span> </h6>
+        </div>
+    </div>
+
+    <!-- <div id="back-to-seat">
         <a href="select-seat.html">
             <button class="btn"><i class="fa-solid fa-circle-left me-2"></i>Change Seat Plan</button>
         </a>
-    </div>
+    </div> -->
 
     <div id="return-to-top">
         <a href="#"><i class="fa-solid fa-angles-up"></i></a>
@@ -121,6 +132,13 @@
                                     <h6>Confirm Payment</h6>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div id="cancel-info">
+                        <div class="d-flex mb-5 border p-3 rounded">
+                            <i class="fa-solid fa-circle-info me-2 mt-1"></i>
+                            <label>You can cancel your ticket(s) up to <span class="text-warning fw-bold">45 minutes</span> before the show begins. After this time, <span class="text-warning fw-bold">cancellations may not be possible</span>, so please make sure to act within this timeframe.</label>
                         </div>
                     </div>
 
@@ -278,11 +296,6 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-
-                    <div id="cancel-info" class="d-flex border p-3 rounded">
-                        <i class="fa-solid fa-circle-info me-2 mt-1"></i>
-                        <label>You can cancel your ticket(s) up to 45 minutes before the show begins. After this time, cancellations may not be possible, so please make sure to act within this timeframe.</label>
                     </div>
                 </div>
             </div>
