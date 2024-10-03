@@ -61,10 +61,9 @@ body{
 }
 #logo-img{
     display: block;
-    width: 50px;
+    width: 120px;
     height: 50px;
-    border-radius: 50%;
-    border: 1px solid white;
+    object-fit: cover;
 }
 #cinema-label{
     margin-top: 4px;
@@ -131,10 +130,10 @@ body{
     }
 }
 @media screen and (max-width: 348px){
-    #logo-img{
+    /* #logo-img{
         width: 35px;
         height: 35px;
-    }
+    } */
     #cinema-label > h5{
         font-size: 12pt !important;
     }
