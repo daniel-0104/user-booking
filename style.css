@@ -597,7 +597,7 @@ body{
         font-size: 11pt !important;
     }
     #now-movie-list{
-        background-color: var(--nav-bar);
+        background-color: #16324d;
         border-radius: 8px;
     }
     #now-movie-list > .col-lg-3 > div{
@@ -2680,7 +2680,7 @@ iframe{
 }
 
 .screen-label {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     margin-bottom: 10px;
     color: #0fd3ff;
@@ -2707,14 +2707,14 @@ iframe{
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     background: rgba(15, 211, 255, 0.336);
-    box-shadow: 0 0 25px rgba(15, 211, 255, 0.6);
+    box-shadow: 0 0 25px rgba(42, 187, 219, 0.582);
 }
 
 #seat-color{
     width: 100%;
     padding: 0 !important;
     display: block;
-    margin-top: 80px auto 0;
+    margin-top: 10px auto 0;
 }
 #seat-color > div:first-child{
     display: block;
@@ -2998,8 +2998,8 @@ iframe{
 
 #seat-design{
     border-bottom: 1px solid white;
-    margin: 60px auto 80px;
-    padding-bottom: 30px;
+    margin: 60px auto 50px;
+    padding-bottom: 10px;
 }
 #seat-design > div:first-child{
     display: block;
@@ -3009,21 +3009,23 @@ iframe{
     padding: 10px 30px;
     border-radius: 5px;
 }
+#seat-design > div:first-child > h5{
+    font-size: 14pt;
+}
 #seat-design .swiper-slide{
     background-position: center;
     background-size: cover;
-    width: 65%;
 }
 #seat-design img{
     border-radius: 8px;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
 }
 #seat-design .swiper-btns{
     position: absolute;
     display: flex;
     margin-top: 0;
-    width: 70%;
+    width: 100%;
     justify-content: space-between;
     z-index: 1;
 }
@@ -3032,8 +3034,8 @@ iframe{
     background-color: #15334d;
     color: white;
     border: none;
-    width: 55px;
-    height: 55px;
+    width: 50px;
+    height: 50px;
     margin-top: 40px;
     border-radius: 50%;
     text-align: center;
@@ -3054,12 +3056,27 @@ iframe{
     background-color: var(--teal);
     opacity: 1;
 }
-@media screen and (max-width: 767px){
-    #seat-design .swiper-slide{
-        width: 90%;
+@media screen and (max-width: 400px){
+    #seat-design .swiper-slide img{
+        margin: auto;
+        width: 250px !important;
+        height: 280px;
     }
-    #seat-design .swiper-btns{
-        width: 95%;
+    #seat-design .mySwiper7{
+        margin-top: 30px !important;
+    }
+    #seat-design{
+        padding-bottom: 50px;
+        margin-bottom: -30px;
+    }
+    #seat-design > div:first-child{
+        padding: 10px 25px;
+    }
+    #seat-design > div:first-child > h5{
+        font-size: 12pt !important;
+    }
+    #seat-design > div:first-child > label{
+        font-size: 10pt !important;
     }
 }
 

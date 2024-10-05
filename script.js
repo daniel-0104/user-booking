@@ -685,28 +685,52 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 //...................................................... seat design swiper start ..........................................
+// var swiper = new Swiper(".mySwiper7", {
+//   effect: "coverflow",
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: "auto",
+//   hashNavigation: {
+//     watchState: true,
+//   },
+//   navigation: {
+//     nextEl: ".button-next7",
+//     prevEl: ".button-prev7",
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   coverflowEffect: {
+//     rotate: 50,
+//     stretch: 0,
+//     depth: 100,
+//     modifier: 1,
+//     slideShadows: true,
+//   }
+// });
+
 var swiper = new Swiper(".mySwiper7", {
-  effect: "coverflow",
+  spaceBetween: 30,
+  slidesPerView: 2,
   grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: "auto",
-  hashNavigation: {
-    watchState: true,
-  },
   navigation: {
-    nextEl: ".button-next7",
-    prevEl: ".button-prev7",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
+        nextEl: ".button-next7",
+        prevEl: ".button-prev7",
+      },
+  breakpoints: {
+    0: {
+        slidesPerView: 1,
+    },
+    500: {
+        slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 2,
+    },
+    1300: {
+        slidesPerView: 3,
+    }
   }
 });
 //....................................................... seat design swiper end ...........................................
