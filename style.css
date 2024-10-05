@@ -2663,56 +2663,55 @@ iframe{
     }
 }
 
-.screen{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+
+#theater-seat-content{
+    margin-top: 80px !important;
 }
-.projecter{
+.screen-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    width: 500px;
-    height: 210px;
-    background-color: #ecececee;
-    box-shadow: 2px 0 10px rgba(255, 255, 255, 0.705);
+    margin-top: 30px;
+    margin-bottom: -90px;
 }
-#quarters{
+
+.screen-label {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: #0fd3ff;
+}
+
+.screen {
+    width: 80%;
+    height: 10px;
+    background-color: transparent;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    border-top: 3px solid white;
+    position: relative;
+}
+
+.screen::before {
+    content: "";
     position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 520px;
-}
-.quarter-ellipse1 {
-    background: var(--nav-bar);
-    width: 120px;
-    height: 240px;
-    border-radius: 20px 0 90% 0;
-}
-.quarter-ellipse2 {
-    background: var(--nav-bar);
-    width: 120px;
-    height: 240px;
-    border-radius: 0 20px 0 90%;
-}
-@media screen and (max-width: 557px){
-    .projecter{
-        width: 300px;
-        height: 180px;
-    }
-    #quarters{
-        width: 320px;
-    }
-    .quarter-ellipse1,
-    .quarter-ellipse2{
-        width: 80px;
-        height: 200px;
-    }
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    background: rgba(15, 211, 255, 0.336);
+    box-shadow: 0 0 25px rgba(15, 211, 255, 0.6);
 }
 
 #seat-color{
-    margin-top: 80px;
-    margin-right: 30px;
+    width: 100%;
+    padding: 0 !important;
+    display: block;
+    margin-top: 80px auto 0;
 }
 #seat-color > div:first-child{
     display: block;
@@ -2761,7 +2760,10 @@ iframe{
 }
 @media screen and (max-width: 860px){
     #seat-color{
-        display: block !important;
+        display: block;
+        text-align: center;
+        margin-left: -25px !important;
+        margin-bottom: 50px !important;
     }
     #swipe-left{
         float: right;
@@ -2797,9 +2799,8 @@ iframe{
 
 #seat-plan-container{
     display: block;
-    width: 95%;
+    width: 100%;
     margin: auto;
-    margin: -60px auto -50px;
     overflow-x: auto;
 }
 #seat-plan-container .lucide-armchair{
@@ -3055,7 +3056,7 @@ iframe{
 
 #check-out{
     background-color: var(--nav-bar);
-    margin: 50px auto;
+    margin: -20px auto 50px;
     padding: 30px 25px;
     border-radius: 10px;
     border-left: 3px solid var(--teal);
