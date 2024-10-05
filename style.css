@@ -1118,7 +1118,7 @@ iframe{
 #movie-cell-show{
     display: none;
     background-color: var(--nav-bar);
-    padding: 30px 20px 0;
+    padding: 15px 15px 0 !important;
     border-radius: 10px;
 }
 #movie-cell-show a img{
@@ -1214,7 +1214,7 @@ iframe{
         display: block;
         width: 100%;
         margin: 0;
-        padding: 20px 10px 0 !important;
+        /* padding: 20px 20px 0 !important; */
         border-radius: 5px;
         /* border-top: 1px solid rgba(255, 255, 255, 0.562); */
     }
@@ -1281,6 +1281,7 @@ iframe{
     #movie-cell-show > div > div{
         /* background-color: red; */
         margin-bottom: 10px !important;
+        padding: 4px !important;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
