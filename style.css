@@ -2765,6 +2765,13 @@ iframe{
         margin-left: -25px !important;
         margin-bottom: 50px !important;
     }
+    #seat-color .lucide-armchair{
+        width: 25px;
+        height: 25px;
+    }
+    #seat-color span{
+        font-size: 13pt;
+    }
     #swipe-left{
         float: right;
         margin-top: 30px;
@@ -2799,7 +2806,7 @@ iframe{
 
 #seat-plan-container{
     display: block;
-    width: 100%;
+    width: 95%;
     margin: auto;
     overflow-x: auto;
 }
