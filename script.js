@@ -154,6 +154,9 @@ var swiper = new Swiper(".mySwiper2", {
     0: {
         slidesPerView: 1,
     },
+    300: {
+      slidesPerView: 2,
+    },
     519: {
       slidesPerView: 2,
     },

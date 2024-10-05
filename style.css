@@ -715,8 +715,8 @@ iframe{
 @media screen and (max-width: 518px){
     .mySwiper2 .swiper-slide img{
         display: block;
-        width: 80% !important;
-        height: 330px !important;
+        width: 100% !important;
+        height: 220px !important;
         margin: auto;
     }
 }
@@ -745,8 +745,8 @@ iframe{
 @media screen and (max-width: 358px){
     .mySwiper2 .swiper-slide img{
         display: block;
-        width: 250px !important;
-        height: 230px !important;
+        width: 100% !important;
+        height: 200px !important;
         margin: auto;
     }
 }
@@ -787,7 +787,11 @@ iframe{
     border: 1px solid white;
     border-radius: 10px;
     padding: 20px;
-    height: 430px;
+    /* height: 430px; */
+}
+#cinema-detail-content > div{
+    display: block;
+    height: 190px !important;
 }
 #cinema-detail-content img{
     height: 220px;
@@ -800,18 +804,18 @@ iframe{
 }
 @media screen and (max-width: 770px){
     #cinema-detail-content img{
-        height: 260px;
+        height: 190px !important;
         object-fit: cover;
     }
-    #cinema-detail-content{
+    /* #cinema-detail-content{
         height: 470px;
-    }
+    } */
 }
-@media screen and (max-width: 400px){
+/* @media screen and (max-width: 400px){
     #cinema-detail-content{
         height: 480px;
     }
-}
+} */
 @media screen and (max-width: 360px){
     #other-movies-label > h4{
         margin-left: -2px;
