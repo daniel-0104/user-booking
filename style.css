@@ -2661,6 +2661,9 @@ iframe{
     #selected-movie-label .col-md-6{
         margin: 20px auto;
     }
+    #selected-movie-label{
+        padding: 20px 10px 20px 0 !important;
+    }
 }
 
 
