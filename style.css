@@ -590,6 +590,9 @@ body{
     }
 }
 @media screen and (max-width: 410px){
+    .zoom-img img:hover{
+        transform: none;
+    }
     #now-movie-list a h5{
         font-size: 11pt !important;
     }
@@ -1156,15 +1159,25 @@ iframe{
 #movie-list-content{
    margin: 20px auto;
 }
+#movie-list-show{
+    display: none;
+}
 #movie-list-show > div{
     background-color: var(--nav-bar);
     border-radius: 10px;
-    padding: 30px 20px 30px 4px;
+    padding: 20px 30px 20px 0;
     border-left: 2px solid var(--teal);
     border-right: 2px solid var(--teal);
 }
+#movie-list-show img{
+    display: block;
+    margin: auto;
+    width: 200px !important;
+    height: 300px;
+    object-fit: cover;
+}
 #movie-cell-show{
-    display: none;
+    display: flex;
     background-color: var(--nav-bar);
     padding: 15px 15px 0 !important;
     border-radius: 10px;
