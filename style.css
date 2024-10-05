@@ -1211,10 +1211,12 @@ iframe{
         font-size: 9pt !important; 
     }
     #movie-cell-show{
-        background-color: transparent;
-        padding: 15px 0 0 !important;
-        border-radius: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.562);
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 20px 10px 0 !important;
+        border-radius: 5px;
+        /* border-top: 1px solid rgba(255, 255, 255, 0.562); */
     }
 }
 @media screen and (max-width: 460px){
@@ -1268,12 +1270,17 @@ iframe{
         width: 100% !important;
     }
     #movie-cell-show a h5{
-        font-size: 12pt;
+        font-size: 7pt !important;
+        /* text-align: left; */
     }
     #movie-cell-show > div{
         display: grid;
-        row-gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
+        row-gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #movie-cell-show > div > div{
+        /* background-color: red; */
+        margin-bottom: 10px !important;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
