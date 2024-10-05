@@ -718,6 +718,10 @@ var swiper = new Swiper(".mySwiper7", {
         nextEl: ".button-next7",
         prevEl: ".button-prev7",
       },
+        pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   breakpoints: {
     0: {
         slidesPerView: 1,

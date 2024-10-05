@@ -3066,7 +3066,7 @@ iframe{
         margin-top: 30px !important;
     }
     #seat-design{
-        padding-bottom: 50px;
+        padding-bottom: 20px;
         margin-bottom: -30px;
     }
     #seat-design > div:first-child{
@@ -3077,6 +3077,20 @@ iframe{
     }
     #seat-design > div:first-child > label{
         font-size: 10pt !important;
+    }
+    #seat-design .swiper-btns button{
+        width: 40px;
+        height: 40px;
+        font-size: 12pt;
+        margin-top: 0;
+    }
+    #seat-design .swiper-wrapper{
+        margin-bottom: 40px;
+    }
+    #seat-design .swiper-pagination-bullet{
+        padding: 0 5px;
+        height: 5px;
+        border-radius: 20px;
     }
 }
 
