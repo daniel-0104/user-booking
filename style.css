@@ -2438,12 +2438,7 @@ iframe{
     color: var(--teal);
     font-size: 15pt;
 }
-#select-date button:hover{
-    background-color: #122138e0 !important;
-    color: var(--teal) !important;
-    border: 1px solid transparent !important;
-    box-shadow: none !important;
-}
+#select-date button:hover,
 .js-select-active,
 .select-time button:hover{
     background-color: #122138e0 !important;
@@ -2575,10 +2570,10 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    #select-date button:hover{
-        background-color: var(--nav-bar);
+    #select-date > ul button:hover{
         border: 1px solid var(--secondary);
-        color: var(--teal);
+        background-color: var(--nav-bar);
+        color: white;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
     }
     #select-date > ul button > span{
