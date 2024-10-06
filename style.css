@@ -4018,3 +4018,154 @@ iframe{
     background-color: #2fdb7d;
 }
 /*................................... ..........auth section end .................................. */
+
+
+/*................................... ......... cinema details start.................................. */
+#cinema-details{
+    margin: 30px auto 70px;
+}
+#cinema-content{
+    display: block;
+    width: 85%;
+    margin: auto;
+    background-color: var(--nav-bar);
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+}
+#cinema-content .col-lg-5 img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+#cinema-content .col-lg-7 h4{
+    color: var(--teal);
+}
+@media screen and (max-width: 928px){
+    #cinema-content{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 768px){
+    #cinema-content{
+        width: 90%;
+        padding: 20px 10px 40px;
+    }
+    #cinema-content .col-lg-5 img{
+        width: 300px;
+        height: 260px;
+    }
+    #cinema-content .col-lg-7{
+        margin-top: 30px;
+        padding: 0 30px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    #cinema-content{
+        width: 100%;
+    }
+    #cinema-content .col-lg-5 img{
+        width: 260px;
+        height: 200px;
+    }
+    #cinema-content .col-lg-7{
+        margin-top: 20px;
+        padding: 0 20px !important;
+    }
+    #cinema-content .col-lg-7 h4{
+        font-size: 14pt;
+    }
+}
+@media screen and (max-width: 319px){
+    #cinema-content .col-lg-5 img{
+        width: 230px;
+        height: 180px;
+    }
+    #cinema-content .col-lg-7 h4{
+        font-size: 13pt;
+    }
+    #cinema-content .col-lg-7 div{
+        font-size: 10pt;
+    }
+}
+/*................................... ......... cinema details end.................................. */
+
+/*................................... ......... review info start .................................. */
+#reviews-info{
+    background-color: var(--nav-bar);
+    padding: 30px;
+}
+.star-rating{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+.radio-input{
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+}
+.radio-label{
+    cursor: pointer;
+    font-size: 0;
+    color: var(--grey);
+    transition: color 0.1s ease-in-out;
+}
+.radio-label:before{
+    content: "★";
+    display: inline-block;
+    font-size: 32px;
+}
+.radio-input:checked ~ .radio-label{
+    color: #ffc700;
+    color: gold;
+}
+.radio-label:hover,
+.radio-label:hover ~ .radio-label{
+    color: goldenrod;
+}
+.radio-input:checked + .radio-label:hover,
+.radio-input:checked + .radio-label:hover ~ .radio-label,
+.radio-input:checked ~ .radio-label:hover,
+.radio-input:checked ~ .radio-label:hover ~ .radio-label,
+.radio-label:hover ~ .radio-input:checked ~ .radio-label{
+    color: darkgoldenrod;
+}
+#review-comment{
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 512px){
+    #reviews-info{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 30px 15px;
+    }
+    #review-comment h5{
+        font-size: 14pt;
+    }
+    #review-comment span,
+    #review-comment p{
+        font-size: 11pt;
+    }
+    #review-comment .fa-star{
+        font-size: 8pt;
+    }
+}
+#rev-form{
+    margin: 40px auto;
+    padding: 0 30px;
+}
+@media screen and (max-width: 792px){
+    #rev-form{
+        margin: 30px auto 40px;
+        padding: 0 10px;
+    }
+    #rev-form #contact-us-form > div{
+        width: 100% !important;
+    }
+}
+/*................................... ......... review info end .................................. */
