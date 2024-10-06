@@ -2570,7 +2570,8 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    #select-date button:hover{
+    #select-date button:hover,
+    #select-date button:active{
         border: 1px solid var(--secondary);
         background-color: var(--nav-bar);
         color: white;
