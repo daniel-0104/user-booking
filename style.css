@@ -2537,12 +2537,6 @@ iframe{
     }
 }
 @media screen and (max-width: 575px){
-    #select-date button:hover{
-        border: 1px solid var(--secondary);
-        background-color: var(--nav-bar);
-        color: white;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
-    }
     #order-location1{
         margin: 60px auto;
     }
@@ -2576,11 +2570,12 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    #select-date > ul button:hover{
-        border: 1px solid var(--secondary);
+    #select-date button:hover{
+    background-color: red !important;
+        /* border: 1px solid var(--secondary);
         background-color: var(--nav-bar);
         color: white;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568); */
     }
     #select-date > ul button > span{
         display: block;
