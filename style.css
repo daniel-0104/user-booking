@@ -225,9 +225,9 @@ body{
     border-radius: 10px;
     z-index: 9999 !important;
 }
-#search-ticket .col-lg-7 > label{
-    color: var(--teal);
-}
+/* #search-ticket .col-lg-7 label{
+    color: var(--teal) !important;
+} */
 #search-ticket p{
     background-color: var(--secondary);
     color: white;
@@ -831,7 +831,7 @@ iframe{
 }
 #cinema-detail-content > div{
     display: block;
-    height: 190px !important;
+    height: 220px !important;
 }
 #cinema-detail-content img{
     height: 220px;
@@ -2503,6 +2503,19 @@ iframe{
 #select-seat-modal .modal-content .row .col-lg-7 button:hover{
     border: 1px solid var(--teal);
 }
+#select-seat-modal .modal-content > div > button{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: var(--teal);
+    color: black;
+    border: transparent;
+    margin-bottom: 0;
+}
+#select-seat-modal .modal-content > div > button:hover{
+    background-color: var(--nav-bar);
+    border: transparent;
+}
 @media screen and (min-width: 768px) and (max-width: 992px){
     #select-seat-modal .modal-lg{
         max-width: 700px;
@@ -2524,6 +2537,12 @@ iframe{
     }
 }
 @media screen and (max-width: 575px){
+    #select-date button:hover{
+        border: 1px solid var(--secondary);
+        background-color: var(--nav-bar);
+        color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    }
     #order-location1{
         margin: 60px auto;
     }
