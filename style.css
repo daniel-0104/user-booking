@@ -2570,12 +2570,12 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    /* #select-date button:hover{
-        border: 1px solid var(--secondary) !important;
-        background-color: var(--nav-bar) !important;
-        color: white !important;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568) !important;
-    } */
+    #select-date button:hover{
+        border: 1px solid var(--secondary);
+        background-color: var(--nav-bar);
+        color: white;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    }
     #select-date > ul button > span{
         display: block;
         font-size: 11pt;
