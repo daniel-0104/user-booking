@@ -2570,12 +2570,11 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    #select-date button:hover,
-    #select-date button:active{
-        border: 1px solid var(--secondary);
-        background-color: var(--nav-bar);
-        color: white;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
+    #select-date button:hover{
+        background-color: unset !important;
+        color: unset !important;
+        border: unset !important;
+        box-shadow: unset !important;
     }
     #select-date > ul button > span{
         display: block;
