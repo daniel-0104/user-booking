@@ -3,8 +3,8 @@ body{
     color: white;
 }
 :root{
-    --body: #29577c;
-    --nav-bar: #1b3c5e;
+    --body: #306896;
+    --nav-bar: #1e466d;
     --secondary: #3c91c9;
     --gold: #FFD700;
     --teal: #5febcf ;
@@ -590,7 +590,7 @@ body{
         font-size: 11pt !important;
     }
     #now-movie-list{
-        background-color: #16324d;
+        background-color: #225180;
         border-radius: 8px;
     }
     #now-movie-list > .col-lg-3 > div{
@@ -1673,7 +1673,8 @@ iframe{
     }
     #movie-detail-content{
         position: relative;
-        background-color: #16324d;
+        /* background-color: #1b3e5e; */
+        background-color: #225180;
         width: 100%;
         margin-right: 0 !important;
         top: 0;
@@ -1956,7 +1957,7 @@ iframe{
     margin-bottom: 8px;
 }
 #team-content .swiper-slide{
-    background-color: #16324d;
+    background-color: var(--nav-bar);
     text-align: center;
     border-radius: 8px;
     height: 350px;
