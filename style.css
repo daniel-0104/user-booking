@@ -829,9 +829,9 @@ iframe{
     padding: 20px;
     /* height: 430px; */
 }
-#cinema-detail-content > div{
+#cinema-detail-content h5{
     display: block;
-    height: 220px !important;
+    height: 30px !important;
 }
 #cinema-detail-content img{
     height: 220px;
@@ -4137,6 +4137,9 @@ iframe{
 }
 #review-comment{
     margin-bottom: 40px;
+}
+#rev-form > div > a{
+    color: var(--teal);
 }
 @media screen and (max-width: 512px){
     #reviews-info{
