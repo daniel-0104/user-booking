@@ -192,11 +192,33 @@
                 <div class="d-flex justify-content-end mb-2">
                     <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
                 </div>
-                <iframe src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <iframe id="videoTrailer" src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </div>
     <!-- movie details end  -->
+
+
+    <!-- <a href="#" data-bs-toggle="modal" data-bs-target="#trailer" class="fs-5" id="circle-play"><i class="fa-solid fa-circle-play"></i> Watch Trailer</a>
+    <div class="modal fade" id="trailer" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="trailerLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 bg-transparent">
+                <div class="d-flex justify-content-end mb-2">
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <iframe id="videoTrailer" src="https://www.youtube.com/embed/1VIZ89FEjYI?si=jd36Et_97PFJJmDp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('trailer');
+        const video = document.getElementById('videoTrailer');
+        
+        modal.addEventListener('hidden.bs.modal', function () {
+            video.src = video.src;
+        });
+    </script> -->
 
     <!-- related movies start  -->
     <section id="other-movies">
@@ -352,6 +374,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- js  -->
-    <script src="script.js"></script>
 
 </html>
