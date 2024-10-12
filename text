@@ -31,7 +31,7 @@ body{
     transform: translateX(0px);
     animation: bounce 3s ease-in-out infinite;
     z-index: 9999;
-} 
+}
 @keyframes bounce{
     0%{
         transform: translateY(0px);
@@ -173,7 +173,7 @@ body{
     font-weight: bold;
 }
 /*.......................................... nav bar end ................................... */
-  
+
 
 /*.......................................... home section start ................................... */
 #home-poster-content > h1{
@@ -207,8 +207,8 @@ body{
     background-color: rgba(0, 0, 0, 0.301);
     top: 0;
 } */
-.carousel-inner{
-    z-index: -1;
+.cover-carousel-inner{
+    z-index: -1 !important;
 }
 .carousel-caption{
     width: 100%;
@@ -225,9 +225,9 @@ body{
     border-radius: 10px;
     z-index: 9999 !important;
 }
-/* #search-ticket .col-lg-7 label{
-    color: var(--teal) !important;
-} */
+#search-ticket .col-lg-7 > label{
+    color: var(--teal);
+}
 #search-ticket p{
     background-color: var(--secondary);
     color: white;
@@ -297,7 +297,7 @@ body{
     #home-poster-content > h1{
         width: 80%;
         font-size: 32pt;
-    }      
+    }
 }
 @media screen and (max-width: 575px){
     #home-poster-content > h1{
@@ -326,7 +326,7 @@ body{
         height: 280px;
         object-fit: cover;
     }
-    
+
 }
 @media screen and (max-width: 348px){
     #home-poster-content > h1{
@@ -363,7 +363,7 @@ body{
     font-size: 1.14rem;
     background-color: var(--body);
     padding: 8px 10px;
-    border: 1px solid white;
+    border: 1px solid var(--gold);
     border-radius: 5px;
     cursor: pointer;
     color: white;
@@ -376,13 +376,13 @@ body{
     text-align: left;
 }
 .selected-value > i{
-    color: var(--teal);
+    color: var(--gold);
     margin-right: 8px;
 }
 .arrow{
     border-left: 5px solid transparent;
     border-right: 5px solid transparent;
-    border-top: 6px solid white;
+    border-top: 6px solid var(--gold);
     transition: transform ease-in-out 0.3s;
 }
 .select-dropdown{
@@ -390,7 +390,7 @@ body{
     list-style: none;
     width: 100%;
     background-color: var(--body);
-    border: 1px solid #dadde0;
+    border: 1px solid #dadde0e6;
     border-radius: 4px;
     padding: 10px;
     margin-top: 5px;
@@ -432,7 +432,7 @@ body{
     border-radius: 25px;
 }
 .select-dropdown li:hover{
-    color: var(--teal);
+    color: var(--gold);
 }
 .select-dropdown input:checked ~ label,
 .select-dropdown input:focus ~ label{
@@ -457,11 +457,11 @@ body{
 }
 .search-btn{
     background-color: var(--nav-bar);
-    color: var(--teal);
+    color: var(--gold);
 }
 .search-btn:hover{
     background-color: var(--nav-bar);
-    color: var(--teal);
+    color: var(--gold);
     border: 1px solid white;
 }
 /*.......................................... home section end ................................... */
@@ -475,7 +475,7 @@ body{
     margin: 90px auto;
 }
 #span-block{
-    display: flex; 
+    display: flex;
     align-items: center;
 }
 #span-block > span{
@@ -501,7 +501,7 @@ body{
     background-color: var(--nav-bar) ;
     padding: 18px 15px 10px;
     border-radius: 8px;
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.832);
 }
 #now-movie-list a{
     color: white;
@@ -517,7 +517,7 @@ body{
     display: block;
     margin: auto;
     width: 180px;
-    height: 250px; 
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     transition: all .3s ease-in-out;
@@ -525,32 +525,28 @@ body{
 .zoom-img img:hover{
     transform: scale(1.1);
 }
-#now-movie-list a > div:last-child{
-    margin-top: 14px;
+#now-movie-list .zoom-img ~ .d-flex{
+    margin-top: 20px;
     text-align: center;
-    height: 40px;
+    height: 40px !important;
     margin-bottom: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.373);
 }
-#now-movie-list a > div:last-child > h5{
-    font-size: 13pt;
+#now-movie-list a h5{
+    font-size: 13pt !important;
 }
-#now-movie-list a:hover,
-#ticket-btn span i{
-    color: var(--teal);
+#now-movie-list a:hover{
+    color: var(--gold);
 }
 #ticket-btn{
-    background-color: transparent;
-    border: 1px solid var(--secondary);
-    color: white;
+    background-color: var(--gold);
+    border: 1px solid var(--gold);
+    color: black;
     box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.524);
 }
 #ticket-btn label{
     cursor: pointer;
-}
-#ticket-btn:hover{
-    color: var(--teal);
 }
 @media screen and (max-width: 576px){
     #now-movie-list #ticket-btn,
@@ -558,7 +554,7 @@ body{
         font-size: 10pt !important;
     }
     #now-movie-list a h5{
-        font-size: 12pt !important;
+        font-size: 11pt !important;
     }
     #now-movie-list > .col-lg-3 > div{
         padding: 10px !important;
@@ -824,21 +820,23 @@ iframe{
 
 #cinema-detail-content{
     background-color: var(--nav-bar);
-    border: 1px solid white;
+    border: 1px solid rgba(255, 255, 255, 0.832);
     border-radius: 10px;
     padding: 20px;
-    /* height: 430px; */
+}
+#cinema-detail-content > div{
+    display: block;
+    /* height: 190px !important; */
+}
+#cinema-detail-content img{
+    height: 220px;
+    object-fit: cover;
 }
 #cinema-detail-content h5{
     color: var(--teal);
     font-weight: bold;
     margin: 10px 0 20px;
-    display: block;
-    height: 30px !important;
-}
-#cinema-detail-content img{
-    height: 220px;
-    object-fit: cover;
+    height: 40px;
 }
 @media screen and (max-width: 770px){
     #cinema-detail-content img{
@@ -1091,12 +1089,6 @@ iframe{
 .sorting-select-btn .arrow{
     margin-left: 15px;
 }
-.sorting-select-btn .arrow{
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 6px solid white;
-    transition: transform ease-in-out 0.3s;
-}
 .sorting-select-btn{
     width: 100%;
     font-size: 1.12rem;
@@ -1174,14 +1166,17 @@ iframe{
     object-fit: cover;
 }
 #movie-cell-show{
-    display: flex;
     background-color: var(--nav-bar);
-    padding: 15px 15px 0 !important;
+    padding: 15px 15px 20px !important;
     border-radius: 10px;
+}
+#movie-cell-show .col-lg-3{
+    margin-bottom: 22px !important;
 }
 #movie-cell-show a img{
     border: 1px solid transparent;
     object-fit: cover;
+    height: 300px;
 }
 #movie-cell-show a img:hover{
     border: 1px solid var(--teal);
@@ -1201,7 +1196,7 @@ iframe{
     margin-bottom: 10px;
 }
 #movie-list-show a h4:hover,
-#movie-list-show span,
+#movie-list-show .col-lg-8 > span,
 #circle-play i,
 #circle-play:hover,
 #movie-cell-show .col-lg-3:hover h5{
@@ -1232,6 +1227,14 @@ iframe{
     display: none;
 }
 
+@media screen and (max-width: 347px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        max-width: 150px !important;
+        max-height: 150px !important;
+    }
+}
 @media screen and (max-width: 358px){
     .sorting-select-btn{
         font-size: 11pt;
@@ -1266,7 +1269,7 @@ iframe{
         font-size: 9pt !important;
     }
     #movie-cell-show a h5{
-        font-size: 9pt !important; 
+        font-size: 9pt !important;
     }
     #movie-cell-show{
         display: block;
@@ -1277,9 +1280,31 @@ iframe{
         /* border-top: 1px solid rgba(255, 255, 255, 0.562); */
     }
 }
-@media screen and (max-width: 460px){
+@media screen and (min-width: 347px) and (max-width: 400px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        max-width: 170px !important;
+        max-height: 170px !important;
+    }
+}
+@media screen and (max-width: 400px){
+    #movie-label form{
+        margin-top: 20px;
+    }
     #movie-label{
         display: block;
+    }
+    #movie-cell-show{
+        padding: 10px 5px !important;
+    }
+}
+@media screen and (min-width: 400px) and (max-width: 460px){
+    #movie-label{
+        display: block;
+    }
+    #movie-cell-show{
+        padding: 10px 5px !important;
     }
     #movie-label p{
         padding: 8px 26px;
@@ -1299,8 +1324,22 @@ iframe{
     #movie-cell-show{
         padding: 15px 10px 0;
     }
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 120px !important;
+        max-height: 190px !important;
+    }
 }
-@media screen and (max-width: 576px){
+@media screen and (min-width: 460px) and (max-width: 510px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 200px !important;
+        max-height: 220px !important;
+    }
+}
+@media screen and (max-width: 575px){
     #movie-sorting{
         display: flex;
         align-items: center;
@@ -1334,12 +1373,18 @@ iframe{
     #movie-cell-show > div{
         display: grid;
         row-gap: 0;
+        margin: auto;
         grid-template-columns: repeat(3, 1fr);
     }
-    #movie-cell-show > div > div{
-        /* background-color: red; */
-        margin-bottom: 2px !important;
+    #movie-cell-show .col-lg-3{
         padding: 4px !important;
+        margin-bottom: 10px !important;
+    }
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 200px !important;
+        height: 250px !important;
     }
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
@@ -1347,6 +1392,22 @@ iframe{
         display: block;
         width: 80% !important;
         margin: auto;
+    }
+}
+@media screen and (min-width: 575px) and (max-width: 638px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        max-width: 200px !important;
+        max-height: 250px;
+    }
+}
+@media screen and (min-width: 680px) and (max-width: 819px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        max-width: 190px !important;
+        height: 260px !important;
     }
 }
 @media screen and (max-width: 767px){
@@ -1364,7 +1425,7 @@ iframe{
         margin-top: 20px !important;
     }
 }
-@media screen and (max-width: 992px){
+@media screen and (max-width: 990px){
     #category-form{
         margin-top: 30px;
     }
@@ -1373,6 +1434,20 @@ iframe{
     }
     #genre-ph{
         display: block;
+    }
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 100% !important;
+        height: 290px;
+    }
+}
+@media screen and (min-width: 990px) and (max-width: 1160px){
+    #movie-cell-show a img{
+        display: block;
+        margin: auto;
+        width: 90% !important;
+        height: 230px;
     }
 }
 /*.......................................... movie category end ................................... */
@@ -1460,6 +1535,9 @@ iframe{
 /*.......................................... promotion details start ................................... */
 #promotion-details{
     margin: 30px auto 70px;
+}
+#promotion-details img{
+    height: 280px;
 }
 #promotion-content{
     display: block;
@@ -1572,14 +1650,14 @@ iframe{
 #movie-cover-poster > img{
     display: block;
     width: 100%;
-    height: 95vh;
+    height: 98vh;
     object-fit: cover;
 }
 #movie-cover-poster > span,
 #ticket-mc-poster > span{
     position: absolute;
     width: 100%;
-    background-color: #212d3bee;
+    background-color: #212d3bec;
     height: 100%;
     top: 0;
 }
@@ -1598,7 +1676,6 @@ iframe{
 }
 
 .modal-content{
-    text-align: end;
     justify-content: end;
 }
 .modal-content button{
@@ -1636,7 +1713,7 @@ iframe{
     width: 100%;
     height: 230px;
     object-fit: cover;
-    border: 2px solid var(--teal);
+    /* border: 2px solid var(--teal); */
     border-radius: 8px;
 }
 #movie-cast .mySwiper6 .swiper-slide{
@@ -1677,12 +1754,13 @@ iframe{
     }
     #movie-detail-content{
         position: relative;
-        background-color: var(--nav-bar);
+        background-color: #193752;
         width: 100%;
         margin-right: 0 !important;
         top: 0;
         padding-top: 20px;
         padding-bottom: 20px;
+        height: 100%;
     }
     #movie-detail-content .col-lg-4 > img{
         width: 300px !important;
@@ -2083,7 +2161,7 @@ iframe{
     margin-bottom: 20px;
 }
 #contact-block{
-    display: flex; 
+    display: flex;
     align-items: center;
     margin-top: 6px;
 }
@@ -2295,7 +2373,7 @@ iframe{
     #change-pass > div:nth-child(1) > label,
     #order-history > div:nth-child(1) > label{
         padding: 10px !important;
-        margin-left: 10px !important; 
+        margin-left: 10px !important;
     }
 }
 /*.......................................... change password end ................................... */
@@ -2306,7 +2384,7 @@ iframe{
     display: block;
     width: 100%;
     margin: auto;
-    height: 500px;
+    height: 520px;
     object-fit: cover;
 }
 #ticket-m-poster{
@@ -2366,7 +2444,7 @@ iframe{
 #order-location2 span:nth-child(1),
 #order-location3 span:nth-child(1),
 #order-location3 span:nth-child(2){
-    border: 1px solid var(--teal);
+    border: 1px solid var(--gold);
 }
 #order-location1 label,
 #order-location2 label,
@@ -2386,7 +2464,7 @@ iframe{
 #order-location3 label:nth-child(1),
 #order-location3 label:nth-child(2),
 #order-location3 label:nth-child(3){
-    background-color: var(--teal);
+    background-color: var(--gold);
     color: var(--nav-bar);
 }
 #order-location1 h6:nth-child(2),
@@ -2438,6 +2516,10 @@ iframe{
     margin-bottom: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
 }
+#caret-right{
+    color: var(--teal);
+    font-size: 15pt;
+}
 #select-date button:hover,
 .js-select-active,
 .select-time button:hover{
@@ -2445,10 +2527,6 @@ iframe{
     color: var(--teal) !important;
     border: 1px solid transparent !important;
     box-shadow: none !important;
-}
-#caret-right{
-    color: var(--teal);
-    font-size: 15pt;
 }
 #select-cinema-time{
     margin: 70px auto;
@@ -2507,19 +2585,6 @@ iframe{
 #select-seat-modal .modal-content .row .col-lg-7 button:hover{
     border: 1px solid var(--teal);
 }
-#select-seat-modal .modal-content > div > button{
-    width: fit-content;
-    height: fit-content;
-    padding: 10px;
-    background-color: var(--teal);
-    color: black;
-    border: transparent;
-    margin-bottom: 0;
-}
-#select-seat-modal .modal-content > div > button:hover{
-    background-color: var(--nav-bar);
-    border: transparent;
-}
 @media screen and (min-width: 768px) and (max-width: 992px){
     #select-seat-modal .modal-lg{
         max-width: 700px;
@@ -2574,12 +2639,6 @@ iframe{
         padding: 10px 20px;
         margin-right: -6px;
     }
-    /* #select-date > ul button:hover{
-        border: 1px solid var(--secondary);
-        background-color: var(--nav-bar);
-        color: white;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.568);
-    } */
     #select-date > ul button:not(.js-select-active):hover{
         border: 1px solid var(--secondary) !important;
         background-color: var(--nav-bar) !important;
@@ -2850,6 +2909,7 @@ iframe{
 #seat-plan,
 #double-seat-paln{
     width: 100%;
+    display: grid;
     overflow-x: auto;
     padding-top: 60px;
     padding-right: 40px;
@@ -2868,6 +2928,7 @@ iframe{
     margin-right: 24px;
     font-size: 16pt;
 }
+
 #seat-plan .seat,
 #double-seat-plan .seat{
     position: relative;
@@ -2881,13 +2942,13 @@ iframe{
 }
 .box{
     display: none;
-    width: fit-content;
+    /* width: fit-content; */
     height: auto;
     background-color: var(--nav-bar);
     color: var(--teal);
     padding: 10px 14px;
     position: absolute;
-    margin-top: -50px;
+    margin-top: -70px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 9999;
@@ -3208,9 +3269,9 @@ iframe{
 }
 #user-contact-info{
     background-color: var(--nav-bar);
-    padding-bottom: 60px;
+    padding: 30px;
     border-radius: 10px;
-    margin-top: 35px;
+
 }
 #user-contact-info form input,
 #promo-code form input{
@@ -3279,7 +3340,6 @@ iframe{
     background-color: var(--nav-bar);
     padding-bottom: 25px;
     border-radius: 10px;
-    margin-top: -30px;
 }
 #booking-total h5,
 #payment-option h5,
@@ -3422,20 +3482,19 @@ iframe{
     object-fit: cover;
 }
 #payment .col-lg-5{
-    position: fixed;
-    height: 100vh;
+    /* position: fixed; */
+    /* height: 100vh; */
     right: 0;
     bottom: -80px;
-    overflow-y: auto;
-    z-index: 1000; 
+    /* overflow-y: auto; */
+    z-index: 1000;
 }
 #payment .col-lg-7{
-    margin-top: 40px;
     background-color: var(--body);
     box-shadow: 0 2px 7px rgba(0, 0, 0, 0.592);
-    padding: 0 20px 40px 20px;
+    padding:40px;
     margin-left: -11px;
-    margin-bottom: -50px;
+    margin-bottom: 50px;
 }
 #payment .item-right .up-border,
 #payment .item-right .down-border{
@@ -3486,7 +3545,7 @@ iframe{
 }
 
 #cancel-info{
-    margin-top: -20px;
+    margin-top: 10px;
     margin-bottom: 60px;
 }
 
@@ -3957,7 +4016,7 @@ iframe{
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(28, 28, 28, 0.606);
     max-width: 450px;
-    width: 100%; 
+    width: 100%;
     color: white;
     border: 1px solid rgb(233, 230, 230);
 }
@@ -4022,8 +4081,26 @@ iframe{
     background-color: #2fdb7d;
 }
 /*................................... ..........auth section end .................................. */
+.bg-nav-bar{
+    background-color: var(--nav-bar);
+}
+.select-seat-modal .modal-content > div > button{
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: var(--teal);
+    color: black;
+    border: transparent;
+    margin-bottom: 0;
+}
+.select-seat-modal .modal-content > div > button:hover{
+    background-color: var(--nav-bar);
+    border: transparent;
+}
 
-
+.select-seat-modal h5{
+    color: var(--teal);
+}
 /*................................... ......... cinema details start.................................. */
 #cinema-details{
     margin: 30px auto 70px;
