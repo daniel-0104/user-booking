@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snacks</title>
+
+    <!-- css bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- font-awesome  -->
+    <link rel="stylesheet" href="font-awesome/css/all.min.css">
+
+    <!-- animate  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- nav bar start-->
+    <nav class="navbar navbar-expand-md sticky-top shadow-sm" id="nav">
+        <div class="container-fluid">
+            <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="image/IMG_20240924_142602_514.png" alt="" id="logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav m-auto" id="nav-order">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="movies.html">Movies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="promotions.html">Promotions</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about-us.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-item d-flex" id="nav-icon">
+                    <div class="d-inline me-2">
+                        <a href="auth.html" class="btn text-white" role="button" id="login-btn">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- nav bar end  -->
+
+    <!-- snacks page start  -->
+    <!-- <section>
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleInterval" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <img src="image/movie-night-snack-board.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="image/il_fullxfull.5926733962_tkkp.avif" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item" data-bs-interval="3000">
+                    <img src="image/pngtree-abundance-of-popcorn-for-an-immersive-cinema-experience-3d-rendered-illustration-picture-image_8480091.jpg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- snacks page end  -->
+
+    <div id="order-location3">
+        <div class="d-flex align-items-center justify-content-center">
+            <span></span>
+            <span></span>
+        </div>
+        <div id="o-location-n">
+            <div class="d-flex align-items-center justify-content-around">
+                <label for=""><i class="fa-solid fa-check"></i></label>
+                <label for=""><i class="fa-solid fa-check"></i></label>
+                <label for="">3</label>
+                <label for="">4</label>
+            </div>
+            <div class="d-flex align-items-center justify-content-around mt-1">
+                <h6>Select Showtime</h6>
+                <h6>Select Seats</h6>
+                <h6>Select Snacks</h6>
+                <h6>Confirm Payment</h6>
+            </div>
+        </div>
+    </div>
+
+    <div id="skip-section" class="container-lg">
+        <div class="d-flex align-items-center">
+            <i class="fa-solid fa-circle-info me-2"></i>
+            <label class="text-gray-50">If you prefer not to purchase snacks, you may skip this step.</label>
+        </div>
+        <a href="payment.html" class="text-decoration-none">
+            <button class="btn btn-sm btn-info"><i class="fa-solid fa-forward me-2"></i>Skip</button>
+        </a>
+    </div>
+
+    <!-- snack catgories start  -->
+    <section id="snack-category" class="container-lg">
+        <div class="combo-snack">
+            <h4>COMBOS</h4>
+            <div class="swiper mySwiper9">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/movie-night-snack-board.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/il_fullxfull.5926733962_tkkp.avif" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/pngtree-abundance-of-popcorn-for-an-immersive-cinema-experience-3d-rendered-illustration-picture-image_8480091.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/movie-night-snack-board.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/il_fullxfull.5926733962_tkkp.avif" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/pngtree-abundance-of-popcorn-for-an-immersive-cinema-experience-3d-rendered-illustration-picture-image_8480091.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="popcorn-snack">
+            <h4>POPCORN</h4>
+            <div class="swiper mySwiper9">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="detail.html" class="text-white text-decoration-none">
+                                <img src="image/pop1.webp" class="w-100 d-block rounded" alt="">
+                                <span>Medium</span>
+                                <h5 class="mt-2">Butter Popcorn</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">4000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/pop2.webp" class="w-100 d-block rounded" alt="">
+                                <span>Medium</span>
+                                <h5 class="mt-2">Caramel Popcorn</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">5000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="sweet-snack">
+            <h4>SWEETS</h4>
+            <div class="swiper mySwiper9">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/sweet1.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">Butter Finger</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">1200 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/sweet2.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">Candy Bag</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">3000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/sweet3.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">Chcocolate box</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">5000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="drinks">
+            <h4>DRINKS</h4>
+            <div class="swiper mySwiper9">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/drinks1.jfif" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">Coca Cola</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">2000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/drinks2.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">Pepsi</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">2000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- snack catgories end  -->
+
+    <!-- <div id="cancel-info">
+        <div class="d-flex mb-5 border p-3 rounded">
+            <i class="fa-solid fa-circle-info me-2 mt-1"></i>
+            <label>You can cancel your ticket(s) up to <span class="text-warning fw-bold">45 minutes</span> before the show begins. After this time, <span class="text-warning fw-bold">cancellations may not be possible</span>, so please make sure to act within this timeframe.</label>
+        </div>
+    </div>
+
+    <div id="booking-total">
+        <h5>Amount Payable</h5>
+        <div class="px-5 mb-4">
+            <div class="d-flex align-items-center justify-content-between mt-3" id="booking-total-content">
+                <div class="d-flex align-items-center">
+                    <span>3</span>
+                    <label>Ticket(s)</label>
+                </div>
+                <label>15000 Kyats</label>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3" id="booking-total-content">
+                <div class="d-flex align-items-center">
+                    <span>6</span>
+                    <label>Snacks</label>
+                </div>
+                <label>19000 Kyats</label>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mt-3" id="taxes">
+                <label for="">Taxes & Fees</label>
+                <label>2000 Kyats</label>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex align-items-center justify-content-between mt-3 px-5" id="total-price">
+            <label for="">Total</label>
+            <label>36000 Kyats</label>
+        </div>
+    </div> -->
+
+
+    <!-- snacks cart start  -->
+    <section id="snack-cart" class="container-lg mx-auto">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-cart-arrow-down me-2 "></i>
+                <h4>My Cart</h4>
+            </div>
+            <label for="">4</label>
+        </div>
+        <div class="cart-details">
+            <div class="cart-content d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="image/pop1.webp" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Butter Popcorn</h5>
+                        <label for="">3000 Ks</label>
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <div id="order-count-btn">
+                    <div class="d-flex align-items-center" style="width: 130px;">
+                        <div class="input-group quantity">
+                            <div class="input-group-btn">
+                                <button class="btn btn-minus btn-warning">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            
+                            <input type="text" class="form-control bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-plus btn-warning">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div >
+                    <label>3000 Kyats</label>
+                </div>
+                <div >
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="cart-content d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="image/drinks2.jpg" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Pepsi</h5>
+                        <label for="">2000 Ks</label>
+                    </div>
+                </div>
+                <div id="order-count-btn" >
+                    <div class="d-flex align-items-center">
+                        <div class="input-group quantity" style="width: 130px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-minus btn-warning">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            
+                            <input type="text" class="form-control bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-plus btn-warning">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>2000 Kyats</label>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="cart-content d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="image/drinks1.jfif" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Coca Cola</h5>
+                        <label for="">2000 Ks</label>
+                    </div>
+                </div>
+                <div id="order-count-btn" >
+                    <div class="d-flex align-items-center">
+                        <div class="input-group quantity" style="width: 130px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-minus btn-warning">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            
+                            <input type="text" class="form-control bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-plus btn-warning">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>2000 Kyats</label>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="cart-content d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center">
+                    <img src="image/movie-night-snack-board.jpg" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Popcorn lover</h5>
+                        <label for="">10000 Ks</label>
+                    </div>
+                </div>
+                <div id="order-count-btn" >
+                    <div class="d-flex align-items-center">
+                        <div class="input-group quantity" style="width: 130px;">
+                            <div class="input-group-btn">
+                                <button class="btn btn-minus btn-warning">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            
+                            <input type="text" class="form-control bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+
+                            <div class="input-group-btn">
+                                <button class="btn btn-plus btn-warning">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <label>10000 Kyats</label>
+                </div>
+                <div>
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+            </div>
+            <div class="pt-2">
+                <div class="d-flex justify-content-end my-2 me-5">
+                    <h5>Total:</h5>
+                    <h5 class="ms-3">0 Kyats</h5>
+                </div>
+                <div class="d-flex justify-content-end me-3">
+                    <button class="btn btn-warning w-25">
+                        <span>Confirm Order</span>
+                    </button>
+                    <button class="btn btn-danger w-25 ms-2">
+                        <span>Clear Cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-details-ph">
+            <div class="cart-content-ph">
+                <div class="d-flex align-content-center justify-content-end mb-1">
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="image/pop1.webp" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Butter Popcorn</h5>
+                        <label for="">3000 Ks</label>
+                        <p>Medium</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div id="order-count-btn">
+                        <div class="d-flex align-items-center" style="width: 130px;">
+                            <div class="input-group quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus btn-warning">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                
+                                <input type="text" class="form-control p-0 bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+    
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus btn-warning">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <label>Total: 3000 Ks</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-content-ph">
+                <div class="d-flex align-content-center justify-content-end mb-1">
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="image/drinks1.jfif" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Coca Cola</h5>
+                        <label for="">2000 Ks</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div id="order-count-btn">
+                        <div class="d-flex align-items-center" style="width: 130px;">
+                            <div class="input-group quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus btn-warning">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                
+                                <input type="text" class="form-control p-0 bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+    
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus btn-warning">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <label>Total: 2000 Ks</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-content-ph">
+                <div class="d-flex align-content-center justify-content-end mb-1">
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="image/drinks2.jpg" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Pepsi</h5>
+                        <label for="">2000 Ks</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div id="order-count-btn">
+                        <div class="d-flex align-items-center" style="width: 130px;">
+                            <div class="input-group quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus btn-warning">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                
+                                <input type="text" class="form-control p-0 bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+    
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus btn-warning">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <label>Total: 2000 Ks</label>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-content-ph">
+                <div class="d-flex align-content-center justify-content-end mb-1">
+                    <button class="btn btn-sm btn-remove remove"><i class="fa fa-times"></i></button>
+                </div>
+                <div class="d-flex align-items-center">
+                    <img src="image/movie-night-snack-board.jpg" class="d-block" alt="">
+                    <div class="ms-3">
+                        <h5>Popcorn Lover</h5>
+                        <label for="">10000 Ks</label>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-3">
+                    <div id="order-count-btn">
+                        <div class="d-flex align-items-center" style="width: 130px;">
+                            <div class="input-group quantity">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-minus btn-warning">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                </div>
+                                
+                                <input type="text" class="form-control p-0 bg-body-tertiary border-0 text-center" id="orderCount" value="1">
+    
+                                <div class="input-group-btn">
+                                    <button class="btn btn-sm btn-plus btn-warning">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ms-3">
+                        <label>Total: 10000 Ks</label>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-2">
+                <div class="d-flex justify-content-end my-2 me-5">
+                    <h5>Total:</h5>
+                    <h5 class="ms-3">0 Kyats</h5>
+                </div>
+                <div class="d-flex justify-content-end me-3" id="btns">
+                    <button class="btn w-25" id="confirm-btn">
+                        <span>Confirm Order</span>
+                    </button>
+                    <button class="btn btn-danger w-25 ms-2" id="clear-btn">
+                        <span>Clear Cart</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- snacks cart end  -->
+
+</body>
+
+    <!-- js bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- js  -->
+    <script src="script.js"></script>
+
+</html>

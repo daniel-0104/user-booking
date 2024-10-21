@@ -2340,37 +2340,45 @@ iframe{
     margin: 80px auto;
 }
 #order-location2,
-#order-location3{
+#order-location3,
+#order-location4{
     position: relative;
     margin: 70px auto;
 }
 #order-location1 #o-location-n,
 #order-location2 #o-location-n,
-#order-location3 #o-location-n{
+#order-location3 #o-location-n,
+#order-location4 #o-location-n{
     margin-top: -15px;
 }
 #order-location1 > div:nth-child(1),
 #order-location2 > div:nth-child(1),
-#order-location3 > div:nth-child(1){
+#order-location3 > div:nth-child(1),
+#order-location4 > div:nth-child(1){
     display: block;
-    width: 65%;
+    width: 75%;
     margin: auto;
     height: 1px;
     background-color: white;
 }
 #order-location2 span,
-#order-location3 span{
+#order-location3 span,
+#order-location4 span{
     display: block;
     width: 100%;
 }
 #order-location2 span:nth-child(1),
 #order-location3 span:nth-child(1),
-#order-location3 span:nth-child(2){
-    border: 1px solid var(--teal);
+#order-location3 span:nth-child(2),
+#order-location4 span:nth-child(1),
+#order-location4 span:nth-child(2),
+#order-location4 span:nth-child(3){
+    border: 1px solid var(--gold);
 }
 #order-location1 label,
 #order-location2 label,
-#order-location3 label{
+#order-location3 label,
+#order-location4 label{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2385,28 +2393,51 @@ iframe{
 #order-location2 label:nth-child(2),
 #order-location3 label:nth-child(1),
 #order-location3 label:nth-child(2),
-#order-location3 label:nth-child(3){
-    background-color: var(--teal);
+#order-location3 label:nth-child(3),
+#order-location4 label:nth-child(1),
+#order-location4 label:nth-child(2),
+#order-location4 label:nth-child(3),
+#order-location4 label:nth-child(4){
+    background-color: var(--gold);
     color: var(--nav-bar);
+}
+#o-location-n h6{
+    width: 100%;
+    text-align: center;
 }
 #order-location1 h6:nth-child(2),
 #order-location1 h6:nth-child(3),
+#order-location1 h6:nth-child(4),
 #order-location2 h6:nth-child(1),
 #order-location2 h6:nth-child(3),
+#order-location2 h6:nth-child(4),
 #order-location3 h6:nth-child(1),
-#order-location3 h6:nth-child(2){
+#order-location3 h6:nth-child(2),
+#order-location3 h6:nth-child(4),
+#order-location4 h6:nth-child(1),
+#order-location4 h6:nth-child(2),
+#order-location4 h6:nth-child(3){
     color: #1c2f4a;
 }
 @media screen and (max-width: 480px){
     #order-location1 #o-location-n > div:nth-child(2) > h6,
     #order-location2 #o-location-n > div:nth-child(2) > h6,
-    #order-location3 #o-location-n > div:nth-child(2) > h6{
+    #order-location3 #o-location-n > div:nth-child(2) > h6,
+    #order-location4 #o-location-n > div:nth-child(2) > h6{
         display: flex;
         align-items: center;
         justify-content: center;
         width: 10%;
         margin: auto;
         text-align: center;
+        font-size: 10pt;
+    }
+}
+@media screen and (max-width: 348px){
+    #order-location4 label{
+        width: 25px;
+        height: 25px;
+        font-size: 10pt;
     }
 }
 
@@ -3428,6 +3459,10 @@ iframe{
     bottom: -80px;
     overflow-y: auto;
     z-index: 1000; 
+    padding-bottom: 150px;
+}
+#payment .col-lg-5::-webkit-scrollbar{
+    display: none;
 }
 #payment .col-lg-7{
     margin-top: 40px;
@@ -3502,6 +3537,7 @@ iframe{
         margin-bottom: 100px;
         z-index: 9999;
         margin-top: -100px;
+        padding-bottom: 0;
     }
     #booking-summary{
         width: 500px;
@@ -4176,3 +4212,620 @@ iframe{
     }
 }
 /*................................... ......... review info end .................................. */
+
+
+
+
+/*.......................................... nav bar start ................................... */
+/* #nav{
+    background-color: var(--nav-bar);
+}
+#logo-img{
+    display: block;
+    width: 120px;
+    height: 50px;
+    object-fit: cover;
+}
+#cinema-label{
+    margin-top: 4px;
+    color: var(--gold);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+#login-btn,
+#logout-btn{
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.644);
+}
+.my-account{
+    display: none;
+}
+.nav-link.active{
+    color: var(--gold) !important;
+}
+#nav-order > li > a{
+    color: white;
+    padding: 8px 30px;
+    margin: 0 10px;
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nav-order > li > a:hover,
+.nav-item a i:hover,
+.nav-item button:hover,
+#login-btn:hover,
+#logout-btn:hover{
+    color: var(--gold) !important;
+}
+.navbar-toggler{
+    border: none;
+    color: white;
+    box-shadow: none;
+    outline: 0;
+}
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+@media screen and (max-width: 767px){
+    #nav-icon{
+        display: flex;
+    }
+    .navbar-nav li{
+        padding: 8px 0;
+    }
+    #nav-icon{
+        border-top: 1px solid rgb(242, 240, 240);
+        padding-left: 20px;
+        padding-top: 15px;
+        margin: 10px 0;
+    }
+    .my-account{
+        display: block;
+        margin-left: 12px;
+    }
+    #cart-lap{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #nav-order > li > a{
+        margin: 0;
+        padding:0 20px;
+    }
+}
+@media screen and (max-width: 348px){
+    #cinema-label > h5{
+        font-size: 12pt !important;
+    }
+    #nav-order > li > a{
+        font-size: 11pt;
+    }
+}
+
+.offcanvas{
+    background-color: var(--nav-bar);
+    color: white;
+}
+.offcanvas > hr{
+    margin-top: -5px;
+}
+.user-name{
+    color: var(--teal);
+    font-size: 18pt !important;
+}
+#profile-info{
+    margin-top: -12px;
+}
+#profile-info form{
+    border-left: 2px solid var(--teal);
+    border-right: 2px solid var(--teal);
+    padding: 10px 0 15px;
+    border-radius: 10px;
+}
+.offcanvas button i:hover,
+#profile-info > div > i,
+#info-link > div > i,
+#info-link > a:hover{
+    color: var(--teal) !important;
+}
+#profile-info > div > h5,
+#info-link > div > h5{
+    font-weight: bold;
+}
+.......................................... nav bar end ................................... */
+
+
+/*.......................................... snack page start ................................... */
+/* .carousel-item > img{
+    display: block;
+    width: 100%;
+    height: 530px;
+    object-fit: cover;
+    margin: auto;
+}
+.carousel-indicators{
+    display: block;
+    margin: auto;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.127);
+    padding: 0 30px;
+    border-radius: 8px;
+}
+.carousel-indicators .active {
+    background-color: var(--gold);
+}
+@media screen and (max-width: 575px){
+    .carousel-item > img{
+        position: relative;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .carousel-indicators{
+        background-color: rgba(255, 255, 255, 0.127);
+        padding: 0 10px;
+        border-radius: 8px;
+    }
+    .carousel-indicators button {
+        width: 15px !important;
+        height: 3px !important; 
+    }
+    
+} */
+/*.......................................... snack page end ................................... */
+
+/*.......................................... snack categories start ................................... */
+@media screen and (max-width: 348px){
+    #order-location4 label{
+        width: 25px;
+        height: 25px;
+        font-size: 10pt;
+    }
+}
+
+#skip-section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    background-color: var(--nav-bar);
+    padding: 10px;
+    border-radius: 8px;
+}
+@media screen and (max-width: 625px){
+    #skip-section{
+        display: block;
+        width: fit-content;
+        margin: auto;
+        text-align: left;
+    }
+    #skip-section > a{
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    #skip-section button{
+        margin-top: 10px !important;
+    }
+}
+@media screen and (max-width: 480px){
+    #skip-section label{
+        font-size: 11pt;
+    }
+}
+#snack-category{
+    margin: 60px auto;
+}
+.popcorn-snack,
+.sweet-snack,
+.drinks{
+    margin-top: 50px;
+}
+.combo-snack > h4,
+.popcorn-snack > h4,
+.sweet-snack > h4,
+.drinks > h4{
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.558);
+    padding-bottom: 12px;
+    margin-bottom: 16px;
+}
+.combo-snack img,
+.popcorn-snack img,
+.sweet-snack img,
+.drinks img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+.combo-snack .mySwiper .swiper-wrapper,
+.popcorn-snack .mySwiper .swiper-wrapper,
+.sweet-snack .mySwiper .swiper-wrapper,
+.drinks .mySwiper .swiper-wrapper{
+    padding-bottom: 40px !important;
+}
+#snack-category .swiper{
+    padding: 0 0 40px;
+}
+.swiper-pagination-bullet-active{
+    background-color: var(--gold);
+    opacity: 1;
+}
+.combo-snack .mySwiper9 .swiper-slide > div,
+.popcorn-snack .mySwiper9 .swiper-slide > div,
+.sweet-snack .mySwiper9 .swiper-slide > div,
+.drinks .mySwiper9 .swiper-slide > div{
+    padding: 10px;
+    background-color: var(--nav-bar);
+}
+.combo-snack a:hover,
+.popcorn-snack a:hover,
+.sweet-snack a:hover,
+.drinks a:hover{
+    color: var(--gold) !important;
+}
+.combo-content h5{
+    height: 40px;
+}
+.combo-content span{
+    position: absolute;
+    color: rgba(255, 255, 255, 0.795);
+    top: 10px;
+    left: 10px;
+    background-color: var(--secondary);
+    border-radius: 5px 5px 5px 0;
+    padding: 3px 10px;
+    font-size: 10pt;
+}
+.cart-btn,
+.cart-btn:hover{
+    background-color: var(--gold);
+    color: black;
+}
+@media screen and (max-width: 475px){
+    .combo-snack img,
+    .popcorn-snack img,
+    .sweet-snack img,
+    .drinks img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .combo-content h5,
+    .combo-content label{
+        font-size: 11pt;
+    }
+    .combo-content button{
+        padding: 3px 6px;
+        font-size: 9pt;
+    }
+    .combo-snack a:hover,
+    .popcorn-snack a:hover,
+    .sweet-snack a:hover,
+    .drinks a:hover{
+        color: white !important;
+    }
+    .combo-snack a:active,
+    .popcorn-snack a:active,
+    .sweet-snack a:active,
+    .drinks a:active{
+        color: var(--gold) !important;
+    }
+    .combo-content span{
+        padding: 3px 8px;
+        font-size: 8pt;
+    }
+}
+@media screen and (max-width: 373px){
+    .combo-content > div{
+        display: block !important;
+        width: 100%;
+        margin-top: 0 !important;
+    }
+    .combo-content button{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        padding: 4px;
+    }
+    .combo-snack > h4,
+    .popcorn-snack > h4,
+    .sweet-snack > h4,
+    .drinks > h4{
+        font-size: 13pt;
+    }
+    .combo-snack .swiper-wrapper,
+    .popcorn-snack .swiper-wrapper,
+    .sweet-snack .swiper-wrapper,
+    .drinks .swiper-wrapper{
+        text-align: center;
+    }
+}
+/*.......................................... snack categories end ................................... */
+
+
+/*.......................................... snack cart start ................................... */
+#snack-cart{
+    background-color: var(--nav-bar);
+    margin-bottom: 60px;
+    border-radius: 8px;
+    padding: 20px;
+}
+#snack-cart > .d-flex{
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.651);
+    margin-bottom: 25px;
+}
+#snack-cart .d-flex > i{
+    color: var(--gold);
+}
+#snack-cart > .d-flex label{
+    background-color: var(--gold);
+    color: black;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+#snack-cart > .d-flex h4{
+    font-weight: bold;
+}
+.cart-content{
+    height: 120px;
+    padding: 0 10px 10px;
+    margin: 15px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+}
+.cart-content > .d-flex:nth-child(1){
+    width: 360px;
+}
+.cart-content img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.remove,
+.remove:hover,
+.remove:active{
+    background-color: red;
+    color: white;
+}
+.cart-details-ph{
+    display: none !important;
+}
+.cart-content-ph{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.308);
+}
+.cart-content-ph img{
+    display: block;
+    width: 130px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+#confirm-btn{
+    background-color: var(--gold);
+    color: black;
+}
+@media screen and (max-width: 729px){
+    .cart-details{
+        display: none;
+    }
+    .cart-details-ph{
+        display: block !important;
+    }
+    #confirm-btn,
+    #clear-btn{
+        width: 100% !important;
+    }
+    #btns{
+        margin-right: 0 !important;
+    }
+}
+@media screen and (max-width: 400px){
+    .cart-details-ph img{
+        width: 100px;
+        height: 100px;
+    }
+    .cart-details-ph h5{
+        font-size: 13pt;
+        font-weight: bold;
+    }
+    .cart-details-ph p{
+        font-size: 10pt;
+    }
+    #snack-cart{
+        padding: 20px 10px;
+    }
+    .cart-content-ph > div:nth-child(3){
+        margin-left: -14px;
+    }
+}
+@media screen and (max-width: 373px){
+    #snack-cart > .d-flex i{
+        margin-bottom: 5px;
+    }
+    #snack-cart > .d-flex label{
+        font-weight: bold;
+        font-size: 10pt;
+        padding: 1px 20px !important;
+    }
+}
+/*.......................................... snack cart end ................................... */
+
+
+/*.......................................... snack deatils start ................................... */
+#snack-back i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+#snack-detail{
+    background-color: var(--nav-bar);
+    margin: 20px auto 40px;
+    padding: 10px 20px 30px;
+    border-radius: 8px;
+}
+#snack-detail img{
+    width: 420px;
+    display: block;
+    margin: auto;
+    height: 400px;
+    object-fit: cover;
+}
+#snack-detail-content > div > h3,
+#snack-back i:hover{
+    color: var(--gold);
+}
+#snack-detail-content label{
+    font-size: 14pt;
+    margin-bottom: 4px;
+}
+#snack-detail-content ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#snack-detail-content ul li{
+    list-style: none;
+    border: 1px solid rgba(255, 255, 255, 0.596);
+    padding: 6px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+#snack-detail-content ul li:hover,
+#snack-detail-content ul li:active,
+.size-active{
+    background-color: #142b4be0 !important;
+}
+@media screen and (max-width: 1200px){
+    #snack-detail img{
+        width: 350px;
+        height: 380px;
+    }
+}
+@media screen and (max-width: 768px){
+    #snack-detail img{
+        width: 100%;
+        height: 380px;
+    }
+    #snack-detail-content{
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 400px){
+    #snack-detail img{
+        width: 100%;
+        height: 280px;
+    }
+    #snack-detail{
+        margin-top: 0 !important;
+        border-radius: 0 0 8px 8px;
+    }
+    #snack-detail-content h3{
+        font-size: 16pt;
+    }
+    #snack-detail-content p{
+        font-size: 11pt;
+    }
+    #snack-detail-content ul{
+        justify-content: left;
+        padding-left: 0;
+    }
+    #snack-detail-content ul li{
+        width: fit-content;
+        padding: 6px 20px;
+        margin-right: 10px;
+        font-size: 11pt;
+    }
+    .input-group{
+        margin-left: 15px !important;
+    }
+    #addCartBtn{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 310px){
+    #snack-detail-content ul{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    #snack-detail-content ul li{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+/*.......................................... snack deatils end ................................. */
+
+
+/*............................................. snack payment start ................................ */
+#snack-order{
+    position: relative;
+    background-color: var(--nav-bar);
+    margin-left: 0;
+    margin-top: 40px;
+    padding: 30px 20px;
+    border-radius: 8px;
+    border-left: 3px solid var(--teal);
+    border-right: 3px solid var(--teal);
+}
+#snack-order > div:first-child{
+    padding-bottom: 15px;
+    border-bottom: 1px dotted white;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+#snack-order > div:first-child label{
+    background-color: var(--gold);
+    color: black;
+    padding: 0 15px;
+    border-radius: 5px;
+}
+#snack-order > p{
+    margin: -10px auto 28px;
+    color: rgba(193, 191, 191, 0.832);
+}
+#snack-order-content > .d-flex{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.219);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+.snack-t-price{
+    color: var(--teal);
+}
+@media screen and (max-width: 415px){
+    #snack-order > div:first-child h5{
+        font-size: 13pt;
+    }
+}
+@media screen and (max-width: 373px){
+    #snack-order > div:first-child label{
+        font-weight: bold;
+        font-size: 10pt;
+        padding: 1px 20px !important;
+    }
+    #snack-order-content h6{
+        font-size: 12pt;
+    }
+    #snack-order > p,
+    #snack-order-content span,
+    #snack-order-content p{
+        font-size: 10pt !important;
+    }
+    #snack-order > div:last-child h5{
+        font-size: 14pt;
+    }
+}
+/*............................................. snack payment end ................................ */
