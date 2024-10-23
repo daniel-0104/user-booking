@@ -222,11 +222,18 @@ document.addEventListener('DOMContentLoaded',function(){
   categoryLinks.forEach(link => link.classList.remove('active'));
   
   categoryLinks.forEach(link => {
-    if (currentHTMLPage.includes(link.getAttribute('href'))) {
-      link.classList.add('active');
+    let linkHref = link.getAttribute('href');
+
+    if(linkHref.startsWith('http')) {
+        const url = new URL(linkHref);
+        linkHref = url.pathname;
     }
 
-    link.addEventListener('click',function(){
+    if(currentHTMLPage === linkHref) {
+        link.classList.add('active');
+    }
+
+    link.addEventListener('click', function () {
       sessionStorage.setItem('genre-scroll-y', categoryContent.scrollTop);
       sessionStorage.setItem('genre-scroll-x', genrePh.scrollLeft);
     });
