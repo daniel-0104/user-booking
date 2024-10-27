@@ -567,7 +567,7 @@ body{
         display: block;
         margin: auto;
         width: 130px;
-        height: 180px;
+        height: 200px;
         object-fit: cover;
     }
     #span-block > span{

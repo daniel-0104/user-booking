@@ -504,26 +504,31 @@ var swiper = new Swiper(".mySwiper6", {
 
 
 // ..................................................... showtime select date start ....................................
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded', function() {
   const selectDates = document.querySelectorAll('.js-select-date');
   const firstDateButton = document.getElementById('first-date-button');
-
-  if (firstDateButton) {
-    firstDateButton.classList.add('js-select-active');
+  
+  const storedDate = localStorage.getItem('activeDate');
+  
+  if (storedDate) {
+      selectDates.forEach(function(selectDate) {
+          if (selectDate.textContent.trim() === storedDate.trim()) {
+              selectDate.classList.add('js-select-active');
+          }
+      });
+  } else if (firstDateButton) {
+      firstDateButton.classList.add('js-select-active');
+      localStorage.setItem('activeDate', firstDateButton.textContent.trim());
   }
 
-  selectDates.forEach(function(selectDate){
-    selectDate.addEventListener('click',function(){
-      if(selectDate.classList.contains('js-select-active')){
-        selectDate.classList.remove('js-select-active');
-      }
-      else{
-        selectDates.forEach(function(date){
-          date.classList.remove('js-select-active');
-        });
-      }
-      selectDate.classList.add('js-select-active');
-    });
+  selectDates.forEach(function(selectDate) {
+      selectDate.addEventListener('click', function() {
+          selectDates.forEach(function(date) {
+              date.classList.remove('js-select-active');
+          });
+          selectDate.classList.add('js-select-active');
+          localStorage.setItem('activeDate', selectDate.textContent.trim());
+      });
   });
 });
 // ..................................................... showtime select date end .................................... 
