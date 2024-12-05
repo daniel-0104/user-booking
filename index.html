@@ -387,6 +387,158 @@
             </div>
         </div>
     </section>
+
+    
+    <style>
+        #now-movie-ph{
+            display: none;
+        }
+        @media screen and (max-width: 575px){
+            #now-movie-ph .swiper-slide > div{
+                background-color: var(--nav-bar) ;
+                padding: 10px;
+                border-radius: 8px;
+                border: 1px solid white;
+            }
+            #now-movie-ph .swiper-slide a{
+                color: white;
+                text-decoration: none;
+            }
+            #now-movie-ph .swiper-slide a > div:last-child{
+                margin-top: 14px;
+                text-align: center;
+                height: 40px;
+                margin-bottom: 10px;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.373);
+            }
+            #now-movie-ph{
+                margin-top: -70px;
+                display: block;
+            }
+            #now-movie-ph .swiper-slide #ticket-btn,
+            #now-movie-ph .swiper-slide p{
+                font-size: 10pt !important;
+            }
+            #now-movie-ph .swiper-slide a h5{
+                font-size: 12pt !important;
+            }
+            #now-movie-ph a:hover{
+                color: var(--gold);
+            }
+            #ticket-btn{
+                border: none;
+                box-shadow: none;
+                background-color: var(--gold);
+                color:black;
+            }
+            #ticket-btn span i{
+                color: black;
+            }
+        }
+        @media screen and (max-width: 410px){
+            .zoom-img img:hover{
+                transform: none;
+            }
+            #now-movie-ph .swiper-slide  a h5{
+                font-size: 10pt !important;
+            }
+            #now-movie-ph{
+                display: block !important;
+                background-color: var(--nav-bar);
+                border-radius: 8px;
+            } 
+            #now-movie-ph .swiper-slide > div{
+                background-color: transparent !important;
+                border: none;
+                padding: 0 10px !important;
+                margin-top: 20px;
+            }
+            #now-movie-ph .swiper-slide #ticket-btn,
+            #now-movie-ph .swiper-slide p{
+                font-size: 9pt !important;
+            }
+        }
+    </style>
+    <section id="now-movie-ph">
+        <div class="swiper mySwiper10 px-2 pb-5">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div>
+                        <a href="">
+                            <div class="zoom-img">
+                                <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"  alt="">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h5 class="text-center">Raya And The Last Dragon</h5>
+                            </div>
+                        </a>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <a href="">
+                                <button class="btn" id="ticket-btn">
+                                    <span><i class="fa-solid fa-ticket"></i></span>
+                                    <label>Book Ticket</label>
+                                </button>
+                            </a>
+                            <p class="mt-1">
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <label>5.0</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <a href="">
+                            <div class="zoom-img">
+                                <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"  alt="">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h5 class="text-center">Raya And The Last Dragon</h5>
+                            </div>
+                        </a>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <a href="">
+                                <button class="btn" id="ticket-btn">
+                                    <span><i class="fa-solid fa-ticket"></i></span>
+                                    <label>Book Ticket</label>
+                                </button>
+                            </a>
+                            <p class="mt-1">
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <label>5.0</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div>
+                        <a href="">
+                            <div class="zoom-img">
+                                <img src="image/MV5BZWNiOTc4NGItNGY4YS00ZGNkLThkOWEtMDE2ODcxODEwNjkwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg"  alt="">
+                            </div>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <h5 class="text-center">Raya And The Last Dragon</h5>
+                            </div>
+                        </a>
+                        <div class="d-flex align-content-center justify-content-between">
+                            <a href="">
+                                <button class="btn" id="ticket-btn">
+                                    <span><i class="fa-solid fa-ticket"></i></span>
+                                    <label>Book Ticket</label>
+                                </button>
+                            </a>
+                            <p class="mt-1">
+                                <span><i class="fa-regular fa-star"></i></span>
+                                <label>5.0</label>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
     <!-- now showing movie end  -->
 
     <!-- feature trailer start  -->
@@ -676,5 +828,30 @@
 
     <!-- js  -->
     <script src="script.js"></script>
+
+    
+    <script>
+        var swiper = new Swiper(".mySwiper10", {
+            spaceBetween: 30,
+            slidesPerView: 3,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                300: {
+                    slidesPerView: 2,
+                    spaceBetween: 12,
+                },
+                410: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                }                     
+            }
+            });
+    </script>
 
 </html>

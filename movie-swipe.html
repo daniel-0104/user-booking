@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<style>
+    body{
+        background-color: var(--body);
+        color: white;
+    }
+    :root{
+        --body: #2c5c85;
+        --nav-bar: #1b4064;
+        --secondary: #3c91c9;
+        --gold: #FFD700;
+        --teal: #5febcf ;
+    }
+    #snack-category{
+        margin: 60px auto;
+    }
+    .popcorn-snack,
+    .sweet-snack,
+    .drinks{
+        margin-top: 50px;
+    }
+    .combo-snack > h4,
+    .popcorn-snack > h4,
+    .sweet-snack > h4,
+    .drinks > h4{
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.558);
+        padding-bottom: 12px;
+        margin-bottom: 16px;
+    }
+    .combo-snack img,
+    .popcorn-snack img,
+    .sweet-snack img,
+    .drinks img{
+        display: block;
+        margin: auto;
+        width: 100%;
+        height: 230px;
+        object-fit: cover;
+    }
+    .combo-snack .mySwiper .swiper-wrapper,
+    .popcorn-snack .mySwiper .swiper-wrapper,
+    .sweet-snack .mySwiper .swiper-wrapper,
+    .drinks .mySwiper .swiper-wrapper{
+        padding-bottom: 40px !important;
+    }
+    #snack-category .swiper{
+        padding: 0 0 40px;
+    }
+    .swiper-pagination-bullet-active{
+        background-color: var(--gold);
+        opacity: 1;
+    }
+    .combo-snack .mySwiper9 .swiper-slide > div,
+    .popcorn-snack .mySwiper9 .swiper-slide > div,
+    .sweet-snack .mySwiper9 .swiper-slide > div,
+    .drinks .mySwiper9 .swiper-slide > div{
+        padding: 10px;
+        background-color: var(--nav-bar);
+    }
+    .combo-snack a:hover,
+    .popcorn-snack a:hover,
+    .sweet-snack a:hover,
+    .drinks a:hover{
+        color: var(--gold) !important;
+    }
+    .combo-content h5{
+        height: 40px;
+    }
+    .combo-content span{
+        position: absolute;
+        color: rgba(255, 255, 255, 0.795);
+        top: 10px;
+        left: 10px;
+        background-color: var(--secondary);
+        border-radius: 5px 5px 5px 0;
+        padding: 3px 10px;
+        font-size: 10pt;
+    }
+    .cart-btn,
+    .cart-btn:hover{
+        background-color: var(--gold);
+        color: black;
+    }
+    @media screen and (max-width: 475px){
+        .combo-snack img,
+        .popcorn-snack img,
+        .sweet-snack img,
+        .drinks img{
+            display: block;
+            margin: auto;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+        .combo-content h5,
+        .combo-content label{
+            font-size: 11pt;
+        }
+        .combo-content button{
+            padding: 3px 6px;
+            font-size: 9pt;
+        }
+        .combo-snack a:hover,
+        .popcorn-snack a:hover,
+        .sweet-snack a:hover,
+        .drinks a:hover{
+            color: white !important;
+        }
+        .combo-snack a:active,
+        .popcorn-snack a:active,
+        .sweet-snack a:active,
+        .drinks a:active{
+            color: var(--gold) !important;
+        }
+        .combo-content span{
+            padding: 3px 8px;
+            font-size: 8pt;
+        }
+    }
+    @media screen and (max-width: 373px){
+        .combo-content > div{
+            display: block !important;
+            width: 100%;
+            margin-top: 0 !important;
+        }
+        .combo-content button{
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+            padding: 4px;
+        }
+        .combo-snack > h4,
+        .popcorn-snack > h4,
+        .sweet-snack > h4,
+        .drinks > h4{
+            font-size: 13pt;
+        }
+        .combo-snack .swiper-wrapper,
+        .popcorn-snack .swiper-wrapper,
+        .sweet-snack .swiper-wrapper,
+        .drinks .swiper-wrapper{
+            text-align: center;
+        }
+    }
+</style>
+<body>
+    <!-- movie swipe start -->
+    <section id="snack-category" class="container-lg">
+        <div class="combo-snack">
+            <h4>COMBOS</h4>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/movie-night-snack-board.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/il_fullxfull.5926733962_tkkp.avif" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/pngtree-abundance-of-popcorn-for-an-immersive-cinema-experience-3d-rendered-illustration-picture-image_8480091.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/movie-night-snack-board.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/il_fullxfull.5926733962_tkkp.avif" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="rounded combo-content">
+                            <a href="" class="text-white text-decoration-none">
+                                <img src="image/pngtree-abundance-of-popcorn-for-an-immersive-cinema-experience-3d-rendered-illustration-picture-image_8480091.jpg" class="w-100 d-block rounded" alt="">
+                                <h5 class="mt-2">PopCorns Lover</h5> 
+                            </a>
+                            <div class="d-flex align-items-center justify-content-between mt-3">
+                                <label for="">10000 Ks</label>
+                                <a href="" class="text-decoration-none">
+                                    <button class="btn cart-btn">Add To Cart</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- movie swipe end  -->
+
+
+</body>
+    <!-- swiper js  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        slidesPerView: 4,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            300: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            },
+            519: {
+            slidesPerView: 2,
+            },
+            694: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+            963: {
+            slidesPerView: 4,
+            },
+            1400: {
+            slidesPerView: 5,
+            }                          
+        }
+        });
+    </script>
+</html>

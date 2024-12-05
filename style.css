@@ -552,7 +552,7 @@ body{
 #ticket-btn:hover{
     color: var(--teal);
 }
-@media screen and (max-width: 576px){
+@media screen and (max-width: 575px){
     #now-movie-list #ticket-btn,
     #now-movie-list > .col-lg-3 .d-flex p{
         font-size: 10pt !important;
@@ -575,8 +575,9 @@ body{
         height: 3px;
     }
     #now-movie-list{
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+        display: none;
+        /* display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important; */
     }
     #now-movie-list > .col-lg-3 > div{
         padding: 25px 15px 20px;
